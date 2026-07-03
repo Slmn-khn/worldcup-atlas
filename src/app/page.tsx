@@ -12,6 +12,7 @@ import EmptyState from "@/components/ui/EmptyState";
 import HomeLatestMatchesSection from "@/components/fixtures/HomeLatestMatchesSection";
 import HomeHero from "@/components/home/HomeHero";
 import ArchiveStatsSection from "@/components/home/ArchiveStatsSection";
+import DiscoveryVaultSection from "@/components/facts/DiscoveryVaultSection";
 import TournamentTimelineSection from "@/components/home/TournamentTimelineSection";
 import FeaturedTournamentsSection from "@/components/home/FeaturedTournamentsSection";
 import RecentFinalsSection from "@/components/home/RecentFinalsSection";
@@ -102,6 +103,9 @@ export default async function Home() {
 
           {/* 3 — Archive at a Glance */}
           <ArchiveStatsSection stats={archiveStats} />
+
+          {/* 3.5 — Discovery Vault (hourly rotating fact). */}
+          <DiscoveryVaultSection hourlyFact={home.hourlyFact} />
 
           {/* 4 — Tournament Timeline */}
           <TournamentTimelineSection entries={home.timeline} />

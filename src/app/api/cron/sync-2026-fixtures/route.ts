@@ -5,9 +5,9 @@
 // repeatedly (sync upserts). Provider errors are sanitized inside the summary,
 // so no provider URL/secret is ever returned.
 
-import { timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
 import { createApiErrorResponse } from "@/server/security/api-errors";
+import { isAuthorizedCronRequest } from "@/server/security/cron";
 import { prisma } from "@/server/db/prisma";
 import { syncFixtures2026 } from "@/server/fixtures/sync";
 
@@ -16,7 +16,7 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 async function handle(request: Request): Promise<NextResponse> {
-  if (!isAuthorized(request)) {
+  if (!isAuthorizedCronRequest(request)) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
@@ -37,31 +37,3 @@ async function handle(request: Request): Promise<NextResponse> {
 
 export const GET = handle;
 export const POST = handle;
-
-function isAuthorized(request: Request): boolean {
-  const secret = process.env.CRON_SECRET;
-  // Fail closed: with no secret configured, the route is disabled.
-  if (secret === undefined || secret === "") return false;
-
-  const provided = extractSecret(request);
-  if (provided === null) return false;
-  return safeEqual(provided, secret);
-}
-
-function extractSecret(request: Request): string | null {
-  const auth = request.headers.get("authorization");
-  if (auth !== null) {
-    const match = /^Bearer\s+(.+)$/i.exec(auth.trim());
-    if (match !== null) return match[1].trim();
-  }
-  const fromQuery = new URL(request.url).searchParams.get("secret");
-  return fromQuery !== null && fromQuery !== "" ? fromQuery : null;
-}
-
-/** Length-safe, constant-time string comparison. */
-function safeEqual(a: string, b: string): boolean {
-  const bufferA = Buffer.from(a);
-  const bufferB = Buffer.from(b);
-  if (bufferA.length !== bufferB.length) return false;
-  return timingSafeEqual(bufferA, bufferB);
-}

@@ -24,6 +24,7 @@ import {
   formatFinalScore,
   matchCardInclude,
 } from "@/server/queries/helpers";
+import { getHourlyFact } from "@/server/facts/rotation";
 import { MediaAssetType, MediaEntityType } from "@/generated/prisma/enums";
 import { formatStage } from "@/lib/format";
 import type { MediaAssetDto } from "@/server/media/types";
@@ -32,6 +33,7 @@ import type {
   TournamentCardDto,
 } from "@/server/queries/types";
 import type { FixtureDto, FixtureFreshness } from "@/server/fixtures/types";
+import type { FactSummary } from "@/server/facts/types";
 
 const FEATURED_TOURNAMENTS_LIMIT = 6;
 const RECENT_FINALS_LIMIT = 6;
@@ -103,6 +105,12 @@ export type HomeFixtureData = {
   freshness: FixtureFreshness;
 };
 
+/** Serializable Discovery Vault hourly fact, or null if none is available. */
+export type HomeHourlyFact = {
+  fact: FactSummary;
+  nextRotationAt: string;
+} | null;
+
 export type HomeViewModel = {
   archiveStats: HomeArchiveStats;
   fixtures: HomeFixtureData | null;
@@ -112,6 +120,7 @@ export type HomeViewModel = {
   countries: HomeCountryHighlight[];
   playerRecords: HomePlayerRecord[];
   records: RecordLeaderboardDto[];
+  hourlyFact: HomeHourlyFact;
 };
 
 const EMPTY_STATS: HomeArchiveStats = {
@@ -298,6 +307,17 @@ async function getPlayerRecordsSection(): Promise<HomePlayerRecord[]> {
   }
 }
 
+async function getHourlyFactSection(): Promise<HomeHourlyFact> {
+  try {
+    const result = await getHourlyFact();
+    if (result === null) return null;
+    return { fact: result.fact, nextRotationAt: result.nextRotationAt.toISOString() };
+  } catch (error) {
+    console.error("[home] failed to load hourly fact", error);
+    return null;
+  }
+}
+
 async function getRecordsSection(): Promise<RecordLeaderboardDto[]> {
   try {
     const overview = await getRecordsOverview();
@@ -340,6 +360,7 @@ export async function getHomeViewModel(): Promise<HomeViewModel> {
     countries,
     playerRecords,
     records,
+    hourlyFact,
   ] = await Promise.all([
     getArchiveStatsSection(tournamentCards),
     getFixturesSection(),
@@ -348,6 +369,7 @@ export async function getHomeViewModel(): Promise<HomeViewModel> {
     getCountryHighlightsSection(),
     getPlayerRecordsSection(),
     getRecordsSection(),
+    getHourlyFactSection(),
   ]);
 
   return {
@@ -359,5 +381,6 @@ export async function getHomeViewModel(): Promise<HomeViewModel> {
     countries,
     playerRecords,
     records,
+    hourlyFact,
   };
 }

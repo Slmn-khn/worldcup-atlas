@@ -6,9 +6,13 @@ import VaultStripe from "@/components/vault/VaultStripe";
 import { siteConfig } from "@/lib/site";
 import { atlas, eyebrowSx } from "@/theme/tokens";
 
-const ARCHIVE_LINKS = siteConfig.navLinks.filter(({ href }) =>
-  ["/tournaments", "/matches", "/countries", "/players"].includes(href),
-);
+// Discoveries is footer-only (not in the top nav, to avoid crowding it).
+const ARCHIVE_LINKS = [
+  ...siteConfig.navLinks.filter(({ href }) =>
+    ["/tournaments", "/matches", "/countries", "/players"].includes(href),
+  ),
+  { label: "Discoveries", href: "/facts" },
+];
 const DATA_LINKS = siteConfig.navLinks.filter(({ href }) =>
   ["/records", "/explorer"].includes(href),
 );

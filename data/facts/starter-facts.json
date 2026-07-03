@@ -1,0 +1,781 @@
+[
+  {
+    "slug": "first-world-cup-1930",
+    "title": "The First World Cup Kicked Off in Uruguay",
+    "summary": "The inaugural FIFA World Cup was held in Uruguay in 1930, with the host nation going on to win the very first title.",
+    "category": "HISTORY",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1930,
+    "eraEndYear": 1930,
+    "readTimeMinutes": 2,
+    "tags": ["1930", "uruguay", "origins", "first-tournament"],
+    "contentBlocks": [
+      { "type": "heading", "text": "A tournament born in Montevideo" },
+      {
+        "type": "paragraph",
+        "text": "Uruguay hosted and won the first FIFA World Cup in 1930, beating Argentina 4-2 in the final at the newly built Estadio Centenario in Montevideo. Thirteen teams took part — mostly from the Americas, since the long sea voyage discouraged many European sides."
+      },
+      {
+        "type": "timeline",
+        "items": [
+          { "year": 1928, "label": "FIFA awards Uruguay the first World Cup", "description": "Chosen partly to mark the centenary of Uruguay's independence." },
+          { "year": 1930, "label": "Thirteen teams compete", "description": "Seven from South America, four from Europe, two from North America." },
+          { "year": 1930, "label": "Uruguay wins the final", "description": "Uruguay beats Argentina 4-2 to become the first World Cup champion." }
+        ]
+      },
+      { "type": "source_note", "text": "Tournament and match records cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "1930 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1930_FIFA_World_Cup",
+        "notes": "General tournament history, host selection, and final result."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1930 tournament, team, and match records used to cross-check the host and final result."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1930", "entityLabel": "1930 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "uruguay", "entityLabel": "Uruguay", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "argentina", "entityLabel": "Argentina", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "1950-decided-by-a-final-group-not-a-final",
+    "title": "1950 Had No Traditional Knockout Final",
+    "summary": "The 1950 World Cup crowned its champion with a deciding match in a final group stage — there was no single knockout final like every other tournament.",
+    "category": "FORMAT",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1950,
+    "eraEndYear": 1950,
+    "readTimeMinutes": 3,
+    "tags": ["1950", "format", "maracana", "uruguay", "brazil"],
+    "contentBlocks": [
+      { "type": "heading", "text": "A final group, not a final match" },
+      {
+        "type": "paragraph",
+        "text": "Unlike every other World Cup, 1950 decided the title with a four-team final round-robin group rather than a single knockout final. Brazil only needed a draw against Uruguay in the last match to win the tournament outright."
+      },
+      {
+        "type": "callout",
+        "variant": "cyan",
+        "text": "Because Uruguay won that last match 2-1, it happened to also be the match that decided the championship — which is why it is still remembered as \"the final\" even though the format was a group, not a knockout tie."
+      },
+      { "type": "source_note", "text": "Format details cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0) and FIFA's published tournament history." }
+    ],
+    "sources": [
+      {
+        "label": "1950 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup",
+        "notes": "Describes the final round-robin group format and the deciding Brazil–Uruguay match."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1950 stage labels confirm the deciding match was part of a final group, not a knockout final."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1950", "entityLabel": "1950 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "uruguay", "entityLabel": "Uruguay", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "brazil-five-world-cup-titles",
+    "title": "Brazil's Record Five World Cup Titles",
+    "summary": "Brazil has won the men's World Cup five times — 1958, 1962, 1970, 1994, and 2002 — more than any other nation.",
+    "category": "RECORD",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "DB_VERIFIED",
+    "eraStartYear": 1958,
+    "eraEndYear": 2002,
+    "readTimeMinutes": 2,
+    "tags": ["brazil", "titles", "record", "champions"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Five stars" },
+      {
+        "type": "paragraph",
+        "text": "Brazil is the most successful nation in men's World Cup history, with five titles across five different decades. The five stars above the national badge each represent one of these championships."
+      },
+      {
+        "type": "stat_grid",
+        "items": [
+          { "label": "1958", "value": "Sweden" },
+          { "label": "1962", "value": "Chile" },
+          { "label": "1970", "value": "Mexico" },
+          { "label": "1994", "value": "USA" },
+          { "label": "2002", "value": "Japan/S. Korea" }
+        ]
+      },
+      { "type": "source_note", "text": "Winner history verified directly against the WORLDCUP Nexus tournament archive." }
+    ],
+    "sources": [
+      {
+        "label": "WORLDCUP Nexus tournament archive",
+        "sourceType": "WORLDCUP_NEXUS_DB",
+        "notes": "Winning team recorded on the Tournament model for each of the five title years."
+      },
+      {
+        "label": "Brazil national football team — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+        "notes": "Lists all five World Cup titles and the host nations for each."
+      }
+    ],
+    "relations": [
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "brazil-never-missed-a-world-cup",
+    "title": "Brazil Is the Only Ever-Present Team",
+    "summary": "Brazil is the only men's national team to have qualified for and played in every FIFA World Cup since the first tournament in 1930.",
+    "category": "FUN_FACT",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1930,
+    "eraEndYear": 2022,
+    "readTimeMinutes": 2,
+    "tags": ["brazil", "qualification", "history"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Never absent" },
+      {
+        "type": "paragraph",
+        "text": "Every World Cup since 1930 has featured Brazil — the only nation with a perfect qualification record across the tournament's entire history. Every other founding nation has missed at least one edition."
+      },
+      {
+        "type": "timeline",
+        "items": [
+          { "year": 1930, "label": "Brazil plays the first ever World Cup" },
+          { "year": 1966, "label": "Brazil is eliminated in the group stage", "description": "Still present, even in a disappointing tournament." },
+          { "year": 2022, "label": "Brazil's most recent appearance", "description": "22 tournaments played, and counting." }
+        ]
+      },
+      { "type": "source_note", "text": "Participation cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "Team participation records for every tournament from 1930 onward confirm Brazil's unbroken run."
+      },
+      {
+        "label": "Brazil national football team — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Brazil_national_football_team",
+        "notes": "Notes Brazil as the only team to have played in every World Cup."
+      }
+    ],
+    "relations": [
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "miroslav-klose-alltime-top-scorer",
+    "title": "Miroslav Klose Is the World Cup's Top Scorer",
+    "summary": "Germany's Miroslav Klose scored 16 goals across four World Cups (2002–2014), the most of any player in men's tournament history.",
+    "category": "RECORD",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "DB_VERIFIED",
+    "eraStartYear": 2002,
+    "eraEndYear": 2014,
+    "readTimeMinutes": 2,
+    "tags": ["klose", "germany", "goals", "record"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Sixteen goals, four tournaments" },
+      {
+        "type": "paragraph",
+        "text": "Miroslav Klose overtook Ronaldo Nazário's mark of 15 World Cup goals during the 2014 tournament, finishing his career with 16 goals across the 2002, 2006, 2010, and 2014 editions — the all-time men's World Cup scoring record."
+      },
+      {
+        "type": "stat_grid",
+        "items": [
+          { "label": "Tournaments", "value": "4" },
+          { "label": "Career WC goals", "value": "16" },
+          { "label": "First WC goal", "value": "2002" }
+        ]
+      },
+      { "type": "related_links", "items": [ { "label": "Explore Germany's archive", "href": "/countries/germany" } ] },
+      {
+        "type": "quiz",
+        "question": "How many World Cup goals did Miroslav Klose score in his career?",
+        "options": ["11", "15", "16", "23"],
+        "correctIndex": 2,
+        "explanation": "Klose scored 16 goals across the 2002, 2006, 2010, and 2014 tournaments — one more than Ronaldo Nazário's previous record of 15."
+      },
+      { "type": "source_note", "text": "Goal totals verified directly against the WORLDCUP Nexus goals archive." }
+    ],
+    "sources": [
+      {
+        "label": "WORLDCUP Nexus goals archive",
+        "sourceType": "WORLDCUP_NEXUS_DB",
+        "notes": "Goal records across the 2002, 2006, 2010, and 2014 tournaments sum to 16."
+      },
+      {
+        "label": "Miroslav Klose — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Miroslav_Klose",
+        "notes": "Confirms the all-time World Cup scoring record of 16 goals."
+      }
+    ],
+    "relations": [
+      { "entityType": "PLAYER", "entitySlug": "miroslav-klose", "entityLabel": "Miroslav Klose", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "germany", "entityLabel": "Germany", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "messi-most-world-cup-appearances",
+    "title": "Messi Holds the World Cup Appearance Record",
+    "summary": "Lionel Messi has played more men's World Cup matches than anyone else, a record built across five tournaments from 2006 to 2022.",
+    "category": "PLAYER_COMPARISON",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "DB_VERIFIED",
+    "eraStartYear": 2006,
+    "eraEndYear": 2022,
+    "readTimeMinutes": 2,
+    "tags": ["messi", "argentina", "appearances", "record"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Five tournaments, unmatched minutes" },
+      {
+        "type": "paragraph",
+        "text": "Lionel Messi made his World Cup debut in 2006 and went on to captain Argentina to the title in 2022, playing more World Cup matches than any other man in the tournament's history along the way."
+      },
+      {
+        "type": "comparison",
+        "title": "World Cups played",
+        "items": [
+          { "label": "Lionel Messi", "value": "5 tournaments", "note": "2006, 2010, 2014, 2018, 2022" },
+          { "label": "Most other all-time greats", "value": "3–4 tournaments" }
+        ]
+      },
+      { "type": "source_note", "text": "Appearance counts cross-checked against the WORLDCUP Nexus squad and match archive." }
+    ],
+    "sources": [
+      {
+        "label": "WORLDCUP Nexus match archive",
+        "sourceType": "WORLDCUP_NEXUS_DB",
+        "notes": "Squad selections and match participation across all five of Messi's tournaments."
+      },
+      {
+        "label": "Lionel Messi — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Lionel_Messi",
+        "notes": "Confirms the record for most World Cup matches played."
+      }
+    ],
+    "relations": [
+      { "entityType": "COUNTRY", "entitySlug": "argentina", "entityLabel": "Argentina", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "france-1998-home-triumph",
+    "title": "France Won the World Cup on Home Soil in 1998",
+    "summary": "Hosting for the first time since 1938, France won its first World Cup title in 1998, beating Brazil 3-0 in the final in Saint-Denis.",
+    "category": "HOST",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1998,
+    "eraEndYear": 1998,
+    "readTimeMinutes": 2,
+    "tags": ["france", "1998", "host", "final"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Les Bleus at home" },
+      {
+        "type": "paragraph",
+        "text": "France hosted the 1998 World Cup and won its first title, beating defending champions Brazil 3-0 in the final at the Stade de France. Zinedine Zidane scored twice in the final."
+      },
+      { "type": "source_note", "text": "Final score and venue cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "1998 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1998_FIFA_World_Cup",
+        "notes": "Confirms host, final result, and scorers."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1998 final match record: France 3–0 Brazil."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1998", "entityLabel": "1998 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "france", "entityLabel": "France", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "spain-2010-first-title",
+    "title": "Spain's First World Cup Title Came in 2010",
+    "summary": "Spain won its only men's World Cup title in 2010, beating the Netherlands 1-0 after extra time in the final in Johannesburg.",
+    "category": "HISTORY",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 2010,
+    "eraEndYear": 2010,
+    "readTimeMinutes": 2,
+    "tags": ["spain", "2010", "first-title"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Tiki-taka's crowning moment" },
+      {
+        "type": "paragraph",
+        "text": "Spain won its first World Cup in 2010, beating the Netherlands 1-0 after extra time in the final. Andrés Iniesta scored the decisive goal in the 116th minute. It remains Spain's only men's World Cup title."
+      },
+      { "type": "source_note", "text": "Final score cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "2010 FIFA World Cup Final — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup_Final",
+        "notes": "Confirms final result, scorer, and extra time."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "2010 final match record: Spain 1–0 Netherlands (a.e.t.)."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "2010", "entityLabel": "2010 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "spain", "entityLabel": "Spain", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "germany-7-1-brazil-2014",
+    "title": "Germany 7-1 Brazil: A World Cup Semi-Final Shock",
+    "summary": "Germany thrashed host nation Brazil 7-1 in the 2014 World Cup semi-final, one of the most one-sided results in tournament history.",
+    "category": "ICONIC_MOMENT",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 2014,
+    "eraEndYear": 2014,
+    "readTimeMinutes": 3,
+    "tags": ["germany", "brazil", "2014", "semi-final"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Mineirazo" },
+      {
+        "type": "paragraph",
+        "text": "Playing in front of its own fans in Belo Horizonte, Brazil was stunned by Germany in the 2014 semi-final, conceding five goals in the first 29 minutes alone. Germany went on to win the tournament, beating Argentina in the final."
+      },
+      {
+        "type": "callout",
+        "variant": "gold",
+        "text": "Germany's 7 goals set a new record for the most goals scored by a team in a men's World Cup semi-final."
+      },
+      { "type": "source_note", "text": "Scoreline and match context cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "2014 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup",
+        "notes": "Semi-final result and tournament outcome."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "2014 semi-final match record: Germany 7–1 Brazil."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "2014", "entityLabel": "2014 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "germany", "entityLabel": "Germany", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "argentina-france-2022-final",
+    "title": "Argentina Beat France on Penalties in a 2022 Final for the Ages",
+    "summary": "Argentina won the 2022 World Cup on penalties after a 3-3 draw with France, capping Lionel Messi's career with his first World Cup title.",
+    "category": "FINAL",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 2022,
+    "eraEndYear": 2022,
+    "readTimeMinutes": 3,
+    "tags": ["argentina", "france", "2022", "final", "penalties"],
+    "contentBlocks": [
+      { "type": "heading", "text": "A final with everything" },
+      {
+        "type": "paragraph",
+        "text": "The 2022 final in Qatar finished 3-3 after extra time, with Kylian Mbappé scoring a hat-trick for France and Lionel Messi scoring twice for Argentina. Argentina won the resulting penalty shootout 4-2 to claim its third World Cup title."
+      },
+      {
+        "type": "comparison",
+        "title": "Final result",
+        "items": [
+          { "label": "Regulation + extra time", "value": "3-3" },
+          { "label": "Penalty shootout", "value": "Argentina 4-2 France" }
+        ]
+      },
+      {
+        "type": "quiz",
+        "question": "How did Argentina win the 2022 World Cup final?",
+        "options": [
+          "A 3-3 draw alone decided the title",
+          "A penalty shootout after a 3-3 draw",
+          "A 4-2 win in regulation",
+          "A golden goal in extra time"
+        ],
+        "correctIndex": 1,
+        "explanation": "The match finished 3-3 after extra time; Argentina then won the penalty shootout 4-2."
+      },
+      { "type": "source_note", "text": "Final result cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "2022 FIFA World Cup Final — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_Final",
+        "notes": "Confirms final score, scorers, and penalty shootout result."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "2022 final match and penalty shootout records."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "2022", "entityLabel": "2022 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "argentina", "entityLabel": "Argentina", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "france", "entityLabel": "France", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "world-cup-2026-first-48-team-tournament",
+    "title": "2026 Will Be the First 48-Team World Cup",
+    "summary": "The 2026 World Cup expands the tournament from 32 to 48 teams for the first time, the biggest format change since 1998.",
+    "category": "SCHEDULE_2026",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 2026,
+    "eraEndYear": 2026,
+    "readTimeMinutes": 2,
+    "tags": ["2026", "format", "expansion"],
+    "contentBlocks": [
+      { "type": "heading", "text": "32 becomes 48" },
+      {
+        "type": "paragraph",
+        "text": "The 2026 World Cup will feature 48 teams for the first time, up from 32 at every tournament since 1998. The expanded format uses 12 groups of four teams, with the top two from each group plus the eight best third-placed teams advancing to a new round of 32."
+      },
+      {
+        "type": "timeline",
+        "items": [
+          { "year": 1998, "label": "Format expands to 32 teams" },
+          { "year": 2026, "label": "Format expands to 48 teams", "description": "12 groups of four, plus a new round of 32." }
+        ]
+      },
+      { "type": "related_links", "items": [ { "label": "See the 2026 schedule", "href": "/schedule/2026" } ] },
+      {
+        "type": "quiz",
+        "question": "How many teams will compete in the 2026 World Cup?",
+        "options": ["32", "40", "48", "64"],
+        "correctIndex": 2,
+        "explanation": "2026 expands the field to 48 teams, up from 32 at every tournament since 1998."
+      },
+      { "type": "source_note", "text": "Format details from FIFA's published tournament regulations for the 2026 World Cup." }
+    ],
+    "sources": [
+      {
+        "label": "2026 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+        "notes": "Describes the expansion to 48 teams and the new group/knockout structure."
+      }
+    ],
+    "relations": [
+      { "entityType": "GENERIC", "entityLabel": "2026 FIFA World Cup", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "world-cup-2026-three-host-nations",
+    "title": "2026 Is the First World Cup Hosted by Three Nations",
+    "summary": "The 2026 World Cup is co-hosted by the United States, Canada, and Mexico, the first men's World Cup shared by three countries.",
+    "category": "HOST",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 2026,
+    "eraEndYear": 2026,
+    "readTimeMinutes": 2,
+    "tags": ["2026", "host", "usa", "canada", "mexico"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Three flags, one tournament" },
+      {
+        "type": "paragraph",
+        "text": "The United States, Canada, and Mexico are jointly hosting the 2026 World Cup, the first time a men's World Cup has been shared by three countries. Mexico becomes the first nation to host the men's tournament three times, after 1970 and 1986."
+      },
+      { "type": "related_links", "items": [ { "label": "See the 2026 schedule", "href": "/schedule/2026" } ] },
+      { "type": "source_note", "text": "Host details from FIFA's published 2026 World Cup hosting announcement." }
+    ],
+    "sources": [
+      {
+        "label": "2026 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+        "notes": "Confirms the three co-host nations and Mexico's third hosting."
+      }
+    ],
+    "relations": [
+      { "entityType": "GENERIC", "entityLabel": "2026 FIFA World Cup", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "penalty-shootouts-in-world-cup-finals",
+    "title": "Only Two World Cup Finals Have Gone to Penalties",
+    "summary": "In men's World Cup history, only the 1994 final (Brazil beat Italy) and the 2022 final (Argentina beat France) have been decided by a penalty shootout.",
+    "category": "PENALTY",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1994,
+    "eraEndYear": 2022,
+    "readTimeMinutes": 2,
+    "tags": ["penalties", "final", "1994", "2022"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Rare drama" },
+      {
+        "type": "paragraph",
+        "text": "Penalty shootouts have decided a men's World Cup final only twice: Brazil beat Italy 3-2 on penalties in 1994 after a scoreless draw, and Argentina beat France 4-2 on penalties in 2022 after a 3-3 draw."
+      },
+      {
+        "type": "comparison",
+        "title": "Finals decided by penalties",
+        "items": [
+          { "label": "1994", "value": "Brazil beat Italy 3-2" },
+          { "label": "2022", "value": "Argentina beat France 4-2" }
+        ]
+      },
+      { "type": "source_note", "text": "Shootout results cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "1994 FIFA World Cup Final — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1994_FIFA_World_Cup_Final",
+        "notes": "Confirms the scoreless draw and penalty shootout result."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "Penalty kick records for the 1994 and 2022 finals."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "2022", "entityLabel": "2022 FIFA World Cup", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "maradona-1986-tournament",
+    "title": "Maradona's 1986 World Cup",
+    "summary": "Diego Maradona led Argentina to the 1986 title, scoring the controversial 'Hand of God' goal and the celebrated 'Goal of the Century' in the same quarter-final.",
+    "category": "ICONIC_MOMENT",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1986,
+    "eraEndYear": 1986,
+    "readTimeMinutes": 3,
+    "tags": ["maradona", "argentina", "1986", "iconic"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Two goals, four minutes apart" },
+      {
+        "type": "paragraph",
+        "text": "In the 1986 quarter-final against England, Diego Maradona scored twice in the space of four minutes: first an illegal handball he later called the 'Hand of God', then a mazy 60-metre solo run voted the 'Goal of the Century'. Argentina went on to win the tournament."
+      },
+      {
+        "type": "callout",
+        "variant": "default",
+        "text": "Maradona's handball goal was not overturned because the referees did not see the infringement — goal-line and video review did not exist in 1986."
+      },
+      { "type": "related_links", "items": [ { "label": "Explore Argentina's archive", "href": "/countries/argentina" } ] },
+      { "type": "source_note", "text": "Match details cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "Diego Maradona — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Diego_Maradona",
+        "notes": "Describes both the 'Hand of God' and 'Goal of the Century' goals in the 1986 quarter-final."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1986 quarter-final match record: Argentina 2–1 England."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1986", "entityLabel": "1986 FIFA World Cup", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "argentina", "entityLabel": "Argentina", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "brazil-1970-first-team-to-three-titles",
+    "title": "Brazil 1970: The First Team to Win Three World Cups",
+    "summary": "Brazil's 1970 squad, built around Pelé, became the first team to win three World Cups — a feat that let Brazil keep the original Jules Rimet Trophy permanently.",
+    "category": "RECORD",
+    "difficulty": "FAN",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1970,
+    "eraEndYear": 1970,
+    "readTimeMinutes": 3,
+    "tags": ["brazil", "1970", "pele", "jules-rimet"],
+    "contentBlocks": [
+      { "type": "heading", "text": "Three titles, one trophy kept forever" },
+      {
+        "type": "paragraph",
+        "text": "Brazil's 1970 team — featuring Pelé, Jairzinho, Carlos Alberto, and Tostão — won the World Cup in Mexico, becoming the first nation to win the tournament three times (after 1958 and 1962). Under FIFA's rules at the time, that achievement let Brazil keep the original Jules Rimet Trophy permanently."
+      },
+      { "type": "source_note", "text": "Tournament history cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "1970 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1970_FIFA_World_Cup",
+        "notes": "Confirms Brazil's third title and the permanent award of the Jules Rimet Trophy."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1970 tournament and final match records."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1970", "entityLabel": "1970 FIFA World Cup", "relationType": "PRIMARY" },
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "MENTIONED" }
+    ]
+  },
+  {
+    "slug": "brazil-vs-argentina-title-count",
+    "title": "Brazil vs. Argentina: South America's Two Giants",
+    "summary": "Brazil and Argentina are South America's most successful World Cup nations, with five and three men's titles respectively.",
+    "category": "COUNTRY_COMPARISON",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "DB_VERIFIED",
+    "eraStartYear": 1930,
+    "eraEndYear": 2022,
+    "readTimeMinutes": 2,
+    "tags": ["brazil", "argentina", "titles", "rivalry"],
+    "contentBlocks": [
+      { "type": "heading", "text": "The continent's two heavyweights" },
+      {
+        "type": "paragraph",
+        "text": "No South American nations have won more World Cups than Brazil and Argentina. Brazil's five titles (1958, 1962, 1970, 1994, 2002) lead the way, with Argentina's three (1978, 1986, 2022) close behind."
+      },
+      {
+        "type": "comparison",
+        "title": "Men's World Cup titles",
+        "items": [
+          { "label": "Brazil", "value": "5 titles", "note": "1958, 1962, 1970, 1994, 2002" },
+          { "label": "Argentina", "value": "3 titles", "note": "1978, 1986, 2022" }
+        ]
+      },
+      { "type": "source_note", "text": "Title counts verified directly against the WORLDCUP Nexus tournament archive." }
+    ],
+    "sources": [
+      {
+        "label": "WORLDCUP Nexus tournament archive",
+        "sourceType": "WORLDCUP_NEXUS_DB",
+        "notes": "Winning team recorded on the Tournament model for each title year for both nations."
+      }
+    ],
+    "relations": [
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "COMPARISON" },
+      { "entityType": "COUNTRY", "entitySlug": "argentina", "entityLabel": "Argentina", "relationType": "COMPARISON" }
+    ]
+  },
+  {
+    "slug": "pele-youngest-world-cup-champion",
+    "title": "Pelé Won the World Cup at Just 17",
+    "summary": "Pelé became a World Cup champion in 1958 at 17 years old, still the youngest player to win the men's tournament.",
+    "category": "FUN_FACT",
+    "difficulty": "CASUAL",
+    "status": "PUBLISHED",
+    "verificationStatus": "SOURCE_VERIFIED",
+    "eraStartYear": 1958,
+    "eraEndYear": 1958,
+    "readTimeMinutes": 2,
+    "tags": ["pele", "brazil", "1958", "youngest"],
+    "contentBlocks": [
+      { "type": "heading", "text": "A teenager on the world stage" },
+      {
+        "type": "paragraph",
+        "text": "Pelé was 17 years old when Brazil won the 1958 World Cup, scoring twice in the final against Sweden. He remains the youngest player to win a men's World Cup."
+      },
+      { "type": "related_links", "items": [ { "label": "Explore Brazil's archive", "href": "/countries/brazil" } ] },
+      { "type": "source_note", "text": "Age and final match details cross-checked against the Fjelstul World Cup Database (CC-BY-SA 4.0)." }
+    ],
+    "sources": [
+      {
+        "label": "Pelé — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/Pel%C3%A9",
+        "notes": "Confirms Pelé's age and goals in the 1958 final."
+      },
+      {
+        "label": "Fjelstul World Cup Database",
+        "sourceType": "FJELSTUL",
+        "notes": "1958 final match record: Brazil 5–2 Sweden."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1958", "entityLabel": "1958 FIFA World Cup", "relationType": "MENTIONED" },
+      { "entityType": "COUNTRY", "entitySlug": "brazil", "entityLabel": "Brazil", "relationType": "PRIMARY" }
+    ]
+  },
+  {
+    "slug": "maracana-1950-attendance-disputed",
+    "title": "The Maracanã's 1950 Crowd — A Disputed Record",
+    "summary": "The 1950 decider between Brazil and Uruguay is often cited as the largest crowd ever at a football match, though the exact attendance figure is disputed.",
+    "category": "FUN_FACT",
+    "difficulty": "EXPERT",
+    "status": "NEEDS_REVIEW",
+    "verificationStatus": "NEEDS_REVIEW",
+    "eraStartYear": 1950,
+    "eraEndYear": 1950,
+    "readTimeMinutes": 2,
+    "tags": ["maracana", "1950", "attendance"],
+    "contentBlocks": [
+      { "type": "heading", "text": "How many people were really there?" },
+      {
+        "type": "paragraph",
+        "text": "The Brazil–Uruguay decider at the Maracanã in 1950 is widely cited as the largest crowd ever to watch a football match, with figures commonly quoted anywhere from about 173,000 to over 200,000. Because ticketing and counting methods from the era were inconsistent, historians have never settled on one official number — this fact is held back pending a source we're confident enough to publish as a specific figure."
+      }
+    ],
+    "sources": [
+      {
+        "label": "1950 FIFA World Cup — Wikipedia",
+        "sourceType": "OTHER",
+        "url": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup",
+        "notes": "Notes that attendance estimates for the deciding match vary widely and are disputed by historians."
+      }
+    ],
+    "relations": [
+      { "entityType": "TOURNAMENT", "entitySlug": "1950", "entityLabel": "1950 FIFA World Cup", "relationType": "MENTIONED" }
+    ]
+  }
+]

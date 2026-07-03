@@ -4,6 +4,10 @@
     {
       "path": "/api/cron/sync-2026-fixtures",
       "schedule": "0,30 * * * *"
+    },
+    {
+      "path": "/api/cron/generate-fact-rotations",
+      "schedule": "0 3 * * *"
     }
   ]
 }

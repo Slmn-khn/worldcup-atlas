@@ -11,6 +11,9 @@
     "data:verify": "tsx scripts/verify/verify-counts.ts",
     "fixtures:sync": "tsx scripts/fixtures/sync-2026-fixtures.ts",
     "media:seed": "tsx scripts/media/seed-curated-media.ts",
+    "facts:seed": "tsx scripts/facts/seed-starter-facts.ts",
+    "facts:generate": "tsx scripts/facts/generate-fact-candidates.ts",
+    "facts:draft-ai": "tsx scripts/facts/draft-ai-fact-candidates.ts",
     "data:verify:queries": "tsx scripts/verify/verify-page-queries.ts",
     "export:verify": "tsx scripts/verify/verify-export.ts",
     "public:verify": "tsx scripts/verify/verify-public-routes.ts",
@@ -35,6 +38,7 @@
     "test:unit": "vitest run"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
