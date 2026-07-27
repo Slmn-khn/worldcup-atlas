@@ -1,0 +1,64 @@
+{
+  "schema": "conflict/v1",
+  "conflicts": [
+    {
+      "id": "C-001",
+      "type": "source_disagreement",
+      "field": "final.shots",
+      "description": "Total shots in the final: NBC reported Spain led 20-2; CBS reported 20-3.",
+      "values": [
+        {
+          "source": "nbc-final",
+          "value": "20-2"
+        },
+        {
+          "source": "cbs-final",
+          "value": "20-3"
+        }
+      ],
+      "resolution": "unresolved; both recorded"
+    },
+    {
+      "id": "C-002",
+      "type": "data_gap",
+      "field": "matches.M88",
+      "description": "Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified.",
+      "resolution": "score left null"
+    },
+    {
+      "id": "C-003",
+      "type": "data_gap",
+      "field": "matches.GB-6",
+      "description": "Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source.",
+      "resolution": "score left null; Group B table not computed"
+    },
+    {
+      "id": "C-004",
+      "type": "data_gap",
+      "field": "teams",
+      "description": "47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources.",
+      "resolution": "placeholder entry with verification=unverified"
+    },
+    {
+      "id": "C-005",
+      "type": "naming_variant",
+      "field": "venues.nynj",
+      "description": "Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility.",
+      "resolution": "both names stored; fifa_name is canonical for FIFA-sourced records"
+    },
+    {
+      "id": "C-006",
+      "type": "data_gap",
+      "field": "matches (group stage)",
+      "description": "35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources.",
+      "resolution": "omitted rather than fabricated; see validation-report coverage metrics"
+    },
+    {
+      "id": "C-007",
+      "type": "data_gap",
+      "field": "matches.round_of_16",
+      "description": "Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL).",
+      "resolution": "winner recorded, score null"
+    }
+  ]
+}

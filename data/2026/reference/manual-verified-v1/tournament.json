@@ -1,0 +1,28 @@
+{
+  "id": "fifa-world-cup-2026",
+  "edition": 23,
+  "name": "FIFA World Cup 2026",
+  "hosts": [
+    "CAN",
+    "MEX",
+    "USA"
+  ],
+  "start_date": "2026-06-11",
+  "end_date": "2026-07-19",
+  "teams": 48,
+  "matches": 104,
+  "venues": 16,
+  "host_cities": 16,
+  "format": "12 groups of 4 → Round of 32 → Round of 16 → QF → SF → Final",
+  "champion": "ESP",
+  "runner_up": "ARG",
+  "third": "ENG",
+  "fourth": "FRA",
+  "total_attendance_reported": "~6,900,000",
+  "verification": "verified",
+  "sources": [
+    "fifa-final",
+    "goal-awards",
+    "pretournament"
+  ]
+}

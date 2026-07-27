@@ -1,0 +1,1497 @@
+{
+  "schema": "match/v1",
+  "official_match_count": 104,
+  "captured_match_count": 67,
+  "matches": [
+    {
+      "match_id": "GA-1",
+      "stage": "group",
+      "date": "2026-06-11",
+      "home": "MEX",
+      "away": "RSA",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "MEX",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GA-2",
+      "stage": "group",
+      "date": "2026-06-11",
+      "home": "KOR",
+      "away": "CZE",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "KOR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GA-3",
+      "stage": "group",
+      "date": "2026-06-18",
+      "home": "CZE",
+      "away": "RSA",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GA-4",
+      "stage": "group",
+      "date": "2026-06-18",
+      "home": "MEX",
+      "away": "KOR",
+      "score": {
+        "home": 1,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "MEX",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GA-5",
+      "stage": "group",
+      "date": "2026-06-24",
+      "home": "MEX",
+      "away": "CZE",
+      "score": {
+        "home": 3,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "MEX",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GA-6",
+      "stage": "group",
+      "date": "2026-06-24",
+      "home": "RSA",
+      "away": "KOR",
+      "score": {
+        "home": 1,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "RSA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-1",
+      "stage": "group",
+      "date": "2026-06-12",
+      "home": "CAN",
+      "away": "BIH",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-2",
+      "stage": "group",
+      "date": "2026-06-13",
+      "home": "SUI",
+      "away": "QAT",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-3",
+      "stage": "group",
+      "date": "2026-06-18",
+      "home": "SUI",
+      "away": "BIH",
+      "score": {
+        "home": 4,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "SUI",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-4",
+      "stage": "group",
+      "date": "2026-06-18",
+      "home": "CAN",
+      "away": "QAT",
+      "score": {
+        "home": 6,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "CAN",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-5",
+      "stage": "group",
+      "date": "2026-06-24",
+      "home": "SUI",
+      "away": "CAN",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "SUI",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GB-6",
+      "stage": "group",
+      "date": "2026-06-24",
+      "home": "BIH",
+      "away": "QAT",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": "Fixture confirmed; score truncated in reviewed source.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "GF-1",
+      "stage": "group",
+      "date": "2026-06-16",
+      "home": "FRA",
+      "away": "SEN",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GF-2",
+      "stage": "group",
+      "date": "2026-06-16",
+      "home": "NOR",
+      "away": "IRQ",
+      "score": {
+        "home": 4,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "NOR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GF-3",
+      "stage": "group",
+      "date": "2026-06-22",
+      "home": "FRA",
+      "away": "IRQ",
+      "score": {
+        "home": 3,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GF-4",
+      "stage": "group",
+      "date": "2026-06-22",
+      "home": "NOR",
+      "away": "SEN",
+      "score": {
+        "home": 3,
+        "away": 2,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "NOR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GF-5",
+      "stage": "group",
+      "date": "2026-06-26",
+      "home": "FRA",
+      "away": "NOR",
+      "score": {
+        "home": 4,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GF-6",
+      "stage": "group",
+      "date": "2026-06-26",
+      "home": "SEN",
+      "away": "IRQ",
+      "score": {
+        "home": 5,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "SEN",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GAR-1",
+      "stage": "group",
+      "date": "2026-06-16",
+      "home": "ARG",
+      "away": "ALG",
+      "score": {
+        "home": 3,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Messi hat-trick reported (fourfourtwo-scores).",
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GAR-2",
+      "stage": "group",
+      "date": "2026-06-16",
+      "home": "AUT",
+      "away": "JOR",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "AUT",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GAR-3",
+      "stage": "group",
+      "date": "2026-06-22",
+      "home": "ARG",
+      "away": "AUT",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GAR-4",
+      "stage": "group",
+      "date": "2026-06-22",
+      "home": "ALG",
+      "away": "JOR",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ALG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GAR-5",
+      "stage": "group",
+      "date": "2026-06-27",
+      "home": "ARG",
+      "away": "JOR",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GAR-6",
+      "stage": "group",
+      "date": "2026-06-27",
+      "home": "AUT",
+      "away": "ALG",
+      "score": {
+        "home": 3,
+        "away": 3,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-1",
+      "stage": "group",
+      "date": "2026-06-17",
+      "home": "POR",
+      "away": "COD",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-2",
+      "stage": "group",
+      "date": "2026-06-17",
+      "home": "UZB",
+      "away": "COL",
+      "score": {
+        "home": 1,
+        "away": 3,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "COL",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-3",
+      "stage": "group",
+      "date": "2026-06-23",
+      "home": "POR",
+      "away": "UZB",
+      "score": {
+        "home": 5,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "POR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-4",
+      "stage": "group",
+      "date": "2026-06-23",
+      "home": "COL",
+      "away": "COD",
+      "score": {
+        "home": 1,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "COL",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-5",
+      "stage": "group",
+      "date": "2026-06-27",
+      "home": "COL",
+      "away": "POR",
+      "score": {
+        "home": 0,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GP-6",
+      "stage": "group",
+      "date": "2026-06-27",
+      "home": "COD",
+      "away": "UZB",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "COD",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-groups"
+      ]
+    },
+    {
+      "match_id": "GX-1",
+      "stage": "group",
+      "date": null,
+      "home": "SWE",
+      "away": "TUN",
+      "score": {
+        "home": 5,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "SWE",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GX-2",
+      "stage": "group",
+      "date": null,
+      "home": "ESP",
+      "away": "CPV",
+      "score": {
+        "home": 0,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GX-3",
+      "stage": "group",
+      "date": null,
+      "home": "EGY",
+      "away": "BEL",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GX-4",
+      "stage": "group",
+      "date": null,
+      "home": "KSA",
+      "away": "URU",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "GX-5",
+      "stage": "group",
+      "date": null,
+      "home": "NZL",
+      "away": "IRN",
+      "score": {
+        "home": 2,
+        "away": 2,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "M73",
+      "stage": "round_of_32",
+      "date": "2026-06-28",
+      "home": "RSA",
+      "away": "CAN",
+      "score": {
+        "home": 0,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "CAN",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M74",
+      "stage": "round_of_32",
+      "date": "2026-06-29",
+      "home": "GER",
+      "away": "PAR",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": {
+          "home": 3,
+          "away": 4,
+          "winner": "PAR"
+        }
+      },
+      "winner": "PAR",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Germany's first ever World Cup penalty-shootout defeat (fourfourtwo-scores).",
+      "verification": "verified",
+      "sources": [
+        "espn-bracket",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "M75",
+      "stage": "round_of_32",
+      "date": "2026-06-29",
+      "home": "NED",
+      "away": "MAR",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": true,
+        "penalties": {
+          "home": 2,
+          "away": 3,
+          "winner": "MAR"
+        }
+      },
+      "winner": "MAR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "M76",
+      "stage": "round_of_32",
+      "date": "2026-06-29",
+      "home": "BRA",
+      "away": "JPN",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "BRA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M77",
+      "stage": "round_of_32",
+      "date": "2026-06-30",
+      "home": "FRA",
+      "away": "SWE",
+      "score": {
+        "home": 3,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M78",
+      "stage": "round_of_32",
+      "date": "2026-06-30",
+      "home": "CIV",
+      "away": "NOR",
+      "score": {
+        "home": 1,
+        "away": 2,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "NOR",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Haaland scored the winner.",
+      "verification": "verified",
+      "sources": [
+        "espn-bracket",
+        "fourfourtwo-scores"
+      ]
+    },
+    {
+      "match_id": "M79",
+      "stage": "round_of_32",
+      "date": "2026-06-30",
+      "home": "MEX",
+      "away": "ECU",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "MEX",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket",
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M80",
+      "stage": "round_of_32",
+      "date": "2026-07-01",
+      "home": "ENG",
+      "away": "COD",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": true,
+        "penalties": null
+      },
+      "winner": "ENG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M81",
+      "stage": "round_of_32",
+      "date": "2026-07-01",
+      "home": "USA",
+      "away": "BIH",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "USA",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M82",
+      "stage": "round_of_32",
+      "date": "2026-07-01",
+      "home": "BEL",
+      "away": "SEN",
+      "score": {
+        "home": 3,
+        "away": 2,
+        "extra_time": true,
+        "penalties": null
+      },
+      "winner": "BEL",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M83",
+      "stage": "round_of_32",
+      "date": "2026-07-02",
+      "home": "POR",
+      "away": "CRO",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "POR",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M84",
+      "stage": "round_of_32",
+      "date": "2026-07-02",
+      "home": "ESP",
+      "away": "AUT",
+      "score": {
+        "home": 3,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ESP",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M85",
+      "stage": "round_of_32",
+      "date": "2026-07-02",
+      "home": "SUI",
+      "away": "ALG",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "SUI",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Match number inferred from bracket position; score verified.",
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M86",
+      "stage": "round_of_32",
+      "date": "2026-07-03",
+      "home": "ARG",
+      "away": "CPV",
+      "score": {
+        "home": 3,
+        "away": 2,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "espn-bracket"
+      ]
+    },
+    {
+      "match_id": "M87",
+      "stage": "round_of_32",
+      "date": "2026-07-03",
+      "home": "AUS",
+      "away": "EGY",
+      "score": {
+        "home": 1,
+        "away": 1,
+        "extra_time": false,
+        "penalties": {
+          "home": 2,
+          "away": 4,
+          "winner": "EGY"
+        }
+      },
+      "winner": "EGY",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Match number inferred; Egypt advanced 4-2 on penalties.",
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M88",
+      "stage": "round_of_32",
+      "date": "2026-07-03",
+      "home": "COL",
+      "away": null,
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": null,
+      "venue_id": null,
+      "goals": [],
+      "notes": "Colombia advanced to the Round of 16; opponent and score not confirmed in reviewed sources. See conflicts.json C-002.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M89",
+      "stage": "round_of_16",
+      "date": "2026-07-04",
+      "home": "CAN",
+      "away": "MAR",
+      "score": {
+        "home": 0,
+        "away": 3,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "MAR",
+      "venue_id": "hou",
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M90",
+      "stage": "round_of_16",
+      "date": "2026-07-04",
+      "home": "PAR",
+      "away": "FRA",
+      "score": {
+        "home": 0,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": "phi",
+      "goals": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "FRA",
+          "minute": null,
+          "type": "penalty"
+        }
+      ],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M91",
+      "stage": "round_of_16",
+      "date": "2026-07-05",
+      "home": "BRA",
+      "away": "NOR",
+      "score": {
+        "home": 1,
+        "away": 2,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "NOR",
+      "venue_id": "nynj",
+      "goals": [
+        {
+          "player": "Erling Haaland",
+          "team": "NOR",
+          "minute": "79"
+        },
+        {
+          "player": "Erling Haaland",
+          "team": "NOR",
+          "minute": "90"
+        },
+        {
+          "player": "Neymar Jr",
+          "team": "BRA",
+          "minute": "90+10",
+          "type": "penalty"
+        }
+      ],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "fifa-r16-brano"
+      ]
+    },
+    {
+      "match_id": "M92",
+      "stage": "round_of_16",
+      "date": "2026-07-05",
+      "home": "MEX",
+      "away": "ENG",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ENG",
+      "venue_id": null,
+      "goals": [],
+      "notes": "England eliminated Mexico; final score not confirmed in reviewed sources.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M93",
+      "stage": "round_of_16",
+      "date": "2026-07-06",
+      "home": "POR",
+      "away": "ESP",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ESP",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Spain eliminated Portugal; final score not confirmed in reviewed sources.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M94",
+      "stage": "round_of_16",
+      "date": "2026-07-06",
+      "home": "USA",
+      "away": "BEL",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "BEL",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Belgium eliminated the USA; final score not confirmed in reviewed sources.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M95",
+      "stage": "round_of_16",
+      "date": "2026-07-07",
+      "home": "ARG",
+      "away": "EGY",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Argentina came from behind to beat Egypt; final score not confirmed.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M96",
+      "stage": "round_of_16",
+      "date": "2026-07-07",
+      "home": "SUI",
+      "away": "COL",
+      "score": {
+        "home": null,
+        "away": null,
+        "extra_time": false,
+        "penalties": {
+          "home": null,
+          "away": null,
+          "winner": "SUI"
+        }
+      },
+      "winner": "SUI",
+      "venue_id": null,
+      "goals": [],
+      "notes": "Switzerland won on penalties; scores not confirmed in reviewed sources.",
+      "verification": "unverified",
+      "sources": []
+    },
+    {
+      "match_id": "M97",
+      "stage": "quarterfinal",
+      "date": "2026-07-09",
+      "home": "FRA",
+      "away": "MAR",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "FRA",
+      "venue_id": "bos",
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M98",
+      "stage": "quarterfinal",
+      "date": "2026-07-10",
+      "home": "ESP",
+      "away": "BEL",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ESP",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M99",
+      "stage": "quarterfinal",
+      "date": "2026-07-11",
+      "home": "ENG",
+      "away": "NOR",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": true,
+        "penalties": null
+      },
+      "winner": "ENG",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket"
+      ]
+    },
+    {
+      "match_id": "M100",
+      "stage": "quarterfinal",
+      "date": "2026-07-11",
+      "home": "ARG",
+      "away": "SUI",
+      "score": {
+        "home": 3,
+        "away": 1,
+        "extra_time": true,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": "kc",
+      "goals": [
+        {
+          "player": "Alexis Mac Allister",
+          "team": "ARG",
+          "minute": "10"
+        },
+        {
+          "player": "Dan Ndoye",
+          "team": "SUI",
+          "minute": "67"
+        },
+        {
+          "player": "Julián Álvarez",
+          "team": "ARG",
+          "minute": "112"
+        },
+        {
+          "player": "Lautaro Martínez",
+          "team": "ARG",
+          "minute": "120+1"
+        }
+      ],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "cbssports-bracket",
+        "olympics-qf"
+      ]
+    },
+    {
+      "match_id": "M101",
+      "stage": "semifinal",
+      "date": "2026-07-14",
+      "home": "ESP",
+      "away": "FRA",
+      "score": {
+        "home": 2,
+        "away": 0,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ESP",
+      "venue_id": null,
+      "goals": [],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-semis"
+      ]
+    },
+    {
+      "match_id": "M102",
+      "stage": "semifinal",
+      "date": "2026-07-15",
+      "home": "ARG",
+      "away": "ENG",
+      "score": {
+        "home": 2,
+        "away": 1,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ARG",
+      "venue_id": "atl",
+      "goals": [],
+      "notes": "Argentina scored twice late to overturn England's lead.",
+      "verification": "verified",
+      "sources": [
+        "yahoo-semis"
+      ]
+    },
+    {
+      "match_id": "M103",
+      "stage": "third_place",
+      "date": "2026-07-18",
+      "home": "ENG",
+      "away": "FRA",
+      "score": {
+        "home": 6,
+        "away": 4,
+        "extra_time": false,
+        "penalties": null
+      },
+      "winner": "ENG",
+      "venue_id": "mia",
+      "goals": [
+        {
+          "player": "Bukayo Saka",
+          "team": "ENG",
+          "minute": null,
+          "note": "hat-trick"
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "ENG",
+          "minute": "90+",
+          "note": "stoppage-time goal"
+        },
+        {
+          "player": "Kylian Mbappé",
+          "team": "FRA",
+          "minute": null,
+          "note": "brace; became World Cup all-time top scorer (22)"
+        }
+      ],
+      "notes": null,
+      "verification": "verified",
+      "sources": [
+        "yahoo-semis",
+        "aljazeera-awards"
+      ]
+    },
+    {
+      "match_id": "M104",
+      "stage": "final",
+      "date": "2026-07-19",
+      "home": "ESP",
+      "away": "ARG",
+      "score": {
+        "home": 1,
+        "away": 0,
+        "extra_time": true,
+        "penalties": null
+      },
+      "winner": "ESP",
+      "venue_id": "nynj",
+      "goals": [
+        {
+          "player": "Ferran Torres",
+          "team": "ESP",
+          "minute": "106"
+        }
+      ],
+      "notes": "Enzo Fernández (ARG) sent off on a second yellow at 90'+3; Argentina played all of extra time with 10 men. Emiliano Martínez made 12 saves, the most ever recorded in a World Cup final. Attendance reported as over 80,000.",
+      "verification": "verified",
+      "sources": [
+        "fifa-final",
+        "cbs-final",
+        "nbc-final"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.164Z",
+  "records": [
+    {
+      "name": "Argentina",
+      "slug": "argentina",
+      "code": "AR",
+      "fifaCode": "ARG",
+      "flagCode": "ar",
+      "groupName": "Group J",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Austria",
+      "slug": "austria",
+      "code": "AT",
+      "fifaCode": "AUT",
+      "flagCode": "at",
+      "groupName": "Group J",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Australia",
+      "slug": "australia",
+      "code": "AU",
+      "fifaCode": "AUS",
+      "flagCode": "au",
+      "groupName": "Group D",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "slug": "bosnia-and-herzegovina",
+      "code": "BA",
+      "fifaCode": "BIH",
+      "flagCode": "ba",
+      "groupName": "Group B",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Belgium",
+      "slug": "belgium",
+      "code": "BE",
+      "fifaCode": "BEL",
+      "flagCode": "be",
+      "groupName": "Group G",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Brazil",
+      "slug": "brazil",
+      "code": "BR",
+      "fifaCode": "BRA",
+      "flagCode": "br",
+      "groupName": "Group C",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Canada",
+      "slug": "canada",
+      "code": "CA",
+      "fifaCode": "CAN",
+      "flagCode": "ca",
+      "groupName": "Group B",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "DR Congo",
+      "slug": "dr-congo",
+      "code": "CD",
+      "fifaCode": "COD",
+      "flagCode": "cd",
+      "groupName": "Group K",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Switzerland",
+      "slug": "switzerland",
+      "code": "CH",
+      "fifaCode": "SUI",
+      "flagCode": "ch",
+      "groupName": "Group B",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Côte d'Ivoire",
+      "slug": "cote-d-ivoire",
+      "code": "CI",
+      "fifaCode": "CIV",
+      "flagCode": "ci",
+      "groupName": "Group E",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Colombia",
+      "slug": "colombia",
+      "code": "CO",
+      "fifaCode": "COL",
+      "flagCode": "co",
+      "groupName": "Group K",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Cape Verde",
+      "slug": "cape-verde",
+      "code": "CV",
+      "fifaCode": "CPV",
+      "flagCode": "cv",
+      "groupName": "Group H",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Curaçao",
+      "slug": "curacao",
+      "code": "CW",
+      "fifaCode": "CUW",
+      "flagCode": "cw",
+      "groupName": "Group E",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Czechia",
+      "slug": "czechia",
+      "code": "CZ",
+      "fifaCode": "CZE",
+      "flagCode": "cz",
+      "groupName": "Group A",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Germany",
+      "slug": "germany",
+      "code": "DE",
+      "fifaCode": "GER",
+      "flagCode": "de",
+      "groupName": "Group E",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Algeria",
+      "slug": "algeria",
+      "code": "DZ",
+      "fifaCode": "ALG",
+      "flagCode": "dz",
+      "groupName": "Group J",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Ecuador",
+      "slug": "ecuador",
+      "code": "EC",
+      "fifaCode": "ECU",
+      "flagCode": "ec",
+      "groupName": "Group E",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Egypt",
+      "slug": "egypt",
+      "code": "EG",
+      "fifaCode": "EGY",
+      "flagCode": "eg",
+      "groupName": "Group G",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Spain",
+      "slug": "spain",
+      "code": "ES",
+      "fifaCode": "ESP",
+      "flagCode": "es",
+      "groupName": "Group H",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "France",
+      "slug": "france",
+      "code": "FR",
+      "fifaCode": "FRA",
+      "flagCode": "fr",
+      "groupName": "Group I",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "England",
+      "slug": "england",
+      "code": "ENG",
+      "fifaCode": "ENG",
+      "flagCode": "gb-eng",
+      "groupName": "Group L",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Scotland",
+      "slug": "scotland",
+      "code": "SCO",
+      "fifaCode": "SCO",
+      "flagCode": "gb-sct",
+      "groupName": "Group C",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Ghana",
+      "slug": "ghana",
+      "code": "GH",
+      "fifaCode": "GHA",
+      "flagCode": "gh",
+      "groupName": "Group L",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Croatia",
+      "slug": "croatia",
+      "code": "HR",
+      "fifaCode": "CRO",
+      "flagCode": "hr",
+      "groupName": "Group L",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Haiti",
+      "slug": "haiti",
+      "code": "HT",
+      "fifaCode": "HAI",
+      "flagCode": "ht",
+      "groupName": "Group C",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Iraq",
+      "slug": "iraq",
+      "code": "IQ",
+      "fifaCode": "IRQ",
+      "flagCode": "iq",
+      "groupName": "Group I",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Iran",
+      "slug": "iran",
+      "code": "IR",
+      "fifaCode": "IRN",
+      "flagCode": "ir",
+      "groupName": "Group G",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Jordan",
+      "slug": "jordan",
+      "code": "JO",
+      "fifaCode": "JOR",
+      "flagCode": "jo",
+      "groupName": "Group J",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Japan",
+      "slug": "japan",
+      "code": "JP",
+      "fifaCode": "JPN",
+      "flagCode": "jp",
+      "groupName": "Group F",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Korea Republic",
+      "slug": "korea-republic",
+      "code": "KR",
+      "fifaCode": "KOR",
+      "flagCode": "kr",
+      "groupName": "Group A",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Morocco",
+      "slug": "morocco",
+      "code": "MA",
+      "fifaCode": "MAR",
+      "flagCode": "ma",
+      "groupName": "Group C",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Mexico",
+      "slug": "mexico",
+      "code": "MX",
+      "fifaCode": "MEX",
+      "flagCode": "mx",
+      "groupName": "Group A",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Netherlands",
+      "slug": "netherlands",
+      "code": "NL",
+      "fifaCode": "NED",
+      "flagCode": "nl",
+      "groupName": "Group F",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Norway",
+      "slug": "norway",
+      "code": "NO",
+      "fifaCode": "NOR",
+      "flagCode": "no",
+      "groupName": "Group I",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "New Zealand",
+      "slug": "new-zealand",
+      "code": "NZ",
+      "fifaCode": "NZL",
+      "flagCode": "nz",
+      "groupName": "Group G",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Panama",
+      "slug": "panama",
+      "code": "PA",
+      "fifaCode": "PAN",
+      "flagCode": "pa",
+      "groupName": "Group L",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Portugal",
+      "slug": "portugal",
+      "code": "PT",
+      "fifaCode": "POR",
+      "flagCode": "pt",
+      "groupName": "Group K",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Paraguay",
+      "slug": "paraguay",
+      "code": "PY",
+      "fifaCode": "PAR",
+      "flagCode": "py",
+      "groupName": "Group D",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Qatar",
+      "slug": "qatar",
+      "code": "QA",
+      "fifaCode": "QAT",
+      "flagCode": "qa",
+      "groupName": "Group B",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Saudi Arabia",
+      "slug": "saudi-arabia",
+      "code": "SA",
+      "fifaCode": "KSA",
+      "flagCode": "sa",
+      "groupName": "Group H",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Sweden",
+      "slug": "sweden",
+      "code": "SE",
+      "fifaCode": "SWE",
+      "flagCode": "se",
+      "groupName": "Group F",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Senegal",
+      "slug": "senegal",
+      "code": "SN",
+      "fifaCode": "SEN",
+      "flagCode": "sn",
+      "groupName": "Group I",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Tunisia",
+      "slug": "tunisia",
+      "code": "TN",
+      "fifaCode": "TUN",
+      "flagCode": "tn",
+      "groupName": "Group F",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Turkey",
+      "slug": "turkey",
+      "code": "TR",
+      "fifaCode": "TUR",
+      "flagCode": "tr",
+      "groupName": "Group D",
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "United States",
+      "slug": "united-states",
+      "code": "US",
+      "fifaCode": "USA",
+      "flagCode": "us",
+      "groupName": "Group D",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Uruguay",
+      "slug": "uruguay",
+      "code": "UY",
+      "fifaCode": "URU",
+      "flagCode": "uy",
+      "groupName": "Group H",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Uzbekistan",
+      "slug": "uzbekistan",
+      "code": "UZ",
+      "fifaCode": "UZB",
+      "flagCode": "uz",
+      "groupName": "Group K",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "South Africa",
+      "slug": "south-africa",
+      "code": "ZA",
+      "fifaCode": "RSA",
+      "flagCode": "za",
+      "groupName": "Group A",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "IC Path 1 Winner",
+      "slug": "ic-path-1-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group K",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "name": "IC Path 2 Winner",
+      "slug": "ic-path-2-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group I",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "name": "UEFA Path A Winner",
+      "slug": "uefa-path-a-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group B",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "name": "UEFA Path B Winner",
+      "slug": "uefa-path-b-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group F",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "name": "UEFA Path C Winner",
+      "slug": "uefa-path-c-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group D",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "name": "UEFA Path D Winner",
+      "slug": "uefa-path-d-winner",
+      "code": "TBD",
+      "fifaCode": "TBD",
+      "flagCode": null,
+      "groupName": "Group A",
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    }
+  ]
+}

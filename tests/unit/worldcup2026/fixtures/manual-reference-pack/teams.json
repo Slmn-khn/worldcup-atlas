@@ -1,0 +1,10 @@
+{
+  "schema": "team/v1",
+  "teams": [
+    { "code": "ESP", "name": "Spain", "verification": "verified" },
+    { "code": "ARG", "name": "Argentina", "verification": "verified" },
+    { "code": "MEX", "name": "Mexico", "verification": "verified" },
+    { "code": "RSA", "name": "South Africa", "verification": "reported" },
+    { "code": null, "name": null, "verification": "unverified", "note": "unconfirmed slot" }
+  ]
+}

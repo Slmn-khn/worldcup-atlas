@@ -1,0 +1,398 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.154Z",
+  "stages": [
+    {
+      "stage": "ROUND_OF_32",
+      "matches": [
+        {
+          "matchNumber": 73,
+          "homeTeamName": "South Africa",
+          "awayTeamName": "Canada",
+          "homeScore": 0,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Canada",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 74,
+          "homeTeamName": "Germany",
+          "awayTeamName": "Paraguay",
+          "homeScore": 1,
+          "awayScore": 1,
+          "homePenaltyScore": 3,
+          "awayPenaltyScore": 4,
+          "winnerTeamName": "Paraguay",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 75,
+          "homeTeamName": "Netherlands",
+          "awayTeamName": "Morocco",
+          "homeScore": 1,
+          "awayScore": 1,
+          "homePenaltyScore": 2,
+          "awayPenaltyScore": 3,
+          "winnerTeamName": "Morocco",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 76,
+          "homeTeamName": "Brazil",
+          "awayTeamName": "Japan",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Brazil",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 77,
+          "homeTeamName": "France",
+          "awayTeamName": "Sweden",
+          "homeScore": 3,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "France",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 78,
+          "homeTeamName": "Côte d'Ivoire",
+          "awayTeamName": "Norway",
+          "homeScore": 1,
+          "awayScore": 2,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Norway",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 79,
+          "homeTeamName": "Mexico",
+          "awayTeamName": "Ecuador",
+          "homeScore": 2,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Mexico",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 80,
+          "homeTeamName": "England",
+          "awayTeamName": "DR Congo",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "England",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 81,
+          "homeTeamName": "United States",
+          "awayTeamName": "Bosnia and Herzegovina",
+          "homeScore": 2,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "United States",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 82,
+          "homeTeamName": "Belgium",
+          "awayTeamName": "Senegal",
+          "homeScore": 3,
+          "awayScore": 2,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Belgium",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 83,
+          "homeTeamName": "Portugal",
+          "awayTeamName": "Croatia",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Portugal",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 84,
+          "homeTeamName": "Spain",
+          "awayTeamName": "Austria",
+          "homeScore": 3,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Spain",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 85,
+          "homeTeamName": "Switzerland",
+          "awayTeamName": "Algeria",
+          "homeScore": 2,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Switzerland",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 86,
+          "homeTeamName": "Argentina",
+          "awayTeamName": "Cape Verde",
+          "homeScore": 3,
+          "awayScore": 2,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Argentina",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 87,
+          "homeTeamName": "Colombia",
+          "awayTeamName": "Ghana",
+          "homeScore": 1,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Colombia",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 88,
+          "homeTeamName": "Colombia",
+          "awayTeamName": null,
+          "homeScore": null,
+          "awayScore": null,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": null,
+          "verificationStatus": "INCOMPLETE"
+        },
+        {
+          "matchNumber": null,
+          "homeTeamName": "Australia",
+          "awayTeamName": "Egypt",
+          "homeScore": 1,
+          "awayScore": 1,
+          "homePenaltyScore": 2,
+          "awayPenaltyScore": 4,
+          "winnerTeamName": "Egypt",
+          "verificationStatus": "CONFLICTED"
+        }
+      ]
+    },
+    {
+      "stage": "ROUND_OF_16",
+      "matches": [
+        {
+          "matchNumber": 91,
+          "homeTeamName": "Brazil",
+          "awayTeamName": "Norway",
+          "homeScore": 1,
+          "awayScore": 2,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Norway",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 92,
+          "homeTeamName": "Mexico",
+          "awayTeamName": "England",
+          "homeScore": 2,
+          "awayScore": 3,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "England",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 93,
+          "homeTeamName": "Portugal",
+          "awayTeamName": "Spain",
+          "homeScore": 0,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Spain",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 94,
+          "homeTeamName": "United States",
+          "awayTeamName": "Belgium",
+          "homeScore": 1,
+          "awayScore": 4,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Belgium",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 95,
+          "homeTeamName": "Argentina",
+          "awayTeamName": "Egypt",
+          "homeScore": 3,
+          "awayScore": 2,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Argentina",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 96,
+          "homeTeamName": "Switzerland",
+          "awayTeamName": "Colombia",
+          "homeScore": 0,
+          "awayScore": 0,
+          "homePenaltyScore": 4,
+          "awayPenaltyScore": 3,
+          "winnerTeamName": "Switzerland",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": null,
+          "homeTeamName": "Canada",
+          "awayTeamName": "Morocco",
+          "homeScore": 0,
+          "awayScore": 3,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Morocco",
+          "verificationStatus": "CONFLICTED"
+        },
+        {
+          "matchNumber": null,
+          "homeTeamName": "Paraguay",
+          "awayTeamName": "France",
+          "homeScore": 0,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "France",
+          "verificationStatus": "CONFLICTED"
+        }
+      ]
+    },
+    {
+      "stage": "QUARTER_FINAL",
+      "matches": [
+        {
+          "matchNumber": 97,
+          "homeTeamName": "France",
+          "awayTeamName": "Morocco",
+          "homeScore": 2,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "France",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 98,
+          "homeTeamName": "Spain",
+          "awayTeamName": "Belgium",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Spain",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 99,
+          "homeTeamName": "England",
+          "awayTeamName": "Norway",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "England",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 100,
+          "homeTeamName": "Argentina",
+          "awayTeamName": "Switzerland",
+          "homeScore": 3,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Argentina",
+          "verificationStatus": "READY"
+        }
+      ]
+    },
+    {
+      "stage": "SEMI_FINAL",
+      "matches": [
+        {
+          "matchNumber": 101,
+          "homeTeamName": "Spain",
+          "awayTeamName": "France",
+          "homeScore": 2,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Spain",
+          "verificationStatus": "READY"
+        },
+        {
+          "matchNumber": 102,
+          "homeTeamName": "Argentina",
+          "awayTeamName": "England",
+          "homeScore": 2,
+          "awayScore": 1,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Argentina",
+          "verificationStatus": "READY"
+        }
+      ]
+    },
+    {
+      "stage": "THIRD_PLACE",
+      "matches": [
+        {
+          "matchNumber": 103,
+          "homeTeamName": "England",
+          "awayTeamName": "France",
+          "homeScore": 6,
+          "awayScore": 4,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "England",
+          "verificationStatus": "READY"
+        }
+      ]
+    },
+    {
+      "stage": "FINAL",
+      "matches": [
+        {
+          "matchNumber": 104,
+          "homeTeamName": "Spain",
+          "awayTeamName": "Argentina",
+          "homeScore": 1,
+          "awayScore": 0,
+          "homePenaltyScore": null,
+          "awayPenaltyScore": null,
+          "winnerTeamName": "Spain",
+          "verificationStatus": "READY"
+        }
+      ]
+    }
+  ]
+}

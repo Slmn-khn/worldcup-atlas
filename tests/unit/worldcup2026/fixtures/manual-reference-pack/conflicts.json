@@ -1,0 +1,9 @@
+{
+  "schema": "conflict/v1",
+  "conflicts": [
+    { "id": "C-001", "type": "source_disagreement", "field": "final.shots",
+      "description": "Shots disputed.", "values": [ { "source": "a", "value": "20-2" }, { "source": "b", "value": "20-3" } ],
+      "resolution": "unresolved; both recorded" },
+    { "id": "C-004", "type": "data_gap", "field": "teams", "description": "48th participant unconfirmed." }
+  ]
+}

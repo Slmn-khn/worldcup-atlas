@@ -1,0 +1,16 @@
+{
+  "schema": "match/v1",
+  "official_match_count": 104,
+  "captured_match_count": 3,
+  "matches": [
+    { "match_id": "GA-1", "stage": "group", "date": "2026-06-11", "home": "MEX", "away": "RSA",
+      "score": { "home": 2, "away": 0, "extra_time": false, "penalties": null },
+      "winner": "MEX", "venue_id": null, "verification": "verified", "sources": ["s1"] },
+    { "match_id": "GA-2", "stage": "group", "date": "2026-06-18", "home": "MEX", "away": "RSA",
+      "score": { "home": null, "away": null, "extra_time": false, "penalties": null },
+      "winner": null, "venue_id": null, "verification": "unverified" },
+    { "match_id": "M104", "stage": "final", "date": "2026-07-19", "home": "ESP", "away": "ARG",
+      "score": { "home": 1, "away": 0, "extra_time": true, "penalties": null },
+      "winner": "ESP", "venue_id": "nynj", "verification": "verified", "sources": ["fifa-final"] }
+  ]
+}

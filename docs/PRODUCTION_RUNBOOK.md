@@ -164,3 +164,45 @@ Watch for the first days after launch:
 - **CSP Report-Only violations** (browser consoles / reporting endpoint
   if configured later): after 1–2 clean weeks, plan the switch to an
   enforced CSP (hardening plan P2.1).
+
+## 11. 2026 archive data steward (Phase 1 — local only)
+
+The 2026 data steward pipeline (`docs/2026_DATA_STEWARD_AGENT.md`) is **not**
+part of any deployment. It runs locally, needs no service credentials, and
+never writes to the production database:
+
+```bash
+pnpm data:2026:collect      # fetch approved source snapshots (internet)
+pnpm data:2026:candidates   # extract per-source candidates
+pnpm data:2026:manual-pack  # inspect the human-authenticated reference pack (offline)
+pnpm data:2026:full-check   # normalize + validate (offline, CI-safe)
+pnpm data:2026:mominul:inspect  # read-only summary of the Mominul candidate provider
+pnpm data:2026:bustami:inspect  # read-only summary of the Bustami EFI candidate provider
+```
+
+The manual reference pack (`data/2026/reference/manual-verified-v1/`) is
+committed, human-curated data: it is read during normalize/validate, hashed
+into the reports, and never fetched by the collector. Its
+`manifest.importAllowed` must remain `false`; importing anything still
+requires the human-written `data/2026/approved/approval.json` gate.
+
+Operational notes:
+
+- Do NOT wire the collect step into CI — collection depends on external
+  endpoints and is allowed to partially fail (failures are recorded in the
+  snapshot sidecars and the coverage report).
+- `data/2026/raw/` and `data/2026/candidates/` are git-ignored working data;
+  the normalized/validation/report outputs are small, curated, committable
+  (except `data/2026/normalized/mominul/` and `data/2026/normalized/bustami/`
+  — large, regenerable enrichment output, also git-ignored).
+- Two **candidate enrichment providers** are registered
+  (`mominul_2026_dataset`, `bustami_fifa_efi_2026`). Their output is
+  candidate/normalized/report files only: nothing is imported, nothing is
+  rendered publicly, and the manual verified reference pack remains
+  authoritative. The Bustami EFI data additionally carries a standing
+  legal/usage block (`RESEARCH_ONLY_UNTIL_LICENSE_REVIEW`) — do not use it
+  outside internal research/analytics until a license review clears it.
+- Importing 2026 archive data into production is a **future phase** and is
+  gated on a human-written `data/2026/approved/approval.json` — see
+  `data/2026/approved/README.md`. A report saying "NOT READY FOR IMPORT"
+  blocks import.

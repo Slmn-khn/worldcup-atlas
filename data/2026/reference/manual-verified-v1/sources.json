@@ -1,0 +1,146 @@
+{
+  "schema": "source/v1",
+  "retrieved": "2026-07-21T00:00:00+00:00",
+  "sources": [
+    {
+      "id": "fifa-final",
+      "publisher": "FIFA.com",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/final",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "final",
+        "awards",
+        "venue naming"
+      ]
+    },
+    {
+      "id": "cbs-final",
+      "publisher": "CBS News",
+      "url": "https://www.cbsnews.com/news/2026-fifa-world-cup-final-spain-argentina-sunday/",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "final match detail",
+        "red card",
+        "saves"
+      ]
+    },
+    {
+      "id": "nbc-final",
+      "publisher": "NBC New York",
+      "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "final",
+        "history context"
+      ]
+    },
+    {
+      "id": "cbssports-bracket",
+      "publisher": "CBS Sports",
+      "url": "https://www.cbssports.com/soccer/news/2026-fifa-world-cup-bracket-round-of-32-results-round-of-16-matchups-final/",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "quarterfinals",
+        "round of 32 partial"
+      ]
+    },
+    {
+      "id": "yahoo-semis",
+      "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/soccer/article/world-cup-semifinals-bracket-full-schedule-matchups-and-path-to-the-final-164942403.html",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "semifinals",
+        "third place"
+      ]
+    },
+    {
+      "id": "espn-bracket",
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/soccer/bracket",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "round of 32 match numbers and scores"
+      ]
+    },
+    {
+      "id": "olympics-qf",
+      "publisher": "Olympics.com",
+      "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-bracket-semi-finals-full-schedule-live-updates",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "Argentina v Switzerland scorers"
+      ]
+    },
+    {
+      "id": "fifa-r16-brano",
+      "publisher": "FIFA.com Match Centre",
+      "url": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021532",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "R16 Brazil v Norway full detail"
+      ]
+    },
+    {
+      "id": "yahoo-groups",
+      "publisher": "Yahoo Sports",
+      "url": "https://sports.yahoo.com/soccer/article/2026-world-cup-results-standings-and-schedule-live-scores-group-stage-updates-and-how-to-watch-050724193.html",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "group stage results (partial)"
+      ]
+    },
+    {
+      "id": "fourfourtwo-scores",
+      "publisher": "FourFourTwo",
+      "url": "https://www.fourfourtwo.com/competition/all-of-the-world-cup-scores-so-far-at-the-2026-tournament",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "group stage results (partial)",
+        "R32 detail"
+      ]
+    },
+    {
+      "id": "nbcsports-awards",
+      "publisher": "NBC Sports",
+      "url": "https://www.nbcsports.com/soccer/news/2026-world-cup-award-winners-golden-boot-golden-ball-best-young-player-golden-glove",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "awards",
+        "top scorers"
+      ]
+    },
+    {
+      "id": "goal-awards",
+      "publisher": "Goal.com",
+      "url": "https://www.goal.com/en/lists/rodri-wins-golden-ball-kylian-mbappe-claims-golden-boot-as-fifa-announces-2026-world-cup-awards/blt4e6ee529fa2610b8",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "awards",
+        "attendance"
+      ]
+    },
+    {
+      "id": "aljazeera-awards",
+      "publisher": "Al Jazeera",
+      "url": "https://www.aljazeera.com/sports/2026/7/20/mbappe-takes-home-second-golden-boot-spain-sweeps-world-cup-awards",
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "awards detail",
+        "clean sheet records"
+      ]
+    },
+    {
+      "id": "pretournament",
+      "publisher": "training-knowledge (pre-Feb 2026, stable)",
+      "url": null,
+      "retrieved": "2026-07-21T00:00:00+00:00",
+      "scope": [
+        "venues",
+        "hosts",
+        "format",
+        "most qualified teams"
+      ]
+    }
+  ]
+}

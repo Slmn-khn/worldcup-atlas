@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.165Z",
+  "records": [
+    {
+      "name": "AT&T Stadium",
+      "slug": "at-t-stadium",
+      "cityName": "Arlington, Texas",
+      "countryName": "USA",
+      "capacity": 80000,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "BC Place",
+      "slug": "bc-place",
+      "cityName": "Vancouver, British Columbia",
+      "countryName": "Canada",
+      "capacity": 54500,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "BMO Field",
+      "slug": "bmo-field",
+      "cityName": "Toronto, Ontario",
+      "countryName": "Canada",
+      "capacity": 45736,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Estadio Akron",
+      "slug": "estadio-akron",
+      "cityName": "Zapopan, Jalisco",
+      "countryName": "Mexico",
+      "capacity": 49850,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Estadio Azteca",
+      "slug": "estadio-azteca",
+      "cityName": "Mexico City",
+      "countryName": "Mexico",
+      "capacity": 87523,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Estadio BBVA",
+      "slug": "estadio-bbva",
+      "cityName": "Guadalupe, Nuevo León",
+      "countryName": "Mexico",
+      "capacity": 53500,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Arrowhead Stadium",
+      "slug": "arrowhead-stadium",
+      "cityName": "Kansas City, Missouri",
+      "countryName": "USA",
+      "capacity": 76416,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Gillette Stadium",
+      "slug": "gillette-stadium",
+      "cityName": "Foxborough, Massachusetts",
+      "countryName": "USA",
+      "capacity": 65878,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Hard Rock Stadium",
+      "slug": "hard-rock-stadium",
+      "cityName": "Miami Gardens, Florida",
+      "countryName": "USA",
+      "capacity": 64767,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Levi's Stadium",
+      "slug": "levi-s-stadium",
+      "cityName": "Santa Clara, California",
+      "countryName": "USA",
+      "capacity": 68500,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Lincoln Financial Field",
+      "slug": "lincoln-financial-field",
+      "cityName": "Philadelphia, Pennsylvania",
+      "countryName": "USA",
+      "capacity": 69796,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Lumen Field",
+      "slug": "lumen-field",
+      "cityName": "Seattle, Washington",
+      "countryName": "USA",
+      "capacity": 69000,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Mercedes-Benz Stadium",
+      "slug": "mercedes-benz-stadium",
+      "cityName": "Atlanta, Georgia",
+      "countryName": "USA",
+      "capacity": 71000,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "MetLife Stadium",
+      "slug": "metlife-stadium",
+      "cityName": "East Rutherford, New Jersey",
+      "countryName": "USA",
+      "capacity": 82500,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "NRG Stadium",
+      "slug": "nrg-stadium",
+      "cityName": "Houston, Texas",
+      "countryName": "USA",
+      "capacity": 72220,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "SoFi Stadium",
+      "slug": "sofi-stadium",
+      "cityName": "Inglewood, California",
+      "countryName": "USA",
+      "capacity": 70240,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    }
+  ]
+}
