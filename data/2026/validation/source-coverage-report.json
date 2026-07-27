@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-07-27T14:10:55.218Z",
+  "coverage": [
+    {
+      "sourceId": "manual_verified_2026_pack_v1",
+      "endpointsConfigured": 0,
+      "endpointsCollected": 0,
+      "endpointsFailed": 0,
+      "failedEndpoints": []
+    },
+    {
+      "sourceId": "openfootball_worldcup_2026",
+      "endpointsConfigured": 2,
+      "endpointsCollected": 2,
+      "endpointsFailed": 0,
+      "failedEndpoints": []
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointsConfigured": 8,
+      "endpointsCollected": 8,
+      "endpointsFailed": 0,
+      "failedEndpoints": []
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointsConfigured": 12,
+      "endpointsCollected": 12,
+      "endpointsFailed": 0,
+      "failedEndpoints": []
+    },
+    {
+      "sourceId": "bustami_fifa_efi_2026",
+      "endpointsConfigured": 3,
+      "endpointsCollected": 3,
+      "endpointsFailed": 0,
+      "failedEndpoints": []
+    }
+  ],
+  "candidateCounts": {
+    "openfootball_worldcup_2026": {
+      "teams": 96,
+      "groups": 24,
+      "matches": 176
+    },
+    "worldcup2026_repo": {
+      "teams": 96,
+      "groups": 12,
+      "venues": 32,
+      "matches": 176,
+      "standings": 48
+    }
+  },
+  "manualPack": {
+    "present": true,
+    "packId": "manual-verified-2026-v1",
+    "packHash": "8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff",
+    "filesLoaded": 10,
+    "officialMatchCount": 104,
+    "capturedMatchCount": 67,
+    "verifiedMatches": 60,
+    "unverifiedMatches": 7,
+    "knownConflicts": 7,
+    "verifiedTeams": 42,
+    "unverifiedTeams": 6,
+    "awardsPresent": true
+  }
+}

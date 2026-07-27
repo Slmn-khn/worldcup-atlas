@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.164Z",
+  "records": [
+    {
+      "name": "Group A",
+      "teams": [
+        "Mexico",
+        "South Africa",
+        "Korea Republic",
+        "Czechia"
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group B",
+      "teams": [
+        "Canada",
+        "Switzerland",
+        "Qatar",
+        "Bosnia and Herzegovina"
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group C",
+      "teams": [
+        "Brazil",
+        "Morocco",
+        "Haiti",
+        "Scotland"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Group D",
+      "teams": [
+        "United States",
+        "Paraguay",
+        "Australia",
+        "Turkey"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group E",
+      "teams": [
+        "Germany",
+        "Curaçao",
+        "Côte d'Ivoire",
+        "Ecuador"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Group F",
+      "teams": [
+        "Netherlands",
+        "Japan",
+        "Sweden",
+        "Tunisia"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group G",
+      "teams": [
+        "Belgium",
+        "Egypt",
+        "Iran",
+        "New Zealand"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Group H",
+      "teams": [
+        "Spain",
+        "Cape Verde",
+        "Saudi Arabia",
+        "Uruguay"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Group I",
+      "teams": [
+        "France",
+        "Norway",
+        "Senegal",
+        "Iraq"
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group J",
+      "teams": [
+        "Argentina",
+        "Austria",
+        "Jordan",
+        "Algeria"
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "name": "Group K",
+      "teams": [
+        "Portugal",
+        "Colombia",
+        "DR Congo",
+        "Uzbekistan"
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "name": "Group L",
+      "teams": [
+        "England",
+        "Croatia",
+        "Ghana",
+        "Panama"
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    }
+  ]
+}

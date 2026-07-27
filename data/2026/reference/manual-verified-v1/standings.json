@@ -1,0 +1,251 @@
+{
+  "schema": "standings/v1",
+  "final_standings": [
+    {
+      "pos": 1,
+      "team": "ESP",
+      "verification": "verified"
+    },
+    {
+      "pos": 2,
+      "team": "ARG",
+      "verification": "verified"
+    },
+    {
+      "pos": 3,
+      "team": "ENG",
+      "verification": "verified"
+    },
+    {
+      "pos": 4,
+      "team": "FRA",
+      "verification": "verified"
+    }
+  ],
+  "group_tables": [
+    {
+      "group": "A",
+      "teams": [
+        "MEX",
+        "RSA",
+        "KOR",
+        "CZE"
+      ],
+      "table": [
+        {
+          "pos": 1,
+          "team": "MEX",
+          "pld": 3,
+          "w": 3,
+          "d": 0,
+          "l": 0,
+          "gf": 6,
+          "ga": 0,
+          "pts": 9
+        },
+        {
+          "pos": 2,
+          "team": "RSA",
+          "pld": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "gf": 2,
+          "ga": 3,
+          "pts": 4
+        },
+        {
+          "pos": 3,
+          "team": "KOR",
+          "pld": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "gf": 2,
+          "ga": 3,
+          "pts": 3
+        },
+        {
+          "pos": 4,
+          "team": "CZE",
+          "pld": 3,
+          "w": 0,
+          "d": 1,
+          "l": 2,
+          "gf": 2,
+          "ga": 6,
+          "pts": 1
+        }
+      ],
+      "note": "Table computed from the six verified Group A results."
+    },
+    {
+      "group": null,
+      "teams": [
+        "FRA",
+        "NOR",
+        "SEN",
+        "IRQ"
+      ],
+      "table": [
+        {
+          "pos": 1,
+          "team": "FRA",
+          "pld": 3,
+          "w": 3,
+          "d": 0,
+          "l": 0,
+          "gf": 10,
+          "ga": 2,
+          "pts": 9
+        },
+        {
+          "pos": 2,
+          "team": "NOR",
+          "pld": 3,
+          "w": 2,
+          "d": 0,
+          "l": 1,
+          "gf": 8,
+          "ga": 7,
+          "pts": 6
+        },
+        {
+          "pos": 3,
+          "team": "SEN",
+          "pld": 3,
+          "w": 1,
+          "d": 0,
+          "l": 2,
+          "gf": 8,
+          "ga": 6,
+          "pts": 3
+        },
+        {
+          "pos": 4,
+          "team": "IRQ",
+          "pld": 3,
+          "w": 0,
+          "d": 0,
+          "l": 3,
+          "gf": 1,
+          "ga": 12,
+          "pts": 0
+        }
+      ],
+      "note": "Computed from six verified results; both FRA and NOR advanced (both later reached the knockout rounds)."
+    },
+    {
+      "group": null,
+      "teams": [
+        "ARG",
+        "AUT",
+        "JOR",
+        "ALG"
+      ],
+      "table": [
+        {
+          "pos": 1,
+          "team": "ARG",
+          "pld": 3,
+          "w": 3,
+          "d": 0,
+          "l": 0,
+          "gf": 8,
+          "ga": 1,
+          "pts": 9
+        },
+        {
+          "pos": 2,
+          "team": "AUT",
+          "pld": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "gf": 6,
+          "ga": 6,
+          "pts": 4
+        },
+        {
+          "pos": 3,
+          "team": "ALG",
+          "pld": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "gf": 5,
+          "ga": 7,
+          "pts": 4
+        },
+        {
+          "pos": 4,
+          "team": "JOR",
+          "pld": 3,
+          "w": 0,
+          "d": 0,
+          "l": 3,
+          "gf": 3,
+          "ga": 8,
+          "pts": 0
+        }
+      ],
+      "note": "Computed from six verified results. AUT ahead of ALG on goal difference. Both AUT and ALG reached the Round of 32."
+    },
+    {
+      "group": null,
+      "teams": [
+        "POR",
+        "COL",
+        "COD",
+        "UZB"
+      ],
+      "table": [
+        {
+          "pos": 1,
+          "team": "COL",
+          "pld": 3,
+          "w": 2,
+          "d": 1,
+          "l": 0,
+          "gf": 4,
+          "ga": 1,
+          "pts": 7
+        },
+        {
+          "pos": 2,
+          "team": "POR",
+          "pld": 3,
+          "w": 1,
+          "d": 2,
+          "l": 0,
+          "gf": 6,
+          "ga": 1,
+          "pts": 5
+        },
+        {
+          "pos": 3,
+          "team": "COD",
+          "pld": 3,
+          "w": 1,
+          "d": 1,
+          "l": 1,
+          "gf": 4,
+          "ga": 3,
+          "pts": 4
+        },
+        {
+          "pos": 4,
+          "team": "UZB",
+          "pld": 3,
+          "w": 0,
+          "d": 0,
+          "l": 3,
+          "gf": 2,
+          "ga": 11,
+          "pts": 0
+        }
+      ],
+      "note": "Computed from six verified results. COD also reached the Round of 32 (as one of the best third-placed teams)."
+    }
+  ]
+}

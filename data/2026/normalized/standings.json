@@ -1,0 +1,965 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.166Z",
+  "records": [
+    {
+      "groupName": "Group A",
+      "teamName": "Mexico",
+      "played": 3,
+      "wins": 3,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 0,
+      "goalDifference": 6,
+      "points": 9,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group A",
+      "teamName": "South Africa",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "goalDifference": -1,
+      "points": 4,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group A",
+      "teamName": "Korea Republic",
+      "played": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "goalDifference": -1,
+      "points": 3,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group A",
+      "teamName": "Czechia",
+      "played": 3,
+      "wins": 0,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 6,
+      "goalDifference": -4,
+      "points": 1,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group B",
+      "teamName": "Switzerland",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 8,
+      "goalsAgainst": 3,
+      "goalDifference": 5,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group B",
+      "teamName": "Canada",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 4,
+      "goalDifference": 4,
+      "points": 4,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group B",
+      "teamName": "Bosnia and Herzegovina",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 6,
+      "goalDifference": -1,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group B",
+      "teamName": "Qatar",
+      "played": 3,
+      "wins": 0,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 10,
+      "goalDifference": -8,
+      "points": 1,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group C",
+      "teamName": "Brazil",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 1,
+      "goalDifference": 6,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group C",
+      "teamName": "Morocco",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 3,
+      "goalDifference": 3,
+      "points": 7,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group C",
+      "teamName": "Scotland",
+      "played": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 4,
+      "goalDifference": -3,
+      "points": 3,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group C",
+      "teamName": "Haiti",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 8,
+      "goalDifference": -6,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group D",
+      "teamName": "United States",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 4,
+      "goalDifference": 4,
+      "points": 6,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group D",
+      "teamName": "Australia",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDifference": 0,
+      "points": 4,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group D",
+      "teamName": "Paraguay",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "goalDifference": -2,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group D",
+      "teamName": "Turkey",
+      "played": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "goalDifference": -2,
+      "points": 3,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group E",
+      "teamName": "Germany",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 10,
+      "goalsAgainst": 4,
+      "goalDifference": 6,
+      "points": 6,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group E",
+      "teamName": "Côte d'Ivoire",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "goalDifference": 2,
+      "points": 6,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group E",
+      "teamName": "Ecuador",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDifference": 0,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group E",
+      "teamName": "Curaçao",
+      "played": 3,
+      "wins": 0,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 9,
+      "goalDifference": -8,
+      "points": 1,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group F",
+      "teamName": "Netherlands",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 10,
+      "goalsAgainst": 4,
+      "goalDifference": 6,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group F",
+      "teamName": "Japan",
+      "played": 3,
+      "wins": 1,
+      "draws": 2,
+      "losses": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 3,
+      "goalDifference": 4,
+      "points": 5,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group F",
+      "teamName": "Sweden",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 7,
+      "goalsAgainst": 7,
+      "goalDifference": 0,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group F",
+      "teamName": "Tunisia",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 12,
+      "goalDifference": -10,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group G",
+      "teamName": "Belgium",
+      "played": 3,
+      "wins": 1,
+      "draws": 2,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 2,
+      "goalDifference": 4,
+      "points": 5,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group G",
+      "teamName": "Egypt",
+      "played": 3,
+      "wins": 1,
+      "draws": 2,
+      "losses": 0,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2,
+      "points": 5,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group G",
+      "teamName": "Iran",
+      "played": 3,
+      "wins": 0,
+      "draws": 3,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "goalDifference": 0,
+      "points": 3,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group G",
+      "teamName": "New Zealand",
+      "played": 3,
+      "wins": 0,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 10,
+      "goalDifference": -6,
+      "points": 1,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group H",
+      "teamName": "Spain",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 5,
+      "goalsAgainst": 0,
+      "goalDifference": 5,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group H",
+      "teamName": "Cape Verde",
+      "played": 3,
+      "wins": 0,
+      "draws": 3,
+      "losses": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDifference": 0,
+      "points": 3,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group H",
+      "teamName": "Uruguay",
+      "played": 3,
+      "wins": 0,
+      "draws": 2,
+      "losses": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "goalDifference": -1,
+      "points": 2,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group H",
+      "teamName": "Saudi Arabia",
+      "played": 3,
+      "wins": 0,
+      "draws": 2,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "goalDifference": -4,
+      "points": 2,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group I",
+      "teamName": "France",
+      "played": 3,
+      "wins": 3,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 10,
+      "goalsAgainst": 2,
+      "goalDifference": 8,
+      "points": 9,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group I",
+      "teamName": "Norway",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 7,
+      "goalDifference": 1,
+      "points": 6,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group I",
+      "teamName": "Senegal",
+      "played": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 8,
+      "goalsAgainst": 6,
+      "goalDifference": 2,
+      "points": 3,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group I",
+      "teamName": "Iraq",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 1,
+      "goalsAgainst": 12,
+      "goalDifference": -11,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group J",
+      "teamName": "Argentina",
+      "played": 3,
+      "wins": 3,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 8,
+      "goalsAgainst": 1,
+      "goalDifference": 7,
+      "points": 9,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group J",
+      "teamName": "Austria",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 6,
+      "goalsAgainst": 6,
+      "goalDifference": 0,
+      "points": 4,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group J",
+      "teamName": "Algeria",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 7,
+      "goalDifference": -2,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group J",
+      "teamName": "Jordan",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 3,
+      "goalsAgainst": 8,
+      "goalDifference": -5,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group K",
+      "teamName": "Colombia",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "goalDifference": 3,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group K",
+      "teamName": "Portugal",
+      "played": 3,
+      "wins": 1,
+      "draws": 2,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 1,
+      "goalDifference": 5,
+      "points": 5,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group K",
+      "teamName": "DR Congo",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 4,
+      "goalsAgainst": 3,
+      "goalDifference": 1,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group K",
+      "teamName": "Uzbekistan",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 11,
+      "goalDifference": -9,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group L",
+      "teamName": "England",
+      "played": 3,
+      "wins": 2,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 2,
+      "goalDifference": 4,
+      "points": 7,
+      "rank": 1,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group L",
+      "teamName": "Croatia",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
+      "goalDifference": 0,
+      "points": 6,
+      "rank": 2,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group L",
+      "teamName": "Ghana",
+      "played": 3,
+      "wins": 1,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDifference": 0,
+      "points": 4,
+      "rank": 3,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "groupName": "Group L",
+      "teamName": "Panama",
+      "played": 3,
+      "wins": 0,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 0,
+      "goalsAgainst": 4,
+      "goalDifference": -4,
+      "points": 0,
+      "rank": 4,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "DERIVED",
+      "verificationStatus": "NEEDS_REVIEW"
+    }
+  ]
+}

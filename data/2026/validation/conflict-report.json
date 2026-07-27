@@ -1,0 +1,4430 @@
+{
+  "generatedAt": "2026-07-27T14:10:55.218Z",
+  "total": 236,
+  "entries": [
+    {
+      "entityType": "groups",
+      "entityKey": "Group A",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Mexico\",\"South Africa\",\"Korea Republic\",\"Czechia\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Mexico\",\"South Africa\",\"South Korea\",\"Czech Republic\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Mexico\",\"South Africa\",\"South Korea\",\"UEFA Path D Winner\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group B",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Canada\",\"Switzerland\",\"Qatar\",\"Bosnia and Herzegovina\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Canada\",\"Bosnia & Herzegovina\",\"Qatar\",\"Switzerland\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Canada\",\"UEFA Path A Winner\",\"Qatar\",\"Switzerland\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group D",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"USA\",\"Paraguay\",\"Australia\",\"Turkey\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"United States\",\"Paraguay\",\"Australia\",\"UEFA Path C Winner\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group F",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Netherlands\",\"Japan\",\"Sweden\",\"Tunisia\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Netherlands\",\"Japan\",\"UEFA Path B Winner\",\"Tunisia\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group I",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"France\",\"Norway\",\"Senegal\",\"Iraq\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"France\",\"Senegal\",\"Iraq\",\"Norway\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"France\",\"Senegal\",\"IC Path 2 Winner\",\"Norway\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group K",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Portugal\",\"Colombia\",\"DR Congo\",\"Uzbekistan\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Portugal\",\"DR Congo\",\"Uzbekistan\",\"Colombia\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Portugal\",\"IC Path 1 Winner\",\"Uzbekistan\",\"Colombia\"]"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Arlington, Texas"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "80000"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "94000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bc-place",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Vancouver, British Columbia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Vancouver"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bc-place",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "54500"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "54000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bmo-field",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Toronto, Ontario"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Toronto"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bmo-field",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "45736"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "45000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-akron",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Zapopan, Jalisco"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Guadalajara (Zapopan)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-akron",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "49850"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "48000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-azteca",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "87523"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "83000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-bbva",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Guadalupe, Nuevo León"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Monterrey (Guadalupe)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Kansas City, Missouri"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "76416"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "73000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Foxborough, Massachusetts"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Boston (Foxborough)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "65878"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "65000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Miami Gardens, Florida"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Miami (Miami Gardens)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "64767"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "65000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Santa Clara, California"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "68500"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "71000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Philadelphia, Pennsylvania"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Philadelphia"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "69796"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "69000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lumen-field",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Seattle, Washington"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Seattle"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lumen-field",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Atlanta, Georgia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Atlanta"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "71000"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "75000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "metlife-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "East Rutherford, New Jersey"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "New York/New Jersey (East Rutherford)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "metlife-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Houston, Texas"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Houston"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "72220"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "72000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Inglewood, California"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Los Angeles (Inglewood)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "countryName",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "capacity",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "70240"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "70000"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:kr",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:mx",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:mx",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Mexico City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Atlanta"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Toronto"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "19:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "13:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "19:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Guadalajara (Zapopan)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Boston (Foxborough)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:za",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:mx~flag:za",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ca",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ca",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Toronto"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Monterrey (Guadalupe)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ch",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ch",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Los Angeles (Inglewood)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Philadelphia"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:ch",
+      "field": "homeScore",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "3"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "2"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:qa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:qa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Vancouver"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "New York/New Jersey (East Rutherford)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "8"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "54"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "kickoffDateLabel",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "2026-06-13"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2026-06-13"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/13/2026"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/25/2026"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "venueName",
+      "values": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Hard Rock Stadium"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "GEHA Field at Arrowhead Stadium"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Miami (Miami Gardens)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:gb-sct",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:gb-sct",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Miami (Miami Gardens)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Mexico City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:30 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Philadelphia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Vancouver"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ma",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ma",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "New York/New Jersey (East Rutherford)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Atlanta"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ht",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ht",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Boston (Foxborough)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Houston"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ma",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ma",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Boston (Foxborough)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Seattle"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:ht~flag:ma",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:ht~flag:ma",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Atlanta"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Guadalajara (Zapopan)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:py",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:py",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Boston (Foxborough)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "21:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Vancouver"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:us",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:us",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Seattle"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "15:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Los Angeles (Inglewood)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:us",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:us",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Los Angeles (Inglewood)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:tr~flag:us",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:tr~flag:us",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Los Angeles (Inglewood)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Philadelphia"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:cw",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:cw",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Philadelphia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Atlanta"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "16:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "19:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "16:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Toronto"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Mexico City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "19:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "19:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Philadelphia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Boston (Foxborough)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:de",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:de",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Houston"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Philadelphia"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:ec",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:ec",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Kansas City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Guadalajara (Zapopan)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:de~flag:ec",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:de~flag:ec",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "New York/New Jersey (East Rutherford)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Miami (Miami Gardens)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:nl",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:nl",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Dallas (Arlington)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "New York/New Jersey (East Rutherford)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "22:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "15:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "22:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Monterrey (Guadalupe)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:se",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:se",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Houston"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Monterrey (Guadalupe)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "kickoffDateLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2026-06-25"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/26/2026"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/25/2026"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Kansas City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Toronto"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Monterrey (Guadalupe)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Toronto"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "15:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Seattle"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "15:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Los Angeles (Inglewood)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Houston"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:nz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:nz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Vancouver"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Los Angeles (Inglewood)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:ir",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:ir",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Seattle"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "18:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Vancouver"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:ir~flag:nz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:ir~flag:nz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Los Angeles (Inglewood)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Vancouver"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:es",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:es",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Atlanta"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Seattle"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "kickoffDateLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2026-06-26"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/27/2026"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/26/2026"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "19:00 UTC-5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "17:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "19:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Houston"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Mexico City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:uy",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:uy",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "18:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:sa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:sa",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "kickoffDateLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2026-06-26"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/27/2026"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "06/26/2026"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "18:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "17:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "18:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Miami (Miami Gardens)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Los Angeles (Inglewood)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:iq",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:iq",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Philadelphia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Boston (Foxborough)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:no",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:no",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Boston (Foxborough)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Seattle"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:sn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:sn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "New York/New Jersey (East Rutherford)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Mexico City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:no",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:no",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Boston (Foxborough)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Guadalajara (Zapopan)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:sn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:sn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Toronto"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Vancouver"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "14:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "New York/New Jersey (East Rutherford)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Philadelphia"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Dallas (Arlington)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "New York/New Jersey (East Rutherford)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:dz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:dz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Kansas City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Monterrey (Guadalupe)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "21:00 UTC-5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Dallas (Arlington)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "21:00 UTC-5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Kansas City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Houston"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "21:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-7"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "11:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Toronto"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Guadalajara (Zapopan)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "San Francisco Bay Area (Santa Clara)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:pt",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:uz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:uz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Atlanta"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Miami (Miami Gardens)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:pt",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:pt",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Miami (Miami Gardens)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Atlanta"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "20:00 UTC-6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "18:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "20:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Mexico City"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Atlanta"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "12:00 UTC-5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "15:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "12:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Houston"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Vancouver"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "16:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "16:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Boston (Foxborough)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Los Angeles (Inglewood)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:hr",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:hr",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Dallas (Arlington)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Kansas City"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:pa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:pa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "New York/New Jersey (East Rutherford)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Monterrey (Guadalupe)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:hr",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:hr",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Philadelphia"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Dallas (Arlington, Texas)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "kickoffTimeLabel",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "19:00 UTC-4"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "21:00"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "19:00"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Toronto"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Miami (Miami Gardens)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:hr~flag:pa",
+      "field": "status",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "FINISHED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "SCHEDULED"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "FINISHED"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:hr~flag:pa",
+      "field": "cityName",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "Toronto"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "Seattle"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:ca~flag:ma",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "89"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "90"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "90"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:fr~flag:py",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "90"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "89"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "89"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_32|flag:au~flag:eg",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "87"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "88"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "88"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "match-number-53",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "53 (Bosnia and Herzegovina v Qatar)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "53 (UEFA Path A Winner v Canada, unverified)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "match-number-59",
+      "field": "matchNumber",
+      "values": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "59 (Japan v Sweden)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "59 (Japan v UEFA Path B Winner, unverified)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record."
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group A",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Mexico: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=6 provider=0, points derived=9 provider=0; South Africa: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=4 provider=0; South Korea: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; UEFA Path D Winner: not present in derived table"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group B",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Canada: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; UEFA Path A Winner: not present in derived table; Qatar: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0; Switzerland: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group C",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Brazil: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0; Morocco: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0; Haiti: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=8 provider=0; Scotland: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=4 provider=0, points derived=3 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group D",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — United States: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Paraguay: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; Australia: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; UEFA Path C Winner: not present in derived table"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group E",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Germany: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Curaçao: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=9 provider=0, points derived=1 provider=0; Ivory Coast: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=2 provider=0, points derived=6 provider=0; Ecuador: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group F",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Netherlands: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=7 provider=0; Japan: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; UEFA Path B Winner: not present in derived table; Tunisia: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=12 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group G",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Belgium: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=5 provider=0; Egypt: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; Iran: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; New Zealand: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group H",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Spain: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=5 provider=0, points derived=7 provider=0; Cape Verde: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=3 provider=0; Saudi Arabia: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=5 provider=0, points derived=2 provider=0; Uruguay: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=4 provider=0, points derived=2 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group I",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — France: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=2 provider=0, points derived=9 provider=0; Senegal: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=6 provider=0, points derived=3 provider=0; IC Path 2 Winner: not present in derived table; Norway: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=7 provider=0, points derived=6 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group J",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Argentina: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=1 provider=0, points derived=9 provider=0; Algeria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=7 provider=0, points derived=4 provider=0; Austria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=6 provider=0, points derived=4 provider=0; Jordan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=8 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group K",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — Portugal: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=1 provider=0, points derived=5 provider=0; IC Path 1 Winner: not present in derived table; Uzbekistan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=11 provider=0; Colombia: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group L",
+      "field": "table",
+      "values": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "Derived vs provider mismatch — England: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=7 provider=0; Croatia: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=5 provider=0, points derived=6 provider=0; Ghana: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; Panama: played derived=3 provider=0, losses derived=3 provider=0, goalsAgainst derived=4 provider=0"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-001",
+      "field": "final.shots",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1/nbc-final",
+          "value": "20-2"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1/cbs-final",
+          "value": "20-3"
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-001, source_disagreement] Total shots in the final: NBC reported Spain led 20-2; CBS reported 20-3."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-002",
+      "field": "matches.M88",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-002, data_gap] Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-003",
+      "field": "matches.GB-6",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-003, data_gap] Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source."
+    },
+    {
+      "entityType": "teams",
+      "entityKey": "manual-verified-2026-v1:C-004",
+      "field": "teams",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-004, data_gap] 47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources."
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "manual-verified-2026-v1:C-005",
+      "field": "venues.nynj",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-005, naming_variant] Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-006",
+      "field": "matches (group stage)",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-006, data_gap] 35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-007",
+      "field": "matches.round_of_16",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL)."
+        }
+      ],
+      "resolution": "UNRESOLVED",
+      "note": "[manual pack C-007, data_gap] Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL)."
+    }
+  ]
+}

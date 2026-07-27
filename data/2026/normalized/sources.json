@@ -1,0 +1,785 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.163Z",
+  "registry": [
+    {
+      "id": "manual_verified_2026_pack_v1",
+      "name": "2026 Manual Verified Reference Pack",
+      "reliability": "MANUAL_REFERENCE",
+      "priority": 1,
+      "licenseLabel": "internal reference pack with source attribution",
+      "description": "Human-authenticated 2026 data pack (data/2026/reference/manual-verified-v1) containing tournament, teams, groups, matches, standings, bracket, awards, venues, sources, and conflicts. Highest-priority reference: `verified` records win merged values; `reported`/`unverified` records are supporting evidence only and never become final. NEVER fetched by the collector and never imported directly — manifest.importAllowed is false and the data/2026/approved/approval.json gate still applies to any future import.",
+      "allowedFor": [
+        "tournament",
+        "teams",
+        "groups",
+        "venues",
+        "fixtures",
+        "matches",
+        "standings",
+        "bracket"
+      ]
+    },
+    {
+      "id": "openfootball_worldcup_2026",
+      "name": "OpenFootball World Cup (2026)",
+      "reliability": "OPEN_DATA",
+      "priority": 2,
+      "licenseLabel": "CC0-1.0",
+      "baseUrl": "https://raw.githubusercontent.com/openfootball",
+      "description": "Open public-domain World Cup data (openfootball/worldcup and openfootball/worldcup.json). Stable baseline for the 2026 tournament: groups, schedule, results, bracket in Football.TXT and JSON form. Same family of data the existing fixture sync uses as its baseline.",
+      "allowedFor": [
+        "tournament",
+        "teams",
+        "groups",
+        "fixtures",
+        "matches",
+        "bracket"
+      ],
+      "endpoints": [
+        {
+          "id": "of26-cup-txt",
+          "label": "2026 cup.txt (Football.TXT, groups + all matches)",
+          "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+          "outputFile": "cup.txt",
+          "format": "txt"
+        },
+        {
+          "id": "of26-worldcup-json",
+          "label": "2026 worldcup.json (rounds + matches)",
+          "url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json",
+          "outputFile": "worldcup.json",
+          "format": "json"
+        }
+      ]
+    },
+    {
+      "id": "worldcup2026_repo",
+      "name": "worldcup2026 community repo/API (rezarahiminia)",
+      "reliability": "COMMUNITY_API",
+      "priority": 3,
+      "licenseLabel": "ISC",
+      "baseUrl": "https://worldcup26.ir",
+      "description": "Structured 2026-specific community provider (rezarahiminia/worldcup2026): teams, groups, stadiums, matches and group tables as CSV/JSON plus a public API at worldcup26.ir. Community-maintained and non-authoritative; never the sole source of truth. Failures are reported, never fatal.",
+      "allowedFor": [
+        "teams",
+        "groups",
+        "venues",
+        "fixtures",
+        "matches",
+        "standings"
+      ],
+      "endpoints": [
+        {
+          "id": "wc26-api-games",
+          "label": "API: all matches",
+          "url": "https://worldcup26.ir/get/games",
+          "outputFile": "api-games.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-groups",
+          "label": "API: groups with standings",
+          "url": "https://worldcup26.ir/get/groups",
+          "outputFile": "api-groups.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-teams",
+          "label": "API: all teams",
+          "url": "https://worldcup26.ir/get/teams",
+          "outputFile": "api-teams.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-stadiums",
+          "label": "API: all stadiums",
+          "url": "https://worldcup26.ir/get/stadiums",
+          "outputFile": "api-stadiums.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-csv-teams",
+          "label": "CSV: teams",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.teams.csv",
+          "outputFile": "teams.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-groups",
+          "label": "CSV: groups + group tables",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.groups.csv",
+          "outputFile": "groups.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-games",
+          "label": "CSV: games",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.games.csv",
+          "outputFile": "games.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-stadia",
+          "label": "CSV: stadiums",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.stadia.csv",
+          "outputFile": "stadia.csv",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "id": "mominul_2026_dataset",
+      "name": "Mominul FIFA World Cup 2026 Dataset",
+      "reliability": "OPEN_DATA_CANDIDATE",
+      "priority": 3,
+      "licenseLabel": "CC0-1.0",
+      "baseUrl": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main",
+      "description": "Relational open dataset for FIFA World Cup 2026 with teams, venues, stages, referees, matches, squads, match events, lineups, player stats, team match stats, xG, and SQLite output. Candidate provider only: core matches may become gap-fill candidates when they resolve cleanly; player/event/lineup/stat rows remain enrichment candidates. Never authoritative over the manual verified reference pack, never auto-approved for import.",
+      "allowedFor": [
+        "teams",
+        "groups",
+        "venues",
+        "matches",
+        "referees",
+        "players",
+        "squads",
+        "lineups",
+        "match_events",
+        "player_stats",
+        "team_match_stats"
+      ],
+      "endpoints": [
+        {
+          "id": "teams_csv",
+          "label": "CSV: teams",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/teams.csv",
+          "outputFile": "teams.csv",
+          "format": "csv"
+        },
+        {
+          "id": "venues_csv",
+          "label": "CSV: venues",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/venues.csv",
+          "outputFile": "venues.csv",
+          "format": "csv"
+        },
+        {
+          "id": "tournament_stages_csv",
+          "label": "CSV: tournament stages",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/tournament_stages.csv",
+          "outputFile": "tournament_stages.csv",
+          "format": "csv"
+        },
+        {
+          "id": "referees_csv",
+          "label": "CSV: referees",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/referees.csv",
+          "outputFile": "referees.csv",
+          "format": "csv"
+        },
+        {
+          "id": "matches_csv",
+          "label": "CSV: matches",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches.csv",
+          "outputFile": "matches.csv",
+          "format": "csv"
+        },
+        {
+          "id": "matches_detailed_csv",
+          "label": "CSV: matches (detailed)",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches_detailed.csv",
+          "outputFile": "matches_detailed.csv",
+          "format": "csv"
+        },
+        {
+          "id": "squads_and_players_csv",
+          "label": "CSV: squads and players",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/squads_and_players.csv",
+          "outputFile": "squads_and_players.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_events_csv",
+          "label": "CSV: match events",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_events.csv",
+          "outputFile": "match_events.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_team_stats_csv",
+          "label": "CSV: match team stats",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_team_stats.csv",
+          "outputFile": "match_team_stats.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_lineups_csv",
+          "label": "CSV: match lineups",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_lineups.csv",
+          "outputFile": "match_lineups.csv",
+          "format": "csv"
+        },
+        {
+          "id": "player_stats_csv",
+          "label": "CSV: player stats",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/player_stats.csv",
+          "outputFile": "player_stats.csv",
+          "format": "csv"
+        },
+        {
+          "id": "real_match_details_json",
+          "label": "JSON: real match details",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/real_match_details.json",
+          "outputFile": "real_match_details.json",
+          "format": "json"
+        }
+      ]
+    },
+    {
+      "id": "bustami_fifa_efi_2026",
+      "name": "Bustami FIFA EFI Data WC 2026",
+      "reliability": "RESEARCH_ANALYTICS_CANDIDATE",
+      "priority": 5,
+      "licenseLabel": "Needs review; README says analytical/research purposes only",
+      "baseUrl": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master",
+      "description": "Player-level FIFA Enhanced Football Intelligence metrics collected from the official FIFA platform, including identity, attacking, physical, passing/progression, defending, receiving, and disciplinary fields. Research/analytics candidate ONLY: usable for FIFA match/player ID mapping and advanced-metric analysis, blocked from any import or public rendering until a license/usage review explicitly clears it (importBlockedReason: RESEARCH_ONLY_UNTIL_LICENSE_REVIEW).",
+      "allowedFor": [
+        "fifa_match_ids",
+        "fifa_player_ids",
+        "efi_player_match_metrics",
+        "advanced_performance_metrics"
+      ],
+      "endpoints": [
+        {
+          "id": "wc2026_efi_csv",
+          "label": "CSV: player-level EFI metrics",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_efi.csv",
+          "outputFile": "wc2026_efi.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc2026_matches_csv",
+          "label": "CSV: FIFA match IDs",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_matches.csv",
+          "outputFile": "wc2026_matches.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc2026_players_csv",
+          "label": "CSV: FIFA player IDs",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_players.csv",
+          "outputFile": "wc2026_players.csv",
+          "format": "csv"
+        }
+      ]
+    }
+  ],
+  "snapshots": [
+    {
+      "sourceId": "bustami_fifa_efi_2026",
+      "endpointId": "wc2026_efi_csv",
+      "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_efi.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:19.164Z",
+      "contentHash": "21fa0ae3c6f1d71b486f14415f43aaf4e84be5f2ff8cf8a0378d65bb303edf6a",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 2223001
+    },
+    {
+      "sourceId": "bustami_fifa_efi_2026",
+      "endpointId": "wc2026_matches_csv",
+      "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_matches.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:19.740Z",
+      "contentHash": "d0c8133bd40b69f1d89a75cc00a9ce422f4fcf019257b840be976bea6f90e21e",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 8648
+    },
+    {
+      "sourceId": "bustami_fifa_efi_2026",
+      "endpointId": "wc2026_players_csv",
+      "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_players.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:20.102Z",
+      "contentHash": "d4d459f036633a6d676cbeadba2a4855afdb02183f529ff2bc0cce1ee6625f51",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 80885
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "match_events_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_events.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:17.487Z",
+      "contentHash": "28e78da914bad94532211df86c6cd1346e29a2b48db0ff22a631ca9e379e770e",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 21263
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "match_lineups_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_lineups.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:18.144Z",
+      "contentHash": "14d97ff8cfb4216d50340307dc96861ccd24f576468ab506ccd1c13ba92c87ff",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 125312
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "match_team_stats_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_team_stats.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:17.814Z",
+      "contentHash": "62600e0e44a4b89f11334826a4a52c8120dac39151b32382470dcb8bfa908266",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 11485
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "matches_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:16.486Z",
+      "contentHash": "4648db46255fce167764350155b54359076e9a3ffbd0e87115f8a49a9632545e",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 7527
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "matches_detailed_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches_detailed.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:16.841Z",
+      "contentHash": "dfb62b235dc7e77a39b4a158c0ca880d0ed7fbec7841947efad7a278628be06d",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 22667
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "player_stats_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/player_stats.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:18.504Z",
+      "contentHash": "e3de1ed6e4217a86a75c294e821531e0cdcc9f56d3d413e3194d46c4ced29d59",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 98545
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "real_match_details_json",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/real_match_details.json",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:18.836Z",
+      "contentHash": "de709cfd088c5ab3caf47d7727971873bd1ca4f7bcece2cc0fed0a033b4343bb",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 50146
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "referees_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/referees.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:16.144Z",
+      "contentHash": "97430cb343120b94a78e27fc5e640c3d3216e6d37eccd35b68b60e1583502a5e",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 878
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "squads_and_players_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/squads_and_players.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:17.143Z",
+      "contentHash": "13e28e432cb1d634f9aedcf7e266d671ba53492736b13dfa38fa2efd85afe7c3",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 91772
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "teams_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/teams.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:15.075Z",
+      "contentHash": "b694972c63f48236a5336b2a765b99ff6252ec1a785f5d76762dc1e2c54623d8",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 2333
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "tournament_stages_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/tournament_stages.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:15.798Z",
+      "contentHash": "d77cfa0dc437ae740044bf447b41f332d747c2ebd1eeb840284ccbb3e6ce84f3",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 169
+    },
+    {
+      "sourceId": "mominul_2026_dataset",
+      "endpointId": "venues_csv",
+      "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/venues.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:15.441Z",
+      "contentHash": "8f62397df67318f2a799bcf541ec1f3bea5cabe76e4f458b9efbf80327455b1b",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 1351
+    },
+    {
+      "sourceId": "openfootball_worldcup_2026",
+      "endpointId": "of26-cup-txt",
+      "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+      "format": "txt",
+      "fetchedAt": "2026-07-27T12:26:11.566Z",
+      "contentHash": "4f52c563a5d470702fedf5078fd379c8f5ddfb2192d23b6f88ce84e997c30028",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 14638
+    },
+    {
+      "sourceId": "openfootball_worldcup_2026",
+      "endpointId": "of26-worldcup-json",
+      "url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:11.989Z",
+      "contentHash": "7015c672bfead58df5297eb2f2f687594bb7c463508c39076010706236b4e6d6",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 42736
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-api-games",
+      "url": "https://worldcup26.ir/get/games",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:12.250Z",
+      "contentHash": "c22eda18e397e53bc9d05eef0bbf85db3370bf599dda37463a123fbe0848a6c7",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 62765
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-api-groups",
+      "url": "https://worldcup26.ir/get/groups",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:13.281Z",
+      "contentHash": "dd0c8aa32339e90c3675cc3f682d2cde818bcfc4304d5b4b0aa92e58cad50910",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 7496
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-api-stadiums",
+      "url": "https://worldcup26.ir/get/stadiums",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:13.620Z",
+      "contentHash": "2cd5a70dc9b9ac18d755f62c79853f4d79d60aab421cb1b2852487db40259c9d",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 4834
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-api-teams",
+      "url": "https://worldcup26.ir/get/teams",
+      "format": "json",
+      "fetchedAt": "2026-07-27T12:26:13.444Z",
+      "contentHash": "469c994baf4f968936efb2037a64addfba5df803d1e33a2f1515e3a826c47fc6",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 8434
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-csv-games",
+      "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.games.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:14.469Z",
+      "contentHash": "11a56a2f85ef1c4d8e6b6e314096f18298523fbd34e2b2d2738dd3794371462a",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 15527
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-csv-groups",
+      "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.groups.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:14.152Z",
+      "contentHash": "21604f9f9f606f455400284db3ba3ebf77fff7a14948bd2b3d86ac9f15620f2e",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 3270
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-csv-stadia",
+      "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.stadia.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:14.779Z",
+      "contentHash": "7d2d9c1282151c554978d22c8362224f6f5c7a5d6d76103ce90877a955e880cf",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 3259
+    },
+    {
+      "sourceId": "worldcup2026_repo",
+      "endpointId": "wc26-csv-teams",
+      "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.teams.csv",
+      "format": "csv",
+      "fetchedAt": "2026-07-27T12:26:13.783Z",
+      "contentHash": "ffda31fe1ab208915b168f88ca046dbfdffe066f3f292f2b6b11dd3cd6884820",
+      "status": "OK",
+      "httpStatus": 200,
+      "errorMessage": null,
+      "contentLength": 7831
+    }
+  ],
+  "manualReferencePack": {
+    "manifest": {
+      "packId": "manual-verified-2026-v1",
+      "label": "2026 Manual Verified Reference Pack",
+      "createdBy": "Salman",
+      "createdAt": "2026-07-21T00:00:00Z",
+      "verificationLevel": "human-authenticated-reference",
+      "importAllowed": false,
+      "notes": [
+        "Use verified records as high-priority reference.",
+        "Do not import partial/unverified records without review.",
+        "Respect conflicts.json as the conflict registry."
+      ],
+      "files": {
+        "tournament": "tournament.json",
+        "teams": "teams.json",
+        "groups": "groups.json",
+        "matches": "matches.json",
+        "standings": "standings.json",
+        "bracket": "bracket.json",
+        "venues": "venues.json",
+        "awards": "awards.json",
+        "sources": "sources.json",
+        "conflicts": "conflicts.json"
+      }
+    },
+    "packHash": "8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff",
+    "fileHashes": {
+      "awards": "8882c3a01b7953bb79688801b2a3281ccb10ac83d6b6a2551d94623f15b4e927",
+      "bracket": "1ed6cdb013af4140cfec06c56d7c0c98d4195f82184e3528366731460e089a07",
+      "conflicts": "ed19ab091790d9633fa49d28d2c1bf714a71245ddea1750cb6a572567487e42d",
+      "groups": "df11878b3c4c4ad8620c85a576000236f100712729921c1b27a9cd619f1dde96",
+      "matches": "af82b1a1a774a79db771f2363758ce8a65dabd4b7e27aff6bdd7925faf6c08fc",
+      "sources": "2a3fd09e5a6a7043c7268cd3b2982624e3943170b7be951bfeadcce1f559879f",
+      "standings": "e7b83d512bb8f12930977094a409a056031d41c14951c5b19e47410b619ecff7",
+      "teams": "990f0a5df9ec5c046730e4b0956a9be09f7bc23d9b799851dd104f27a3bdfdf0",
+      "tournament": "deb14963a90bd95448f8592c9a2c6b4c5f4533f0a3579a6852af2ab2671a3463",
+      "venues": "2697be37241560fb025272d3769c2cbff7d2c2f6ebff5d1e2f73093d1bc2d31b"
+    },
+    "stats": {
+      "present": true,
+      "packId": "manual-verified-2026-v1",
+      "packHash": "8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff",
+      "filesLoaded": 10,
+      "officialMatchCount": 104,
+      "capturedMatchCount": 67,
+      "verifiedMatches": 60,
+      "unverifiedMatches": 7,
+      "knownConflicts": 7,
+      "verifiedTeams": 42,
+      "unverifiedTeams": 6,
+      "awardsPresent": true
+    },
+    "unresolvedGroups": 7,
+    "attributedSources": [
+      {
+        "id": "fifa-final",
+        "publisher": "FIFA.com",
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/final",
+        "scope": [
+          "final",
+          "awards",
+          "venue naming"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "cbs-final",
+        "publisher": "CBS News",
+        "url": "https://www.cbsnews.com/news/2026-fifa-world-cup-final-spain-argentina-sunday/",
+        "scope": [
+          "final match detail",
+          "red card",
+          "saves"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "nbc-final",
+        "publisher": "NBC New York",
+        "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754",
+        "scope": [
+          "final",
+          "history context"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "cbssports-bracket",
+        "publisher": "CBS Sports",
+        "url": "https://www.cbssports.com/soccer/news/2026-fifa-world-cup-bracket-round-of-32-results-round-of-16-matchups-final/",
+        "scope": [
+          "quarterfinals",
+          "round of 32 partial"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "yahoo-semis",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/soccer/article/world-cup-semifinals-bracket-full-schedule-matchups-and-path-to-the-final-164942403.html",
+        "scope": [
+          "semifinals",
+          "third place"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "espn-bracket",
+        "publisher": "ESPN",
+        "url": "https://www.espn.com/soccer/bracket",
+        "scope": [
+          "round of 32 match numbers and scores"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "olympics-qf",
+        "publisher": "Olympics.com",
+        "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-bracket-semi-finals-full-schedule-live-updates",
+        "scope": [
+          "Argentina v Switzerland scorers"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "fifa-r16-brano",
+        "publisher": "FIFA.com Match Centre",
+        "url": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021532",
+        "scope": [
+          "R16 Brazil v Norway full detail"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "yahoo-groups",
+        "publisher": "Yahoo Sports",
+        "url": "https://sports.yahoo.com/soccer/article/2026-world-cup-results-standings-and-schedule-live-scores-group-stage-updates-and-how-to-watch-050724193.html",
+        "scope": [
+          "group stage results (partial)"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "fourfourtwo-scores",
+        "publisher": "FourFourTwo",
+        "url": "https://www.fourfourtwo.com/competition/all-of-the-world-cup-scores-so-far-at-the-2026-tournament",
+        "scope": [
+          "group stage results (partial)",
+          "R32 detail"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "nbcsports-awards",
+        "publisher": "NBC Sports",
+        "url": "https://www.nbcsports.com/soccer/news/2026-world-cup-award-winners-golden-boot-golden-ball-best-young-player-golden-glove",
+        "scope": [
+          "awards",
+          "top scorers"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "goal-awards",
+        "publisher": "Goal.com",
+        "url": "https://www.goal.com/en/lists/rodri-wins-golden-ball-kylian-mbappe-claims-golden-boot-as-fifa-announces-2026-world-cup-awards/blt4e6ee529fa2610b8",
+        "scope": [
+          "awards",
+          "attendance"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "aljazeera-awards",
+        "publisher": "Al Jazeera",
+        "url": "https://www.aljazeera.com/sports/2026/7/20/mbappe-takes-home-second-golden-boot-spain-sweeps-world-cup-awards",
+        "scope": [
+          "awards detail",
+          "clean sheet records"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      },
+      {
+        "id": "pretournament",
+        "publisher": "training-knowledge (pre-Feb 2026, stable)",
+        "url": null,
+        "scope": [
+          "venues",
+          "hosts",
+          "format",
+          "most qualified teams"
+        ],
+        "retrieved": "2026-07-21T00:00:00+00:00"
+      }
+    ]
+  },
+  "recordCounts": {
+    "teams": 54,
+    "groups": 12,
+    "venues": 16,
+    "matches": 107,
+    "standings": 48,
+    "awards": 4,
+    "conflicts": 236
+  }
+}

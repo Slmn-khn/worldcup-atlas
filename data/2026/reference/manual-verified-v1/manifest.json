@@ -1,0 +1,25 @@
+{
+  "packId": "manual-verified-2026-v1",
+  "label": "2026 Manual Verified Reference Pack",
+  "createdBy": "Salman",
+  "createdAt": "2026-07-21T00:00:00Z",
+  "verificationLevel": "human-authenticated-reference",
+  "importAllowed": false,
+  "notes": [
+    "Use verified records as high-priority reference.",
+    "Do not import partial/unverified records without review.",
+    "Respect conflicts.json as the conflict registry."
+  ],
+  "files": {
+    "tournament": "tournament.json",
+    "teams": "teams.json",
+    "groups": "groups.json",
+    "matches": "matches.json",
+    "standings": "standings.json",
+    "bracket": "bracket.json",
+    "venues": "venues.json",
+    "awards": "awards.json",
+    "sources": "sources.json",
+    "conflicts": "conflicts.json"
+  }
+}

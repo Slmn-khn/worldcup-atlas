@@ -1,0 +1,21 @@
+{
+  "packId": "fixture-pack-v1",
+  "label": "Fixture Reference Pack",
+  "createdBy": "Test",
+  "createdAt": "2026-07-21T00:00:00Z",
+  "verificationLevel": "human-authenticated-reference",
+  "importAllowed": false,
+  "notes": ["fixture"],
+  "files": {
+    "tournament": "tournament.json",
+    "teams": "teams.json",
+    "groups": "groups.json",
+    "matches": "matches.json",
+    "standings": "standings.json",
+    "bracket": "bracket.json",
+    "venues": "venues.json",
+    "awards": "awards.json",
+    "sources": "sources.json",
+    "conflicts": "conflicts.json"
+  }
+}

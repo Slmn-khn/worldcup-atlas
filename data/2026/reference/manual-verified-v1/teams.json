@@ -1,0 +1,294 @@
+{
+  "schema": "team/v1",
+  "teams": [
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "confederation": "CONCACAF",
+      "verification": "verified"
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "confederation": "CONCACAF",
+      "verification": "verified"
+    },
+    {
+      "code": "USA",
+      "name": "United States",
+      "confederation": "CONCACAF",
+      "verification": "verified"
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "confederation": "CONCACAF",
+      "verification": "reported"
+    },
+    {
+      "code": "CUW",
+      "name": "Curaçao",
+      "confederation": "CONCACAF",
+      "verification": "reported"
+    },
+    {
+      "code": "HAI",
+      "name": "Haiti",
+      "confederation": "CONCACAF",
+      "verification": "reported"
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "ECU",
+      "name": "Ecuador",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay",
+      "confederation": "CONMEBOL",
+      "verification": "verified"
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "ENG",
+      "name": "England",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "POR",
+      "name": "Portugal",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "NED",
+      "name": "Netherlands",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "GER",
+      "name": "Germany",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "CRO",
+      "name": "Croatia",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "SUI",
+      "name": "Switzerland",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "SWE",
+      "name": "Sweden",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "CZE",
+      "name": "Czechia",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "confederation": "UEFA",
+      "verification": "verified"
+    },
+    {
+      "code": "SCO",
+      "name": "Scotland",
+      "confederation": "UEFA",
+      "verification": "reported"
+    },
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "IRN",
+      "name": "Iran",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "KOR",
+      "name": "Korea Republic",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "JOR",
+      "name": "Jordan",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "KSA",
+      "name": "Saudi Arabia",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "QAT",
+      "name": "Qatar",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq",
+      "confederation": "AFC",
+      "verification": "verified"
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "ALG",
+      "name": "Algeria",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "CIV",
+      "name": "Côte d'Ivoire",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "confederation": "CAF",
+      "verification": "reported"
+    },
+    {
+      "code": "CPV",
+      "name": "Cape Verde",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "RSA",
+      "name": "South Africa",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "COD",
+      "name": "DR Congo",
+      "confederation": "CAF",
+      "verification": "verified"
+    },
+    {
+      "code": "NZL",
+      "name": "New Zealand",
+      "confederation": "OFC",
+      "verification": "verified"
+    },
+    {
+      "code": null,
+      "name": null,
+      "confederation": "UEFA (play-off winner)",
+      "verification": "unverified",
+      "note": "48th participant not confirmed in reviewed sources; do not guess. See conflicts.json C-004."
+    }
+  ]
+}

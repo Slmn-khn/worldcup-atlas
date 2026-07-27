@@ -1,0 +1,1329 @@
+{
+  "status": "WARN",
+  "generatedAt": "2026-07-27T14:10:55.218Z",
+  "counts": {
+    "teams": 54,
+    "realTeams": 48,
+    "placeholderTeams": 6,
+    "groups": 12,
+    "venues": 16,
+    "matchRecords": 107,
+    "resolvedMatches": 104,
+    "finishedMatches": 104,
+    "standings": 48,
+    "conflicts": 236,
+    "errors": 0,
+    "warnings": 3
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "code": "MANUAL_PACK_PARTIAL_COVERAGE",
+      "message": "Manual reference pack captures 67 of 104 official matches — usable as high-priority supporting evidence, insufficient for a full import."
+    },
+    {
+      "code": "MANUAL_PACK_UNVERIFIED_MATCHES",
+      "message": "7 manual pack matches are not fully verified (missing scores/participants) — supporting evidence only, never final values."
+    },
+    {
+      "code": "MANUAL_PACK_UNVERIFIED_TEAMS",
+      "message": "6 manual pack team records are not fully verified (including unconfirmed participant placeholders) — not import-ready."
+    }
+  ],
+  "conflicts": [
+    {
+      "entityType": "groups",
+      "entityKey": "Group A",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group B",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group D",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group F",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group I",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "groups",
+      "entityKey": "Group K",
+      "field": "teams",
+      "note": "Group membership differs between sources."
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bc-place",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bc-place",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bmo-field",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "bmo-field",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-akron",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-akron",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-azteca",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "estadio-bbva",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lumen-field",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "lumen-field",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "metlife-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "metlife-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "cityName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "countryName"
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "capacity"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:kr",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:mx",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:mx",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:cz~flag:za",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:mx",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:kr~flag:za",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group A|flag:mx~flag:za",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ca",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ca",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ch",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ba~flag:ch",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:ch",
+      "field": "homeScore"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:qa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:qa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "matchNumber"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "kickoffDateLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "venueName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:gb-sct",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:gb-sct",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ht",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ma",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:br~flag:ma",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ht",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ht",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ma",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:gb-sct~flag:ma",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:ht~flag:ma",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group C|flag:ht~flag:ma",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:py",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:py",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:tr",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:us",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:au~flag:us",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:tr",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:us",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:py~flag:us",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:tr~flag:us",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group D|flag:tr~flag:us",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:cw",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:cw",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:de",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:ci~flag:ec",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:de",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:de",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:ec",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:cw~flag:ec",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:de~flag:ec",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group E|flag:de~flag:ec",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:nl",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:nl",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:jp~flag:tn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:se",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:se",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "kickoffDateLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:nl~flag:tn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group F|flag:se~flag:tn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:eg",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:ir",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:nz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:be~flag:nz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:ir",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:ir",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:eg~flag:nz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:ir~flag:nz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group G|flag:ir~flag:nz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:es",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:es",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "kickoffDateLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:sa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:uy",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:cv~flag:uy",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:sa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:sa",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "kickoffDateLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:es~flag:uy",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group H|flag:sa~flag:uy",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:iq",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:iq",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:no",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:no",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:sn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:fr~flag:sn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:no",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:no",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:sn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:iq~flag:sn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group I|flag:no~flag:sn",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:at",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:dz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:dz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:ar~flag:jo",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:dz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:at~flag:jo",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group J|flag:dz~flag:jo",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:co",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:pt",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:uz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:cd~flag:uz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:pt",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:pt",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:co~flag:uz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group K|flag:pt~flag:uz",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:gh",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:hr",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:hr",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:pa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gb-eng~flag:pa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:hr",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:hr",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "kickoffTimeLabel"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:gh~flag:pa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:hr~flag:pa",
+      "field": "status",
+      "note": "Lower-priority snapshot may be stale (e.g. pre-tournament data)."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GROUP|Group L|flag:hr~flag:pa",
+      "field": "cityName"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:ca~flag:ma",
+      "field": "matchNumber"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:fr~flag:py",
+      "field": "matchNumber"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_32|flag:au~flag:eg",
+      "field": "matchNumber"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "match-number-53",
+      "field": "matchNumber",
+      "note": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "match-number-59",
+      "field": "matchNumber",
+      "note": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record."
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group A",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Mexico: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=6 provider=0, points derived=9 provider=0; South Africa: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=4 provider=0; South Korea: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; UEFA Path D Winner: not present in derived table"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group B",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Canada: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; UEFA Path A Winner: not present in derived table; Qatar: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0; Switzerland: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group C",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Brazil: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0; Morocco: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0; Haiti: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=8 provider=0; Scotland: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=4 provider=0, points derived=3 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group D",
+      "field": "table",
+      "note": "Derived vs provider mismatch — United States: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Paraguay: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; Australia: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; UEFA Path C Winner: not present in derived table"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group E",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Germany: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Curaçao: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=9 provider=0, points derived=1 provider=0; Ivory Coast: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=2 provider=0, points derived=6 provider=0; Ecuador: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group F",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Netherlands: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=7 provider=0; Japan: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; UEFA Path B Winner: not present in derived table; Tunisia: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=12 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group G",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Belgium: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=5 provider=0; Egypt: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; Iran: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; New Zealand: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group H",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Spain: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=5 provider=0, points derived=7 provider=0; Cape Verde: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=3 provider=0; Saudi Arabia: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=5 provider=0, points derived=2 provider=0; Uruguay: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=4 provider=0, points derived=2 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group I",
+      "field": "table",
+      "note": "Derived vs provider mismatch — France: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=2 provider=0, points derived=9 provider=0; Senegal: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=6 provider=0, points derived=3 provider=0; IC Path 2 Winner: not present in derived table; Norway: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=7 provider=0, points derived=6 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group J",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Argentina: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=1 provider=0, points derived=9 provider=0; Algeria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=7 provider=0, points derived=4 provider=0; Austria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=6 provider=0, points derived=4 provider=0; Jordan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=8 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group K",
+      "field": "table",
+      "note": "Derived vs provider mismatch — Portugal: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=1 provider=0, points derived=5 provider=0; IC Path 1 Winner: not present in derived table; Uzbekistan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=11 provider=0; Colombia: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0"
+    },
+    {
+      "entityType": "standings",
+      "entityKey": "Group L",
+      "field": "table",
+      "note": "Derived vs provider mismatch — England: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=7 provider=0; Croatia: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=5 provider=0, points derived=6 provider=0; Ghana: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; Panama: played derived=3 provider=0, losses derived=3 provider=0, goalsAgainst derived=4 provider=0"
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-001",
+      "field": "final.shots",
+      "note": "[manual pack C-001, source_disagreement] Total shots in the final: NBC reported Spain led 20-2; CBS reported 20-3."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-002",
+      "field": "matches.M88",
+      "note": "[manual pack C-002, data_gap] Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-003",
+      "field": "matches.GB-6",
+      "note": "[manual pack C-003, data_gap] Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source."
+    },
+    {
+      "entityType": "teams",
+      "entityKey": "manual-verified-2026-v1:C-004",
+      "field": "teams",
+      "note": "[manual pack C-004, data_gap] 47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources."
+    },
+    {
+      "entityType": "venues",
+      "entityKey": "manual-verified-2026-v1:C-005",
+      "field": "venues.nynj",
+      "note": "[manual pack C-005, naming_variant] Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-006",
+      "field": "matches (group stage)",
+      "note": "[manual pack C-006, data_gap] 35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-007",
+      "field": "matches.round_of_16",
+      "note": "[manual pack C-007, data_gap] Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL)."
+    }
+  ],
+  "recommendations": [
+    "Review conflicts.json: every entry is a real cross-source (or intra-source) disagreement that was reported, not silently resolved.",
+    "Do NOT import in Phase 1. A future import phase must require data/2026/approved/approval.json (see data/2026/approved/README.md)."
+  ],
+  "manualPack": {
+    "present": true,
+    "packId": "manual-verified-2026-v1",
+    "packHash": "8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff",
+    "filesLoaded": 10,
+    "officialMatchCount": 104,
+    "capturedMatchCount": 67,
+    "verifiedMatches": 60,
+    "unverifiedMatches": 7,
+    "knownConflicts": 7,
+    "verifiedTeams": 42,
+    "unverifiedTeams": 6,
+    "awardsPresent": true
+  }
+}

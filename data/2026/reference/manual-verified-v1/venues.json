@@ -1,0 +1,165 @@
+{
+  "schema": "venue/v1",
+  "venues": [
+    {
+      "id": "nynj",
+      "fifa_name": "New York New Jersey Stadium",
+      "stadium_name": "MetLife Stadium",
+      "city": "East Rutherford, New Jersey",
+      "country": "USA",
+      "capacity_approx": 82500,
+      "hosted_final": true,
+      "verification": "verified"
+    },
+    {
+      "id": "la",
+      "fifa_name": "Los Angeles Stadium",
+      "stadium_name": "SoFi Stadium",
+      "city": "Inglewood, California",
+      "country": "USA",
+      "capacity_approx": 70240,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "dal",
+      "fifa_name": "Dallas Stadium",
+      "stadium_name": "AT&T Stadium",
+      "city": "Arlington, Texas",
+      "country": "USA",
+      "capacity_approx": 80000,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "hou",
+      "fifa_name": "Houston Stadium",
+      "stadium_name": "NRG Stadium",
+      "city": "Houston, Texas",
+      "country": "USA",
+      "capacity_approx": 72220,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "atl",
+      "fifa_name": "Atlanta Stadium",
+      "stadium_name": "Mercedes-Benz Stadium",
+      "city": "Atlanta, Georgia",
+      "country": "USA",
+      "capacity_approx": 71000,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "mia",
+      "fifa_name": "Miami Stadium",
+      "stadium_name": "Hard Rock Stadium",
+      "city": "Miami Gardens, Florida",
+      "country": "USA",
+      "capacity_approx": 64767,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "phi",
+      "fifa_name": "Philadelphia Stadium",
+      "stadium_name": "Lincoln Financial Field",
+      "city": "Philadelphia, Pennsylvania",
+      "country": "USA",
+      "capacity_approx": 69796,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "sfba",
+      "fifa_name": "San Francisco Bay Area Stadium",
+      "stadium_name": "Levi's Stadium",
+      "city": "Santa Clara, California",
+      "country": "USA",
+      "capacity_approx": 68500,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "sea",
+      "fifa_name": "Seattle Stadium",
+      "stadium_name": "Lumen Field",
+      "city": "Seattle, Washington",
+      "country": "USA",
+      "capacity_approx": 69000,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "kc",
+      "fifa_name": "Kansas City Stadium",
+      "stadium_name": "Arrowhead Stadium",
+      "city": "Kansas City, Missouri",
+      "country": "USA",
+      "capacity_approx": 76416,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "bos",
+      "fifa_name": "Boston Stadium",
+      "stadium_name": "Gillette Stadium",
+      "city": "Foxborough, Massachusetts",
+      "country": "USA",
+      "capacity_approx": 65878,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "tor",
+      "fifa_name": "Toronto Stadium",
+      "stadium_name": "BMO Field",
+      "city": "Toronto, Ontario",
+      "country": "Canada",
+      "capacity_approx": 45736,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "van",
+      "fifa_name": "BC Place Vancouver",
+      "stadium_name": "BC Place",
+      "city": "Vancouver, British Columbia",
+      "country": "Canada",
+      "capacity_approx": 54500,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "cdmx",
+      "fifa_name": "Estadio Ciudad de México",
+      "stadium_name": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "capacity_approx": 87523,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "gdl",
+      "fifa_name": "Estadio Guadalajara",
+      "stadium_name": "Estadio Akron",
+      "city": "Zapopan, Jalisco",
+      "country": "Mexico",
+      "capacity_approx": 49850,
+      "hosted_final": false,
+      "verification": "reported"
+    },
+    {
+      "id": "mty",
+      "fifa_name": "Estadio Monterrey",
+      "stadium_name": "Estadio BBVA",
+      "city": "Guadalupe, Nuevo León",
+      "country": "Mexico",
+      "capacity_approx": 53500,
+      "hosted_final": false,
+      "verification": "reported"
+    }
+  ]
+}
