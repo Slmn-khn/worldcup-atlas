@@ -23,6 +23,12 @@ export const VALIDATION_2026_DIR = `${DATA_2026_DIR}/validation`;
 export const REPORTS_2026_DIR = `${DATA_2026_DIR}/reports`;
 export const SOURCE_REGISTRY_JSON_PATH = `${DATA_2026_DIR}/source-registry.json`;
 
+/** Phase 2A human-review workflow folders. */
+export const REVIEW_2026_DIR = `${DATA_2026_DIR}/review`;
+export const REVIEW_TEMPLATES_2026_DIR = `${REVIEW_2026_DIR}/templates`;
+export const REVIEW_OUTPUT_2026_DIR = `${REVIEW_2026_DIR}/output`;
+export const APPROVED_2026_DIR = `${DATA_2026_DIR}/approved`;
+
 /** Candidate-provider sub-folders (candidate + normalized enrichment output). */
 export const MOMINUL_CANDIDATES_DIR = `${CANDIDATES_2026_DIR}/mominul`;
 export const BUSTAMI_CANDIDATES_DIR = `${CANDIDATES_2026_DIR}/bustami`;

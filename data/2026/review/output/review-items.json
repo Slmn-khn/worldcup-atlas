@@ -1,0 +1,3077 @@
+{
+  "schema": "review-pack/v1",
+  "generatedAt": "2026-07-27T15:14:12.024Z",
+  "reviewPackHash": "26247e14dad94d4ce11327c841fd16e0e5946e3032567fb3bee79f61fd8c2581",
+  "counts": {
+    "total": 110,
+    "bySeverity": {
+      "LOW": 16,
+      "MEDIUM": 91,
+      "HIGH": 3,
+      "CRITICAL": 0
+    },
+    "byType": {
+      "MATCH_RESULT_CONFLICT": 13,
+      "EFI_ANALYTICS_CANDIDATE": 4,
+      "MATCH_GAP_FILL": 36,
+      "TEAM_CONFLICT": 7,
+      "VENUE_CONFLICT": 25,
+      "SOURCE_CONFLICT": 18,
+      "PLAYER_EVENT_CANDIDATE": 2,
+      "LINEUP_CANDIDATE": 1,
+      "OTHER": 4
+    }
+  },
+  "inputs": [
+    "validation/conflict-report.json",
+    "reports/enrichment-conflict-report.json",
+    "reports/enrichment-coverage-report.json",
+    "normalized/mominul/enriched-matches.json"
+  ],
+  "items": [
+    {
+      "id": "review-match-GB-5-score",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "HIGH",
+      "entityType": "matches",
+      "entityKey": "GB-5",
+      "field": "score",
+      "manualPackValue": "Switzerland 3-1 Canada",
+      "providerValue": "Switzerland 2-1 Canada (matches.csv row 51)",
+      "providerSourceId": "mominul_2026_dataset",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Manual verified pack remains preferred; provider value reported, never applied.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Switzerland 3-1 Canada"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Switzerland 2-1 Canada (matches.csv row 51)"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Switzerland 2-1 Canada (matches_detailed.csv row 51)"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-GROUP-Group-B-flag-ca-flag-ch-homeScore",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "HIGH",
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ca~flag:ch",
+      "field": "homeScore",
+      "manualPackValue": "3",
+      "providerValue": "2",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on matches.homeScore for GROUP|Group B|flag:ca~flag:ch.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "3"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "2"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "2"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-001",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "HIGH",
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-001",
+      "field": "final.shots",
+      "manualPackValue": "20-2",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-001, source_disagreement] Total shots in the final: NBC reported Spain led 20-2; CBS reported 20-3.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1/nbc-final",
+          "value": "20-2"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1/cbs-final",
+          "value": "20-3"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-efi-license",
+      "type": "EFI_ANALYTICS_CANDIDATE",
+      "severity": "MEDIUM",
+      "entityType": "source",
+      "entityKey": "bustami_fifa_efi_2026",
+      "field": "license",
+      "providerSourceId": "bustami_fifa_efi_2026",
+      "preferredSourceId": null,
+      "currentRecommendation": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW",
+      "reason": "The Bustami EFI dataset's upstream README scopes the data to analytical/research purposes only, and the metrics derive from the official FIFA platform. Until a documented license/usage review clears it, every record stays research-only: no import, no public rendering, never merged into the core archive.",
+      "evidence": [
+        {
+          "sourceId": "bustami_fifa_efi_2026",
+          "note": "importBlockedReason: RESEARCH_ONLY_UNTIL_LICENSE_REVIEW"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-GB-6",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "GB-6",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Bosnia and Herzegovina 3-1 Qatar (2026-06-24)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match GB-6, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Bosnia and Herzegovina 3-1 Qatar (2026-06-24)",
+          "note": "matches_detailed.csv row 52"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Bosnia and Herzegovina 3–1 Qatar (June 24, 2026)",
+          "note": "real_match_details.json row 52"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M10",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M10",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Germany 7-1 Curaçao (2026-06-14)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M10, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Germany 7-1 Curaçao (2026-06-14)",
+          "note": "matches_detailed.csv row 9"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Germany 7–1 Curaçao (June 14, 2026)",
+          "note": "real_match_details.json row 13"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M11",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M11",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Netherlands 2-2 Japan (2026-06-14)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M11, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Netherlands 2-2 Japan (2026-06-14)",
+          "note": "matches_detailed.csv row 10"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Netherlands 2–2 Japan (June 14, 2026)",
+          "note": "real_match_details.json row 15"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M12",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M12",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "23 5-1 24 (2026-06-14)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M12, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "23 5-1 24 (2026-06-14)",
+          "note": "matches.csv row 12"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Sweden 5-1 Tunisia (2026-06-14)",
+          "note": "matches_detailed.csv row 12"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Sweden 5–1 Tunisia (June 14, 2026)",
+          "note": "real_match_details.json row 16"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M13",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M13",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Iran 2–2 New Zealand (June 15, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M13, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Iran 2–2 New Zealand (June 15, 2026)",
+          "note": "real_match_details.json row 18"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M14",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M14",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Spain 0–0 Cape Verde (June 15, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M14, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Spain 0–0 Cape Verde (June 15, 2026)",
+          "note": "real_match_details.json row 19"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M15",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M15",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Belgium 1-1 Egypt (2026-06-15)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M15, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Belgium 1-1 Egypt (2026-06-15)",
+          "note": "matches_detailed.csv row 14"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Belgium 1–1 Egypt (June 15, 2026)",
+          "note": "real_match_details.json row 17"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M16",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M16",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Saudi Arabia 1-1 Uruguay (2026-06-15)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M16, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Saudi Arabia 1-1 Uruguay (2026-06-15)",
+          "note": "matches_detailed.csv row 15"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Saudi Arabia 1–1 Uruguay (June 15, 2026)",
+          "note": "real_match_details.json row 20"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M22",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M22",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "45 4-2 46 (2026-06-17)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M22, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "45 4-2 46 (2026-06-17)",
+          "note": "matches.csv row 22"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "England 4-2 Croatia (2026-06-17)",
+          "note": "matches_detailed.csv row 22"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "England 4–2 Croatia (June 17, 2026)",
+          "note": "real_match_details.json row 27"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M24",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M24",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Ghana 1-0 Panama (2026-06-17)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M24, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Ghana 1-0 Panama (2026-06-17)",
+          "note": "matches_detailed.csv row 23"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Ghana 1–0 Panama (June 17, 2026)",
+          "note": "real_match_details.json row 28"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M29",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M29",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "9 3-0 11 (2026-06-19)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M29, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "9 3-0 11 (2026-06-19)",
+          "note": "matches.csv row 29"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Brazil 3-0 Haiti (2026-06-19)",
+          "note": "matches_detailed.csv row 29"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Brazil 3–0 Haiti (June 19, 2026)",
+          "note": "real_match_details.json row 29"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M30",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M30",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "12 0-1 10 (2026-06-19)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M30, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "12 0-1 10 (2026-06-19)",
+          "note": "matches.csv row 30"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Scotland 0-1 Morocco (2026-06-19)",
+          "note": "matches_detailed.csv row 30"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Scotland 0–1 Morocco (June 19, 2026)",
+          "note": "real_match_details.json row 30"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M31",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M31",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "13 2-0 15 (2026-06-19)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M31, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "13 2-0 15 (2026-06-19)",
+          "note": "matches.csv row 31"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "USA 2-0 Australia (2026-06-19)",
+          "note": "matches_detailed.csv row 31"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "United States 2–0 Australia (June 19, 2026)",
+          "note": "real_match_details.json row 31"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M33",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M33",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "17 2-1 19 (2026-06-20)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M33, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "17 2-1 19 (2026-06-20)",
+          "note": "matches.csv row 33"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Germany 2-1 Côte d'Ivoire (2026-06-20)",
+          "note": "matches_detailed.csv row 33"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Germany 2–1 Ivory Coast (June 20, 2026)",
+          "note": "real_match_details.json row 33"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M34",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M34",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "20 0-0 18 (2026-06-20)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M34, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "20 0-0 18 (2026-06-20)",
+          "note": "matches.csv row 34"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Ecuador 0-0 Curaçao (2026-06-20)",
+          "note": "matches_detailed.csv row 34"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Ecuador 0–0 Curaçao (June 20, 2026)",
+          "note": "real_match_details.json row 34"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M35",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M35",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "21 5-1 23 (2026-06-20)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M35, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "21 5-1 23 (2026-06-20)",
+          "note": "matches.csv row 35"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Netherlands 5-1 Sweden (2026-06-20)",
+          "note": "matches_detailed.csv row 35"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Netherlands 5–1 Sweden (June 20, 2026)",
+          "note": "real_match_details.json row 35"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M36",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M36",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "24 0-4 22 (2026-06-20)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M36, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "24 0-4 22 (2026-06-20)",
+          "note": "matches.csv row 36"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Tunisia 0-4 Japan (2026-06-20)",
+          "note": "matches_detailed.csv row 36"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Tunisia 0–4 Japan (June 20, 2026)",
+          "note": "real_match_details.json row 36"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M37",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M37",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Belgium 0–0 Iran (June 21, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M37, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Belgium 0–0 Iran (June 21, 2026)",
+          "note": "real_match_details.json row 37"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M38",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M38",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "28 1-3 26 (2026-06-21)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M38, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "28 1-3 26 (2026-06-21)",
+          "note": "matches.csv row 38"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "New Zealand 1-3 Egypt (2026-06-21)",
+          "note": "matches_detailed.csv row 38"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "New Zealand 1–3 Egypt (June 21, 2026)",
+          "note": "real_match_details.json row 38"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M39",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M39",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "29 4-0 31 (2026-06-21)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M39, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "29 4-0 31 (2026-06-21)",
+          "note": "matches.csv row 39"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Spain 4-0 Saudi Arabia (2026-06-21)",
+          "note": "matches_detailed.csv row 39"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Spain 4–0 Saudi Arabia (June 21, 2026)",
+          "note": "real_match_details.json row 39"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M4",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M4",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "13 4-1 14 (2026-06-12)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M4, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "13 4-1 14 (2026-06-12)",
+          "note": "matches.csv row 4"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "USA 4-1 Paraguay (2026-06-12)",
+          "note": "matches_detailed.csv row 4"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "United States 4–1 Paraguay (June 12, 2026)",
+          "note": "real_match_details.json row 11"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M40",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M40",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Uruguay 2–2 Cape Verde (June 21, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M40, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Uruguay 2–2 Cape Verde (June 21, 2026)",
+          "note": "real_match_details.json row 40"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M46",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M46",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Panama 0-1 Croatia (2026-06-23)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M46, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Panama 0-1 Croatia (2026-06-23)",
+          "note": "matches_detailed.csv row 48"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Panama 0–1 Croatia (June 23, 2026)",
+          "note": "real_match_details.json row 48"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M48",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M48",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "England 0-0 Ghana (2026-06-23)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M48, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "England 0-0 Ghana (2026-06-23)",
+          "note": "matches_detailed.csv row 47"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "England 0–0 Ghana (June 23, 2026)",
+          "note": "real_match_details.json row 47"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M5",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M5",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Haiti 0-1 Scotland (2026-06-13)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M5, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Haiti 0-1 Scotland (2026-06-13)",
+          "note": "matches_detailed.csv row 7"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Haiti 0–1 Scotland (June 13, 2026)",
+          "note": "real_match_details.json row 10"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M57",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M57",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Paraguay 0-0 Australia (2026-06-25)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M57, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Paraguay 0-0 Australia (2026-06-25)",
+          "note": "matches_detailed.csv row 56"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Paraguay 0-0 Australia (June 25, 2026)",
+          "note": "real_match_details.json row 56"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M58",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M58",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Turkey 3-2 United States (June 25, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M58, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Turkey 3-2 United States (June 25, 2026)",
+          "note": "real_match_details.json row 55"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M6",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M6",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Australia 2–0 Turkey (June 13, 2026)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M6, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Australia 2–0 Turkey (June 13, 2026)",
+          "note": "real_match_details.json row 12"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M7",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M7",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Brazil 1-1 Morocco (2026-06-13)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M7, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Brazil 1-1 Morocco (2026-06-13)",
+          "note": "matches_detailed.csv row 6"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Brazil 1–1 Morocco (June 13, 2026)",
+          "note": "real_match_details.json row 9"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M88",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M88",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "44 1-0 47 (2026-07-04)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M88, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "44 1-0 47 (2026-07-04)",
+          "note": "matches.csv row 88"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Colombia 1-0 Ghana (2026-07-04)",
+          "note": "matches_detailed.csv row 88"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M9",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M9",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "Côte d'Ivoire 1-0 Ecuador (2026-06-14)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M9, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Côte d'Ivoire 1-0 Ecuador (2026-06-14)",
+          "note": "matches_detailed.csv row 11"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Ivory Coast 1–0 Ecuador (June 14, 2026)",
+          "note": "real_match_details.json row 14"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M92",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M92",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "1 2-3 45 (2026-07-06)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M92, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "1 2-3 45 (2026-07-06)",
+          "note": "matches.csv row 92"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Mexico 2-3 England (2026-07-06)",
+          "note": "matches_detailed.csv row 92"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M93",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M93",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "41 0-1 29 (2026-07-06)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M93, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "41 0-1 29 (2026-07-06)",
+          "note": "matches.csv row 93"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Portugal 0-1 Spain (2026-07-06)",
+          "note": "matches_detailed.csv row 93"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M94",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M94",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "13 1-4 25 (2026-07-07)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M94, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "13 1-4 25 (2026-07-07)",
+          "note": "matches.csv row 94"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "USA 1-4 Belgium (2026-07-07)",
+          "note": "matches_detailed.csv row 94"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M95",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M95",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "37 3-2 26 (2026-07-07)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M95, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "37 3-2 26 (2026-07-07)",
+          "note": "matches.csv row 95"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Argentina 3-2 Egypt (2026-07-07)",
+          "note": "matches_detailed.csv row 95"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-gap-M96",
+      "type": "MATCH_GAP_FILL",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "M96",
+      "field": "result",
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "8 0-0 44 (2026-07-07)",
+      "preferredSourceId": null,
+      "currentRecommendation": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION",
+      "reason": "Provider data cleanly resolves match M96, for which the manual verified pack records no verified result (a documented gap). Approving fills the gap; the manual pack is not overridden.",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "8 0-0 44 (2026-07-07)",
+          "note": "matches.csv row 96"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Switzerland 0-0 Colombia (2026-07-07)",
+          "note": "matches_detailed.csv row 96"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-A-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group A",
+      "field": "teams",
+      "manualPackValue": "[\"Mexico\",\"South Africa\",\"Korea Republic\",\"Czechia\"]",
+      "providerValue": "[\"Mexico\",\"South Africa\",\"South Korea\",\"Czech Republic\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Mexico\",\"South Africa\",\"Korea Republic\",\"Czechia\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Mexico\",\"South Africa\",\"South Korea\",\"Czech Republic\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Mexico\",\"South Africa\",\"South Korea\",\"UEFA Path D Winner\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-B-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group B",
+      "field": "teams",
+      "manualPackValue": "[\"Canada\",\"Switzerland\",\"Qatar\",\"Bosnia and Herzegovina\"]",
+      "providerValue": "[\"Canada\",\"Bosnia & Herzegovina\",\"Qatar\",\"Switzerland\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Canada\",\"Switzerland\",\"Qatar\",\"Bosnia and Herzegovina\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Canada\",\"Bosnia & Herzegovina\",\"Qatar\",\"Switzerland\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Canada\",\"UEFA Path A Winner\",\"Qatar\",\"Switzerland\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-D-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group D",
+      "field": "teams",
+      "providerValue": "[\"USA\",\"Paraguay\",\"Australia\",\"Turkey\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "openfootball_worldcup_2026",
+      "currentRecommendation": "KEEP_HIGHEST_PRIORITY_SOURCE",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"USA\",\"Paraguay\",\"Australia\",\"Turkey\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"United States\",\"Paraguay\",\"Australia\",\"UEFA Path C Winner\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-F-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group F",
+      "field": "teams",
+      "providerValue": "[\"Netherlands\",\"Japan\",\"Sweden\",\"Tunisia\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "openfootball_worldcup_2026",
+      "currentRecommendation": "KEEP_HIGHEST_PRIORITY_SOURCE",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Netherlands\",\"Japan\",\"Sweden\",\"Tunisia\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Netherlands\",\"Japan\",\"UEFA Path B Winner\",\"Tunisia\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-I-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group I",
+      "field": "teams",
+      "manualPackValue": "[\"France\",\"Norway\",\"Senegal\",\"Iraq\"]",
+      "providerValue": "[\"France\",\"Senegal\",\"Iraq\",\"Norway\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"France\",\"Norway\",\"Senegal\",\"Iraq\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"France\",\"Senegal\",\"Iraq\",\"Norway\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"France\",\"Senegal\",\"IC Path 2 Winner\",\"Norway\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-group-Group-K-teams",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "groups",
+      "entityKey": "Group K",
+      "field": "teams",
+      "manualPackValue": "[\"Portugal\",\"Colombia\",\"DR Congo\",\"Uzbekistan\"]",
+      "providerValue": "[\"Portugal\",\"DR Congo\",\"Uzbekistan\",\"Colombia\"]",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Group membership differs between sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "[\"Portugal\",\"Colombia\",\"DR Congo\",\"Uzbekistan\"]"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "[\"Portugal\",\"DR Congo\",\"Uzbekistan\",\"Colombia\"]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "[\"Portugal\",\"IC Path 1 Winner\",\"Uzbekistan\",\"Colombia\"]"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-GROUP-Group-B-flag-ch-flag-qa-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "GROUP|Group B|flag:ch~flag:qa",
+      "field": "matchNumber",
+      "providerValue": "8",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "worldcup2026_repo",
+      "currentRecommendation": "KEEP_HIGHEST_PRIORITY_SOURCE",
+      "reason": "Sources disagree on matches.matchNumber for GROUP|Group B|flag:ch~flag:qa.",
+      "evidence": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "8"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "54"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-match-number-53-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "match-number-53",
+      "field": "matchNumber",
+      "manualPackValue": "53 (Bosnia and Herzegovina v Qatar)",
+      "providerValue": "53 (UEFA Path A Winner v Canada, unverified)",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "53 (Bosnia and Herzegovina v Qatar)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "53 (UEFA Path A Winner v Canada, unverified)"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-match-number-59-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "match-number-59",
+      "field": "matchNumber",
+      "providerValue": "59 (Japan v Sweden)",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "openfootball_worldcup_2026",
+      "currentRecommendation": "KEEP_HIGHEST_PRIORITY_SOURCE",
+      "reason": "Unverified/placeholder record claimed a match number owned by a resolved match; the number is withheld on the unverified record.",
+      "evidence": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "59 (Japan v Sweden)"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "59 (Japan v UEFA Path B Winner, unverified)"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-ROUND-OF-16-flag-ca-flag-ma-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:ca~flag:ma",
+      "field": "matchNumber",
+      "manualPackValue": "89",
+      "providerValue": "90",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on matches.matchNumber for ROUND_OF_16|flag:ca~flag:ma.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "89"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "90"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "90"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-ROUND-OF-16-flag-fr-flag-py-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_16|flag:fr~flag:py",
+      "field": "matchNumber",
+      "manualPackValue": "90",
+      "providerValue": "89",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on matches.matchNumber for ROUND_OF_16|flag:fr~flag:py.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "90"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "89"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "89"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-match-ROUND-OF-32-flag-au-flag-eg-matchNumber",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "ROUND_OF_32|flag:au~flag:eg",
+      "field": "matchNumber",
+      "manualPackValue": "87",
+      "providerValue": "88",
+      "providerSourceId": "openfootball_worldcup_2026",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on matches.matchNumber for ROUND_OF_32|flag:au~flag:eg.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "87"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "88"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "88"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-002",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-002",
+      "field": "matches.M88",
+      "manualPackValue": "Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified.",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-002, data_gap] Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-003",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-003",
+      "field": "matches.GB-6",
+      "manualPackValue": "Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source.",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-003, data_gap] Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-005",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "manual-verified-2026-v1:C-005",
+      "field": "venues.nynj",
+      "manualPackValue": "Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility.",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-005, naming_variant] Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-006",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-006",
+      "field": "matches (group stage)",
+      "manualPackValue": "35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources.",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-006, data_gap] 35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-pack-C-007",
+      "type": "MATCH_RESULT_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "matches",
+      "entityKey": "manual-verified-2026-v1:C-007",
+      "field": "matches.round_of_16",
+      "manualPackValue": "Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL).",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-007, data_gap] Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL).",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL)."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-A-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group A",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Mexico: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=6 provider=0, points derived=9 provider=0; South Africa: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=4 provider=0; South Korea: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; UEFA Path D Winner: not present in derived table",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-B-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group B",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Canada: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; UEFA Path A Winner: not present in derived table; Qatar: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0; Switzerland: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-C-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group C",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Brazil: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0; Morocco: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=3 provider=0, points derived=7 provider=0; Haiti: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=8 provider=0; Scotland: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=4 provider=0, points derived=3 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-D-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group D",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — United States: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Paraguay: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=4 provider=0, points derived=4 provider=0; Australia: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; UEFA Path C Winner: not present in derived table",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-E-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group E",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Germany: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=6 provider=0; Curaçao: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=9 provider=0, points derived=1 provider=0; Ivory Coast: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=2 provider=0, points derived=6 provider=0; Ecuador: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-F-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group F",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Netherlands: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=4 provider=0, points derived=7 provider=0; Japan: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=7 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; UEFA Path B Winner: not present in derived table; Tunisia: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=12 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-G-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group G",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Belgium: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=5 provider=0; Egypt: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=3 provider=0, points derived=5 provider=0; Iran: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=3 provider=0, points derived=3 provider=0; New Zealand: played derived=3 provider=0, draws derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=10 provider=0, points derived=1 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-H-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group H",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Spain: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=5 provider=0, points derived=7 provider=0; Cape Verde: played derived=3 provider=0, draws derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=3 provider=0; Saudi Arabia: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=1 provider=0, goalsAgainst derived=5 provider=0, points derived=2 provider=0; Uruguay: played derived=3 provider=0, draws derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=4 provider=0, points derived=2 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-I-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group I",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — France: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=10 provider=0, goalsAgainst derived=2 provider=0, points derived=9 provider=0; Senegal: played derived=3 provider=0, wins derived=1 provider=0, losses derived=2 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=6 provider=0, points derived=3 provider=0; IC Path 2 Winner: not present in derived table; Norway: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=7 provider=0, points derived=6 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-J-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group J",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Argentina: played derived=3 provider=0, wins derived=3 provider=0, goalsFor derived=8 provider=0, goalsAgainst derived=1 provider=0, points derived=9 provider=0; Algeria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=7 provider=0, points derived=4 provider=0; Austria: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=6 provider=0, points derived=4 provider=0; Jordan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=3 provider=0, goalsAgainst derived=8 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-K-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group K",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — Portugal: played derived=3 provider=0, wins derived=1 provider=0, draws derived=2 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=1 provider=0, points derived=5 provider=0; IC Path 1 Winner: not present in derived table; Uzbekistan: played derived=3 provider=0, losses derived=3 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=11 provider=0; Colombia: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=4 provider=0, goalsAgainst derived=1 provider=0, points derived=7 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-standings-Group-L-table",
+      "type": "SOURCE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "standings",
+      "entityKey": "Group L",
+      "field": "table",
+      "providerValue": "computed from match results",
+      "providerSourceId": "derived-from-matches",
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "Derived vs provider mismatch — England: played derived=3 provider=0, wins derived=2 provider=0, draws derived=1 provider=0, goalsFor derived=6 provider=0, goalsAgainst derived=2 provider=0, points derived=7 provider=0; Croatia: played derived=3 provider=0, wins derived=2 provider=0, losses derived=1 provider=0, goalsFor derived=5 provider=0, goalsAgainst derived=5 provider=0, points derived=6 provider=0; Ghana: played derived=3 provider=0, wins derived=1 provider=0, draws derived=1 provider=0, losses derived=1 provider=0, goalsFor derived=2 provider=0, goalsAgainst derived=2 provider=0, points derived=4 provider=0; Panama: played derived=3 provider=0, losses derived=3 provider=0, goalsAgainst derived=4 provider=0",
+      "evidence": [
+        {
+          "sourceId": "derived-from-matches",
+          "value": "computed from match results"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "provider group table"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-team-unverified-48th",
+      "type": "TEAM_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "teams",
+      "entityKey": "manual-verified-2026-v1:C-004",
+      "field": "teams",
+      "manualPackValue": "47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources.",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "NEEDS_SOURCE",
+      "reason": "[manual pack C-004, data_gap] 47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources."
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-at-t-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "capacity",
+      "manualPackValue": "80000",
+      "providerValue": "94000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for at-t-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "80000"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "94000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-at-t-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "at-t-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for at-t-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-bc-place-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "bc-place",
+      "field": "capacity",
+      "manualPackValue": "54500",
+      "providerValue": "54000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for bc-place.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "54500"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "54000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-bmo-field-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "bmo-field",
+      "field": "capacity",
+      "manualPackValue": "45736",
+      "providerValue": "45000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for bmo-field.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "45736"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "45000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-estadio-akron-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "estadio-akron",
+      "field": "capacity",
+      "manualPackValue": "49850",
+      "providerValue": "48000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for estadio-akron.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "49850"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "48000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-estadio-azteca-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "estadio-azteca",
+      "field": "capacity",
+      "manualPackValue": "87523",
+      "providerValue": "83000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for estadio-azteca.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "87523"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "83000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-geha-field-at-arrowhead-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "capacity",
+      "manualPackValue": "76416",
+      "providerValue": "73000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for geha-field-at-arrowhead-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "76416"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "73000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-geha-field-at-arrowhead-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "geha-field-at-arrowhead-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for geha-field-at-arrowhead-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-gillette-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "capacity",
+      "manualPackValue": "65878",
+      "providerValue": "65000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for gillette-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "65878"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "65000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-gillette-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "gillette-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for gillette-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-hard-rock-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "capacity",
+      "manualPackValue": "64767",
+      "providerValue": "65000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for hard-rock-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "64767"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "65000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-hard-rock-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "hard-rock-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for hard-rock-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-levi-s-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "capacity",
+      "manualPackValue": "68500",
+      "providerValue": "71000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for levi-s-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "68500"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "71000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-levi-s-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "levi-s-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for levi-s-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-lincoln-financial-field-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "capacity",
+      "manualPackValue": "69796",
+      "providerValue": "69000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for lincoln-financial-field.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "69796"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "69000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-lincoln-financial-field-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "lincoln-financial-field",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for lincoln-financial-field.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-lumen-field-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "lumen-field",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for lumen-field.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-mercedes-benz-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "capacity",
+      "manualPackValue": "71000",
+      "providerValue": "75000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for mercedes-benz-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "71000"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "75000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-mercedes-benz-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "mercedes-benz-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for mercedes-benz-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-metlife-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "metlife-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for metlife-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-nrg-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "capacity",
+      "manualPackValue": "72220",
+      "providerValue": "72000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for nrg-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "72220"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "72000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-nrg-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "nrg-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for nrg-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-sofi-stadium-capacity",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "capacity",
+      "manualPackValue": "70240",
+      "providerValue": "70000",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.capacity for sofi-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "70240"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "70000"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-venue-sofi-stadium-countryName",
+      "type": "VENUE_CONFLICT",
+      "severity": "MEDIUM",
+      "entityType": "venues",
+      "entityKey": "sofi-stadium",
+      "field": "countryName",
+      "manualPackValue": "USA",
+      "providerValue": "United States",
+      "providerSourceId": "worldcup2026_repo",
+      "preferredSourceId": "manual_verified_2026_pack_v1",
+      "currentRecommendation": "KEEP_MANUAL_VERIFIED",
+      "reason": "Sources disagree on venues.countryName for sofi-stadium.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "USA"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "United States"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-bustami-wc2026-efi",
+      "type": "EFI_ANALYTICS_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "bustami_fifa_efi_2026/wc2026_efi.csv",
+      "field": null,
+      "providerSourceId": "bustami_fifa_efi_2026",
+      "providerValue": "5359 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW",
+      "reason": "5359 enrichment-only candidate rows from wc2026_efi.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "bustami_fifa_efi_2026",
+          "value": "5359 rows",
+          "note": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-bustami-wc2026-matches",
+      "type": "EFI_ANALYTICS_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "bustami_fifa_efi_2026/wc2026_matches.csv",
+      "field": null,
+      "providerSourceId": "bustami_fifa_efi_2026",
+      "providerValue": "104 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW",
+      "reason": "104 enrichment-only candidate rows from wc2026_matches.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "bustami_fifa_efi_2026",
+          "value": "104 rows",
+          "note": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-bustami-wc2026-players",
+      "type": "EFI_ANALYTICS_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "bustami_fifa_efi_2026/wc2026_players.csv",
+      "field": null,
+      "providerSourceId": "bustami_fifa_efi_2026",
+      "providerValue": "1248 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW",
+      "reason": "1248 enrichment-only candidate rows from wc2026_players.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "bustami_fifa_efi_2026",
+          "value": "1248 rows",
+          "note": "RESEARCH_ONLY_UNTIL_LICENSE_REVIEW"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-match-events",
+      "type": "PLAYER_EVENT_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/match_events.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "834 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "834 enrichment-only candidate rows from match_events.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "834 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-match-lineups",
+      "type": "LINEUP_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/match_lineups.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "5408 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "5408 enrichment-only candidate rows from match_lineups.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "5408 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-match-team-stats",
+      "type": "OTHER",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/match_team_stats.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "208 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "208 enrichment-only candidate rows from match_team_stats.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "208 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-player-stats",
+      "type": "PLAYER_EVENT_CANDIDATE",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/player_stats.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "1248 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "1248 enrichment-only candidate rows from player_stats.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "1248 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-referees",
+      "type": "OTHER",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/referees.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "28 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "28 enrichment-only candidate rows from referees.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "28 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-squads-and-players",
+      "type": "OTHER",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/squads_and_players.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "1248 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "1248 enrichment-only candidate rows from squads_and_players.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "1248 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-enrichment-mominul-tournament-stages",
+      "type": "OTHER",
+      "severity": "LOW",
+      "entityType": "enrichment",
+      "entityKey": "mominul_2026_dataset/tournament_stages.csv",
+      "field": null,
+      "providerSourceId": "mominul_2026_dataset",
+      "providerValue": "7 candidate rows",
+      "preferredSourceId": null,
+      "currentRecommendation": "ENRICHMENT_ONLY",
+      "reason": "7 enrichment-only candidate rows from tournament_stages.csv. No import model exists for this kind; the only approvable outcome in this phase is APPROVE_AS_ENRICHMENT_ONLY (or rejection).",
+      "evidence": [
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "7 rows",
+          "note": "CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-matches-cityName",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "matches",
+      "entityKey": "matches.cityName (62 records)",
+      "field": "cityName",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "62 matches records have minor \"cityName\" label disagreements between openfootball_worldcup_2026, worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: Mexico City | worldcup2026_repo: Dallas (Arlington, Texas)",
+          "note": "sample: GROUP|Group A|flag:cz~flag:mx"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: Atlanta | worldcup2026_repo: Toronto",
+          "note": "sample: GROUP|Group A|flag:cz~flag:za"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: Guadalajara (Zapopan) | worldcup2026_repo: Boston (Foxborough)",
+          "note": "sample: GROUP|Group A|flag:kr~flag:mx"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: Toronto | worldcup2026_repo: Monterrey (Guadalupe)",
+          "note": "sample: GROUP|Group B|flag:ba~flag:ca"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: Los Angeles (Inglewood) | worldcup2026_repo: Philadelphia",
+          "note": "sample: GROUP|Group B|flag:ba~flag:ch"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-matches-kickoffDateLabel",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "matches",
+      "entityKey": "matches.kickoffDateLabel (4 records)",
+      "field": "kickoffDateLabel",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "4 matches records have minor \"kickoffDateLabel\" label disagreements between manual_verified_2026_pack_v1, openfootball_worldcup_2026, worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: 2026-06-13 | openfootball_worldcup_2026: 2026-06-13 | worldcup2026_repo: 06/13/2026 | worldcup2026_repo: 06/25/2026",
+          "note": "sample: GROUP|Group B|flag:ch~flag:qa"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 2026-06-25 | worldcup2026_repo: 06/26/2026 | worldcup2026_repo: 06/25/2026",
+          "note": "sample: GROUP|Group F|flag:nl~flag:tn"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 2026-06-26 | worldcup2026_repo: 06/27/2026 | worldcup2026_repo: 06/26/2026",
+          "note": "sample: GROUP|Group H|flag:cv~flag:sa"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 2026-06-26 | worldcup2026_repo: 06/27/2026 | worldcup2026_repo: 06/26/2026",
+          "note": "sample: GROUP|Group H|flag:es~flag:uy"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-matches-kickoffTimeLabel",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "matches",
+      "entityKey": "matches.kickoffTimeLabel (29 records)",
+      "field": "kickoffTimeLabel",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "29 matches records have minor \"kickoffTimeLabel\" label disagreements between openfootball_worldcup_2026, worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 12:00 UTC-4 | worldcup2026_repo: 12:00 | worldcup2026_repo: 18:00",
+          "note": "sample: GROUP|Group A|flag:cz~flag:za"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 19:00 UTC-6 | worldcup2026_repo: 13:00 | worldcup2026_repo: 19:00",
+          "note": "sample: GROUP|Group A|flag:kr~flag:mx"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 12:00 UTC-7 | worldcup2026_repo: 12:00 | worldcup2026_repo: 18:00",
+          "note": "sample: GROUP|Group B|flag:ch~flag:qa"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 20:30 UTC-4 | worldcup2026_repo: 21:00",
+          "note": "sample: GROUP|Group C|flag:br~flag:ht"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "value": "openfootball_worldcup_2026: 21:00 UTC-7 | worldcup2026_repo: 21:00 | worldcup2026_repo: 12:00",
+          "note": "sample: GROUP|Group D|flag:au~flag:tr"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-matches-status",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "matches",
+      "entityKey": "matches.status (69 records)",
+      "field": "status",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "69 matches records have minor \"status\" label disagreements between manual_verified_2026_pack_v1, openfootball_worldcup_2026, worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: FINISHED | openfootball_worldcup_2026: FINISHED | worldcup2026_repo: FINISHED | worldcup2026_repo: SCHEDULED",
+          "note": "sample: GROUP|Group A|flag:cz~flag:kr"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: FINISHED | openfootball_worldcup_2026: FINISHED | worldcup2026_repo: FINISHED | worldcup2026_repo: SCHEDULED",
+          "note": "sample: GROUP|Group A|flag:cz~flag:mx"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: FINISHED | openfootball_worldcup_2026: FINISHED | worldcup2026_repo: FINISHED | worldcup2026_repo: SCHEDULED",
+          "note": "sample: GROUP|Group A|flag:cz~flag:za"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: FINISHED | openfootball_worldcup_2026: FINISHED | worldcup2026_repo: SCHEDULED | worldcup2026_repo: FINISHED",
+          "note": "sample: GROUP|Group A|flag:kr~flag:mx"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: FINISHED | openfootball_worldcup_2026: FINISHED | worldcup2026_repo: SCHEDULED | worldcup2026_repo: FINISHED",
+          "note": "sample: GROUP|Group A|flag:kr~flag:za"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-matches-venueName",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "matches",
+      "entityKey": "matches.venueName (1 records)",
+      "field": "venueName",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "1 matches records have minor \"venueName\" label disagreements between worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "value": "worldcup2026_repo: Hard Rock Stadium | worldcup2026_repo: GEHA Field at Arrowhead Stadium",
+          "note": "sample: GROUP|Group B|flag:ch~flag:qa"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    },
+    {
+      "id": "review-labels-venues-cityName",
+      "type": "SOURCE_CONFLICT",
+      "severity": "LOW",
+      "entityType": "venues",
+      "entityKey": "venues.cityName (15 records)",
+      "field": "cityName",
+      "providerSourceId": null,
+      "preferredSourceId": null,
+      "currentRecommendation": "IGNORE_NON_BLOCKING_CANDIDATE",
+      "reason": "15 venues records have minor \"cityName\" label disagreements between manual_verified_2026_pack_v1, worldcup2026_repo — display-level drift (stale snapshots, local-vs-UTC labels, sponsor aliases), not result data.",
+      "evidence": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: Arlington, Texas | worldcup2026_repo: Dallas (Arlington, Texas)",
+          "note": "sample: at-t-stadium"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: Vancouver, British Columbia | worldcup2026_repo: Vancouver",
+          "note": "sample: bc-place"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: Toronto, Ontario | worldcup2026_repo: Toronto",
+          "note": "sample: bmo-field"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: Zapopan, Jalisco | worldcup2026_repo: Guadalajara (Zapopan)",
+          "note": "sample: estadio-akron"
+        },
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "manual_verified_2026_pack_v1: Guadalupe, Nuevo León | worldcup2026_repo: Monterrey (Guadalupe)",
+          "note": "sample: estadio-bbva"
+        }
+      ],
+      "decision": null,
+      "reviewerNote": null,
+      "status": "PENDING"
+    }
+  ]
+}

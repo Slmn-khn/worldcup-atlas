@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T14:10:55.218Z",
+  "generatedAt": "2026-07-27T15:11:32.420Z",
   "coverage": [
     {
       "sourceId": "manual_verified_2026_pack_v1",
@@ -54,7 +54,7 @@
   "manualPack": {
     "present": true,
     "packId": "manual-verified-2026-v1",
-    "packHash": "8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff",
+    "packHash": "1479aa2fe555b1f8481dc59c975fd364bd1ce1977dd56d0de575454fe125bde2",
     "filesLoaded": 10,
     "officialMatchCount": 104,
     "capturedMatchCount": 67,

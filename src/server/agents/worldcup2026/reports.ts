@@ -10,6 +10,98 @@ import type { ManualReferencePack } from "./manualReferencePack";
 import type { SnapshotMeta } from "./types";
 import type { NormalizedDataSet, ValidationReport } from "./validator";
 
+// ---------------------------------------------------------------------------
+// Human review status (Phase 2A)
+// ---------------------------------------------------------------------------
+
+export const HUMAN_REVIEW_STATUS_LABELS = [
+  "REVIEW_NOT_STARTED",
+  "REVIEW_IN_PROGRESS",
+  "REVIEW_BLOCKED",
+  "READY_FOR_APPROVAL_CANDIDATE",
+  "APPROVAL_CANDIDATE_GENERATED",
+] as const;
+export type HumanReviewStatusLabel =
+  (typeof HUMAN_REVIEW_STATUS_LABELS)[number];
+
+export type HumanReviewStatus = {
+  label: HumanReviewStatusLabel;
+  packGeneratedAt: string | null;
+  totalItems: number;
+  bySeverity: Record<string, number>;
+  pendingItems: number;
+  reviewedItems: number;
+  /** Items carrying a BLOCK_IMPORT decision. */
+  blockedItems: number;
+  importBlockingCount: number;
+  approvalCandidateExists: boolean;
+  nextActions: string[];
+};
+
+/**
+ * Derives the review status label + next human actions from the current
+ * review state. Pure — unit-tested.
+ */
+export function deriveHumanReviewStatus(input: {
+  packGeneratedAt: string | null;
+  totalItems: number;
+  bySeverity: Record<string, number>;
+  pendingItems: number;
+  reviewedItems: number;
+  blockImportDecisions: number;
+  importBlockingCount: number;
+  eligibleForApprovalCandidate: boolean;
+  approvalCandidateExists: boolean;
+}): HumanReviewStatus {
+  let label: HumanReviewStatusLabel;
+  const nextActions: string[] = [];
+
+  if (input.packGeneratedAt === null) {
+    label = "REVIEW_NOT_STARTED";
+    nextActions.push("Generate the review pack: `pnpm data:2026:review-pack`.");
+  } else if (input.blockImportDecisions > 0) {
+    label = "REVIEW_BLOCKED";
+    nextActions.push(
+      `Resolve the ${input.blockImportDecisions} BLOCK_IMPORT decision(s) — import stays blocked until the reviewer withdraws them.`,
+    );
+  } else if (input.eligibleForApprovalCandidate) {
+    label = input.approvalCandidateExists
+      ? "APPROVAL_CANDIDATE_GENERATED"
+      : "READY_FOR_APPROVAL_CANDIDATE";
+    if (!input.approvalCandidateExists) {
+      nextActions.push(
+        "Generate the approval candidate: `pnpm data:2026:approval-candidate`.",
+      );
+    }
+    nextActions.push(
+      "A human must fill approvedBy/approvedAt in approval.candidate.json, set approvedForImport=true, and rename it to approval.json.",
+    );
+    if (input.pendingItems > 0) {
+      nextActions.push(
+        `${input.pendingItems} MEDIUM/LOW items remain pending — non-blocking, but worth deciding before final approval.`,
+      );
+    }
+  } else {
+    label = "REVIEW_IN_PROGRESS";
+    nextActions.push(
+      `Decide the remaining blocking items (${input.importBlockingCount}) in data/2026/review/review-decisions.json, then run \`pnpm data:2026:review-validate\`.`,
+    );
+  }
+
+  return {
+    label,
+    packGeneratedAt: input.packGeneratedAt,
+    totalItems: input.totalItems,
+    bySeverity: input.bySeverity,
+    pendingItems: input.pendingItems,
+    reviewedItems: input.reviewedItems,
+    blockedItems: input.blockImportDecisions,
+    importBlockingCount: input.importBlockingCount,
+    approvalCandidateExists: input.approvalCandidateExists,
+    nextActions,
+  };
+}
+
 /** Per-provider slice of enrichment-coverage-report.json for the report. */
 export type EnrichmentProviderSummary = {
   sourceId: string;
@@ -83,6 +175,8 @@ export function buildStewardReportMarkdown(input: {
   manualReferencePack?: ManualReferencePack | null;
   /** Candidate-provider enrichment summaries, when an enrichment run exists. */
   enrichmentProviders?: EnrichmentProviderSummary[] | null;
+  /** Phase 2A human review status, when derivable. */
+  humanReviewStatus?: HumanReviewStatus | null;
 }): string {
   const { validation, data, coverage, candidateCounts } = input;
   const pack = input.manualReferencePack ?? null;
@@ -361,6 +455,64 @@ export function buildStewardReportMarkdown(input: {
       );
     }
   }
+
+  // Phase 2A human review status — review-only: no DB writes, no import,
+  // manual approval always required.
+  const review =
+    input.humanReviewStatus ??
+    deriveHumanReviewStatus({
+      packGeneratedAt: null,
+      totalItems: 0,
+      bySeverity: {},
+      pendingItems: 0,
+      reviewedItems: 0,
+      blockImportDecisions: 0,
+      importBlockingCount: 0,
+      eligibleForApprovalCandidate: false,
+      approvalCandidateExists: false,
+    });
+  lines.push("");
+  lines.push("## Human Review Status");
+  lines.push("");
+  lines.push(`Status: **${review.label}**`);
+  lines.push("");
+  if (review.packGeneratedAt === null) {
+    lines.push(
+      "No review pack has been generated yet — run `pnpm data:2026:review-pack`.",
+    );
+  } else {
+    lines.push(`- Review pack generated: ${review.packGeneratedAt}`);
+    lines.push(`- Total review items: ${review.totalItems}`);
+    lines.push(
+      `- By severity: CRITICAL ${review.bySeverity.CRITICAL ?? 0}, ` +
+        `HIGH ${review.bySeverity.HIGH ?? 0}, ` +
+        `MEDIUM ${review.bySeverity.MEDIUM ?? 0}, ` +
+        `LOW ${review.bySeverity.LOW ?? 0}`,
+    );
+    lines.push(`- Reviewed: ${review.reviewedItems}`);
+    lines.push(`- Pending: ${review.pendingItems}`);
+    lines.push(`- Blocked (BLOCK_IMPORT decisions): ${review.blockedItems}`);
+    lines.push(
+      `- Approval candidate: ${
+        review.approvalCandidateExists
+          ? "generated (`data/2026/approved/approval.candidate.json` — approvedForImport stays false until a human completes it)"
+          : "not generated"
+      }`,
+    );
+  }
+  lines.push("");
+  lines.push("Next required human actions:");
+  lines.push("");
+  for (const action of review.nextActions) {
+    lines.push(`- ${action}`);
+  }
+  lines.push("");
+  lines.push(
+    "_Phase 2A guarantees: no database writes occurred, nothing was " +
+      "imported, and manual approval is required — an import needs a " +
+      "human-completed `data/2026/approved/approval.json`, which is never " +
+      "auto-created._",
+  );
 
   lines.push("");
   lines.push("## Conflicts");

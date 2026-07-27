@@ -21,14 +21,24 @@ import {
 import {
   buildSourceCoverage,
   buildStewardReportMarkdown,
+  deriveHumanReviewStatus,
   importReadiness,
   type EnrichmentProviderSummary,
+  type HumanReviewStatus,
 } from "../../src/server/agents/worldcup2026/reports";
 import {
+  parseReviewDecisionsFile,
+  parseReviewPackFile,
+  validateReviewDecisions,
+} from "../../src/server/agents/worldcup2026/reviewDecisionValidator";
+import {
+  APPROVED_2026_DIR,
   APPROVED_2026_SOURCES,
   CANDIDATES_2026_DIR,
   RAW_2026_DIR,
   REPORTS_2026_DIR,
+  REVIEW_2026_DIR,
+  REVIEW_OUTPUT_2026_DIR,
   VALIDATION_2026_DIR,
 } from "../../src/server/agents/worldcup2026/sourceRegistry";
 import type {
@@ -114,6 +124,103 @@ async function readEnrichmentProviders(): Promise<EnrichmentProviderSummary[]> {
   }
 }
 
+/**
+ * Derives the Phase 2A human review status from the current review files.
+ * Tolerant: any missing/unreadable review file simply yields the
+ * REVIEW_NOT_STARTED / partial state — validation never fails because
+ * review has not happened yet.
+ */
+async function readHumanReviewStatus(): Promise<HumanReviewStatus> {
+  const notStarted = () =>
+    deriveHumanReviewStatus({
+      packGeneratedAt: null,
+      totalItems: 0,
+      bySeverity: {},
+      pendingItems: 0,
+      reviewedItems: 0,
+      blockImportDecisions: 0,
+      importBlockingCount: 0,
+      eligibleForApprovalCandidate: false,
+      approvalCandidateExists: false,
+    });
+
+  let packPayload: unknown;
+  let packGeneratedAt: string | null = null;
+  try {
+    packPayload = JSON.parse(
+      await readFile(
+        path.join(REVIEW_OUTPUT_2026_DIR, "review-items.json"),
+        "utf8",
+      ),
+    );
+    packGeneratedAt =
+      (packPayload as { generatedAt?: string }).generatedAt ?? null;
+  } catch {
+    return notStarted();
+  }
+  const pack = parseReviewPackFile(packPayload);
+  if (!pack.ok) return notStarted();
+
+  let approvalCandidateExists = false;
+  try {
+    await readFile(
+      path.join(APPROVED_2026_DIR, "approval.candidate.json"),
+      "utf8",
+    );
+    approvalCandidateExists = true;
+  } catch {
+    approvalCandidateExists = false;
+  }
+
+  const bySeverity: Record<string, number> = {};
+  for (const item of pack.items) {
+    bySeverity[item.severity] = (bySeverity[item.severity] ?? 0) + 1;
+  }
+
+  let decisionsPayload: unknown = null;
+  try {
+    decisionsPayload = JSON.parse(
+      await readFile(path.join(REVIEW_2026_DIR, "review-decisions.json"), "utf8"),
+    );
+  } catch {
+    decisionsPayload = null;
+  }
+  const decisions =
+    decisionsPayload !== null ? parseReviewDecisionsFile(decisionsPayload) : null;
+  if (decisions === null || !decisions.ok) {
+    return deriveHumanReviewStatus({
+      packGeneratedAt,
+      totalItems: pack.items.length,
+      bySeverity,
+      pendingItems: pack.items.length,
+      reviewedItems: 0,
+      blockImportDecisions: 0,
+      importBlockingCount: pack.items.filter(
+        (item) => item.severity === "CRITICAL" || item.severity === "HIGH",
+      ).length,
+      eligibleForApprovalCandidate: false,
+      approvalCandidateExists,
+    });
+  }
+
+  const validation = validateReviewDecisions(
+    pack.items,
+    decisions.decisions,
+    pack.reviewPackHash,
+  );
+  return deriveHumanReviewStatus({
+    packGeneratedAt,
+    totalItems: validation.summary.totalItems,
+    bySeverity,
+    pendingItems: validation.summary.pendingItems,
+    reviewedItems: validation.summary.reviewedItems,
+    blockImportDecisions: validation.summary.blockImportDecisions,
+    importBlockingCount: validation.summary.importBlockingCount,
+    eligibleForApprovalCandidate: validation.eligibleForApprovalCandidate,
+    approvalCandidateExists,
+  });
+}
+
 async function main() {
   console.log("WORLDCUP Nexus — 2026 data steward: validate\n");
 
@@ -168,6 +275,7 @@ async function main() {
     candidateCounts,
     manualReferencePack,
     enrichmentProviders: await readEnrichmentProviders(),
+    humanReviewStatus: await readHumanReviewStatus(),
   });
   await writeFile(
     path.join(REPORTS_2026_DIR, "2026-data-steward-report.md"),

@@ -1,0 +1,111 @@
+id,type,severity,entityType,entityKey,field,manualPackValue,providerSourceId,providerValue,currentRecommendation,decision,reviewerNote,status
+review-match-GB-5-score,MATCH_RESULT_CONFLICT,HIGH,matches,GB-5,score,Switzerland 3-1 Canada,mominul_2026_dataset,Switzerland 2-1 Canada (matches.csv row 51),KEEP_MANUAL_VERIFIED,,,PENDING
+review-match-GROUP-Group-B-flag-ca-flag-ch-homeScore,MATCH_RESULT_CONFLICT,HIGH,matches,GROUP|Group B|flag:ca~flag:ch,homeScore,3,openfootball_worldcup_2026,2,KEEP_MANUAL_VERIFIED,,,PENDING
+review-pack-C-001,MATCH_RESULT_CONFLICT,HIGH,matches,manual-verified-2026-v1:C-001,final.shots,20-2,,,NEEDS_SOURCE,,,PENDING
+review-efi-license,EFI_ANALYTICS_CANDIDATE,MEDIUM,source,bustami_fifa_efi_2026,license,,bustami_fifa_efi_2026,,RESEARCH_ONLY_UNTIL_LICENSE_REVIEW,,,PENDING
+review-gap-GB-6,MATCH_GAP_FILL,MEDIUM,matches,GB-6,result,,mominul_2026_dataset,Bosnia and Herzegovina 3-1 Qatar (2026-06-24),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M10,MATCH_GAP_FILL,MEDIUM,matches,M10,result,,mominul_2026_dataset,Germany 7-1 Curaçao (2026-06-14),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M11,MATCH_GAP_FILL,MEDIUM,matches,M11,result,,mominul_2026_dataset,Netherlands 2-2 Japan (2026-06-14),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M12,MATCH_GAP_FILL,MEDIUM,matches,M12,result,,mominul_2026_dataset,23 5-1 24 (2026-06-14),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M13,MATCH_GAP_FILL,MEDIUM,matches,M13,result,,mominul_2026_dataset,"Iran 2–2 New Zealand (June 15, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M14,MATCH_GAP_FILL,MEDIUM,matches,M14,result,,mominul_2026_dataset,"Spain 0–0 Cape Verde (June 15, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M15,MATCH_GAP_FILL,MEDIUM,matches,M15,result,,mominul_2026_dataset,Belgium 1-1 Egypt (2026-06-15),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M16,MATCH_GAP_FILL,MEDIUM,matches,M16,result,,mominul_2026_dataset,Saudi Arabia 1-1 Uruguay (2026-06-15),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M22,MATCH_GAP_FILL,MEDIUM,matches,M22,result,,mominul_2026_dataset,45 4-2 46 (2026-06-17),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M24,MATCH_GAP_FILL,MEDIUM,matches,M24,result,,mominul_2026_dataset,Ghana 1-0 Panama (2026-06-17),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M29,MATCH_GAP_FILL,MEDIUM,matches,M29,result,,mominul_2026_dataset,9 3-0 11 (2026-06-19),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M30,MATCH_GAP_FILL,MEDIUM,matches,M30,result,,mominul_2026_dataset,12 0-1 10 (2026-06-19),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M31,MATCH_GAP_FILL,MEDIUM,matches,M31,result,,mominul_2026_dataset,13 2-0 15 (2026-06-19),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M33,MATCH_GAP_FILL,MEDIUM,matches,M33,result,,mominul_2026_dataset,17 2-1 19 (2026-06-20),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M34,MATCH_GAP_FILL,MEDIUM,matches,M34,result,,mominul_2026_dataset,20 0-0 18 (2026-06-20),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M35,MATCH_GAP_FILL,MEDIUM,matches,M35,result,,mominul_2026_dataset,21 5-1 23 (2026-06-20),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M36,MATCH_GAP_FILL,MEDIUM,matches,M36,result,,mominul_2026_dataset,24 0-4 22 (2026-06-20),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M37,MATCH_GAP_FILL,MEDIUM,matches,M37,result,,mominul_2026_dataset,"Belgium 0–0 Iran (June 21, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M38,MATCH_GAP_FILL,MEDIUM,matches,M38,result,,mominul_2026_dataset,28 1-3 26 (2026-06-21),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M39,MATCH_GAP_FILL,MEDIUM,matches,M39,result,,mominul_2026_dataset,29 4-0 31 (2026-06-21),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M4,MATCH_GAP_FILL,MEDIUM,matches,M4,result,,mominul_2026_dataset,13 4-1 14 (2026-06-12),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M40,MATCH_GAP_FILL,MEDIUM,matches,M40,result,,mominul_2026_dataset,"Uruguay 2–2 Cape Verde (June 21, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M46,MATCH_GAP_FILL,MEDIUM,matches,M46,result,,mominul_2026_dataset,Panama 0-1 Croatia (2026-06-23),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M48,MATCH_GAP_FILL,MEDIUM,matches,M48,result,,mominul_2026_dataset,England 0-0 Ghana (2026-06-23),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M5,MATCH_GAP_FILL,MEDIUM,matches,M5,result,,mominul_2026_dataset,Haiti 0-1 Scotland (2026-06-13),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M57,MATCH_GAP_FILL,MEDIUM,matches,M57,result,,mominul_2026_dataset,Paraguay 0-0 Australia (2026-06-25),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M58,MATCH_GAP_FILL,MEDIUM,matches,M58,result,,mominul_2026_dataset,"Turkey 3-2 United States (June 25, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M6,MATCH_GAP_FILL,MEDIUM,matches,M6,result,,mominul_2026_dataset,"Australia 2–0 Turkey (June 13, 2026)",CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M7,MATCH_GAP_FILL,MEDIUM,matches,M7,result,,mominul_2026_dataset,Brazil 1-1 Morocco (2026-06-13),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M88,MATCH_GAP_FILL,MEDIUM,matches,M88,result,,mominul_2026_dataset,44 1-0 47 (2026-07-04),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M9,MATCH_GAP_FILL,MEDIUM,matches,M9,result,,mominul_2026_dataset,Côte d'Ivoire 1-0 Ecuador (2026-06-14),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M92,MATCH_GAP_FILL,MEDIUM,matches,M92,result,,mominul_2026_dataset,1 2-3 45 (2026-07-06),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M93,MATCH_GAP_FILL,MEDIUM,matches,M93,result,,mominul_2026_dataset,41 0-1 29 (2026-07-06),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M94,MATCH_GAP_FILL,MEDIUM,matches,M94,result,,mominul_2026_dataset,13 1-4 25 (2026-07-07),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M95,MATCH_GAP_FILL,MEDIUM,matches,M95,result,,mominul_2026_dataset,37 3-2 26 (2026-07-07),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-gap-M96,MATCH_GAP_FILL,MEDIUM,matches,M96,result,,mominul_2026_dataset,8 0-0 44 (2026-07-07),CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION,,,PENDING
+review-group-Group-A-teams,TEAM_CONFLICT,MEDIUM,groups,Group A,teams,"[""Mexico"",""South Africa"",""Korea Republic"",""Czechia""]",openfootball_worldcup_2026,"[""Mexico"",""South Africa"",""South Korea"",""Czech Republic""]",KEEP_MANUAL_VERIFIED,,,PENDING
+review-group-Group-B-teams,TEAM_CONFLICT,MEDIUM,groups,Group B,teams,"[""Canada"",""Switzerland"",""Qatar"",""Bosnia and Herzegovina""]",openfootball_worldcup_2026,"[""Canada"",""Bosnia & Herzegovina"",""Qatar"",""Switzerland""]",KEEP_MANUAL_VERIFIED,,,PENDING
+review-group-Group-D-teams,TEAM_CONFLICT,MEDIUM,groups,Group D,teams,,openfootball_worldcup_2026,"[""USA"",""Paraguay"",""Australia"",""Turkey""]",KEEP_HIGHEST_PRIORITY_SOURCE,,,PENDING
+review-group-Group-F-teams,TEAM_CONFLICT,MEDIUM,groups,Group F,teams,,openfootball_worldcup_2026,"[""Netherlands"",""Japan"",""Sweden"",""Tunisia""]",KEEP_HIGHEST_PRIORITY_SOURCE,,,PENDING
+review-group-Group-I-teams,TEAM_CONFLICT,MEDIUM,groups,Group I,teams,"[""France"",""Norway"",""Senegal"",""Iraq""]",openfootball_worldcup_2026,"[""France"",""Senegal"",""Iraq"",""Norway""]",KEEP_MANUAL_VERIFIED,,,PENDING
+review-group-Group-K-teams,TEAM_CONFLICT,MEDIUM,groups,Group K,teams,"[""Portugal"",""Colombia"",""DR Congo"",""Uzbekistan""]",openfootball_worldcup_2026,"[""Portugal"",""DR Congo"",""Uzbekistan"",""Colombia""]",KEEP_MANUAL_VERIFIED,,,PENDING
+review-match-GROUP-Group-B-flag-ch-flag-qa-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,GROUP|Group B|flag:ch~flag:qa,matchNumber,,worldcup2026_repo,8,KEEP_HIGHEST_PRIORITY_SOURCE,,,PENDING
+review-match-match-number-53-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,match-number-53,matchNumber,53 (Bosnia and Herzegovina v Qatar),worldcup2026_repo,"53 (UEFA Path A Winner v Canada, unverified)",KEEP_MANUAL_VERIFIED,,,PENDING
+review-match-match-number-59-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,match-number-59,matchNumber,,openfootball_worldcup_2026,59 (Japan v Sweden),KEEP_HIGHEST_PRIORITY_SOURCE,,,PENDING
+review-match-ROUND-OF-16-flag-ca-flag-ma-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,ROUND_OF_16|flag:ca~flag:ma,matchNumber,89,openfootball_worldcup_2026,90,KEEP_MANUAL_VERIFIED,,,PENDING
+review-match-ROUND-OF-16-flag-fr-flag-py-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,ROUND_OF_16|flag:fr~flag:py,matchNumber,90,openfootball_worldcup_2026,89,KEEP_MANUAL_VERIFIED,,,PENDING
+review-match-ROUND-OF-32-flag-au-flag-eg-matchNumber,MATCH_RESULT_CONFLICT,MEDIUM,matches,ROUND_OF_32|flag:au~flag:eg,matchNumber,87,openfootball_worldcup_2026,88,KEEP_MANUAL_VERIFIED,,,PENDING
+review-pack-C-002,MATCH_RESULT_CONFLICT,MEDIUM,matches,manual-verified-2026-v1:C-002,matches.M88,Colombia's Round-of-32 opponent and score not present in reviewed sources; Colombia's advancement to the R16 (v Switzerland) is verified.,,,NEEDS_SOURCE,,,PENDING
+review-pack-C-003,MATCH_RESULT_CONFLICT,MEDIUM,matches,manual-verified-2026-v1:C-003,matches.GB-6,"Bosnia and Herzegovina v Qatar (Group B, matchday 3) score truncated in the reviewed source.",,,NEEDS_SOURCE,,,PENDING
+review-pack-C-005,VENUE_CONFLICT,MEDIUM,venues,manual-verified-2026-v1:C-005,venues.nynj,"Final venue reported as both 'MetLife Stadium' (CBS, Wikipedia) and 'New York New Jersey Stadium' (FIFA clean-branding name). Same facility.",,,NEEDS_SOURCE,,,PENDING
+review-pack-C-006,MATCH_RESULT_CONFLICT,MEDIUM,matches,manual-verified-2026-v1:C-006,matches (group stage),35 of 72 group-stage fixtures captured (29 with verified scores); remaining fixtures not reconstructed from reviewed sources.,,,NEEDS_SOURCE,,,PENDING
+review-pack-C-007,MATCH_RESULT_CONFLICT,MEDIUM,matches,manual-verified-2026-v1:C-007,matches.round_of_16,"Winners verified for all 8 R16 ties, but final scores unconfirmed for M92-M96 (MEX-ENG, POR-ESP, USA-BEL, ARG-EGY, SUI-COL).",,,NEEDS_SOURCE,,,PENDING
+review-standings-Group-A-table,SOURCE_CONFLICT,MEDIUM,standings,Group A,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-B-table,SOURCE_CONFLICT,MEDIUM,standings,Group B,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-C-table,SOURCE_CONFLICT,MEDIUM,standings,Group C,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-D-table,SOURCE_CONFLICT,MEDIUM,standings,Group D,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-E-table,SOURCE_CONFLICT,MEDIUM,standings,Group E,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-F-table,SOURCE_CONFLICT,MEDIUM,standings,Group F,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-G-table,SOURCE_CONFLICT,MEDIUM,standings,Group G,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-H-table,SOURCE_CONFLICT,MEDIUM,standings,Group H,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-I-table,SOURCE_CONFLICT,MEDIUM,standings,Group I,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-J-table,SOURCE_CONFLICT,MEDIUM,standings,Group J,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-K-table,SOURCE_CONFLICT,MEDIUM,standings,Group K,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-standings-Group-L-table,SOURCE_CONFLICT,MEDIUM,standings,Group L,table,,derived-from-matches,computed from match results,NEEDS_SOURCE,,,PENDING
+review-team-unverified-48th,TEAM_CONFLICT,MEDIUM,teams,manual-verified-2026-v1:C-004,teams,47 of 48 participants confirmed; the remaining UEFA play-off qualifier was not identified in reviewed sources.,,,NEEDS_SOURCE,,,PENDING
+review-venue-at-t-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,at-t-stadium,capacity,80000,worldcup2026_repo,94000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-at-t-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,at-t-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-bc-place-capacity,VENUE_CONFLICT,MEDIUM,venues,bc-place,capacity,54500,worldcup2026_repo,54000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-bmo-field-capacity,VENUE_CONFLICT,MEDIUM,venues,bmo-field,capacity,45736,worldcup2026_repo,45000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-estadio-akron-capacity,VENUE_CONFLICT,MEDIUM,venues,estadio-akron,capacity,49850,worldcup2026_repo,48000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-estadio-azteca-capacity,VENUE_CONFLICT,MEDIUM,venues,estadio-azteca,capacity,87523,worldcup2026_repo,83000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-geha-field-at-arrowhead-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,geha-field-at-arrowhead-stadium,capacity,76416,worldcup2026_repo,73000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-geha-field-at-arrowhead-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,geha-field-at-arrowhead-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-gillette-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,gillette-stadium,capacity,65878,worldcup2026_repo,65000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-gillette-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,gillette-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-hard-rock-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,hard-rock-stadium,capacity,64767,worldcup2026_repo,65000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-hard-rock-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,hard-rock-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-levi-s-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,levi-s-stadium,capacity,68500,worldcup2026_repo,71000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-levi-s-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,levi-s-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-lincoln-financial-field-capacity,VENUE_CONFLICT,MEDIUM,venues,lincoln-financial-field,capacity,69796,worldcup2026_repo,69000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-lincoln-financial-field-countryName,VENUE_CONFLICT,MEDIUM,venues,lincoln-financial-field,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-lumen-field-countryName,VENUE_CONFLICT,MEDIUM,venues,lumen-field,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-mercedes-benz-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,mercedes-benz-stadium,capacity,71000,worldcup2026_repo,75000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-mercedes-benz-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,mercedes-benz-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-metlife-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,metlife-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-nrg-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,nrg-stadium,capacity,72220,worldcup2026_repo,72000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-nrg-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,nrg-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-sofi-stadium-capacity,VENUE_CONFLICT,MEDIUM,venues,sofi-stadium,capacity,70240,worldcup2026_repo,70000,KEEP_MANUAL_VERIFIED,,,PENDING
+review-venue-sofi-stadium-countryName,VENUE_CONFLICT,MEDIUM,venues,sofi-stadium,countryName,USA,worldcup2026_repo,United States,KEEP_MANUAL_VERIFIED,,,PENDING
+review-enrichment-bustami-wc2026-efi,EFI_ANALYTICS_CANDIDATE,LOW,enrichment,bustami_fifa_efi_2026/wc2026_efi.csv,,,bustami_fifa_efi_2026,5359 candidate rows,RESEARCH_ONLY_UNTIL_LICENSE_REVIEW,,,PENDING
+review-enrichment-bustami-wc2026-matches,EFI_ANALYTICS_CANDIDATE,LOW,enrichment,bustami_fifa_efi_2026/wc2026_matches.csv,,,bustami_fifa_efi_2026,104 candidate rows,RESEARCH_ONLY_UNTIL_LICENSE_REVIEW,,,PENDING
+review-enrichment-bustami-wc2026-players,EFI_ANALYTICS_CANDIDATE,LOW,enrichment,bustami_fifa_efi_2026/wc2026_players.csv,,,bustami_fifa_efi_2026,1248 candidate rows,RESEARCH_ONLY_UNTIL_LICENSE_REVIEW,,,PENDING
+review-enrichment-mominul-match-events,PLAYER_EVENT_CANDIDATE,LOW,enrichment,mominul_2026_dataset/match_events.csv,,,mominul_2026_dataset,834 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-match-lineups,LINEUP_CANDIDATE,LOW,enrichment,mominul_2026_dataset/match_lineups.csv,,,mominul_2026_dataset,5408 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-match-team-stats,OTHER,LOW,enrichment,mominul_2026_dataset/match_team_stats.csv,,,mominul_2026_dataset,208 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-player-stats,PLAYER_EVENT_CANDIDATE,LOW,enrichment,mominul_2026_dataset/player_stats.csv,,,mominul_2026_dataset,1248 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-referees,OTHER,LOW,enrichment,mominul_2026_dataset/referees.csv,,,mominul_2026_dataset,28 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-squads-and-players,OTHER,LOW,enrichment,mominul_2026_dataset/squads_and_players.csv,,,mominul_2026_dataset,1248 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-enrichment-mominul-tournament-stages,OTHER,LOW,enrichment,mominul_2026_dataset/tournament_stages.csv,,,mominul_2026_dataset,7 candidate rows,ENRICHMENT_ONLY,,,PENDING
+review-labels-matches-cityName,SOURCE_CONFLICT,LOW,matches,matches.cityName (62 records),cityName,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING
+review-labels-matches-kickoffDateLabel,SOURCE_CONFLICT,LOW,matches,matches.kickoffDateLabel (4 records),kickoffDateLabel,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING
+review-labels-matches-kickoffTimeLabel,SOURCE_CONFLICT,LOW,matches,matches.kickoffTimeLabel (29 records),kickoffTimeLabel,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING
+review-labels-matches-status,SOURCE_CONFLICT,LOW,matches,matches.status (69 records),status,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING
+review-labels-matches-venueName,SOURCE_CONFLICT,LOW,matches,matches.venueName (1 records),venueName,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING
+review-labels-venues-cityName,SOURCE_CONFLICT,LOW,venues,venues.cityName (15 records),cityName,,,,IGNORE_NON_BLOCKING_CANDIDATE,,,PENDING

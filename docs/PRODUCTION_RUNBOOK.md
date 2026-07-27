@@ -178,6 +178,9 @@ pnpm data:2026:manual-pack  # inspect the human-authenticated reference pack (of
 pnpm data:2026:full-check   # normalize + validate (offline, CI-safe)
 pnpm data:2026:mominul:inspect  # read-only summary of the Mominul candidate provider
 pnpm data:2026:bustami:inspect  # read-only summary of the Bustami EFI candidate provider
+pnpm data:2026:review-pack        # Phase 2A: generate the human review pack
+pnpm data:2026:review-validate    # Phase 2A: validate review-decisions.json
+pnpm data:2026:approval-candidate # Phase 2A: gated approval.candidate.json (needs review decisions — keep out of CI)
 ```
 
 The manual reference pack (`data/2026/reference/manual-verified-v1/`) is
@@ -185,6 +188,15 @@ committed, human-curated data: it is read during normalize/validate, hashed
 into the reports, and never fetched by the collector. Its
 `manifest.importAllowed` must remain `false`; importing anything still
 requires the human-written `data/2026/approved/approval.json` gate.
+
+**Phase 2A (human review) is also review-only.** The review pack converts
+conflicts and gap-fill candidates into files under `data/2026/review/`; a
+human records explicit decisions in `review-decisions.json`, validates them,
+and — only when nothing blocks — generates
+`data/2026/approved/approval.candidate.json`. The candidate always has
+`approvedForImport: false`: a human must fill in `approvedBy`/`approvedAt`,
+set `approvedForImport: true`, and rename it to `approval.json` before the
+future Phase 2B importer can run. Nothing in Phase 2A writes the database.
 
 Operational notes:
 

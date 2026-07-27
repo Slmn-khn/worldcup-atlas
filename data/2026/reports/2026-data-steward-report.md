@@ -1,6 +1,6 @@
 # 2026 Data Steward Report
 
-Generated: 2026-07-27T14:10:55.218Z
+Generated: 2026-07-27T15:11:32.420Z
 
 ## Verdict: NOT READY FOR IMPORT
 
@@ -63,8 +63,8 @@ Validation status: **WARN** — 0 errors, 3 warnings, 236 conflicts.
 ## Manual Verified Reference Pack
 
 - Pack ID: `manual-verified-2026-v1`
-- Pack hash: `sha256:8086c4d001bdef7034ff21a19113b66bd6c9103aad9d8a6033422f22ff766cff`
-- Files loaded: 10 — awards (`8882c3a01b79…`), bracket (`1ed6cdb013af…`), conflicts (`ed19ab091790…`), groups (`df11878b3c4c…`), matches (`af82b1a1a774…`), sources (`2a3fd09e5a6a…`), standings (`e7b83d512bb8…`), teams (`990f0a5df9ec…`), tournament (`deb14963a90b…`), venues (`2697be372415…`)
+- Pack hash: `sha256:1479aa2fe555b1f8481dc59c975fd364bd1ce1977dd56d0de575454fe125bde2`
+- Files loaded: 10 — awards (`f4bcbe6f18e4…`), bracket (`72699bbf76e1…`), conflicts (`1088bc0b789b…`), groups (`cbc540e2f10d…`), matches (`1d40a4818447…`), sources (`950cadfb6bf2…`), standings (`e5a581408523…`), teams (`539ceb6c4da2…`), tournament (`8fd8382b0cb0…`), venues (`dae8e214afea…`)
 
 Coverage:
 
@@ -94,6 +94,24 @@ Candidate providers contribute enrichment/analytics **candidates only**: nothing
 | bustami_fifa_efi_2026 | 3/0 | 6711 | 0 | 0 | RESEARCH_ONLY_UNTIL_LICENSE_REVIEW |
 
 ⚠️ `bustami_fifa_efi_2026` carries a standing usage restriction — importBlockedReason: **RESEARCH_ONLY_UNTIL_LICENSE_REVIEW** (research/analytics only until a license/usage review clears it; never merged into the core public archive in this phase).
+
+## Human Review Status
+
+Status: **REVIEW_IN_PROGRESS**
+
+- Review pack generated: 2026-07-27T15:09:29.578Z
+- Total review items: 110
+- By severity: CRITICAL 0, HIGH 3, MEDIUM 91, LOW 16
+- Reviewed: 0
+- Pending: 110
+- Blocked (BLOCK_IMPORT decisions): 0
+- Approval candidate: not generated
+
+Next required human actions:
+
+- Decide the remaining blocking items (3) in data/2026/review/review-decisions.json, then run `pnpm data:2026:review-validate`.
+
+_Phase 2A guarantees: no database writes occurred, nothing was imported, and manual approval is required — an import needs a human-completed `data/2026/approved/approval.json`, which is never auto-created._
 
 ## Conflicts
 

@@ -212,6 +212,10 @@ pnpm data:2026:full-check   # normalize + validate (no network — CI-safe once 
 pnpm data:2026:collect-and-check  # full pipeline including collection
 pnpm data:2026:mominul:inspect    # read-only summary of the Mominul provider files
 pnpm data:2026:bustami:inspect    # read-only summary of the Bustami EFI provider files
+pnpm data:2026:review-pack        # Phase 2A: generate the human review pack
+pnpm data:2026:review-validate    # Phase 2A: validate review-decisions.json
+pnpm data:2026:approval-candidate # Phase 2A: generate approval.candidate.json (gated)
+pnpm data:2026:human-review       # review-pack + review-validate
 ```
 
 Command flow for the candidate providers: `collect` downloads both providers'
@@ -258,11 +262,100 @@ require manual review — see also the conflict-handling policy in
 - There is no import script. A future one must demand
   `data/2026/approved/approval.json` (see `data/2026/approved/README.md`).
 
+## Phase 2A — Human review pack + approval workflow
+
+Phase 2A converts the pipeline's conflicts and gap-fill/enrichment
+candidates into **reviewable files** and validates a human's explicit
+decisions. It is still review-only: **no database writes, no import, no
+auto-approval**, and the manual verified reference pack remains
+authoritative.
+
+### Generate the review pack
+
+```bash
+pnpm data:2026:review-pack             # never clobbers review-decisions.json
+pnpm data:2026:review-pack -- --force  # also regenerate review-decisions.json
+```
+
+Reads the validation/enrichment reports (and the Mominul enriched matches
+for per-gap detail) and writes to `data/2026/review/`:
+
+- `output/review-items.json` — deterministic review items with deduplicated
+  evidence. Severity: **CRITICAL** for tournament winner/final/top-four
+  conflicts, **HIGH** for match result conflicts, **MEDIUM** for gap-fill
+  candidates and team/group/venue conflicts (and the EFI license review),
+  **LOW** for enrichment-only candidates and label-drift classes. Every item
+  starts `decision: null`, `status: "PENDING"`.
+- `output/review-items.csv` — the same items for Excel / Google Sheets.
+- `output/review-summary.md` — human-facing summary.
+- `templates/review-decisions.example.json` — annotated example.
+- `review-decisions.json` — the reviewer's working file (created only when
+  missing; existing reviewer work is preserved unless `--force`).
+
+### Record and validate decisions
+
+A human fills `data/2026/review/review-decisions.json` with entries
+`{reviewItemId, decision, reviewerNote, approvedValue, approvedSourceId}`.
+Decisions: `APPROVE_MANUAL`, `APPROVE_MOMINUL`, `APPROVE_OPENFOOTBALL`,
+`APPROVE_DERIVED`, `APPROVE_AS_ENRICHMENT_ONLY`, `REJECT_PROVIDER`,
+`NEEDS_SOURCE`, `IGNORE_NON_BLOCKING`, `BLOCK_IMPORT`.
+
+```bash
+pnpm data:2026:review-validate
+```
+
+Checks schema, known item ids, evidence-backed `approvedSourceId`, required
+`approvedValue` on value conflicts, and **required reviewer notes** for
+`REJECT_PROVIDER`, `BLOCK_IMPORT`, `APPROVE_AS_ENRICHMENT_ONLY`, and any
+`APPROVE_MOMINUL` that overrides a manual verified pack value. Writes
+`output/review-validation-report.json`/`.md`. Exit 0 while items are merely
+pending (with a loud warning that import cannot proceed); exit 1 only for a
+malformed decisions file.
+
+### Generate the approval candidate
+
+```bash
+pnpm data:2026:approval-candidate
+```
+
+Only when every CRITICAL/HIGH item is decided, nothing is `BLOCK_IMPORT`,
+and no CRITICAL/HIGH item is stuck at `NEEDS_SOURCE`, this writes
+`data/2026/approved/approval.candidate.json` with pinned hashes
+(validation report, review pack, review decisions, normalized data pack).
+
+**`approval.candidate.json` is not `approval.json`.** The candidate always
+has `approvedForImport: false` and empty `approvedBy`/`approvedAt`. A human
+must fill those in, set `approvedForImport: true`, and rename the file to
+`approval.json` — the generator never does any of that. The future Phase 2B
+importer refuses to run without that human-completed `approval.json`.
+
+### Recommended full review flow
+
+```bash
+pnpm data:2026:validate
+pnpm data:2026:review-pack
+# … human edits data/2026/review/review-decisions.json …
+pnpm data:2026:review-validate
+pnpm data:2026:approval-candidate
+# re-run pnpm data:2026:validate to refresh the report's Human Review Status
+```
+
+The steward report (`data/2026/reports/2026-data-steward-report.md`) carries
+a **Human Review Status** section (REVIEW_NOT_STARTED → REVIEW_IN_PROGRESS →
+REVIEW_BLOCKED / READY_FOR_APPROVAL_CANDIDATE →
+APPROVAL_CANDIDATE_GENERATED) with counts and the next required human
+actions; it reflects the review state at the last `data:2026:validate` run.
+
+`data:2026:approval-candidate` requires reviewer decisions — do not add it
+to CI. `data:2026:human-review` (pack + validate) is safe to run any time.
+
 ## Future phases
 
-1. **Approved import** — import script gated on the approval file
-   (`approvedBy`, `approvedAt`, `dataPackVersion`, `validationReportHash`,
-   `approvedForImport`), never overwriting existing archive records.
+1. **Approved import (Phase 2B)** — import script gated on the
+   human-completed approval file (`approvedBy`, `approvedAt`,
+   `dataPackVersion`, `validationReportHash`, `approvedForImport: true`),
+   never overwriting existing archive records. Phase 2A only produces the
+   `approval.candidate.json` precursor.
 2. **Fact generation** — derive verified facts/records from the imported
    archive with the existing verification-script pattern.
 3. **AI-assisted narrative candidates** — generated *candidates only*, always

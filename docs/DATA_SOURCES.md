@@ -165,6 +165,16 @@ Rules:
   official FIFA platform. It is blocked from import and from any public
   rendering (`RESEARCH_ONLY_UNTIL_LICENSE_REVIEW`) until a documented
   license/usage review clears it.
+- **Human review (Phase 2A):** conflicts and gap-fill candidates are
+  converted into reviewable files under `data/2026/review/`
+  (`pnpm data:2026:review-pack`). A human records explicit decisions
+  (`APPROVE_MANUAL`, `APPROVE_MOMINUL`, `REJECT_PROVIDER`, `NEEDS_SOURCE`,
+  `APPROVE_AS_ENRICHMENT_ONLY`, `BLOCK_IMPORT`, …) in
+  `review-decisions.json`, validated by `pnpm data:2026:review-validate`.
+  A complete review can yield `data/2026/approved/approval.candidate.json`
+  (`pnpm data:2026:approval-candidate`) — always `approvedForImport: false`;
+  only a human-completed, renamed `approval.json` will ever gate the future
+  Phase 2B importer. No DB writes occur anywhere in this workflow.
 
 ## Additional reference sources
 
