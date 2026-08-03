@@ -39,6 +39,17 @@ Set in the hosting platform (see the table in
 | `MEILISEARCH_API_KEY` | the **runtime search key** (not the admin key) |
 | `NEXT_PUBLIC_SITE_URL` | `https://your-production-domain.com` |
 | `NODE_ENV` | `production` (platform usually sets this) |
+| `FEATURE_LATEST_MATCHES_SECTION` | leave **unset** (post-tournament: homepage shows the archive CTA, not live Latest Matches) |
+| `FEATURE_2026_FIXTURE_SYNC` | leave **unset** (post-tournament: provider sync disabled; cron route answers `{ ok, disabled }` and does no work) |
+| `FEATURE_2026_ARCHIVE_MODE` | leave unset or `true` (archive wording on `/schedule/2026`) |
+
+The 2026 tournament is complete: live fixture sync and the homepage
+"Latest Matches & Scores" band are **off by default**, the `vercel.json`
+cron entry is removed, and finalized 2026 data comes from the archive
+import pipeline — not live provider sync. Provider code is retained; to
+re-enable live mode for a future tournament, follow
+[FEATURE_2026_SCHEDULE.md](FEATURE_2026_SCHEDULE.md) ("Re-enabling live
+mode": set both flags to `true`, restore the cron entry, redeploy).
 
 In the **admin environment**, export the same variables per command run,
 except `MEILISEARCH_API_KEY` = the **admin/indexing key** when indexing.

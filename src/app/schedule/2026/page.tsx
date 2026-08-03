@@ -26,6 +26,7 @@ import {
   getScheduleFilterMeta2026,
   getSchedule2026,
 } from "@/server/fixtures/queries";
+import { isPostTournamentArchiveMode } from "@/config/features";
 import type { FixtureStatusValue } from "@/server/fixtures/types";
 
 export const dynamic = "force-dynamic";
@@ -33,7 +34,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "2026 World Cup Schedule & Scores",
   description:
-    "The full 2026 FIFA World Cup match schedule — fixtures, results, venues, groups, and live status in the WORLDCUP Nexus archive.",
+    "The full 2026 FIFA World Cup match schedule — fixtures, results, venues, groups, and match status in the WORLDCUP Nexus archive.",
 };
 
 const STATUS_VALUES: FixtureStatusValue[] = [
@@ -49,6 +50,7 @@ const STATUS_VALUES: FixtureStatusValue[] = [
 type Props = { searchParams: Promise<RawSearchParams> };
 
 export default async function Schedule2026Page({ searchParams }: Props) {
+  const archiveMode = isPostTournamentArchiveMode();
   const params = await searchParams;
   const filters = {
     q: getStringParam(params, "q"),
@@ -110,9 +112,13 @@ export default async function Schedule2026Page({ searchParams }: Props) {
       <VaultPageHeader
         eyebrow="2026 World Cup"
         title="2026 Match Schedule & Scores"
-        lede="Latest fixtures, results, venues, groups, and match status — synced into the archive, then rendered here."
+        lede={
+          archiveMode
+            ? "Every 2026 fixture, result, venue, and group — the completed tournament, archived and rendered from the Nexus database."
+            : "Latest fixtures, results, venues, groups, and match status — synced into the archive, then rendered here."
+        }
       >
-        <FixtureFreshnessNote freshness={freshness} />
+        <FixtureFreshnessNote freshness={freshness} archiveMode={archiveMode} />
       </VaultPageHeader>
 
       <PageContainer sx={{ py: { xs: 5, md: 7 } }}>

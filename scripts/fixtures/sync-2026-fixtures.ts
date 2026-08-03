@@ -2,16 +2,36 @@
 // summary. Exits non-zero only when every attempted provider failed (so an
 // OpenFootball-only setup with worldcup26 unreachable still succeeds).
 //
+// Post-tournament archive mode: unless FEATURE_2026_FIXTURE_SYNC="true" or
+// `--force` is passed, the script prints a notice and exits 0 without touching
+// any provider or the database. Re-run for a future tournament with:
+//   FEATURE_2026_FIXTURE_SYNC=true pnpm fixtures:sync
+//   pnpm fixtures:sync -- --force
+//
 // Uses createScriptPrismaClient (relative imports) so it runs under tsx without
 // "@/" alias resolution; syncFixtures2026 takes the client as a parameter.
 
 import "dotenv/config";
 
 import { createScriptPrismaClient } from "../import/utils/db";
+import { isFixtureSyncEnabled } from "../../src/config/features";
 import { syncFixtures2026 } from "../../src/server/fixtures/sync";
 
 async function main() {
   console.log("WORLDCUP Nexus — 2026 fixture sync\n");
+
+  const force = process.argv.includes("--force");
+  if (!isFixtureSyncEnabled() && !force) {
+    console.log(
+      "2026 fixture sync is disabled. Set FEATURE_2026_FIXTURE_SYNC=true to run manually.",
+    );
+    console.log("(Or override once with: pnpm fixtures:sync -- --force)");
+    return;
+  }
+  if (force && !isFixtureSyncEnabled()) {
+    console.log("--force passed — running despite the disabled sync flag.\n");
+  }
+
   const prisma = createScriptPrismaClient();
 
   try {

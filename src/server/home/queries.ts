@@ -11,6 +11,7 @@
 // - No hardcoded historical totals — stats/timeline/finals come from the DB.
 
 import { prisma } from "@/server/db/prisma";
+import { isLatestMatchesSectionEnabled } from "@/config/features";
 import { getArchiveStats } from "@/server/queries/home";
 import { getTournamentCards } from "@/server/queries/tournaments";
 import { getRecordsOverview } from "@/server/queries/records";
@@ -155,6 +156,9 @@ async function getArchiveStatsSection(
 }
 
 async function getFixturesSection(): Promise<HomeFixtureData | null> {
+  // Post-tournament archive mode: the homepage band is hidden, so don't spend
+  // the fixture queries. (Reads are DB-only either way — never a provider.)
+  if (!isLatestMatchesSectionEnabled()) return null;
   try {
     return await getHomeFixtures2026();
   } catch (error) {

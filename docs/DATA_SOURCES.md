@@ -92,6 +92,15 @@ normalize or import anything into the database — that happens in Checkpoint 4.
 
 ## Live fixtures: 2026 schedule & scores
 
+> **Status: post-tournament archive mode.** The 2026 tournament ended on
+> 2026-07-19; live provider sync is **disabled by default**
+> (`FEATURE_2026_FIXTURE_SYNC` unset/false) and the homepage no longer shows
+> the live "Latest Matches & Scores" band (`FEATURE_LATEST_MATCHES_SECTION`
+> unset/false). The provider code below is retained, unchanged, for future
+> tournaments. Finalized 2026 tournament data comes from the data steward
+> archive/import pipeline (next section), not from live provider sync.
+> Re-enable steps: `docs/FEATURE_2026_SCHEDULE.md`.
+
 The 2026 schedule/scores feature uses a **separate** pipeline from the historical
 Fjelstul archive (it lands in the `Fixture` table, never in `Match`). It is
 source-attributed and synced into PostgreSQL before rendering — the browser
