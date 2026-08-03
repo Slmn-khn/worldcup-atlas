@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-08-03T09:18:40.113Z",
+  "mode": "DRY_RUN",
+  "ok": true,
+  "refusedBy": null,
+  "sourceId": "mominul_2026_dataset",
+  "batchId": null,
+  "counts": {
+    "stages": {
+      "planned": 7,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "teams": {
+      "planned": 48,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "venues": {
+      "planned": 16,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "referees": {
+      "planned": 28,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "matches": {
+      "planned": 104,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "players": {
+      "planned": 1248,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "events": {
+      "planned": 834,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "lineups": {
+      "planned": 5408,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "playerStats": {
+      "planned": 1248,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    },
+    "teamMatchStats": {
+      "planned": 208,
+      "created": 0,
+      "updated": 0,
+      "skipped": 0
+    }
+  },
+  "warnings": [],
+  "errors": []
+}

@@ -89,7 +89,7 @@ export default async function CountriesPage({ searchParams }: Props) {
       <VaultPageHeader
         title="World Cup Nations"
         lede="Explore every nation and team history recorded in the WORLDCUP Nexus database."
-        meta={`${formatNumber(index.total)} nations in the archive`}
+        meta={`${formatNumber(index.total)} nations in the historical archive (1930–2022) · 2026 squads and results live in the 2026 archive hub`}
       />
 
       <PageContainer sx={{ py: { xs: 5, md: 7 } }}>

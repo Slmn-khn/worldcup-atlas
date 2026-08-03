@@ -1,0 +1,203 @@
+{
+  "schema": "mominul-approved-pack/referees/v1",
+  "sourceId": "mominul_2026_dataset",
+  "count": 28,
+  "records": [
+    {
+      "sourceRefereeId": 1,
+      "name": "Szymon Marciniak",
+      "slug": "szymon-marciniak",
+      "country": "Poland",
+      "avgCardsPerGame": 4.2
+    },
+    {
+      "sourceRefereeId": 2,
+      "name": "Daniele Orsato",
+      "slug": "daniele-orsato",
+      "country": "Italy",
+      "avgCardsPerGame": 4.8
+    },
+    {
+      "sourceRefereeId": 3,
+      "name": "Michael Oliver",
+      "slug": "michael-oliver",
+      "country": "England",
+      "avgCardsPerGame": 3.9
+    },
+    {
+      "sourceRefereeId": 4,
+      "name": "Anthony Taylor",
+      "slug": "anthony-taylor",
+      "country": "England",
+      "avgCardsPerGame": 4.1
+    },
+    {
+      "sourceRefereeId": 5,
+      "name": "Clément Turpin",
+      "slug": "clement-turpin",
+      "country": "France",
+      "avgCardsPerGame": 3.6
+    },
+    {
+      "sourceRefereeId": 6,
+      "name": "Danny Makkelie",
+      "slug": "danny-makkelie",
+      "country": "Netherlands",
+      "avgCardsPerGame": 3.8
+    },
+    {
+      "sourceRefereeId": 7,
+      "name": "Jesús Valenzuela",
+      "slug": "jesus-valenzuela",
+      "country": "Venezuela",
+      "avgCardsPerGame": 4.9
+    },
+    {
+      "sourceRefereeId": 8,
+      "name": "Wilton Sampaio",
+      "slug": "wilton-sampaio",
+      "country": "Brazil",
+      "avgCardsPerGame": 4.5
+    },
+    {
+      "sourceRefereeId": 9,
+      "name": "César Arturo Ramos",
+      "slug": "cesar-arturo-ramos",
+      "country": "Mexico",
+      "avgCardsPerGame": 4
+    },
+    {
+      "sourceRefereeId": 10,
+      "name": "Ivan Barton",
+      "slug": "ivan-barton",
+      "country": "El Salvador",
+      "avgCardsPerGame": 5.1
+    },
+    {
+      "sourceRefereeId": 11,
+      "name": "Mustapha Ghorbal",
+      "slug": "mustapha-ghorbal",
+      "country": "Algeria",
+      "avgCardsPerGame": 3.7
+    },
+    {
+      "sourceRefereeId": 12,
+      "name": "Victor Gomes",
+      "slug": "victor-gomes",
+      "country": "South Africa",
+      "avgCardsPerGame": 4.3
+    },
+    {
+      "sourceRefereeId": 13,
+      "name": "Ma Ning",
+      "slug": "ma-ning",
+      "country": "China",
+      "avgCardsPerGame": 5.5
+    },
+    {
+      "sourceRefereeId": 14,
+      "name": "Alireza Faghani",
+      "slug": "alireza-faghani",
+      "country": "Australia",
+      "avgCardsPerGame": 4.2
+    },
+    {
+      "sourceRefereeId": 15,
+      "name": "Yoshimi Yamashita",
+      "slug": "yoshimi-yamashita",
+      "country": "Japan",
+      "avgCardsPerGame": 3.4
+    },
+    {
+      "sourceRefereeId": 16,
+      "name": "Facundo Tello",
+      "slug": "facundo-tello",
+      "country": "Argentina",
+      "avgCardsPerGame": 5
+    },
+    {
+      "sourceRefereeId": 17,
+      "name": "João Pinheiro",
+      "slug": "joao-pinheiro",
+      "country": "Portugal",
+      "avgCardsPerGame": 4.7
+    },
+    {
+      "sourceRefereeId": 18,
+      "name": "Maurizio Mariani",
+      "slug": "maurizio-mariani",
+      "country": "Italy",
+      "avgCardsPerGame": 4.8
+    },
+    {
+      "sourceRefereeId": 19,
+      "name": "Jalal Jayed",
+      "slug": "jalal-jayed",
+      "country": "Morocco",
+      "avgCardsPerGame": 4.6
+    },
+    {
+      "sourceRefereeId": 20,
+      "name": "Slavko Vinčić",
+      "slug": "slavko-vincic",
+      "country": "Slovenia",
+      "avgCardsPerGame": 4.1
+    },
+    {
+      "sourceRefereeId": 21,
+      "name": "Adham Makhadmeh",
+      "slug": "adham-makhadmeh",
+      "country": "Jordan",
+      "avgCardsPerGame": 4.2
+    },
+    {
+      "sourceRefereeId": 22,
+      "name": "Saíd Martínez",
+      "slug": "said-martinez",
+      "country": "Honduras",
+      "avgCardsPerGame": 4.1
+    },
+    {
+      "sourceRefereeId": 23,
+      "name": "Raphael Claus",
+      "slug": "raphael-claus",
+      "country": "Brazil",
+      "avgCardsPerGame": 4.1
+    },
+    {
+      "sourceRefereeId": 24,
+      "name": "Glenn Nyberg",
+      "slug": "glenn-nyberg",
+      "country": "Sweden",
+      "avgCardsPerGame": 3.1
+    },
+    {
+      "sourceRefereeId": 25,
+      "name": "Espen Eskås",
+      "slug": "espen-eskas",
+      "country": "Norway",
+      "avgCardsPerGame": 2.9
+    },
+    {
+      "sourceRefereeId": 26,
+      "name": "Yael Falcón",
+      "slug": "yael-falcon",
+      "country": "Argentina",
+      "avgCardsPerGame": 5.4
+    },
+    {
+      "sourceRefereeId": 27,
+      "name": "Gustavo Tejera",
+      "slug": "gustavo-tejera",
+      "country": "Uruguay",
+      "avgCardsPerGame": 5.1
+    },
+    {
+      "sourceRefereeId": 28,
+      "name": "Drew Fischer",
+      "slug": "drew-fischer",
+      "country": "Canada",
+      "avgCardsPerGame": 3.3
+    }
+  ]
+}

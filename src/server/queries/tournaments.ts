@@ -2,6 +2,11 @@
 
 import { prisma } from "@/server/db/prisma";
 import {
+  buildWc2026TournamentCard,
+  mergeWc2026TournamentCard,
+} from "@/server/worldcup2026/canonicalBridge";
+import { getWc2026Overview } from "@/server/worldcup2026/queries";
+import {
   finalStageFilter,
   formatFinalScore,
   matchCardInclude,
@@ -66,7 +71,7 @@ export async function getTournamentCards(): Promise<TournamentCardDto[]> {
   );
   const finalScores = await finalScoreByTournamentId();
 
-  return tournaments.map((t) => {
+  const cards = tournaments.map((t) => {
     const winnerRef =
       t.winnerTeamId !== null ? (refs.get(t.winnerTeamId) ?? null) : null;
     const runnerUpRef =
@@ -89,6 +94,24 @@ export async function getTournamentCards(): Promise<TournamentCardDto[]> {
       finalScore: finalScores.get(t.id) ?? null,
     };
   });
+
+  // Bridge in the imported 2026 archive (Mominul-only tables) as a card.
+  // mergeWc2026TournamentCard drops the synthetic card if canonical 2026
+  // exists (post-promotion), so the archive is never double-counted. Timeline,
+  // featured tournaments, /tournaments, and archive-span derivations all flow
+  // from this list, which keeps every surface 2026-aware in one place.
+  try {
+    const overview = await getWc2026Overview();
+    if (overview !== null) {
+      return mergeWc2026TournamentCard(
+        cards,
+        buildWc2026TournamentCard(overview),
+      );
+    }
+  } catch (error) {
+    console.error("[tournaments] 2026 archive bridge unavailable", error);
+  }
+  return cards;
 }
 
 /**

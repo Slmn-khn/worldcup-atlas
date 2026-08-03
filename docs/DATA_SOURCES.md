@@ -102,11 +102,34 @@ normalize or import anything into the database — that happens in Checkpoint 4.
 > Re-enable steps: `docs/FEATURE_2026_SCHEDULE.md`.
 >
 > `/schedule/2026` no longer reads the `Fixture` table at all: it renders the
-> **file-backed archive schedule** (`src/server/worldcup2026/archiveSchedule.ts`)
-> built from the manual verified reference pack and approved finalized
-> artifacts. Unresolved records display as "Under review" — never "Scheduled".
-> Regenerate the display artifact with `pnpm data:2026:display-schedule`
-> (file-in/file-out; no DB writes). See `docs/2026_DATA_STEWARD_AGENT.md`.
+> **imported Mominul archive** (`WorldCup2026*` tables) when the approved
+> import has run, falling back to the file-backed archive chain
+> (`src/server/worldcup2026/archiveSchedule.ts`: approved Mominul pack →
+> finalized artifacts → manual verified reference pack). Unresolved records
+> display as "Under review" — never "Scheduled".
+> See `docs/2026_DATA_STEWARD_AGENT.md`.
+>
+> **Imported 2026 archive source (user-approved):** the
+> **Mominul FIFA World Cup 2026 Dataset**
+> (github.com/mominullptr/FIFA-World-Cup-2026-Dataset) is the ONLY source
+> imported into the 2026 archive tables — policy:
+> `data/2026/approved/mominul-import-policy.json`. Its ML prediction features
+> are excluded; Bustami EFI, OpenFootball, worldcup26 and manual-pack values
+> are never imported. Every imported row is tagged
+> `sourceId = "mominul_2026_dataset"` and keeps the raw source row for audit.
+> `/tournaments/2026`, `/matches/2026/<id>`, and 2026 player pages render
+> from these tables with visible source attribution.
+>
+> **The archive now spans 1930–2026 app-wide.** Static copy uses
+> `src/lib/archiveCoverage.ts` (`ARCHIVE_COVERAGE`); numeric stats are
+> COMPUTED by `src/server/archive/stats.ts` (canonical tables + imported 2026
+> additions — goals summed from imported match scores). The tournament
+> timeline, featured tournaments, /tournaments list, homepage finals board,
+> sitemap, and search all include 2026 via
+> `src/server/worldcup2026/canonicalBridge.ts`. Every bridge point carries a
+> double-counting guard: if 2026 is later promoted into the canonical
+> `Tournament`/`Match` tables, the synthetic 2026 card/final/stat additions
+> are dropped automatically and canonical rows stand alone.
 
 The 2026 schedule/scores feature uses a **separate** pipeline from the historical
 Fjelstul archive (it lands in the `Fixture` table, never in `Match`). It is

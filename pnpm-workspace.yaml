@@ -1,7 +1,7 @@
 packages:
   - "."
 
-overrides:
-  "esbuild@>=0.17.0 <0.28.1": "0.28.1"
-  "tsx>esbuild": "0.28.1"
-  "hono:": "4.12.25"
+# NOTE: this project pins pnpm@8 (see package.json packageManager), and pnpm 8
+# does NOT read overrides from this file — security overrides live in
+# package.json under "pnpm.overrides". A previous overrides block here
+# (including a malformed "hono:" key) was inert and has been removed.

@@ -51,17 +51,70 @@ re-enable live mode for a future tournament, follow
 [FEATURE_2026_SCHEDULE.md](FEATURE_2026_SCHEDULE.md) ("Re-enabling live
 mode": set both flags to `true`, restore the cron entry, redeploy).
 
-`/schedule/2026` renders the **file-backed 2026 archive schedule** (manual
-verified reference pack + approved finalized artifacts committed under
-`data/2026/`), not the live `Fixture` table. Unresolved results display as
-"Under review", never "Scheduled". If the pack or review decisions change,
-regenerate the display artifact from the admin environment and commit it:
-`pnpm data:2026:display-schedule` (file-in/file-out — it performs **no**
-database writes and does not touch the import approval gate).
+`/schedule/2026` renders the **imported 2026 archive** (`WorldCup2026*`
+tables, Mominul-only import) when populated, else the file-backed archive
+chain committed under `data/2026/` — never the live `Fixture` table.
+Unresolved results display as "Under review", never "Scheduled".
+
+**2026 Mominul import (production sequence).** Never run the write import
+against production before it has been verified locally/staging. From the
+admin environment:
+
+1. Deploy migrations: `pnpm db:deploy` (adds the `WorldCup2026*` tables).
+2. Dry-run against the production DB: `pnpm data:2026:mominul:import`
+   (dry-run performs zero database access; it validates policy + pack).
+3. If clean:
+   `CONFIRM_2026_MOMINUL_IMPORT=true pnpm data:2026:mominul:import:write -- --confirm-production`
+4. Re-run `pnpm search:index` if Meilisearch is active (adds 2026 teams,
+   matches, players, venues to the index).
+5. Smoke test `/schedule/2026`, `/tournaments/2026`, one
+   `/matches/2026/<id>`, and `/sources`.
+
+The import is idempotent (source-id upserts; re-running converges and is
+also the recovery path after a failed partial run) and writes ONLY the
+quarantined `WorldCup2026*` tables — never the canonical historical archive,
+never `Fixture` rows. Each run records a `WorldCup2026ImportBatch` audit row.
+
+**App-wide 2026 coverage.** With the import in place the app presents the
+archive as **1930–2026**: homepage stats/timeline/featured/finals, the
+/tournaments list, sitemap, and search all bridge in the imported 2026
+archive (`src/server/worldcup2026/canonicalBridge.ts` +
+`src/server/archive/stats.ts`). To refresh 2026 data: re-run the approved
+pack + write import (above), then `pnpm search:index`. If 2026 is ever
+promoted into the canonical `Tournament`/`Match` tables, no cleanup is
+needed — every bridge point detects canonical year 2026 and drops the
+synthetic additions, so nothing is double-counted; then retire the bridge at
+leisure.
 
 In the **admin environment**, export the same variables per command run,
 except `MEILISEARCH_API_KEY` = the **admin/indexing key** when indexing.
 Never write production values into a committed file.
+
+## Dependency audit overrides (2026-08-03)
+
+`pnpm audit --audit-level moderate` is clean (all/prod/dev). Fixes applied:
+
+- **Direct update:** `next`/`@next/third-parties`/`eslint-config-next`
+  `16.2.6 → 16.2.12` — clears nine Next advisories (4 high SSRF/cache
+  poisoning, 5 moderate) patched in `>=16.2.11`.
+- **Overrides** (in `package.json` → `pnpm.overrides`; note this repo pins
+  **pnpm 8**, which does NOT read overrides from `pnpm-workspace.yaml` — an
+  inert overrides block there was removed):
+  | Override | Advisory | Reason |
+  | --- | --- | --- |
+  | `hono` → 4.12.27 | GHSA-xgm2/hvrm/w62v | via `@prisma/dev` (prisma CLI, dev-time) |
+  | `@hono/node-server` → 2.0.10 | GHSA-9mqv-5hh9-4cgg | via `@prisma/dev` |
+  | `postcss@<8.5.18` → >=8.5.18 | GHSA-r28c-9q8g-f849 | source-map path traversal, via next |
+  | `sharp@<0.35.0` → >=0.35.1 | GHSA-f88m-g3jw-g9cj | next's bundled sharp |
+  | `fast-uri@3` → 3.1.4 | GHSA-v2hh / GHSA-4c8g | via ajv in `@prisma/dev` chain |
+  | `valibot@1` → 1.4.2 | GHSA-5qjj-4xww-7phc | via `@prisma/dev` |
+  | `js-yaml@4` → 4.3.0 | GHSA-52cp-r559-cp3m | via eslint (dev) |
+  | `brace-expansion@1` → 1.1.17, `@5` → 5.0.8 | GHSA-3jxr / GHSA-mh99 | ReDoS, via eslint toolchain (dev) |
+  | `esbuild` → ^0.28.1 | (pre-existing) | retained |
+
+  Remove an override once its parent ships a patched resolution. Validated
+  with: `pnpm typecheck`, `pnpm lint`, `pnpm test:unit`, `pnpm build`,
+  `pnpm prod:preflight`, and all three `pnpm audit` variants.
 
 ## 3. Deploy database migrations
 

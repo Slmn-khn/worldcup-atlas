@@ -728,3 +728,369 @@ model FeedbackEvent {
   @@index([action])
   @@index([createdAt])
 }
+
+// ---------------------------------------------------------------------------
+// 2026 World Cup archive tables (Mominul-only import).
+//
+// Deliberately SEPARATE from the canonical historical archive (Tournament/
+// Match/Player/…): the 2026 archive is imported from exactly one approved
+// source (sourceId "mominul_2026_dataset") and stays quarantined here until a
+// promotion into the canonical tables is explicitly approved. Every row keeps
+// its integer source id (upsert key — imports are idempotent), a sourceId tag,
+// and the raw source row for audit. See docs/2026_DATA_STEWARD_AGENT.md.
+// ---------------------------------------------------------------------------
+
+model WorldCup2026ImportBatch {
+  id              String  @id @default(cuid())
+  sourceId        String
+  sourceVersion   String?
+  sourceCommitSha String?
+  status          String
+  dryRun          Boolean @default(true)
+
+  filesImported  Json?
+  recordsPlanned Json?
+  recordsCreated Json?
+  recordsUpdated Json?
+  recordsSkipped Json?
+  warnings       Json?
+  errors         Json?
+
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([sourceId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model WorldCup2026Team {
+  id            String  @id @default(cuid())
+  sourceTeamId  Int?    @unique
+  name          String
+  slug          String  @unique
+  fifaCode      String?
+  flagCode      String?
+  groupLetter   String?
+  confederation String?
+  fifaRanking   Int?
+  eloRating     Int?
+  managerName   String?
+  sourceId      String
+  raw           Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  matchesHome    WorldCup2026Match[]         @relation("Wc2026HomeTeam")
+  matchesAway    WorldCup2026Match[]         @relation("Wc2026AwayTeam")
+  players        WorldCup2026Player[]
+  playerStats    WorldCup2026PlayerStat[]
+  teamMatchStats WorldCup2026TeamMatchStat[]
+
+  @@index([fifaCode])
+  @@index([groupLetter])
+  @@index([confederation])
+}
+
+model WorldCup2026Venue {
+  id              String  @id @default(cuid())
+  sourceVenueId   Int?    @unique
+  name            String
+  slug            String  @unique
+  stadiumName     String?
+  city            String?
+  country         String?
+  capacity        Int?
+  latitude        Float?
+  longitude       Float?
+  elevationMeters Int?
+  sourceId        String
+  raw             Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  matches WorldCup2026Match[]
+
+  @@index([country])
+  @@index([city])
+}
+
+model WorldCup2026Stage {
+  id            String  @id @default(cuid())
+  sourceStageId Int?    @unique
+  name          String
+  slug          String  @unique
+  isKnockout    Boolean @default(false)
+  sortOrder     Int?
+  sourceId      String
+  raw           Json?
+
+  matches WorldCup2026Match[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model WorldCup2026Referee {
+  id              String  @id @default(cuid())
+  sourceRefereeId Int?    @unique
+  name            String
+  slug            String
+  country         String?
+  avgCardsPerGame Float?
+  sourceId        String
+  raw             Json?
+
+  matches WorldCup2026Match[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+}
+
+model WorldCup2026Match {
+  id             String    @id @default(cuid())
+  sourceMatchId  Int       @unique
+  matchNumber    Int?
+  date           DateTime?
+  kickoffTimeUtc String?
+
+  stageId String?
+  stage   WorldCup2026Stage? @relation(fields: [stageId], references: [id])
+
+  stageName   String?
+  groupLetter String?
+
+  venueId String?
+  venue   WorldCup2026Venue? @relation(fields: [venueId], references: [id])
+
+  homeTeamId String?
+  homeTeam   WorldCup2026Team? @relation("Wc2026HomeTeam", fields: [homeTeamId], references: [id])
+
+  awayTeamId String?
+  awayTeam   WorldCup2026Team? @relation("Wc2026AwayTeam", fields: [awayTeamId], references: [id])
+
+  homeTeamName String?
+  awayTeamName String?
+  homeTeamCode String?
+  awayTeamCode String?
+
+  homeScore        Int?
+  awayScore        Int?
+  homePenaltyScore Int?
+  awayPenaltyScore Int?
+
+  resultType     String?
+  status         String
+  winnerTeamName String?
+  winnerTeamCode String?
+
+  homeXg Float?
+  awayXg Float?
+
+  goalkeeperHome   String?
+  goalkeeperAway   String?
+  playerOfTheMatch String?
+
+  refereeId   String?
+  referee     WorldCup2026Referee? @relation(fields: [refereeId], references: [id])
+  refereeName String?
+
+  sourceId     String
+  dataSource   String?
+  lastVerified String?
+  raw          Json?
+
+  events    WorldCup2026MatchEvent[]
+  lineups   WorldCup2026Lineup[]
+  teamStats WorldCup2026TeamMatchStat[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([date])
+  @@index([stageName])
+  @@index([groupLetter])
+  @@index([status])
+  @@index([winnerTeamCode])
+}
+
+model WorldCup2026Player {
+  id             String            @id @default(cuid())
+  sourcePlayerId Int               @unique
+  teamId         String?
+  team           WorldCup2026Team? @relation(fields: [teamId], references: [id])
+
+  teamName String?
+  teamCode String?
+
+  name               String
+  slug               String
+  position           String?
+  club               String?
+  marketValueEur     Int?
+  caps               Int?
+  dateOfBirth        DateTime?
+  heightCm           Int?
+  internationalGoals Int?
+
+  sourceId String
+  raw      Json?
+
+  events  WorldCup2026MatchEvent[]
+  lineups WorldCup2026Lineup[]
+  stats   WorldCup2026PlayerStat?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+  @@index([teamCode])
+  @@index([position])
+}
+
+model WorldCup2026MatchEvent {
+  id            String  @id @default(cuid())
+  sourceEventId Int?    @unique
+  /// Deterministic fallback key (matchId+type+minute+player) when the source has no event id.
+  importKey     String? @unique
+
+  matchId String
+  match   WorldCup2026Match @relation(fields: [matchId], references: [id], onDelete: Cascade)
+
+  playerId String?
+  player   WorldCup2026Player? @relation(fields: [playerId], references: [id])
+
+  teamId   String?
+  teamCode String?
+  teamName String?
+
+  minute           Int?
+  stoppageMinute   Int?
+  eventType        String
+  playerName       String?
+  assistPlayerName String?
+  cardType         String?
+  varOutcome       String?
+  description      String?
+
+  sourceId String
+  raw      Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([matchId])
+  @@index([playerId])
+  @@index([teamCode])
+  @@index([eventType])
+}
+
+model WorldCup2026Lineup {
+  id             String @id @default(cuid())
+  sourceLineupId Int?   @unique
+
+  matchId String
+  match   WorldCup2026Match @relation(fields: [matchId], references: [id], onDelete: Cascade)
+
+  playerId String?
+  player   WorldCup2026Player? @relation(fields: [playerId], references: [id])
+
+  teamId   String?
+  teamCode String?
+  teamName String?
+
+  playerName       String?
+  isStarting       Boolean?
+  position         String?
+  tacticalPosition String?
+  minutesPlayed    Int?
+
+  sourceId String
+  raw      Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([matchId])
+  @@index([playerId])
+  @@index([teamCode])
+}
+
+model WorldCup2026PlayerStat {
+  id String @id @default(cuid())
+
+  playerId String             @unique
+  player   WorldCup2026Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+
+  teamId String?
+  team   WorldCup2026Team? @relation(fields: [teamId], references: [id])
+
+  playerName String?
+  teamCode   String?
+
+  matchesPlayed   Int?
+  matchesStarted  Int?
+  minutesPlayed   Int?
+  goals           Int?
+  assists         Int?
+  yellowCards     Int?
+  redCards        Int?
+  penaltiesScored Int?
+  ownGoals        Int?
+  saves           Int?
+  goalsConceded   Int?
+  cleanSheets     Int?
+  averageRating   Float?
+
+  dataSource   String?
+  lastVerified String?
+  sourceId     String
+  raw          Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([teamCode])
+  @@index([goals])
+  @@index([assists])
+}
+
+model WorldCup2026TeamMatchStat {
+  id String @id @default(cuid())
+
+  matchId String
+  match   WorldCup2026Match @relation(fields: [matchId], references: [id], onDelete: Cascade)
+
+  teamId String?
+  team   WorldCup2026Team? @relation(fields: [teamId], references: [id])
+
+  teamCode String?
+  teamName String?
+
+  possessionPct Float?
+  totalShots    Int?
+  shotsOnTarget Int?
+  corners       Int?
+  fouls         Int?
+  offsides      Int?
+  saves         Int?
+  xg            Float?
+
+  dataSource  String?
+  lastUpdated String?
+  sourceId    String
+  raw         Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([matchId, teamCode])
+  @@index([teamCode])
+}

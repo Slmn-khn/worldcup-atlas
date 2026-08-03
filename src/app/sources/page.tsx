@@ -119,10 +119,11 @@ export default function SourcesPage() {
       <PageContainer component="section" sx={SECTION_SX}>
         <SectionHeading
           title="Secondary and Reference Sources"
-          subtitle="Used for verification only — never as automated import sources."
+          subtitle="Additional sources beyond the primary historical database."
         />
         <Bullets
           items={[
+            "Mominul FIFA World Cup 2026 Dataset (github.com/mominullptr/FIFA-World-Cup-2026-Dataset) — the approved, user-verified source of the imported 2026 tournament archive: teams, venues, matches, squads, events, lineups, and statistics. The only source imported for 2026; its ML prediction features are excluded.",
             "OpenFootball World Cup data (public domain) — reserved for cross-referencing results and filling confirmed gaps; not currently used in production data.",
             "Wikipedia match articles and RSSSF records — manual verification reference only.",
           ]}
@@ -149,7 +150,8 @@ export default function SourcesPage() {
         <SectionHeading title="Known Limitations" />
         <Bullets
           items={[
-            "The imported dataset covers both men's (1930–2022) and women's (1991–2019) World Cups; combined views are labeled \"all imported tournaments\".",
+            "The imported historical dataset covers both men's (1930–2022) and women's (1991–2019) World Cups; combined views are labeled \"all imported tournaments\". The archive now extends through 2026 via the separately imported 2026 dataset below.",
+            "2026 archive data is integrated from the approved Mominul FIFA World Cup 2026 Dataset, with source attribution and validation through the WORLDCUP Nexus Data Steward pipeline.",
             "Squad membership means a player was selected for a tournament squad — it is not match appearance data. No appearances, caps, or minutes are claimed.",
             "Assist, lineup, referee-to-match, and attendance data are not part of the imported subset.",
             "Penalty shootout kicks are listed in source order; the source does not record the true kick sequence or distinguish missed from saved.",

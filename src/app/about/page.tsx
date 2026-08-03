@@ -10,11 +10,12 @@ import PageContainer from "@/components/layout/PageContainer";
 import VaultPageHeader from "@/components/vault/VaultPageHeader";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/lib/site";
+import { ARCHIVE_COVERAGE } from "@/lib/archiveCoverage";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What WORLDCUP Nexus is: an independent, data-driven historical archive of the FIFA World Cup.",
+    "What WORLDCUP Nexus is: an independent, data-driven archive of the FIFA World Cup from 1930 to 2026.",
 };
 
 export default function AboutPage() {
@@ -32,12 +33,14 @@ export default function AboutPage() {
           variant="body1"
           sx={{ color: "text.secondary", maxWidth: 760 }}
         >
-          WORLDCUP Nexus is a digital football museum: every imported
-          tournament, nation, player, match, goal, card, substitution, and
-          penalty in one place. Browse tournament histories, relive matches
-          through event timelines, follow a nation through every campaign, trace
-          a player&apos;s World Cup record, explore the Book of Records, or dig
-          through the raw numbers in the Data Explorer.
+          WORLDCUP Nexus is a digital football museum spanning{" "}
+          {ARCHIVE_COVERAGE.label}: every imported tournament, nation, player,
+          match, goal, card, substitution, and penalty in one place — from the
+          first World Cup through the completed 2026 edition. Browse tournament
+          histories, relive matches through event timelines, follow a nation
+          through every campaign, trace a player&apos;s World Cup record,
+          explore the Book of Records, or dig through the raw numbers in the
+          Data Explorer.
         </Typography>
       </PageContainer>
 

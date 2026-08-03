@@ -279,14 +279,76 @@ The generator is file-in/file-out: **no database writes**, no network. The
 artifact lives under `data/2026/approved/finalized/` but is a *display* file —
 it is not `approval.json` and does not open the DB import gate.
 
+## Approved Mominul import (Phase 2 — implemented)
+
+The user manually verified the **Mominul FIFA World Cup 2026 Dataset**
+(github.com/mominullptr/FIFA-World-Cup-2026-Dataset) and approved importing it
+as the ONLY 2026 archive source. The import is quarantined in dedicated
+`WorldCup2026*` Prisma tables (see `prisma/schema.prisma`) — the canonical
+historical archive (`Tournament`/`Match`/`Player`/…) is untouched, and the
+`approval.json` gate for canonical imports (below) remains closed.
+
+**Source lock:** `data/2026/approved/mominul-import-policy.json`, validated
+semantically by `src/server/agents/worldcup2026/mominulImportPolicy.ts`. The
+importer refuses to run unless the policy names `mominul_2026_dataset`,
+status `APPROVED_BY_USER`, and explicitly excludes
+`match_prediction_features`, `bustami_efi`, `openfootball`,
+`worldcup26_live`, and `manual_pack_values`.
+
+**Pipeline:**
+
+```bash
+pnpm data:2026:collect                  # snapshot the source files (network)
+pnpm data:2026:mominul:approved-pack    # raw CSVs → approved pack (validated)
+pnpm data:2026:mominul:import           # DRY-RUN (default; zero DB access)
+CONFIRM_2026_MOMINUL_IMPORT=true pnpm data:2026:mominul:import:write
+# NODE_ENV=production additionally requires: -- --confirm-production
+```
+
+- The approved pack (`data/2026/approved/mominul/finalized/`) is validated
+  hard: 48 teams, 16 venues, 104 matches, 1,248 players, no duplicate source
+  ids, full referential integrity, all matches Completed, and the final must
+  be Spain 1–0 Argentina AET. Validation failure blocks the import.
+- The importer (`mominulImporter.ts`) is **idempotent** — every entity
+  upserts on its integer source id (or `matchId+teamCode` for team stats),
+  so re-running converges; a re-run after a bad partial import is the
+  rollback story (no destructive reset exists or is needed). Each write run
+  is recorded as a `WorldCup2026ImportBatch` row with per-entity
+  created/updated/skipped counts.
+- Reports: `data/2026/reports/mominul-approved-import-{preview,result}.{json,md}`.
+- Excluded on principle: `match_prediction_features.csv` (ML-only), all
+  Bustami EFI data, OpenFootball/worldcup26 rows, and manual-pack values
+  (the manual pack stays a comparison/reference artifact only).
+
+**Website integration:** `/schedule/2026` and `/tournaments/2026` read the
+imported tables first (`src/server/worldcup2026/{queries,scheduleSource}.ts`)
+and fall back to the file-backed approved pack when the DB is empty;
+`/matches/2026/<id>` and `/tournaments/2026/players/<id>` render match
+reports and player profiles. 2026 players are deliberately NOT merged into
+the historical `Player` model. Live OpenFootball/worldcup26 fixture sync
+remains disabled (feature flags) and the legacy `Fixture` rows are never
+used for 2026 display.
+
+Beyond the 2026-specific pages, the whole app now treats the archive as
+**1930–2026**: `canonicalBridge.ts` maps the imported archive onto the
+canonical card/finals/stats read models (homepage, timeline, featured,
+/tournaments, sitemap, search), and every bridge point drops its synthetic
+2026 contribution automatically if canonical `Tournament` year 2026 appears
+(post-promotion) — the double-counting guard is
+`mergeWc2026TournamentCard` plus the canonical-2026 check in
+`src/server/archive/stats.ts`.
+
 ## No production writes in Phase 1
 
 - No module under `src/server/agents/worldcup2026/` imports Prisma or any
-  database utility.
+  database utility, except the Phase 2 `mominulImporter.ts`, which receives
+  its client as a parameter, only ever writes the quarantined
+  `WorldCup2026*` tables, and is gated as described above.
 - No existing `Fixture`, `Match`, `Tournament`, `Team`, `Country`, or
   `Stadium` records are read or written.
-- There is no import script. A future one must demand
-  `data/2026/approved/approval.json` (see `data/2026/approved/README.md`).
+- There is still no CANONICAL-archive import script. A future one must
+  demand `data/2026/approved/approval.json` (see
+  `data/2026/approved/README.md`).
 
 ## Future phases
 

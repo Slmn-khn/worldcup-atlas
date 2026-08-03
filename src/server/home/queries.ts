@@ -12,7 +12,9 @@
 
 import { prisma } from "@/server/db/prisma";
 import { isLatestMatchesSectionEnabled } from "@/config/features";
-import { getArchiveStats } from "@/server/queries/home";
+import { getCombinedArchiveStats } from "@/server/archive/stats";
+import { buildWc2026FinalSummary } from "@/server/worldcup2026/canonicalBridge";
+import { getWc2026Overview } from "@/server/worldcup2026/queries";
 import { getTournamentCards } from "@/server/queries/tournaments";
 import { getRecordsOverview } from "@/server/queries/records";
 import { getHomeFixtures2026 } from "@/server/fixtures/queries";
@@ -126,28 +128,25 @@ const EMPTY_STATS: HomeArchiveStats = {
 };
 
 /**
- * Archive-at-a-glance counters. `champions` and the span are derived from the
- * tournament cards (distinct winners / min–max year) so nothing is hardcoded.
+ * Archive-at-a-glance counters — combined canonical + imported 2026 archive
+ * (src/server/archive/stats.ts). Champions and the span derive from the
+ * 2026-inclusive tournament cards; nothing is hardcoded, and the combined
+ * layer guards against double-counting if 2026 is later promoted into the
+ * canonical tables.
  */
 async function getArchiveStatsSection(
   tournamentCards: TournamentCardDto[],
 ): Promise<HomeArchiveStats> {
   try {
-    const stats = await getArchiveStats();
-    const years = tournamentCards.map((t) => t.year);
-    const champions = new Set(
-      tournamentCards
-        .map((t) => t.winner)
-        .filter((winner): winner is string => winner !== null),
-    );
+    const combined = await getCombinedArchiveStats(tournamentCards);
     return {
-      tournaments: stats.tournaments,
-      matches: stats.matches,
-      goals: stats.goals,
-      nations: stats.countries,
-      champions: champions.size,
-      spanStart: years.length > 0 ? Math.min(...years) : null,
-      spanEnd: years.length > 0 ? Math.max(...years) : null,
+      tournaments: combined.tournamentsCount,
+      matches: combined.matchesCount,
+      goals: combined.goalsCount,
+      nations: combined.nationsCount,
+      champions: combined.championsCount,
+      spanStart: combined.spanStart,
+      spanEnd: combined.spanEnd,
     };
   } catch (error) {
     console.error("[home] failed to load archive stats", error);
@@ -204,7 +203,6 @@ async function getRecentFinalsSection(): Promise<HomeFinal[]> {
       orderBy: { matchDate: "desc" },
       take: RECENT_FINALS_LIMIT,
     });
-    if (finals.length === 0) return [];
 
     let eventMedia = new Map<string, MediaAssetDto>();
     try {
@@ -217,7 +215,7 @@ async function getRecentFinalsSection(): Promise<HomeFinal[]> {
       console.error("[home] failed to load final event media", mediaError);
     }
 
-    return finals.map((match) => ({
+    const list: HomeFinal[] = finals.map((match) => ({
       id: match.id,
       slug: match.slug,
       year: match.tournament.year,
@@ -230,6 +228,35 @@ async function getRecentFinalsSection(): Promise<HomeFinal[]> {
       venue: match.stadium?.name ?? null,
       eventMedia: eventMedia.get(match.id) ?? null,
     }));
+
+    // The imported 2026 final leads the board (skipped once a canonical 2026
+    // final exists — no duplicates). Its slug path routes to /matches/2026/<id>.
+    try {
+      if (!list.some((final) => final.year === 2026)) {
+        const overview = await getWc2026Overview();
+        const summary =
+          overview !== null ? buildWc2026FinalSummary(overview) : null;
+        if (summary !== null) {
+          list.unshift({
+            id: summary.id,
+            slug: summary.matchSlugPath,
+            year: summary.year,
+            tournamentName: summary.tournamentName,
+            stageLabel: "Final",
+            homeTeam: summary.homeTeam,
+            awayTeam: summary.awayTeam,
+            score: summary.score,
+            decidedByPenalties: summary.decidedByPenalties,
+            venue: summary.venue,
+            eventMedia: null,
+          });
+        }
+      }
+    } catch (bridgeError) {
+      console.error("[home] 2026 final bridge unavailable", bridgeError);
+    }
+
+    return list.slice(0, RECENT_FINALS_LIMIT);
   } catch (error) {
     console.error("[home] failed to load recent finals", error);
     return [];

@@ -256,7 +256,10 @@ export async function getRecordsOverview(): Promise<RecordsOverviewDto> {
   const scopeNote =
     `Leaderboards combine all ${tournaments.length} imported tournaments` +
     (scopeParts.length > 0 ? ` — ${scopeParts.join(" and ")} — ` : " ") +
-    "and are computed from the imported source data only. This is an independent archive, not an official record list.";
+    "and are computed from the imported source data only. This is an independent archive, not an official record list." +
+    (tournaments.some((t) => t.year === 2026)
+      ? ""
+      : " The completed 2026 tournament is archived separately; its scorers, assists, and match stats live in the 2026 archive hub and are not yet merged into these historical leaderboards.");
 
   // ---- Team (nation) records. ----
   const teamGoals = new Map(goalsByTeam.map((g) => [g.teamId, g._count._all]));
