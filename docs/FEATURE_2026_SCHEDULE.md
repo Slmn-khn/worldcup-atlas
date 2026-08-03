@@ -8,6 +8,58 @@ fixture list grouped by date.
 > WORLDCUP Nexus is an independent historical archive and is **not affiliated
 > with FIFA**. No official FIFA logos or branding are used.
 
+## Status: post-tournament archive mode (current default)
+
+The 2026 tournament is complete (final played 2026-07-19). Live mode is
+**switched off by configuration, not by code removal** — the fixture models,
+providers, sync orchestration, and homepage section all remain in the repo and
+can be re-enabled for a future tournament.
+
+Feature flags (`src/config/features.ts`, server-only — never `NEXT_PUBLIC_*`):
+
+| Flag | Default | Effect when default |
+| --- | --- | --- |
+| `FEATURE_LATEST_MATCHES_SECTION` | unset → **off** | Homepage renders a static "2026 Tournament Archive" CTA (`TournamentArchiveCtaSection`) instead of the live Latest Matches band; the home view model skips the fixture queries. |
+| `FEATURE_2026_FIXTURE_SYNC` | unset → **off** | Cron/manual sync route answers `200 { ok: true, disabled: true }` and does **no** work (no provider fetch, no `FixtureSyncLog` write). `pnpm fixtures:sync` prints a notice and exits 0. |
+| `FEATURE_2026_ARCHIVE_MODE` | unset → **on** | `/schedule/2026` uses archive wording ("Archived 2026 fixture data") and drops the stale-data warning — the data is final. Set to `"false"` to restore live wording. |
+
+What still works in archive mode:
+
+- `/schedule/2026` is now the **2026 Match Schedule & Results** archive page.
+  It renders the file-backed verified archive schedule
+  (`src/server/worldcup2026/archiveSchedule.ts` — reference pack + approved
+  finalized artifacts), **not** the `Fixture` table; unresolved results show
+  as "Under review", never "Scheduled". Regenerate its display artifact with
+  `pnpm data:2026:display-schedule`.
+- The read APIs (`/api/fixtures/2026`, `/latest`, `/today`, `/upcoming`)
+  keep serving archived DB data — they never called providers.
+- The Vercel cron entry was removed from `vercel.json` (the route is kept and
+  is harmless if something still calls it).
+
+### Re-enabling live mode (future tournament)
+
+1. Set in the hosting platform env (e.g. Vercel):
+   `FEATURE_LATEST_MATCHES_SECTION="true"`, `FEATURE_2026_FIXTURE_SYNC="true"`,
+   plus the provider vars (`OPENFOOTBALL_2026_URL`,
+   `FIXTURE_SYNC_PROVIDER_MODE`, optionally `WORLDCUP26_API_BASE_URL`) and a
+   strong `CRON_SECRET`.
+2. Restore the cron entry in `vercel.json`:
+
+   ```json
+   {
+     "$schema": "https://openapi.vercel.sh/vercel.json",
+     "crons": [
+       { "path": "/api/cron/sync-2026-fixtures", "schedule": "0,30 * * * *" }
+     ]
+   }
+   ```
+
+3. Redeploy. For a one-off manual sync without flipping the env flag:
+   `pnpm fixtures:sync -- --force` (or
+   `FEATURE_2026_FIXTURE_SYNC=true pnpm fixtures:sync`).
+
+Everything below documents the live-mode behaviour as built.
+
 ## Why the data is stored in the database before rendering
 
 External fixture data is **never** fetched from the browser, and **never**
@@ -84,7 +136,9 @@ first implementation.
 
 ## Sync frequency
 
-Configured in `vercel.json` (`/api/cron/sync-2026-fixtures`).
+Configured in `vercel.json` (`/api/cron/sync-2026-fixtures`). **The cron entry
+is currently removed** (post-tournament archive mode) — restore it as shown in
+the status section above when live mode returns.
 
 - **During the tournament:** every 15–30 minutes is reasonable (default:
   `0,30 * * * *`, i.e. every 30 min).

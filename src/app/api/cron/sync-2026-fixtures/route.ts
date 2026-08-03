@@ -1,5 +1,10 @@
 // POST|GET /api/cron/sync-2026-fixtures — protected fixture sync trigger.
 //
+// Post-tournament archive mode (FEATURE_2026_FIXTURE_SYNC not "true", the
+// default): the route acknowledges with 200 `{ ok, disabled }` and does no
+// work — no provider fetch, no FixtureSyncLog write — so a still-scheduled
+// cron never fails. Set the flag to "true" to restore live sync.
+//
 // Auth: CRON_SECRET via `Authorization: Bearer <secret>` (Vercel Cron sets this
 // automatically) or `?secret=<secret>`. Missing/invalid → 401. Safe to run
 // repeatedly (sync upserts). Provider errors are sanitized inside the summary,
@@ -8,6 +13,7 @@
 import { timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
 import { createApiErrorResponse } from "@/server/security/api-errors";
+import { isFixtureSyncEnabled } from "@/config/features";
 import { prisma } from "@/server/db/prisma";
 import { syncFixtures2026 } from "@/server/fixtures/sync";
 
@@ -16,6 +22,15 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 async function handle(request: Request): Promise<NextResponse> {
+  if (!isFixtureSyncEnabled()) {
+    return NextResponse.json({
+      ok: true,
+      disabled: true,
+      message:
+        "2026 fixture sync is disabled because the tournament is in archive mode.",
+    });
+  }
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }

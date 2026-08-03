@@ -212,6 +212,7 @@ pnpm data:2026:full-check   # normalize + validate (no network — CI-safe once 
 pnpm data:2026:collect-and-check  # full pipeline including collection
 pnpm data:2026:mominul:inspect    # read-only summary of the Mominul provider files
 pnpm data:2026:bustami:inspect    # read-only summary of the Bustami EFI provider files
+pnpm data:2026:display-schedule   # build the /schedule/2026 display artifact (no DB writes)
 ```
 
 Command flow for the candidate providers: `collect` downloads both providers'
@@ -248,6 +249,35 @@ Everything lands in `data/2026/normalized/conflicts.json` and
 exist, the Markdown report states **NOT READY FOR IMPORT**. Major conflicts
 require manual review — see also the conflict-handling policy in
 `docs/DATA_SOURCES.md` and `docs/DATA_ISSUES.md`.
+
+## Archive display schedule (`/schedule/2026`)
+
+With the tournament complete, `/schedule/2026` renders from this pipeline's
+**file-backed archive data — not** from the live `Fixture` table and never
+from a provider fetch. The source module is
+`src/server/worldcup2026/archiveSchedule.ts`, with this preference order:
+
+1. `data/2026/approved/finalized/matches.json` (pack match format), if valid
+2. `data/2026/approved/finalized/display-schedule.json` (generated artifact)
+3. the manual verified reference pack, plus gap-fills from
+   `data/2026/review/review-decisions.json` **only** when a decision sets
+   `approved: true` — and even then the row's verification is capped at
+   `REPORTED` (only the pack itself can mark a row `VERIFIED`)
+
+Rules: missing scores/teams are shown as **RESULT UNDER REVIEW** (never
+fabricated, never "SCHEDULED" — the tournament is over), group letters are
+only shown where sources confirmed them, and unresolved knockout rows keep
+their honest gaps (e.g. M88).
+
+Regenerate the display artifact after pack/decision changes:
+
+```bash
+pnpm data:2026:display-schedule
+```
+
+The generator is file-in/file-out: **no database writes**, no network. The
+artifact lives under `data/2026/approved/finalized/` but is a *display* file —
+it is not `approval.json` and does not open the DB import gate.
 
 ## No production writes in Phase 1
 
