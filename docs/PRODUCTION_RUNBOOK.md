@@ -51,6 +51,14 @@ re-enable live mode for a future tournament, follow
 [FEATURE_2026_SCHEDULE.md](FEATURE_2026_SCHEDULE.md) ("Re-enabling live
 mode": set both flags to `true`, restore the cron entry, redeploy).
 
+`/schedule/2026` renders the **file-backed 2026 archive schedule** (manual
+verified reference pack + approved finalized artifacts committed under
+`data/2026/`), not the live `Fixture` table. Unresolved results display as
+"Under review", never "Scheduled". If the pack or review decisions change,
+regenerate the display artifact from the admin environment and commit it:
+`pnpm data:2026:display-schedule` (file-in/file-out — it performs **no**
+database writes and does not touch the import approval gate).
+
 In the **admin environment**, export the same variables per command run,
 except `MEILISEARCH_API_KEY` = the **admin/indexing key** when indexing.
 Never write production values into a committed file.

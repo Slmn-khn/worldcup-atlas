@@ -25,7 +25,12 @@ Feature flags (`src/config/features.ts`, server-only — never `NEXT_PUBLIC_*`):
 
 What still works in archive mode:
 
-- `/schedule/2026` renders the full archived fixture list from PostgreSQL.
+- `/schedule/2026` is now the **2026 Match Schedule & Results** archive page.
+  It renders the file-backed verified archive schedule
+  (`src/server/worldcup2026/archiveSchedule.ts` — reference pack + approved
+  finalized artifacts), **not** the `Fixture` table; unresolved results show
+  as "Under review", never "Scheduled". Regenerate its display artifact with
+  `pnpm data:2026:display-schedule`.
 - The read APIs (`/api/fixtures/2026`, `/latest`, `/today`, `/upcoming`)
   keep serving archived DB data — they never called providers.
 - The Vercel cron entry was removed from `vercel.json` (the route is kept and
