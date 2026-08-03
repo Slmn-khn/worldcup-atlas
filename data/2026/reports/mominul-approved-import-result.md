@@ -1,9 +1,9 @@
 # Mominul 2026 approved import — write result
 
-- Generated: 2026-08-03T08:51:53.631Z
+- Generated: 2026-08-03T09:19:07.319Z
 - Source: `mominul_2026_dataset`
 - Outcome: OK
-- Import batch: `cmsczpqr400004whyw41v8b0w`
+- Import batch: `cmsd0orsz0000q4hyaeef2lk8`
 
 | Entity | Planned | Created | Updated | Skipped |
 | --- | ---: | ---: | ---: | ---: |

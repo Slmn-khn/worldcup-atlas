@@ -1,7 +1,7 @@
 {
   "schema": "mominul-approved-pack/v1",
   "sourceId": "mominul_2026_dataset",
-  "generatedAt": "2026-08-03T08:48:08.813Z",
+  "generatedAt": "2026-08-03T09:18:28.257Z",
   "sourceFiles": [
     "teams.csv",
     "venues.csv",
@@ -21,9 +21,9 @@
     "venues.csv": "8f62397df67318f2a799bcf541ec1f3bea5cabe76e4f458b9efbf80327455b1b",
     "tournament_stages.csv": "d77cfa0dc437ae740044bf447b41f332d747c2ebd1eeb840284ccbb3e6ce84f3",
     "referees.csv": "97430cb343120b94a78e27fc5e640c3d3216e6d37eccd35b68b60e1583502a5e",
-    "matches.csv": "4648db46255fce167764350155b54359076e9a3ffbd0e87115f8a49a9632545e",
-    "matches_detailed.csv": "dfb62b235dc7e77a39b4a158c0ca880d0ed7fbec7841947efad7a278628be06d",
-    "squads_and_players.csv": "13e28e432cb1d634f9aedcf7e266d671ba53492736b13dfa38fa2efd85afe7c3",
+    "matches.csv": "04d53f24be8b6e5654971271ad6932e1ec0bb993c90e1c9d49336adbd0b6e89b",
+    "matches_detailed.csv": "be3bcb281e32399459bf966566ba9b1745175c5ca10ff0c77efcdfb0f7d0f366",
+    "squads_and_players.csv": "bd6df5fd86b38b315ee88e2d094a8d7c5097946a64f642ff972b2221ab846201",
     "match_events.csv": "28e78da914bad94532211df86c6cd1346e29a2b48db0ff22a631ca9e379e770e",
     "match_team_stats.csv": "62600e0e44a4b89f11334826a4a52c8120dac39151b32382470dcb8bfa908266",
     "match_lineups.csv": "14d97ff8cfb4216d50340307dc96861ccd24f576468ab506ccd1c13ba92c87ff",
