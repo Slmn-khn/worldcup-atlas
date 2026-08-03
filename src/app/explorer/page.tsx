@@ -40,7 +40,7 @@ export default async function ExplorerPage({ searchParams }: Props) {
       <VaultPageHeader
         title="Data Explorer"
         lede="Browse imported World Cup records and events across tournaments, matches, players, and teams."
-        meta="This explorer uses normalized imported data. Raw source rows are not exposed."
+        meta="This explorer covers the normalized historical archive (1930–2022). The separately imported 2026 archive is browsable via the 2026 hub, schedule, and search. Raw source rows are not exposed."
       />
 
       <PageContainer sx={{ py: { xs: 5, md: 7 } }}>

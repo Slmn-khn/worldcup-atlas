@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.163Z",
+  "record": {
+    "tournamentYear": 2026,
+    "name": "World Cup 2026",
+    "hostCountries": [
+      "Canada",
+      "Mexico",
+      "USA"
+    ],
+    "teamsCount": 48,
+    "groupsCount": 12,
+    "matchesCount": 104,
+    "venuesCount": 16,
+    "startDate": "2026-06-11",
+    "endDate": "2026-07-19",
+    "winner": "Spain",
+    "runnerUp": "Argentina",
+    "thirdPlace": "England",
+    "fourthPlace": "France",
+    "sourceIds": [
+      "manual_verified_2026_pack_v1",
+      "openfootball_worldcup_2026",
+      "worldcup2026_repo"
+    ],
+    "confidence": "MULTI_SOURCE_VERIFIED",
+    "verificationStatus": "NEEDS_REVIEW"
+  }
+}

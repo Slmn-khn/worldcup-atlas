@@ -1,0 +1,277 @@
+{
+  "$comment": "Generated mirror of src/server/agents/worldcup2026/sourceRegistry.ts. Do not edit by hand — pnpm data:2026:collect rewrites it.",
+  "sources": [
+    {
+      "id": "manual_verified_2026_pack_v1",
+      "name": "2026 Manual Verified Reference Pack",
+      "reliability": "MANUAL_REFERENCE",
+      "priority": 1,
+      "licenseLabel": "internal reference pack with source attribution",
+      "description": "Human-authenticated 2026 data pack (data/2026/reference/manual-verified-v1) containing tournament, teams, groups, matches, standings, bracket, awards, venues, sources, and conflicts. Highest-priority reference: `verified` records win merged values; `reported`/`unverified` records are supporting evidence only and never become final. NEVER fetched by the collector and never imported directly — manifest.importAllowed is false and the data/2026/approved/approval.json gate still applies to any future import.",
+      "allowedFor": [
+        "tournament",
+        "teams",
+        "groups",
+        "venues",
+        "fixtures",
+        "matches",
+        "standings",
+        "bracket"
+      ]
+    },
+    {
+      "id": "openfootball_worldcup_2026",
+      "name": "OpenFootball World Cup (2026)",
+      "reliability": "OPEN_DATA",
+      "priority": 2,
+      "licenseLabel": "CC0-1.0",
+      "baseUrl": "https://raw.githubusercontent.com/openfootball",
+      "description": "Open public-domain World Cup data (openfootball/worldcup and openfootball/worldcup.json). Stable baseline for the 2026 tournament: groups, schedule, results, bracket in Football.TXT and JSON form. Same family of data the existing fixture sync uses as its baseline.",
+      "allowedFor": [
+        "tournament",
+        "teams",
+        "groups",
+        "fixtures",
+        "matches",
+        "bracket"
+      ],
+      "endpoints": [
+        {
+          "id": "of26-cup-txt",
+          "label": "2026 cup.txt (Football.TXT, groups + all matches)",
+          "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+          "outputFile": "cup.txt",
+          "format": "txt"
+        },
+        {
+          "id": "of26-worldcup-json",
+          "label": "2026 worldcup.json (rounds + matches)",
+          "url": "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json",
+          "outputFile": "worldcup.json",
+          "format": "json"
+        }
+      ]
+    },
+    {
+      "id": "worldcup2026_repo",
+      "name": "worldcup2026 community repo/API (rezarahiminia)",
+      "reliability": "COMMUNITY_API",
+      "priority": 3,
+      "licenseLabel": "ISC",
+      "baseUrl": "https://worldcup26.ir",
+      "description": "Structured 2026-specific community provider (rezarahiminia/worldcup2026): teams, groups, stadiums, matches and group tables as CSV/JSON plus a public API at worldcup26.ir. Community-maintained and non-authoritative; never the sole source of truth. Failures are reported, never fatal.",
+      "allowedFor": [
+        "teams",
+        "groups",
+        "venues",
+        "fixtures",
+        "matches",
+        "standings"
+      ],
+      "endpoints": [
+        {
+          "id": "wc26-api-games",
+          "label": "API: all matches",
+          "url": "https://worldcup26.ir/get/games",
+          "outputFile": "api-games.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-groups",
+          "label": "API: groups with standings",
+          "url": "https://worldcup26.ir/get/groups",
+          "outputFile": "api-groups.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-teams",
+          "label": "API: all teams",
+          "url": "https://worldcup26.ir/get/teams",
+          "outputFile": "api-teams.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-api-stadiums",
+          "label": "API: all stadiums",
+          "url": "https://worldcup26.ir/get/stadiums",
+          "outputFile": "api-stadiums.json",
+          "format": "json"
+        },
+        {
+          "id": "wc26-csv-teams",
+          "label": "CSV: teams",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.teams.csv",
+          "outputFile": "teams.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-groups",
+          "label": "CSV: groups + group tables",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.groups.csv",
+          "outputFile": "groups.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-games",
+          "label": "CSV: games",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.games.csv",
+          "outputFile": "games.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc26-csv-stadia",
+          "label": "CSV: stadiums",
+          "url": "https://raw.githubusercontent.com/rezarahiminia/worldcup2026/master/worldcup2026.stadia.csv",
+          "outputFile": "stadia.csv",
+          "format": "csv"
+        }
+      ]
+    },
+    {
+      "id": "mominul_2026_dataset",
+      "name": "Mominul FIFA World Cup 2026 Dataset",
+      "reliability": "OPEN_DATA_CANDIDATE",
+      "priority": 3,
+      "licenseLabel": "CC0-1.0",
+      "baseUrl": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main",
+      "description": "Relational open dataset for FIFA World Cup 2026 with teams, venues, stages, referees, matches, squads, match events, lineups, player stats, team match stats, xG, and SQLite output. Candidate provider only: core matches may become gap-fill candidates when they resolve cleanly; player/event/lineup/stat rows remain enrichment candidates. Never authoritative over the manual verified reference pack, never auto-approved for import.",
+      "allowedFor": [
+        "teams",
+        "groups",
+        "venues",
+        "matches",
+        "referees",
+        "players",
+        "squads",
+        "lineups",
+        "match_events",
+        "player_stats",
+        "team_match_stats"
+      ],
+      "endpoints": [
+        {
+          "id": "teams_csv",
+          "label": "CSV: teams",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/teams.csv",
+          "outputFile": "teams.csv",
+          "format": "csv"
+        },
+        {
+          "id": "venues_csv",
+          "label": "CSV: venues",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/venues.csv",
+          "outputFile": "venues.csv",
+          "format": "csv"
+        },
+        {
+          "id": "tournament_stages_csv",
+          "label": "CSV: tournament stages",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/tournament_stages.csv",
+          "outputFile": "tournament_stages.csv",
+          "format": "csv"
+        },
+        {
+          "id": "referees_csv",
+          "label": "CSV: referees",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/referees.csv",
+          "outputFile": "referees.csv",
+          "format": "csv"
+        },
+        {
+          "id": "matches_csv",
+          "label": "CSV: matches",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches.csv",
+          "outputFile": "matches.csv",
+          "format": "csv"
+        },
+        {
+          "id": "matches_detailed_csv",
+          "label": "CSV: matches (detailed)",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/matches_detailed.csv",
+          "outputFile": "matches_detailed.csv",
+          "format": "csv"
+        },
+        {
+          "id": "squads_and_players_csv",
+          "label": "CSV: squads and players",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/squads_and_players.csv",
+          "outputFile": "squads_and_players.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_events_csv",
+          "label": "CSV: match events",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_events.csv",
+          "outputFile": "match_events.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_team_stats_csv",
+          "label": "CSV: match team stats",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_team_stats.csv",
+          "outputFile": "match_team_stats.csv",
+          "format": "csv"
+        },
+        {
+          "id": "match_lineups_csv",
+          "label": "CSV: match lineups",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/match_lineups.csv",
+          "outputFile": "match_lineups.csv",
+          "format": "csv"
+        },
+        {
+          "id": "player_stats_csv",
+          "label": "CSV: player stats",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/player_stats.csv",
+          "outputFile": "player_stats.csv",
+          "format": "csv"
+        },
+        {
+          "id": "real_match_details_json",
+          "label": "JSON: real match details",
+          "url": "https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/real_match_details.json",
+          "outputFile": "real_match_details.json",
+          "format": "json"
+        }
+      ]
+    },
+    {
+      "id": "bustami_fifa_efi_2026",
+      "name": "Bustami FIFA EFI Data WC 2026",
+      "reliability": "RESEARCH_ANALYTICS_CANDIDATE",
+      "priority": 5,
+      "licenseLabel": "Needs review; README says analytical/research purposes only",
+      "baseUrl": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master",
+      "description": "Player-level FIFA Enhanced Football Intelligence metrics collected from the official FIFA platform, including identity, attacking, physical, passing/progression, defending, receiving, and disciplinary fields. Research/analytics candidate ONLY: usable for FIFA match/player ID mapping and advanced-metric analysis, blocked from any import or public rendering until a license/usage review explicitly clears it (importBlockedReason: RESEARCH_ONLY_UNTIL_LICENSE_REVIEW).",
+      "allowedFor": [
+        "fifa_match_ids",
+        "fifa_player_ids",
+        "efi_player_match_metrics",
+        "advanced_performance_metrics"
+      ],
+      "endpoints": [
+        {
+          "id": "wc2026_efi_csv",
+          "label": "CSV: player-level EFI metrics",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_efi.csv",
+          "outputFile": "wc2026_efi.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc2026_matches_csv",
+          "label": "CSV: FIFA match IDs",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_matches.csv",
+          "outputFile": "wc2026_matches.csv",
+          "format": "csv"
+        },
+        {
+          "id": "wc2026_players_csv",
+          "label": "CSV: FIFA player IDs",
+          "url": "https://raw.githubusercontent.com/Bustami/efi-fifa-data-wc-2026/master/data/wc2026_players.csv",
+          "outputFile": "wc2026_players.csv",
+          "format": "csv"
+        }
+      ]
+    }
+  ]
+}

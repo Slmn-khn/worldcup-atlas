@@ -1,0 +1,85 @@
+{
+  "schema": "awards/v1",
+  "awards": {
+    "golden_ball": {
+      "winner": "Rodri",
+      "team": "ESP",
+      "silver": "Lionel Messi (ARG)",
+      "bronze": "Kylian Mbappé (FRA)",
+      "detail": "Voted by FIFA's Technical Study Group; Rodri led the tournament in completed passes, touches and distance covered.",
+      "verification": "verified",
+      "sources": [
+        "nbcsports-awards",
+        "goal-awards",
+        "olympics-qf",
+        "aljazeera-awards"
+      ]
+    },
+    "golden_boot": {
+      "winner": "Kylian Mbappé",
+      "team": "FRA",
+      "goals": 10,
+      "assists": 4,
+      "minutes": 769,
+      "silver": "Lionel Messi (ARG) — 8 goals, 4 assists",
+      "detail": "Second consecutive Golden Boot; now World Cup all-time top scorer with 22 career goals (Messi 21).",
+      "top_scorers": [
+        {
+          "player": "Kylian Mbappé",
+          "team": "FRA",
+          "goals": 10
+        },
+        {
+          "player": "Lionel Messi",
+          "team": "ARG",
+          "goals": 8
+        },
+        {
+          "player": "Jude Bellingham",
+          "team": "ENG",
+          "goals": 7
+        },
+        {
+          "player": "Erling Haaland",
+          "team": "NOR",
+          "goals": 7
+        },
+        {
+          "player": "Harry Kane",
+          "team": "ENG",
+          "goals": 6
+        },
+        {
+          "player": "Ousmane Dembélé",
+          "team": "FRA",
+          "goals": 6
+        }
+      ],
+      "verification": "verified",
+      "sources": [
+        "nbcsports-awards",
+        "goal-awards",
+        "aljazeera-awards"
+      ]
+    },
+    "golden_glove": {
+      "winner": "Unai Simón",
+      "team": "ESP",
+      "detail": "Record 7 clean sheets in a single World Cup; conceded 1 goal in 8 matches, fewest ever by a champion's goalkeeper.",
+      "verification": "verified",
+      "sources": [
+        "fifa-final",
+        "aljazeera-awards"
+      ]
+    },
+    "best_young_player": {
+      "winner": "Pau Cubarsí",
+      "team": "ESP",
+      "verification": "verified",
+      "sources": [
+        "fifa-final",
+        "goal-awards"
+      ]
+    }
+  }
+}

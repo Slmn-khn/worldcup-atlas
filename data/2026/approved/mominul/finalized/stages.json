@@ -1,0 +1,56 @@
+{
+  "schema": "mominul-approved-pack/stages/v1",
+  "sourceId": "mominul_2026_dataset",
+  "count": 7,
+  "records": [
+    {
+      "sourceStageId": 1,
+      "name": "Group Stage",
+      "slug": "group-stage",
+      "isKnockout": false,
+      "sortOrder": 1
+    },
+    {
+      "sourceStageId": 2,
+      "name": "Round of 32",
+      "slug": "round-of-32",
+      "isKnockout": true,
+      "sortOrder": 2
+    },
+    {
+      "sourceStageId": 3,
+      "name": "Round of 16",
+      "slug": "round-of-16",
+      "isKnockout": true,
+      "sortOrder": 3
+    },
+    {
+      "sourceStageId": 4,
+      "name": "Quarter-finals",
+      "slug": "quarter-finals",
+      "isKnockout": true,
+      "sortOrder": 4
+    },
+    {
+      "sourceStageId": 5,
+      "name": "Semi-finals",
+      "slug": "semi-finals",
+      "isKnockout": true,
+      "sortOrder": 5
+    },
+    {
+      "sourceStageId": 6,
+      "name": "Third-place match",
+      "slug": "third-place-match",
+      "isKnockout": true,
+      "sortOrder": 6
+    },
+    {
+      "sourceStageId": 7,
+      "name": "Final",
+      "slug": "final",
+      "isKnockout": true,
+      "sortOrder": 7
+    }
+  ]
+}

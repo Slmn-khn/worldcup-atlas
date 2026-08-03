@@ -1,0 +1,10 @@
+{
+  "schema": "group/v1",
+  "groups": [
+    { "group": "A", "teams": ["MEX", "RSA"], "verification": "verified", "final_table": [
+      { "pos": 1, "team": "MEX", "pld": 1, "w": 1, "d": 0, "l": 0, "gf": 2, "ga": 0, "pts": 3 },
+      { "pos": 2, "team": "RSA", "pld": 1, "w": 0, "d": 0, "l": 1, "gf": 0, "ga": 2, "pts": 0 }
+    ] },
+    { "group": null, "teams": ["ESP", "ARG"], "verification": "verified", "final_table": null }
+  ]
+}

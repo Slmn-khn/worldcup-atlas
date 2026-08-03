@@ -10,6 +10,7 @@ import HomeSection from "@/components/home/HomeSection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import EmptyState from "@/components/ui/EmptyState";
 import HomeLatestMatchesSection from "@/components/fixtures/HomeLatestMatchesSection";
+import TournamentArchiveCtaSection from "@/components/home/TournamentArchiveCtaSection";
 import HomeHero from "@/components/home/HomeHero";
 import ArchiveStatsSection from "@/components/home/ArchiveStatsSection";
 import TournamentTimelineSection from "@/components/home/TournamentTimelineSection";
@@ -19,6 +20,7 @@ import ExploreByCountrySection from "@/components/home/ExploreByCountrySection";
 import TopPlayerRecordsSection from "@/components/home/TopPlayerRecordsSection";
 import RecordsFirstsSection from "@/components/home/RecordsFirstsSection";
 import { getHomeViewModel } from "@/server/home/queries";
+import { isLatestMatchesSectionEnabled } from "@/config/features";
 import {
   atlasBorders,
   atlasColors,
@@ -80,25 +82,31 @@ export default async function Home() {
             overflow: "hidden",
           }}
         >
-          {/* 2 — Latest 2026 Matches / Schedule (existing fixture pipeline;
-              DB-backed, no third-party calls from the browser). */}
-          <HomeSection>
-            <SectionHeader
-              eyebrow="2026 World Cup"
-              title="Latest Matches & Scores"
-              accent="cyan"
-              subtitle="Live, today's, recent, and upcoming 2026 World Cup fixtures."
-              action={{ label: "Full schedule", href: "/schedule/2026" }}
-            />
-            {home.fixtures !== null ? (
-              <HomeLatestMatchesSection data={home.fixtures} />
-            ) : (
-              <EmptyState
-                title="2026 schedule temporarily unavailable"
-                description="Fixtures appear here once the next sync runs. The rest of the archive is unaffected."
+          {/* 2 — Live "Latest Matches" band only while
+              FEATURE_LATEST_MATCHES_SECTION=true (fixture pipeline; DB-backed,
+              no third-party calls from the browser). Post-tournament default:
+              a static archive CTA in its place — never an empty gap. */}
+          {isLatestMatchesSectionEnabled() ? (
+            <HomeSection>
+              <SectionHeader
+                eyebrow="2026 World Cup"
+                title="Latest Matches & Scores"
+                accent="cyan"
+                subtitle="Live, today's, recent, and upcoming 2026 World Cup fixtures."
+                action={{ label: "Full schedule", href: "/schedule/2026" }}
               />
-            )}
-          </HomeSection>
+              {home.fixtures !== null ? (
+                <HomeLatestMatchesSection data={home.fixtures} />
+              ) : (
+                <EmptyState
+                  title="2026 schedule temporarily unavailable"
+                  description="Fixtures appear here once the next sync runs. The rest of the archive is unaffected."
+                />
+              )}
+            </HomeSection>
+          ) : (
+            <TournamentArchiveCtaSection />
+          )}
 
           {/* 3 — Archive at a Glance */}
           <ArchiveStatsSection stats={archiveStats} />

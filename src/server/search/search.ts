@@ -28,6 +28,7 @@ const GROUP_BY_TYPE: Record<
   match: "matches",
   record: "records",
   event: "events",
+  venue: "venues",
 };
 
 export async function searchWorldCupAtlas(

@@ -42,7 +42,7 @@ export default function RecordsFirstsSection({
         eyebrow="Still standing"
         title="Records & Firsts"
         accent="gold"
-        subtitle="Database-backed leaderboards computed from imported events."
+        subtitle="Database-backed leaderboards computed from imported historical events (1930–2022); 2026 tournament stats live in the 2026 archive hub."
         action={{ label: "All records", href: "/records" }}
       />
       {cards.length > 0 ? (

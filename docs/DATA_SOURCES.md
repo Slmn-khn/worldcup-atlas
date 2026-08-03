@@ -92,6 +92,45 @@ normalize or import anything into the database — that happens in Checkpoint 4.
 
 ## Live fixtures: 2026 schedule & scores
 
+> **Status: post-tournament archive mode.** The 2026 tournament ended on
+> 2026-07-19; live provider sync is **disabled by default**
+> (`FEATURE_2026_FIXTURE_SYNC` unset/false) and the homepage no longer shows
+> the live "Latest Matches & Scores" band (`FEATURE_LATEST_MATCHES_SECTION`
+> unset/false). The provider code below is retained, unchanged, for future
+> tournaments. Finalized 2026 tournament data comes from the data steward
+> archive/import pipeline (next section), not from live provider sync.
+> Re-enable steps: `docs/FEATURE_2026_SCHEDULE.md`.
+>
+> `/schedule/2026` no longer reads the `Fixture` table at all: it renders the
+> **imported Mominul archive** (`WorldCup2026*` tables) when the approved
+> import has run, falling back to the file-backed archive chain
+> (`src/server/worldcup2026/archiveSchedule.ts`: approved Mominul pack →
+> finalized artifacts → manual verified reference pack). Unresolved records
+> display as "Under review" — never "Scheduled".
+> See `docs/2026_DATA_STEWARD_AGENT.md`.
+>
+> **Imported 2026 archive source (user-approved):** the
+> **Mominul FIFA World Cup 2026 Dataset**
+> (github.com/mominullptr/FIFA-World-Cup-2026-Dataset) is the ONLY source
+> imported into the 2026 archive tables — policy:
+> `data/2026/approved/mominul-import-policy.json`. Its ML prediction features
+> are excluded; Bustami EFI, OpenFootball, worldcup26 and manual-pack values
+> are never imported. Every imported row is tagged
+> `sourceId = "mominul_2026_dataset"` and keeps the raw source row for audit.
+> `/tournaments/2026`, `/matches/2026/<id>`, and 2026 player pages render
+> from these tables with visible source attribution.
+>
+> **The archive now spans 1930–2026 app-wide.** Static copy uses
+> `src/lib/archiveCoverage.ts` (`ARCHIVE_COVERAGE`); numeric stats are
+> COMPUTED by `src/server/archive/stats.ts` (canonical tables + imported 2026
+> additions — goals summed from imported match scores). The tournament
+> timeline, featured tournaments, /tournaments list, homepage finals board,
+> sitemap, and search all include 2026 via
+> `src/server/worldcup2026/canonicalBridge.ts`. Every bridge point carries a
+> double-counting guard: if 2026 is later promoted into the canonical
+> `Tournament`/`Match` tables, the synthetic 2026 card/final/stat additions
+> are dropped automatically and canonical rows stand alone.
+
 The 2026 schedule/scores feature uses a **separate** pipeline from the historical
 Fjelstul archive (it lands in the `Fixture` table, never in `Match`). It is
 source-attributed and synced into PostgreSQL before rendering — the browser
@@ -124,6 +163,47 @@ design.
   treated as provisional until verified against the official FIFA page.
 - WorldCup Nexus / WorldCup Atlas is an independent archive and is **not
   affiliated with FIFA**; no official FIFA logos or branding are used.
+
+## 2026 archive data steward (Phase 1)
+
+Separate from the live fixture sync above, the **2026 data steward agent**
+(`docs/2026_DATA_STEWARD_AGENT.md`) prepares finalized 2026 tournament archive
+data for a future, human-approved import. Phase 1 is collect → candidates →
+normalize → validate only — **no database writes, no publishing**.
+
+Its approved sources (registry:
+`src/server/agents/worldcup2026/sourceRegistry.ts`):
+
+| Source | Reliability | License | Role |
+| --- | --- | --- | --- |
+| Manual verified reference pack (`data/2026/reference/manual-verified-v1/`) | Manual reference (human-authenticated) | Internal reference pack with source attribution | Highest-priority reference. `verified` records win merged values; `reported`/`partial` are supporting evidence; `unverified` never become final. Carries its own source attributions and known-conflict registry. Never fetched, never imported directly |
+| OpenFootball (`openfootball/worldcup` 2026--usa + `worldcup.json` 2026) | Open data | CC0-1.0 (public domain) | Stable open baseline: groups, schedule, results, bracket |
+| `rezarahiminia/worldcup2026` repo + worldcup26.ir API | Community/open-source | ISC | Structured 2026-specific provider: teams, groups, stadiums, matches, group tables. Non-authoritative, never the sole source of truth |
+| `mominullptr/FIFA-World-Cup-2026-Dataset` (`mominul_2026_dataset`) | Open-data **candidate** (`OPEN_DATA_CANDIDATE`) | CC0-1.0 | Relational 2026 dataset: teams, venues, stages, referees, matches, squads, match events, lineups, player stats, team match stats. Enrichment/gap-fill candidates only; cleanly-resolved matches may become gap-fill candidates. Import recommendation: `CANDIDATE_FOR_APPROVAL_AFTER_VALIDATION` |
+| `Bustami/efi-fifa-data-wc-2026` (`bustami_fifa_efi_2026`) | Research/analytics **candidate** (`RESEARCH_ANALYTICS_CANDIDATE`) | **Needs review** — upstream README: analytical/research purposes only | Player-level FIFA EFI metrics + FIFA match/player IDs. Research/analytics use only; every record carries `importBlockedReason: RESEARCH_ONLY_UNTIL_LICENSE_REVIEW`; never merged into the core public archive, never displayed publicly until a license/usage review clears it |
+
+Rules:
+
+- Every normalized record carries source ids, confidence and verification
+  metadata; raw snapshots are kept separate under `data/2026/raw/`.
+- Cross-source disagreements are written to `data/2026/normalized/conflicts.json`
+  — **major conflicts require manual review** before any import approval.
+- Official pages remain manual verification references; **no scraping**.
+  Official/manual reference snapshots can be added later as a
+  `MANUAL_REFERENCE` source saved by hand into the raw folder.
+- The manual verified reference pack remains **authoritative** for the 2026
+  tournament outcome, the final, awards, and known conflicts. Candidate
+  providers (Mominul, Bustami EFI) can corroborate (`SUPPORTING_EVIDENCE`),
+  disagree (reported conflict — the pack value stays preferred), or fill
+  documented pack gaps (`GAP_FILL_CANDIDATE`); they never override verified
+  records and are never auto-approved. Provider reports:
+  `data/2026/reports/mominul-provider-report.md` and
+  `data/2026/reports/bustami-efi-provider-report.md`.
+- **Legal/usage caution for EFI data:** the Bustami EFI dataset is scoped by
+  its upstream README to analytical/research purposes and derives from the
+  official FIFA platform. It is blocked from import and from any public
+  rendering (`RESEARCH_ONLY_UNTIL_LICENSE_REVIEW`) until a documented
+  license/usage review clears it.
 
 ## Additional reference sources
 

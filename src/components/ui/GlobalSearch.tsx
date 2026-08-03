@@ -33,6 +33,7 @@ const GROUPS: { key: keyof SearchResponseDto["groups"]; label: string }[] = [
   { key: "matches", label: "Matches" },
   { key: "records", label: "Records" },
   { key: "events", label: "Events" },
+  { key: "venues", label: "Venues" },
 ];
 
 function firstResult(response: SearchResponseDto): SearchResultDto | null {

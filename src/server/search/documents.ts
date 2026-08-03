@@ -371,8 +371,141 @@ export async function buildEventSearchDocuments(): Promise<SearchDocument[]> {
   return [...goalDocs, ...penaltyDocs, ...awardDocs];
 }
 
+// 2026 imported archive (Mominul-only import; WorldCup2026* tables). Indexed
+// only when the import has populated the tables — an empty archive simply
+// contributes zero documents, so indexing never fails because of 2026.
+export async function buildWorldCup2026SearchDocuments(): Promise<
+  SearchDocument[]
+> {
+  const matchCount = await prisma.worldCup2026Match.count().catch(() => 0);
+  if (matchCount === 0) return [];
+
+  const [teams, venues, matches, players] = await Promise.all([
+    prisma.worldCup2026Team.findMany(),
+    prisma.worldCup2026Venue.findMany(),
+    prisma.worldCup2026Match.findMany({
+      include: { venue: { select: { name: true } } },
+    }),
+    prisma.worldCup2026Player.findMany({
+      include: { stats: { select: { goals: true, assists: true } } },
+    }),
+  ]);
+
+  // One tournament document for the 2026 archive hub. Champion/final are
+  // derived from the imported final row — never hardcoded.
+  const finalRow = matches.find((match) => match.stageName === "Final");
+  const championName =
+    finalRow?.winnerTeamCode != null
+      ? finalRow.winnerTeamCode === finalRow.homeTeamCode
+        ? finalRow.homeTeamName
+        : finalRow.awayTeamName
+      : null;
+  const tournamentDoc: SearchDocument = {
+    id: "wc2026-tournament",
+    type: "tournament",
+    title: "2026 World Cup",
+    subtitle: "Completed tournament archive",
+    description:
+      finalRow != null && finalRow.homeScore !== null
+        ? `${championName !== null ? `Champion ${championName} · ` : ""}Final ${finalRow.homeTeamName} ${finalRow.homeScore}–${finalRow.awayScore} ${finalRow.awayTeamName}${finalRow.resultType === "AET" ? " AET" : ""}`
+        : null,
+    href: "/tournaments/2026",
+    keywords: [
+      "2026",
+      "world cup 2026",
+      "2026 final",
+      ...(championName !== null ? [championName] : []),
+    ],
+    tournamentYear: 2026,
+    sortYear: 2026,
+  };
+
+  const teamDocs: SearchDocument[] = teams.map((team) => ({
+    id: `wc2026-team-${team.id}`,
+    type: "country",
+    title: team.name,
+    subtitle: "2026 World Cup team",
+    description: [
+      team.groupLetter !== null ? `Group ${team.groupLetter}` : null,
+      team.confederation,
+      team.managerName !== null ? `Manager ${team.managerName}` : null,
+    ]
+      .filter((value) => value !== null)
+      .join(" · "),
+    href: "/tournaments/2026#teams",
+    keywords: [
+      team.name,
+      team.fifaCode ?? "",
+      "2026",
+      "world cup 2026",
+    ].filter((keyword) => keyword !== ""),
+    tournamentYear: 2026,
+    countryName: team.name,
+    sortYear: 2026,
+  }));
+
+  const venueDocs: SearchDocument[] = venues.map((venue) => ({
+    id: `wc2026-venue-${venue.id}`,
+    type: "venue",
+    title: venue.name,
+    subtitle: "2026 World Cup venue",
+    description: [venue.city, venue.country]
+      .filter((value) => value !== null)
+      .join(", "),
+    href: "/tournaments/2026#venues",
+    keywords: [venue.name, venue.city ?? "", venue.country ?? "", "2026"].filter(
+      (keyword) => keyword !== "",
+    ),
+    tournamentYear: 2026,
+    sortYear: 2026,
+  }));
+
+  const matchDocs: SearchDocument[] = matches.map((match) => ({
+    id: `wc2026-match-${match.id}`,
+    type: "match",
+    title: `${match.homeTeamName ?? "?"} ${match.homeScore ?? "–"}–${match.awayScore ?? "–"} ${match.awayTeamName ?? "?"}`,
+    subtitle: `2026 · ${match.stageName ?? "Match"}`,
+    description: match.venue?.name ?? null,
+    href: `/matches/2026/${match.sourceMatchId}`,
+    keywords: [
+      match.homeTeamName ?? "",
+      match.awayTeamName ?? "",
+      match.stageName ?? "",
+      "2026",
+    ].filter((keyword) => keyword !== ""),
+    tournamentYear: 2026,
+    stage: match.stageName ?? undefined,
+    sortYear: 2026,
+  }));
+
+  const playerDocs: SearchDocument[] = players.map((player) => ({
+    id: `wc2026-player-${player.id}`,
+    type: "player",
+    title: player.name,
+    subtitle: `2026 · ${player.teamName ?? "World Cup squad"}`,
+    description: [
+      player.position,
+      player.stats?.goals != null && player.stats.goals > 0
+        ? `${player.stats.goals} goals`
+        : null,
+    ]
+      .filter((value) => value !== null)
+      .join(" · "),
+    href: `/tournaments/2026/players/${player.sourcePlayerId}`,
+    keywords: [player.name, player.teamName ?? "", "2026"].filter(
+      (keyword) => keyword !== "",
+    ),
+    tournamentYear: 2026,
+    playerName: player.name,
+    countryName: player.teamName ?? undefined,
+    sortYear: 2026,
+  }));
+
+  return [tournamentDoc, ...teamDocs, ...venueDocs, ...matchDocs, ...playerDocs];
+}
+
 export async function buildAllSearchDocuments(): Promise<SearchDocument[]> {
-  const [tournaments, countries, players, matches, records, events] =
+  const [tournaments, countries, players, matches, records, events, wc2026] =
     await Promise.all([
       buildTournamentSearchDocuments(),
       buildCountrySearchDocuments(),
@@ -380,6 +513,7 @@ export async function buildAllSearchDocuments(): Promise<SearchDocument[]> {
       buildMatchSearchDocuments(),
       buildRecordSearchDocuments(),
       buildEventSearchDocuments(),
+      buildWorldCup2026SearchDocuments(),
     ]);
   return [
     ...tournaments,
@@ -388,5 +522,6 @@ export async function buildAllSearchDocuments(): Promise<SearchDocument[]> {
     ...matches,
     ...records,
     ...events,
+    ...wc2026,
   ];
 }

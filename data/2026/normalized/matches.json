@@ -1,0 +1,5373 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.165Z",
+  "records": [
+    {
+      "matchNumber": 1,
+      "sourceMatchId": "GA-1",
+      "stage": "GROUP",
+      "round": "Matchday 1",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-11T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-11",
+      "kickoffTimeLabel": "13:00 UTC-6",
+      "homeTeamName": "Mexico",
+      "awayTeamName": "South Africa",
+      "homeTeamCode": "MEX",
+      "awayTeamCode": "RSA",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Azteca",
+      "cityName": "Mexico City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[0] (GA-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:79"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[0]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:2"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[56]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 2,
+      "sourceMatchId": "GA-2",
+      "stage": "GROUP",
+      "round": "Matchday 1",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-12T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-11",
+      "kickoffTimeLabel": "20:00 UTC-6",
+      "homeTeamName": "Korea Republic",
+      "awayTeamName": "Czechia",
+      "homeTeamCode": "KOR",
+      "awayTeamCode": "CZE",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Akron",
+      "cityName": "Guadalajara (Zapopan)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[1] (GA-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:81"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[1]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[25]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:3"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 3,
+      "sourceMatchId": "GB-1",
+      "stage": "GROUP",
+      "round": "Matchday 2",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-12T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-12",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "Canada",
+      "awayTeamName": "Bosnia and Herzegovina",
+      "homeTeamCode": "CAN",
+      "awayTeamCode": "BIH",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio BBVA",
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[6] (GB-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:98"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[6]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[79]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:4"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 4,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 2",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-13T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-12",
+      "kickoffTimeLabel": "18:00 UTC-7",
+      "homeTeamName": "United States",
+      "awayTeamName": "Paraguay",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 4,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "AT&T Stadium",
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:140"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[18]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:5"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[26]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 5,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-14T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-13",
+      "kickoffTimeLabel": "21:00 UTC-4",
+      "homeTeamName": "Haiti",
+      "awayTeamName": "Scotland",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "NRG Stadium",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:123"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[13]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:6"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[11]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 6,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-14T04:00:00.000Z",
+      "kickoffDateLabel": "2026-06-13",
+      "kickoffTimeLabel": "21:00 UTC-7",
+      "homeTeamName": "Australia",
+      "awayTeamName": "Turkey",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "GEHA Field at Arrowhead Stadium",
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:144"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[19]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[0]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:7"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 7,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-13T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-13",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Brazil",
+      "awayTeamName": "Morocco",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:121"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[12]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:8"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[57]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 9,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 4",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-14T23:00:00.000Z",
+      "kickoffDateLabel": "2026-06-14",
+      "kickoffTimeLabel": "19:00 UTC-4",
+      "homeTeamName": "Côte d'Ivoire",
+      "awayTeamName": "Ecuador",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Gillette Stadium",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:164"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[25]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:10"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[35]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 10,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 4",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-14T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-14",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Germany",
+      "awayTeamName": "Curaçao",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 7,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lincoln Financial Field",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:160"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[24]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:11"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[36]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 11,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 4",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-14T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-14",
+      "kickoffTimeLabel": "15:00 UTC-5",
+      "homeTeamName": "Netherlands",
+      "awayTeamName": "Japan",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "MetLife Stadium",
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:180"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[30]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:12"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[58]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 12,
+      "sourceMatchId": "GX-1",
+      "stage": "GROUP",
+      "round": "Matchday 4",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-15T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-14",
+      "kickoffTimeLabel": "20:00 UTC-6",
+      "homeTeamName": "Sweden",
+      "awayTeamName": "Tunisia",
+      "homeTeamCode": "SWE",
+      "awayTeamCode": "TUN",
+      "homeScore": 5,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BMO Field",
+      "cityName": "Monterrey (Guadalupe)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[30] (GX-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:183"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[31]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[37]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:13"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 13,
+      "sourceMatchId": "GX-5",
+      "stage": "GROUP",
+      "round": "Matchday 5",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-16T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-15",
+      "kickoffTimeLabel": "18:00 UTC-7",
+      "homeTeamName": "New Zealand",
+      "awayTeamName": "Iran",
+      "homeTeamCode": "NZL",
+      "awayTeamCode": "IRN",
+      "homeScore": 2,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BC Place",
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[34] (GX-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:207"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[37]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:14"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[80]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 14,
+      "sourceMatchId": "GX-2",
+      "stage": "GROUP",
+      "round": "Matchday 5",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-15T16:00:00.000Z",
+      "kickoffDateLabel": "2026-06-15",
+      "kickoffTimeLabel": "12:00 UTC-4",
+      "homeTeamName": "Spain",
+      "awayTeamName": "Cape Verde",
+      "homeTeamCode": "ESP",
+      "awayTeamCode": "CPV",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lumen Field",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[31] (GX-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:226"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[42]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:15"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[72]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 15,
+      "sourceMatchId": "GX-3",
+      "stage": "GROUP",
+      "round": "Matchday 5",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-15T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-15",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Egypt",
+      "awayTeamName": "Belgium",
+      "homeTeamCode": "EGY",
+      "awayTeamCode": "BEL",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Levi's Stadium",
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[32] (GX-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:204"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[36]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:16"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[92]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 16,
+      "sourceMatchId": "GX-4",
+      "stage": "GROUP",
+      "round": "Matchday 5",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-15T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-15",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Saudi Arabia",
+      "awayTeamName": "Uruguay",
+      "homeTeamCode": "KSA",
+      "awayTeamCode": "URU",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "SoFi Stadium",
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[33] (GX-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:227"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[43]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:17"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[73]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 17,
+      "sourceMatchId": "GF-1",
+      "stage": "GROUP",
+      "round": "Matchday 6",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-16T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-16",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "France",
+      "awayTeamName": "Senegal",
+      "homeTeamCode": "FRA",
+      "awayTeamCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Azteca",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[12] (GF-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:243"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[48]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:18"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[27]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 18,
+      "sourceMatchId": "GF-2",
+      "stage": "GROUP",
+      "round": "Matchday 6",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-16T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-16",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Norway",
+      "awayTeamName": "Iraq",
+      "homeTeamCode": "NOR",
+      "awayTeamCode": "IRQ",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Akron",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[13] (GF-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:246"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[49]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[28]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:19"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 19,
+      "sourceMatchId": "GAR-1",
+      "stage": "GROUP",
+      "round": "Matchday 6",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-17T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-16",
+      "kickoffTimeLabel": "20:00 UTC-5",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Algeria",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "ALG",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio BBVA",
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[18] (GAR-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:265"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[54]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:20"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[81]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 20,
+      "sourceMatchId": "GAR-2",
+      "stage": "GROUP",
+      "round": "Matchday 6",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-17T04:00:00.000Z",
+      "kickoffDateLabel": "2026-06-16",
+      "kickoffTimeLabel": "21:00 UTC-7",
+      "homeTeamName": "Austria",
+      "awayTeamName": "Jordan",
+      "homeTeamCode": "AUT",
+      "awayTeamCode": "JOR",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "AT&T Stadium",
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[19] (GAR-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:267"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[55]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:21"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[74]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 21,
+      "sourceMatchId": "GP-1",
+      "stage": "GROUP",
+      "round": "Matchday 7",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-17T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-17",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Portugal",
+      "awayTeamName": "DR Congo",
+      "homeTeamCode": "POR",
+      "awayTeamCode": "COD",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "NRG Stadium",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[24] (GP-1)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:287"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[60]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[29]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:22"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 22,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 7",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-17T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-17",
+      "kickoffTimeLabel": "15:00 UTC-5",
+      "homeTeamName": "England",
+      "awayTeamName": "Croatia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 4,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "GEHA Field at Arrowhead Stadium",
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:308"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[66]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:23"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[12]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 23,
+      "sourceMatchId": "GP-2",
+      "stage": "GROUP",
+      "round": "Matchday 7",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-18T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-17",
+      "kickoffTimeLabel": "20:00 UTC-6",
+      "homeTeamName": "Uzbekistan",
+      "awayTeamName": "Colombia",
+      "homeTeamCode": "UZB",
+      "awayTeamCode": "COL",
+      "homeScore": 1,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "Mexico City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[25] (GP-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:290"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[61]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:24"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[75]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 24,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 7",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-17T23:00:00.000Z",
+      "kickoffDateLabel": "2026-06-17",
+      "kickoffTimeLabel": "19:00 UTC-4",
+      "homeTeamName": "Ghana",
+      "awayTeamName": "Panama",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Hard Rock Stadium",
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:311"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[67]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:25"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[82]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 25,
+      "sourceMatchId": "GA-4",
+      "stage": "GROUP",
+      "round": "Matchday 8",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-19T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-18",
+      "kickoffTimeLabel": "19:00 UTC-6",
+      "homeTeamName": "Mexico",
+      "awayTeamName": "Korea Republic",
+      "homeTeamCode": "MEX",
+      "awayTeamCode": "KOR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Gillette Stadium",
+      "cityName": "Guadalajara (Zapopan)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[3] (GA-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:87"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[3]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:26"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[38]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 26,
+      "sourceMatchId": "GB-3",
+      "stage": "GROUP",
+      "round": "Matchday 8",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-18T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-18",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Switzerland",
+      "awayTeamName": "Bosnia and Herzegovina",
+      "homeTeamCode": "SUI",
+      "awayTeamCode": "BIH",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lincoln Financial Field",
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[8] (GB-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:104"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[8]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[59]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:27"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 27,
+      "sourceMatchId": "GB-4",
+      "stage": "GROUP",
+      "round": "Matchday 8",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-18T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-18",
+      "kickoffTimeLabel": "15:00 UTC-7",
+      "homeTeamName": "Canada",
+      "awayTeamName": "Qatar",
+      "homeTeamCode": "CAN",
+      "awayTeamCode": "QAT",
+      "homeScore": 6,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "MetLife Stadium",
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[9] (GB-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:107"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[9]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:28"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[39]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 28,
+      "sourceMatchId": "GA-3",
+      "stage": "GROUP",
+      "round": "Matchday 8",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-18T16:00:00.000Z",
+      "kickoffDateLabel": "2026-06-18",
+      "kickoffTimeLabel": "12:00 UTC-4",
+      "homeTeamName": "Czechia",
+      "awayTeamName": "South Africa",
+      "homeTeamCode": "CZE",
+      "awayTeamCode": "RSA",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BMO Field",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[2] (GA-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:85"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[2]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[83]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:29"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 29,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 9",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-20T00:30:00.000Z",
+      "kickoffDateLabel": "2026-06-19",
+      "kickoffTimeLabel": "20:30 UTC-4",
+      "homeTeamName": "Brazil",
+      "awayTeamName": "Haiti",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BC Place",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:128"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[15]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:30"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[60]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 30,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 9",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-19T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-19",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Scotland",
+      "awayTeamName": "Morocco",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lumen Field",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:126"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[14]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:31"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[40]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 31,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 9",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-19T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-19",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "United States",
+      "awayTeamName": "Australia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Levi's Stadium",
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:147"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[20]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:32"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[2]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 32,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 9",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-20T03:00:00.000Z",
+      "kickoffDateLabel": "2026-06-19",
+      "kickoffTimeLabel": "20:00 UTC-7",
+      "homeTeamName": "Turkey",
+      "awayTeamName": "Paraguay",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "SoFi Stadium",
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:149"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[21]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[41]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:33"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 33,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 10",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-20T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-20",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "Germany",
+      "awayTeamName": "Côte d'Ivoire",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Azteca",
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:167"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[26]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:34"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[3]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 34,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 10",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-21T00:00:00.000Z",
+      "kickoffDateLabel": "2026-06-20",
+      "kickoffTimeLabel": "19:00 UTC-5",
+      "homeTeamName": "Ecuador",
+      "awayTeamName": "Curaçao",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Akron",
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:169"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[27]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:35"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[93]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 35,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 10",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-20T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-20",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Netherlands",
+      "awayTeamName": "Sweden",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 5,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio BBVA",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:188"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[32]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[4]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:36"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 36,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 10",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-21T04:00:00.000Z",
+      "kickoffDateLabel": "2026-06-20",
+      "kickoffTimeLabel": "22:00 UTC-6",
+      "homeTeamName": "Tunisia",
+      "awayTeamName": "Japan",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 4,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "AT&T Stadium",
+      "cityName": "Monterrey (Guadalupe)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:191"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[33]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:37"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[61]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 37,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 11",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-21T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-21",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Belgium",
+      "awayTeamName": "Iran",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "NRG Stadium",
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:211"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[38]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:38"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[30]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 38,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 11",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-22T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-21",
+      "kickoffTimeLabel": "18:00 UTC-7",
+      "homeTeamName": "New Zealand",
+      "awayTeamName": "Egypt",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "GEHA Field at Arrowhead Stadium",
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:212"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[39]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:39"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[62]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 39,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 11",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-21T16:00:00.000Z",
+      "kickoffDateLabel": "2026-06-21",
+      "kickoffTimeLabel": "12:00 UTC-4",
+      "homeTeamName": "Spain",
+      "awayTeamName": "Saudi Arabia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:230"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[44]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:40"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[13]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 40,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 11",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-21T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-21",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Uruguay",
+      "awayTeamName": "Cape Verde",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Hard Rock Stadium",
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:232"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[45]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:41"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[63]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 41,
+      "sourceMatchId": "GF-3",
+      "stage": "GROUP",
+      "round": "Matchday 12",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-22T21:00:00.000Z",
+      "kickoffDateLabel": "2026-06-22",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "France",
+      "awayTeamName": "Iraq",
+      "homeTeamCode": "FRA",
+      "awayTeamCode": "IRQ",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Gillette Stadium",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[14] (GF-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:250"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[50]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[5]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:42"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 42,
+      "sourceMatchId": "GF-4",
+      "stage": "GROUP",
+      "round": "Matchday 12",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-23T00:00:00.000Z",
+      "kickoffDateLabel": "2026-06-22",
+      "kickoffTimeLabel": "20:00 UTC-4",
+      "homeTeamName": "Norway",
+      "awayTeamName": "Senegal",
+      "homeTeamCode": "NOR",
+      "awayTeamCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lincoln Financial Field",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[15] (GF-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:252"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[51]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:43"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[6]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 43,
+      "sourceMatchId": "GAR-3",
+      "stage": "GROUP",
+      "round": "Matchday 12",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-22T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-22",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Austria",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "AUT",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "MetLife Stadium",
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[20] (GAR-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:271"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[56]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:44"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[42]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 44,
+      "sourceMatchId": "GAR-4",
+      "stage": "GROUP",
+      "round": "Matchday 12",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-23T03:00:00.000Z",
+      "kickoffDateLabel": "2026-06-22",
+      "kickoffTimeLabel": "20:00 UTC-7",
+      "homeTeamName": "Algeria",
+      "awayTeamName": "Jordan",
+      "homeTeamCode": "ALG",
+      "awayTeamCode": "JOR",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BMO Field",
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[21] (GAR-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:273"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[57]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:45"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[14]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 45,
+      "sourceMatchId": "GP-3",
+      "stage": "GROUP",
+      "round": "Matchday 13",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-23T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-23",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Portugal",
+      "awayTeamName": "Uzbekistan",
+      "homeTeamCode": "POR",
+      "awayTeamCode": "UZB",
+      "homeScore": 5,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BC Place",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[26] (GP-3)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:294"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[62]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:46"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[15]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 46,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 13",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-23T23:00:00.000Z",
+      "kickoffDateLabel": "2026-06-23",
+      "kickoffTimeLabel": "19:00 UTC-4",
+      "homeTeamName": "Panama",
+      "awayTeamName": "Croatia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lumen Field",
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:315"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[69]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:47"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[16]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 47,
+      "sourceMatchId": "GP-4",
+      "stage": "GROUP",
+      "round": "Matchday 13",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-24T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-23",
+      "kickoffTimeLabel": "20:00 UTC-6",
+      "homeTeamName": "Colombia",
+      "awayTeamName": "DR Congo",
+      "homeTeamCode": "COL",
+      "awayTeamCode": "COD",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Levi's Stadium",
+      "cityName": "Guadalajara (Zapopan)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[27] (GP-4)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:297"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[63]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[64]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:48"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 48,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 13",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-23T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-23",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "England",
+      "awayTeamName": "Ghana",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "SoFi Stadium",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:314"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[68]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:49"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[84]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 49,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-24T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Scotland",
+      "awayTeamName": "Brazil",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Azteca",
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:131"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[16]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:50"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[43]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 50,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group C",
+      "kickoffAtUtc": "2026-06-24T22:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Morocco",
+      "awayTeamName": "Haiti",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 4,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Akron",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:133"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[17]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:51"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[31]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 51,
+      "sourceMatchId": "GA-6",
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-25T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "19:00 UTC-6",
+      "homeTeamName": "South Africa",
+      "awayTeamName": "Korea Republic",
+      "homeTeamCode": "RSA",
+      "awayTeamCode": "KOR",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio BBVA",
+      "cityName": "Monterrey (Guadalupe)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[5] (GA-6)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:92"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[5]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:52"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[32]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 52,
+      "sourceMatchId": "GA-5",
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group A",
+      "kickoffAtUtc": "2026-06-25T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "19:00 UTC-6",
+      "homeTeamName": "Mexico",
+      "awayTeamName": "Czechia",
+      "homeTeamCode": "MEX",
+      "awayTeamCode": "CZE",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "AT&T Stadium",
+      "cityName": "Mexico City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[4] (GA-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:90"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[4]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[17]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:53"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 53,
+      "sourceMatchId": "GB-6",
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-24T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Bosnia and Herzegovina",
+      "awayTeamName": "Qatar",
+      "homeTeamCode": "BIH",
+      "awayTeamCode": "QAT",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": null,
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[11] (GB-6)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:114"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[11]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[44]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 54,
+      "sourceMatchId": "GB-5",
+      "stage": "GROUP",
+      "round": "Matchday 14",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-24T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-24",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Switzerland",
+      "awayTeamName": "Canada",
+      "homeTeamCode": "SUI",
+      "awayTeamCode": "CAN",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": null,
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[10] (GB-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:111"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[10]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[94]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "matchNumber": 55,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-25T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "Curaçao",
+      "awayTeamName": "Côte d'Ivoire",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:171"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[28]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:56"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[85]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 56,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group E",
+      "kickoffAtUtc": "2026-06-25T20:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "Ecuador",
+      "awayTeamName": "Germany",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Hard Rock Stadium",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:173"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[29]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:57"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[86]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 57,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-26T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "19:00 UTC-7",
+      "homeTeamName": "Paraguay",
+      "awayTeamName": "Australia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Gillette Stadium",
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:155"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[23]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:58"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[95]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 58,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group D",
+      "kickoffAtUtc": "2026-06-26T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "19:00 UTC-7",
+      "homeTeamName": "Turkey",
+      "awayTeamName": "United States",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 3,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lincoln Financial Field",
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:152"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[22]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[45]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:59"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 59,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-25T23:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "18:00 UTC-5",
+      "homeTeamName": "Japan",
+      "awayTeamName": "Sweden",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": null,
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:194"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[34]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[7]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 60,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 15",
+      "groupName": "Group F",
+      "kickoffAtUtc": "2026-06-25T23:00:00.000Z",
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "18:00 UTC-5",
+      "homeTeamName": "Tunisia",
+      "awayTeamName": "Netherlands",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BMO Field",
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:197"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[35]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:61"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[18]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 61,
+      "sourceMatchId": "GF-6",
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-26T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "Senegal",
+      "awayTeamName": "Iraq",
+      "homeTeamCode": "SEN",
+      "awayTeamCode": "IRQ",
+      "homeScore": 5,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "BC Place",
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[17] (GF-6)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:259"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[53]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[19]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:62"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 62,
+      "sourceMatchId": "GF-5",
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group I",
+      "kickoffAtUtc": "2026-06-26T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "France",
+      "awayTeamName": "Norway",
+      "homeTeamCode": "FRA",
+      "awayTeamCode": "NOR",
+      "homeScore": 4,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Lumen Field",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[16] (GF-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:256"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[52]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:63"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[46]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 63,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-27T03:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "20:00 UTC-7",
+      "homeTeamName": "Egypt",
+      "awayTeamName": "Iran",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Levi's Stadium",
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:216"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[40]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:64"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[47]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 64,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group G",
+      "kickoffAtUtc": "2026-06-27T03:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "20:00 UTC-7",
+      "homeTeamName": "New Zealand",
+      "awayTeamName": "Belgium",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 5,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "SoFi Stadium",
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:219"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[41]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:65"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[96]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 65,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-27T00:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "19:00 UTC-5",
+      "homeTeamName": "Cape Verde",
+      "awayTeamName": "Saudi Arabia",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Azteca",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:236"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[46]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:66"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[48]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 66,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 16",
+      "groupName": "Group H",
+      "kickoffAtUtc": "2026-06-27T00:00:00.000Z",
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "18:00 UTC-6",
+      "homeTeamName": "Uruguay",
+      "awayTeamName": "Spain",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio Akron",
+      "cityName": "Guadalajara (Zapopan)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:237"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[47]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:67"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[49]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 67,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-27T21:00:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "Panama",
+      "awayTeamName": "England",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Estadio BBVA",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:318"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[70]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:68"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[20]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 68,
+      "sourceMatchId": null,
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group L",
+      "kickoffAtUtc": "2026-06-27T21:00:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "Croatia",
+      "awayTeamName": "Ghana",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "AT&T Stadium",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:320"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[71]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:69"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[87]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 69,
+      "sourceMatchId": "GAR-6",
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-28T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "21:00 UTC-5",
+      "homeTeamName": "Austria",
+      "awayTeamName": "Algeria",
+      "homeTeamCode": "AUT",
+      "awayTeamCode": "ALG",
+      "homeScore": 3,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "NRG Stadium",
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[23] (GAR-6)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:277"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[58]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:70"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[88]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 70,
+      "sourceMatchId": "GAR-5",
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group J",
+      "kickoffAtUtc": "2026-06-28T02:00:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "21:00 UTC-5",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Jordan",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "JOR",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "GEHA Field at Arrowhead Stadium",
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[22] (GAR-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:280"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[59]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:71"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[50]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 71,
+      "sourceMatchId": "GP-5",
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-27T23:30:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "19:30 UTC-4",
+      "homeTeamName": "Colombia",
+      "awayTeamName": "Portugal",
+      "homeTeamCode": "COL",
+      "awayTeamCode": "POR",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[28] (GP-5)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:300"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[64]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:72"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[65]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": 72,
+      "sourceMatchId": "GP-6",
+      "stage": "GROUP",
+      "round": "Matchday 17",
+      "groupName": "Group K",
+      "kickoffAtUtc": "2026-06-27T23:30:00.000Z",
+      "kickoffDateLabel": "2026-06-27",
+      "kickoffTimeLabel": "19:30 UTC-4",
+      "homeTeamName": "DR Congo",
+      "awayTeamName": "Uzbekistan",
+      "homeTeamCode": "COD",
+      "awayTeamCode": "UZB",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Hard Rock Stadium",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[29] (GP-6)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:301"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[65]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[21]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:73"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "NEEDS_REVIEW"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "GB-2",
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group B",
+      "kickoffAtUtc": "2026-06-13T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-13",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Switzerland",
+      "awayTeamName": "Qatar",
+      "homeTeamCode": "SUI",
+      "awayTeamCode": "QAT",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "Hard Rock Stadium",
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[7] (GB-2)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-cup-txt",
+          "ref": "line:101"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[7]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:9"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:55"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[1]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "53",
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group B",
+      "kickoffAtUtc": null,
+      "kickoffDateLabel": "2026-06-25",
+      "kickoffTimeLabel": "18:00",
+      "homeTeamName": "UEFA Path A Winner",
+      "awayTeamName": "Canada",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": null,
+      "awayScore": null,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "NRG Stadium",
+      "cityName": "Houston",
+      "status": "SCHEDULED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:54"
+        }
+      ],
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "INCOMPLETE"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "59",
+      "stage": "GROUP",
+      "round": "Matchday 3",
+      "groupName": "Group F",
+      "kickoffAtUtc": null,
+      "kickoffDateLabel": "2026-06-26",
+      "kickoffTimeLabel": "18:00",
+      "homeTeamName": "Japan",
+      "awayTeamName": "UEFA Path B Winner",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": null,
+      "awayScore": null,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": "MetLife Stadium",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "SCHEDULED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-csv-games",
+          "ref": "row:60"
+        }
+      ],
+      "sourceIds": [
+        "worldcup2026_repo"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "INCOMPLETE"
+    },
+    {
+      "matchNumber": 73,
+      "sourceMatchId": "M73",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-28T19:00:00.000Z",
+      "kickoffDateLabel": "2026-06-28",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "South Africa",
+      "awayTeamName": "Canada",
+      "homeTeamCode": "RSA",
+      "awayTeamCode": "CAN",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Canada",
+      "venueName": null,
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[35] (M73)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[72]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[66]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 74,
+      "sourceMatchId": "M74",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-29T20:30:00.000Z",
+      "kickoffDateLabel": "2026-06-29",
+      "kickoffTimeLabel": "16:30 UTC-4",
+      "homeTeamName": "Germany",
+      "awayTeamName": "Paraguay",
+      "homeTeamCode": "GER",
+      "awayTeamCode": "PAR",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": 3,
+      "awayPenaltyScore": 4,
+      "winnerTeamName": "Paraguay",
+      "venueName": null,
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[36] (M74)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[73]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[89]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 75,
+      "sourceMatchId": "M75",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-30T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-29",
+      "kickoffTimeLabel": "19:00 UTC-6",
+      "homeTeamName": "Netherlands",
+      "awayTeamName": "Morocco",
+      "homeTeamCode": "NED",
+      "awayTeamCode": "MAR",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": 2,
+      "awayPenaltyScore": 3,
+      "winnerTeamName": "Morocco",
+      "venueName": null,
+      "cityName": "Monterrey (Guadalupe)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[37] (M75)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[74]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[97]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 76,
+      "sourceMatchId": "M76",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-29T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-29",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Brazil",
+      "awayTeamName": "Japan",
+      "homeTeamCode": "BRA",
+      "awayTeamCode": "JPN",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Brazil",
+      "venueName": null,
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[38] (M76)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[75]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[51]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 77,
+      "sourceMatchId": "M77",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-30T21:00:00.000Z",
+      "kickoffDateLabel": "2026-06-30",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "France",
+      "awayTeamName": "Sweden",
+      "homeTeamCode": "FRA",
+      "awayTeamCode": "SWE",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "France",
+      "venueName": null,
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[39] (M77)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[76]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[67]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 78,
+      "sourceMatchId": "M78",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-06-30T17:00:00.000Z",
+      "kickoffDateLabel": "2026-06-30",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Côte d'Ivoire",
+      "awayTeamName": "Norway",
+      "homeTeamCode": "CIV",
+      "awayTeamCode": "NOR",
+      "homeScore": 1,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Norway",
+      "venueName": null,
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[40] (M78)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[77]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[98]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 79,
+      "sourceMatchId": "M79",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-01T01:00:00.000Z",
+      "kickoffDateLabel": "2026-06-30",
+      "kickoffTimeLabel": "19:00 UTC-6",
+      "homeTeamName": "Mexico",
+      "awayTeamName": "Ecuador",
+      "homeTeamCode": "MEX",
+      "awayTeamCode": "ECU",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Mexico",
+      "venueName": null,
+      "cityName": "Mexico City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[41] (M79)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[78]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[99]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 80,
+      "sourceMatchId": "M80",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-01T16:00:00.000Z",
+      "kickoffDateLabel": "2026-07-01",
+      "kickoffTimeLabel": "12:00 UTC-4",
+      "homeTeamName": "England",
+      "awayTeamName": "DR Congo",
+      "homeTeamCode": "ENG",
+      "awayTeamCode": "COD",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "England",
+      "venueName": null,
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[42] (M80)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[79]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[100]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 81,
+      "sourceMatchId": "M81",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-02T00:00:00.000Z",
+      "kickoffDateLabel": "2026-07-01",
+      "kickoffTimeLabel": "17:00 UTC-7",
+      "homeTeamName": "United States",
+      "awayTeamName": "Bosnia and Herzegovina",
+      "homeTeamCode": "USA",
+      "awayTeamCode": "BIH",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "United States",
+      "venueName": null,
+      "cityName": "San Francisco Bay Area (Santa Clara)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[43] (M81)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[80]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[90]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 82,
+      "sourceMatchId": "M82",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-01T20:00:00.000Z",
+      "kickoffDateLabel": "2026-07-01",
+      "kickoffTimeLabel": "13:00 UTC-7",
+      "homeTeamName": "Belgium",
+      "awayTeamName": "Senegal",
+      "homeTeamCode": "BEL",
+      "awayTeamCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Belgium",
+      "venueName": null,
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[44] (M82)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[81]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[101]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 83,
+      "sourceMatchId": "M83",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-02T23:00:00.000Z",
+      "kickoffDateLabel": "2026-07-02",
+      "kickoffTimeLabel": "19:00 UTC-4",
+      "homeTeamName": "Portugal",
+      "awayTeamName": "Croatia",
+      "homeTeamCode": "POR",
+      "awayTeamCode": "CRO",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Portugal",
+      "venueName": null,
+      "cityName": "Toronto",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[45] (M83)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[82]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[52]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 84,
+      "sourceMatchId": "M84",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-02T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-02",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Spain",
+      "awayTeamName": "Austria",
+      "homeTeamCode": "ESP",
+      "awayTeamCode": "AUT",
+      "homeScore": 3,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Spain",
+      "venueName": null,
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[46] (M84)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[83]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[68]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 85,
+      "sourceMatchId": "M85",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-03T03:00:00.000Z",
+      "kickoffDateLabel": "2026-07-02",
+      "kickoffTimeLabel": "20:00 UTC-7",
+      "homeTeamName": "Switzerland",
+      "awayTeamName": "Algeria",
+      "homeTeamCode": "SUI",
+      "awayTeamCode": "ALG",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Switzerland",
+      "venueName": null,
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[47] (M85)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[84]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[53]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 86,
+      "sourceMatchId": "M86",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-03T22:00:00.000Z",
+      "kickoffDateLabel": "2026-07-03",
+      "kickoffTimeLabel": "18:00 UTC-4",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Cape Verde",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "CPV",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Argentina",
+      "venueName": null,
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[48] (M86)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[85]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[22]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 87,
+      "sourceMatchId": "87",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-04T01:30:00.000Z",
+      "kickoffDateLabel": "2026-07-03",
+      "kickoffTimeLabel": "20:30 UTC-5",
+      "homeTeamName": "Colombia",
+      "awayTeamName": "Ghana",
+      "homeTeamCode": null,
+      "awayTeamCode": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Colombia",
+      "venueName": null,
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[86]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[33]"
+        }
+      ],
+      "sourceIds": [
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 88,
+      "sourceMatchId": "M88",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": null,
+      "kickoffDateLabel": "2026-07-03",
+      "kickoffTimeLabel": null,
+      "homeTeamName": "Colombia",
+      "awayTeamName": null,
+      "homeTeamCode": "COL",
+      "awayTeamCode": null,
+      "homeScore": null,
+      "awayScore": null,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": null,
+      "venueName": null,
+      "cityName": null,
+      "status": "UNKNOWN",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[50] (M88)"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1"
+      ],
+      "confidence": "UNVERIFIED",
+      "verificationStatus": "INCOMPLETE"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "M87",
+      "stage": "ROUND_OF_32",
+      "round": "Round of 32",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-03T18:00:00.000Z",
+      "kickoffDateLabel": "2026-07-03",
+      "kickoffTimeLabel": "13:00 UTC-5",
+      "homeTeamName": "Australia",
+      "awayTeamName": "Egypt",
+      "homeTeamCode": "AUS",
+      "awayTeamCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePenaltyScore": 2,
+      "awayPenaltyScore": 4,
+      "winnerTeamName": "Egypt",
+      "venueName": null,
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[49] (M87)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[87]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[23]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "matchNumber": 91,
+      "sourceMatchId": "M91",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-05T20:00:00.000Z",
+      "kickoffDateLabel": "2026-07-05",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "Brazil",
+      "awayTeamName": "Norway",
+      "homeTeamCode": "BRA",
+      "awayTeamCode": "NOR",
+      "homeScore": 1,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Norway",
+      "venueName": "MetLife Stadium",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[53] (M91)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[90]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[76]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 92,
+      "sourceMatchId": "M92",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-06T00:00:00.000Z",
+      "kickoffDateLabel": "2026-07-05",
+      "kickoffTimeLabel": "18:00 UTC-6",
+      "homeTeamName": "Mexico",
+      "awayTeamName": "England",
+      "homeTeamCode": "MEX",
+      "awayTeamCode": "ENG",
+      "homeScore": 2,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "England",
+      "venueName": null,
+      "cityName": "Mexico City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[54] (M92)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[91]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[70]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 93,
+      "sourceMatchId": "M93",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-06T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-06",
+      "kickoffTimeLabel": "14:00 UTC-5",
+      "homeTeamName": "Portugal",
+      "awayTeamName": "Spain",
+      "homeTeamCode": "POR",
+      "awayTeamCode": "ESP",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Spain",
+      "venueName": null,
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[55] (M93)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[92]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[54]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 94,
+      "sourceMatchId": "M94",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-07T00:00:00.000Z",
+      "kickoffDateLabel": "2026-07-06",
+      "kickoffTimeLabel": "17:00 UTC-7",
+      "homeTeamName": "United States",
+      "awayTeamName": "Belgium",
+      "homeTeamCode": "USA",
+      "awayTeamCode": "BEL",
+      "homeScore": 1,
+      "awayScore": 4,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Belgium",
+      "venueName": null,
+      "cityName": "Seattle",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[56] (M94)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[93]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[71]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 95,
+      "sourceMatchId": "M95",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-07T16:00:00.000Z",
+      "kickoffDateLabel": "2026-07-07",
+      "kickoffTimeLabel": "12:00 UTC-4",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Egypt",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "EGY",
+      "homeScore": 3,
+      "awayScore": 2,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Argentina",
+      "venueName": null,
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[57] (M95)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[94]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[8]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 96,
+      "sourceMatchId": "M96",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-07T20:00:00.000Z",
+      "kickoffDateLabel": "2026-07-07",
+      "kickoffTimeLabel": "13:00 UTC-7",
+      "homeTeamName": "Switzerland",
+      "awayTeamName": "Colombia",
+      "homeTeamCode": "SUI",
+      "awayTeamCode": "COL",
+      "homeScore": 0,
+      "awayScore": 0,
+      "homePenaltyScore": 4,
+      "awayPenaltyScore": 3,
+      "winnerTeamName": "Switzerland",
+      "venueName": null,
+      "cityName": "Vancouver",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[58] (M96)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[95]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[55]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "M89",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-04T17:00:00.000Z",
+      "kickoffDateLabel": "2026-07-04",
+      "kickoffTimeLabel": "12:00 UTC-5",
+      "homeTeamName": "Canada",
+      "awayTeamName": "Morocco",
+      "homeTeamCode": "CAN",
+      "awayTeamCode": "MAR",
+      "homeScore": 0,
+      "awayScore": 3,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Morocco",
+      "venueName": "NRG Stadium",
+      "cityName": "Houston",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[51] (M89)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[89]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[69]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "matchNumber": null,
+      "sourceMatchId": "M90",
+      "stage": "ROUND_OF_16",
+      "round": "Round of 16",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-04T21:00:00.000Z",
+      "kickoffDateLabel": "2026-07-04",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "Paraguay",
+      "awayTeamName": "France",
+      "homeTeamCode": "PAR",
+      "awayTeamCode": "FRA",
+      "homeScore": 0,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "France",
+      "venueName": "Lincoln Financial Field",
+      "cityName": "Philadelphia",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[52] (M90)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[88]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[102]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "CONFLICTED",
+      "verificationStatus": "CONFLICTED"
+    },
+    {
+      "matchNumber": 97,
+      "sourceMatchId": "M97",
+      "stage": "QUARTER_FINAL",
+      "round": "Quarter-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-09T20:00:00.000Z",
+      "kickoffDateLabel": "2026-07-09",
+      "kickoffTimeLabel": "16:00 UTC-4",
+      "homeTeamName": "France",
+      "awayTeamName": "Morocco",
+      "homeTeamCode": "FRA",
+      "awayTeamCode": "MAR",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "France",
+      "venueName": "Gillette Stadium",
+      "cityName": "Boston (Foxborough)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[59] (M97)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[96]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[77]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 98,
+      "sourceMatchId": "M98",
+      "stage": "QUARTER_FINAL",
+      "round": "Quarter-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-10T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-10",
+      "kickoffTimeLabel": "12:00 UTC-7",
+      "homeTeamName": "Spain",
+      "awayTeamName": "Belgium",
+      "homeTeamCode": "ESP",
+      "awayTeamCode": "BEL",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Spain",
+      "venueName": null,
+      "cityName": "Los Angeles (Inglewood)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[60] (M98)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[97]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[34]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 99,
+      "sourceMatchId": "M99",
+      "stage": "QUARTER_FINAL",
+      "round": "Quarter-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-11T21:00:00.000Z",
+      "kickoffDateLabel": "2026-07-11",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "England",
+      "awayTeamName": "Norway",
+      "homeTeamCode": "ENG",
+      "awayTeamCode": "NOR",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "England",
+      "venueName": null,
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[61] (M99)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[98]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[103]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 100,
+      "sourceMatchId": "M100",
+      "stage": "QUARTER_FINAL",
+      "round": "Quarter-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-12T01:00:00.000Z",
+      "kickoffDateLabel": "2026-07-11",
+      "kickoffTimeLabel": "20:00 UTC-5",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "Switzerland",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "SUI",
+      "homeScore": 3,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Argentina",
+      "venueName": "Arrowhead Stadium",
+      "cityName": "Kansas City",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[62] (M100)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[99]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[24]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 101,
+      "sourceMatchId": "M101",
+      "stage": "SEMI_FINAL",
+      "round": "Semi-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-14T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-14",
+      "kickoffTimeLabel": "14:00 UTC-5",
+      "homeTeamName": "Spain",
+      "awayTeamName": "France",
+      "homeTeamCode": "ESP",
+      "awayTeamCode": "FRA",
+      "homeScore": 2,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Spain",
+      "venueName": null,
+      "cityName": "Dallas (Arlington)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[63] (M101)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[100]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[9]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 102,
+      "sourceMatchId": "M102",
+      "stage": "SEMI_FINAL",
+      "round": "Semi-final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-15T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-15",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "Argentina",
+      "awayTeamName": "England",
+      "homeTeamCode": "ARG",
+      "awayTeamCode": "ENG",
+      "homeScore": 2,
+      "awayScore": 1,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Argentina",
+      "venueName": "Mercedes-Benz Stadium",
+      "cityName": "Atlanta",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[64] (M102)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[101]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[10]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 103,
+      "sourceMatchId": "M103",
+      "stage": "THIRD_PLACE",
+      "round": "Match for third place",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-18T21:00:00.000Z",
+      "kickoffDateLabel": "2026-07-18",
+      "kickoffTimeLabel": "17:00 UTC-4",
+      "homeTeamName": "England",
+      "awayTeamName": "France",
+      "homeTeamCode": "ENG",
+      "awayTeamCode": "FRA",
+      "homeScore": 6,
+      "awayScore": 4,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "England",
+      "venueName": "Hard Rock Stadium",
+      "cityName": "Miami (Miami Gardens)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[65] (M103)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[102]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[91]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    },
+    {
+      "matchNumber": 104,
+      "sourceMatchId": "M104",
+      "stage": "FINAL",
+      "round": "Final",
+      "groupName": null,
+      "kickoffAtUtc": "2026-07-19T19:00:00.000Z",
+      "kickoffDateLabel": "2026-07-19",
+      "kickoffTimeLabel": "15:00 UTC-4",
+      "homeTeamName": "Spain",
+      "awayTeamName": "Argentina",
+      "homeTeamCode": "ESP",
+      "awayTeamCode": "ARG",
+      "homeScore": 1,
+      "awayScore": 0,
+      "homePenaltyScore": null,
+      "awayPenaltyScore": null,
+      "winnerTeamName": "Spain",
+      "venueName": "MetLife Stadium",
+      "cityName": "New York/New Jersey (East Rutherford)",
+      "status": "FINISHED",
+      "rawSourceRefs": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "endpointId": "pack-matches",
+          "ref": "matches[66] (M104)"
+        },
+        {
+          "sourceId": "openfootball_worldcup_2026",
+          "endpointId": "of26-worldcup-json",
+          "ref": "matches[103]"
+        },
+        {
+          "sourceId": "worldcup2026_repo",
+          "endpointId": "wc26-api-games",
+          "ref": "records[78]"
+        }
+      ],
+      "sourceIds": [
+        "manual_verified_2026_pack_v1",
+        "openfootball_worldcup_2026",
+        "worldcup2026_repo"
+      ],
+      "confidence": "MULTI_SOURCE_VERIFIED",
+      "verificationStatus": "READY"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "standings/v1",
+  "final_standings": [
+    { "pos": 1, "team": "ESP", "verification": "verified" },
+    { "pos": 2, "team": "ARG", "verification": "verified" }
+  ],
+  "group_tables": [
+    { "group": "A", "teams": ["MEX", "RSA"], "table": [
+      { "pos": 1, "team": "MEX", "pld": 1, "w": 1, "d": 0, "l": 0, "gf": 2, "ga": 0, "pts": 3 }
+    ] }
+  ]
+}

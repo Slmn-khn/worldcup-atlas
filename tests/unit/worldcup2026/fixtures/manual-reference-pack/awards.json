@@ -1,0 +1,7 @@
+{
+  "schema": "award/v1",
+  "awards": {
+    "golden_ball": { "winner": "Rodri", "team": "ESP", "verification": "verified", "sources": ["s2"] },
+    "golden_boot": { "winner": "Someone", "team": "FRA", "verification": "reported" }
+  }
+}

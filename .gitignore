@@ -83,6 +83,23 @@ data/sources/fjelstul/reports/*.json
 # The committed .example.json documents the shape.
 data/media/curated-player-media.json
 
+# 2026 data steward agent (Phase 1) — raw snapshots and scratch outputs stay
+# local (re-fetch with `pnpm data:2026:collect`). Curated small outputs
+# (data/2026/normalized/, data/2026/validation/, data/2026/reports/, and
+# data/2026/source-registry.json) remain committable by policy — see
+# docs/2026_DATA_STEWARD_AGENT.md.
+data/2026/raw/
+data/2026/candidates/
+data/2026/reports/tmp/
+data/2026/downloads/
+# Candidate-provider enrichment output can be large (per-row player stats /
+# EFI metrics) and is fully regenerable with `pnpm data:2026:normalize`.
+data/2026/normalized/mominul/
+data/2026/normalized/bustami/
+
+# Scratch area for files pending manual deletion (never commit)
+_to_delete/
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache

@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-07-27T14:00:20.170Z",
+  "records": [
+    {
+      "award": "best_young_player",
+      "winner": "Pau Cubarsí",
+      "team": "Spain",
+      "detail": null,
+      "sourceIds": [
+        "manual_verified_2026_pack_v1"
+      ],
+      "confidence": "MANUAL_OVERRIDE",
+      "verificationStatus": "READY"
+    },
+    {
+      "award": "golden_ball",
+      "winner": "Rodri",
+      "team": "Spain",
+      "detail": "Voted by FIFA's Technical Study Group; Rodri led the tournament in completed passes, touches and distance covered.",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1"
+      ],
+      "confidence": "MANUAL_OVERRIDE",
+      "verificationStatus": "READY"
+    },
+    {
+      "award": "golden_boot",
+      "winner": "Kylian Mbappé",
+      "team": "France",
+      "detail": "Second consecutive Golden Boot; now World Cup all-time top scorer with 22 career goals (Messi 21).",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1"
+      ],
+      "confidence": "MANUAL_OVERRIDE",
+      "verificationStatus": "READY"
+    },
+    {
+      "award": "golden_glove",
+      "winner": "Unai Simón",
+      "team": "Spain",
+      "detail": "Record 7 clean sheets in a single World Cup; conceded 1 goal in 8 matches, fewest ever by a champion's goalkeeper.",
+      "sourceIds": [
+        "manual_verified_2026_pack_v1"
+      ],
+      "confidence": "MANUAL_OVERRIDE",
+      "verificationStatus": "READY"
+    }
+  ]
+}

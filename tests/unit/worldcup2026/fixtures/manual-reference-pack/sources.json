@@ -1,0 +1,1 @@
+{ "schema": "source/v1", "sources": [ { "id": "s1", "publisher": "P1", "url": "https://example.com/1" } ] }

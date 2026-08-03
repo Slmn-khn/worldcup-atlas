@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-07-27T14:00:21.281Z",
+  "total": 2,
+  "resolutionPolicy": "Conflicts are reported, never silently resolved. The manual verified reference pack value remains preferred; provider values are never applied over verified records.",
+  "entries": [
+    {
+      "entityType": "matches",
+      "entityKey": "GB-5",
+      "field": "score",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Switzerland 3-1 Canada"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Switzerland 2-1 Canada (matches.csv row 51)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Manual verified pack remains preferred; provider value reported, never applied."
+    },
+    {
+      "entityType": "matches",
+      "entityKey": "GB-5",
+      "field": "score",
+      "values": [
+        {
+          "sourceId": "manual_verified_2026_pack_v1",
+          "value": "Switzerland 3-1 Canada"
+        },
+        {
+          "sourceId": "mominul_2026_dataset",
+          "value": "Switzerland 2-1 Canada (matches_detailed.csv row 51)"
+        }
+      ],
+      "resolution": "KEPT_HIGHEST_PRIORITY",
+      "note": "Manual verified pack remains preferred; provider value reported, never applied."
+    }
+  ]
+}
