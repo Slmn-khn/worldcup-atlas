@@ -8,6 +8,7 @@ export const SEARCH_DOCUMENT_TYPES = [
   "match",
   "record",
   "event",
+  "venue",
 ] as const;
 
 export type SearchDocumentType = (typeof SEARCH_DOCUMENT_TYPES)[number];
@@ -48,6 +49,7 @@ export type SearchResponseDto = {
     matches: SearchResultDto[];
     records: SearchResultDto[];
     events: SearchResultDto[];
+    venues: SearchResultDto[];
   };
 };
 
@@ -62,6 +64,7 @@ export function emptySearchResponse(query: string): SearchResponseDto {
       matches: [],
       records: [],
       events: [],
+      venues: [],
     },
   };
 }

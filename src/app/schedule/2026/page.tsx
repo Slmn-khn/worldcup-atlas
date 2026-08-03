@@ -1,11 +1,11 @@
 // 2026 Match Schedule & Results — completed-tournament archive page.
 //
-// Data comes from the FILE-backed archive source (verified reference pack +
-// approved finalized artifacts) via getArchived2026Schedule(). This page does
-// NOT read the live Fixture table, does not call providers, and never
-// triggers a sync. Unresolved records render as "Under review" — never
-// "Scheduled" (the tournament is over). Filters are URL-driven and applied
-// server-side.
+// Data source order (scheduleSource.ts): imported WorldCup2026Match rows
+// (Mominul-only DB import) first, then the file-backed archive chain. This
+// page never reads the legacy live Fixture table, never calls providers, and
+// never triggers a sync. Every row is a final result — no "Scheduled" rows;
+// anything unresolved renders as "Under review". Filters are URL-driven and
+// applied server-side.
 
 import type { Metadata } from "next";
 import Box from "@mui/material/Box";
@@ -23,17 +23,15 @@ import ArchivedScheduleTable, {
 } from "@/components/schedule/ArchivedScheduleTable";
 import { atlas, eyebrowSx, tabularNums } from "@/theme/tokens";
 import { getEnumParam, getStringParam, type RawSearchParams } from "@/lib/search-params";
-import {
-  getArchived2026Schedule,
-  type Archived2026ScheduleRow,
-} from "@/server/worldcup2026/archiveSchedule";
+import type { Archived2026ScheduleRow } from "@/server/worldcup2026/archiveSchedule";
+import { getSchedule2026ForDisplay } from "@/server/worldcup2026/scheduleSource";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "2026 Match Schedule & Results",
   description:
-    "Final fixtures, scores, venues, stages, and verification status from the completed 2026 FIFA World Cup — archived in WORLDCUP Nexus.",
+    "Completed tournament fixtures, scores, venues, and match details from the 2026 World Cup archive dataset.",
 };
 
 // --- URL filter vocab ------------------------------------------------------
@@ -58,17 +56,6 @@ const STATUS_FILTERS = {
   },
 } as const;
 type StatusFilterKey = keyof typeof STATUS_FILTERS;
-
-const VERIFICATION_FILTERS = {
-  verified: { label: "Verified", levels: ["VERIFIED"] },
-  reported: { label: "Reported", levels: ["REPORTED"] },
-  partial: { label: "Partial", levels: ["PARTIAL"] },
-  needs_review: {
-    label: "Needs review",
-    levels: ["NEEDS_REVIEW", "UNVERIFIED"],
-  },
-} as const;
-type VerificationFilterKey = keyof typeof VERIFICATION_FILTERS;
 
 function rowMatchesSearch(row: Archived2026ScheduleRow, q: string): boolean {
   const needle = q.toLowerCase();
@@ -136,24 +123,22 @@ function StatTile({
 type Props = { searchParams: Promise<RawSearchParams> };
 
 export default async function Schedule2026Page({ searchParams }: Props) {
-  const [params, result] = await Promise.all([
+  const [params, display] = await Promise.all([
     searchParams,
-    getArchived2026Schedule(),
+    getSchedule2026ForDisplay(),
   ]);
+  const { result, sourceLabel, teamsCount, venuesCount } = display;
 
   const filters = {
     q: getStringParam(params, "q"),
     stage: getEnumParam(params, "stage", STAGE_VALUES),
     group: getStringParam(params, "group", 3),
+    team: getStringParam(params, "team", 8),
+    venue: getStringParam(params, "venue", 80),
     status: getEnumParam(
       params,
       "status",
       Object.keys(STATUS_FILTERS) as StatusFilterKey[],
-    ),
-    verification: getEnumParam(
-      params,
-      "verification",
-      Object.keys(VERIFICATION_FILTERS) as VerificationFilterKey[],
     ),
   };
 
@@ -171,18 +156,20 @@ export default async function Schedule2026Page({ searchParams }: Props) {
       return false;
     }
     if (
+      filters.team !== undefined &&
+      row.homeTeamCode !== filters.team &&
+      row.awayTeamCode !== filters.team
+    ) {
+      return false;
+    }
+    if (filters.venue !== undefined && row.venueName !== filters.venue) {
+      return false;
+    }
+    if (
       filters.status !== undefined &&
       !(STATUS_FILTERS[filters.status].statuses as readonly string[]).includes(
         row.status,
       )
-    ) {
-      return false;
-    }
-    if (
-      filters.verification !== undefined &&
-      !(
-        VERIFICATION_FILTERS[filters.verification].levels as readonly string[]
-      ).includes(row.verification)
     ) {
       return false;
     }
@@ -209,29 +196,41 @@ export default async function Schedule2026Page({ searchParams }: Props) {
     value: letter,
     label: `Group ${letter}`,
   }));
+  const teamOptions: FilterOptionDto[] = [
+    ...new Map(
+      result.rows
+        .flatMap((row) => [
+          [row.homeTeamCode, row.homeTeamName] as const,
+          [row.awayTeamCode, row.awayTeamName] as const,
+        ])
+        .filter(
+          (entry): entry is [string, string] =>
+            entry[0] != null && entry[1] != null,
+        ),
+    ).entries(),
+  ]
+    .map(([code, name]) => ({ value: code, label: name }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+  const venueOptions: FilterOptionDto[] = [
+    ...new Set(
+      result.rows
+        .map((row) => row.venueName)
+        .filter((name): name is string => name != null),
+    ),
+  ]
+    .sort()
+    .map((name) => ({ value: name, label: name }));
   const statusOptions: FilterOptionDto[] = (
     Object.entries(STATUS_FILTERS) as [
       StatusFilterKey,
       (typeof STATUS_FILTERS)[StatusFilterKey],
-    ][]
-  ).map(([value, meta]) => ({
-    value,
-    label: meta.label,
-    count: result.rows.filter((row) =>
-      (meta.statuses as readonly string[]).includes(row.status),
-    ).length,
-  }));
-  const verificationOptions: FilterOptionDto[] = (
-    Object.entries(VERIFICATION_FILTERS) as [
-      VerificationFilterKey,
-      (typeof VERIFICATION_FILTERS)[VerificationFilterKey],
     ][]
   )
     .map(([value, meta]) => ({
       value,
       label: meta.label,
       count: result.rows.filter((row) =>
-        (meta.levels as readonly string[]).includes(row.verification),
+        (meta.statuses as readonly string[]).includes(row.status),
       ).length,
     }))
     .filter((option) => option.count > 0);
@@ -252,6 +251,18 @@ export default async function Schedule2026Page({ searchParams }: Props) {
     filters.group !== undefined
       ? { param: "group", label: "Group", value: `Group ${filters.group.toUpperCase()}` }
       : null,
+    filters.team !== undefined
+      ? {
+          param: "team",
+          label: "Team",
+          value:
+            teamOptions.find((option) => option.value === filters.team)?.label ??
+            filters.team,
+        }
+      : null,
+    filters.venue !== undefined
+      ? { param: "venue", label: "Venue", value: filters.venue }
+      : null,
     filters.status !== undefined
       ? {
           param: "status",
@@ -259,17 +270,9 @@ export default async function Schedule2026Page({ searchParams }: Props) {
           value: STATUS_FILTERS[filters.status].label,
         }
       : null,
-    filters.verification !== undefined
-      ? {
-          param: "verification",
-          label: "Verification",
-          value: VERIFICATION_FILTERS[filters.verification].label,
-        }
-      : null,
   ].filter((item): item is NonNullable<typeof item> => item !== null);
 
-  // Champion / final summary — derived from the archived final row, never
-  // hardcoded.
+  // Champion / final summary — derived from the archived final row.
   const finalRow = result.rows.find((row) => row.stageKey === "final");
   const championName =
     finalRow?.winnerTeamCode != null
@@ -295,12 +298,8 @@ export default async function Schedule2026Page({ searchParams }: Props) {
       <VaultPageHeader
         eyebrow="2026 World Cup"
         title="2026 Match Schedule & Results"
-        lede="Final fixtures, scores, venues, stages, and verification status from the completed 2026 World Cup archive."
-        meta={
-          result.lastUpdatedLabel !== undefined
-            ? `Archived 2026 data · verified sources and reviewed conflicts · ${result.lastUpdatedLabel}`
-            : "Archived 2026 data · verified sources and reviewed conflicts"
-        }
+        lede="Completed tournament fixtures, scores, venues, and match details from the 2026 archive dataset."
+        meta={`Archived completed tournament · ${sourceLabel}`}
       >
         <Box
           sx={{
@@ -314,18 +313,28 @@ export default async function Schedule2026Page({ searchParams }: Props) {
           }}
         >
           <StatTile
-            label="Official matches"
+            label="Matches"
             value={String(result.totalOfficialMatches)}
           />
-          <StatTile
-            label="Captured results"
-            value={String(result.capturedMatches)}
-          />
-          <StatTile label="Verified" value={String(result.verifiedCount)} />
-          <StatTile
-            label="Under review"
-            value={String(result.unresolvedCount)}
-          />
+          {teamsCount !== null ? (
+            <StatTile label="Teams" value={String(teamsCount)} />
+          ) : (
+            <StatTile
+              label="Captured results"
+              value={String(result.capturedMatches)}
+            />
+          )}
+          {venuesCount !== null ? (
+            <StatTile label="Venues" value={String(venuesCount)} />
+          ) : (
+            <StatTile label="Verified" value={String(result.verifiedCount)} />
+          )}
+          {result.unresolvedCount > 0 ? (
+            <StatTile
+              label="Under review"
+              value={String(result.unresolvedCount)}
+            />
+          ) : null}
           {championName !== null ? (
             <StatTile label="Champion" value={championName} accent />
           ) : null}
@@ -356,17 +365,24 @@ export default async function Schedule2026Page({ searchParams }: Props) {
             },
             {
               kind: "select",
+              param: "team",
+              label: "Team",
+              options: teamOptions,
+              allLabel: "All teams",
+            },
+            {
+              kind: "select",
+              param: "venue",
+              label: "Venue",
+              options: venueOptions,
+              allLabel: "All venues",
+            },
+            {
+              kind: "select",
               param: "status",
               label: "Result",
               options: statusOptions,
               allLabel: "All results",
-            },
-            {
-              kind: "select",
-              param: "verification",
-              label: "Verification",
-              options: verificationOptions,
-              allLabel: "All verification levels",
             },
           ]}
           active={active}
@@ -392,7 +408,7 @@ export default async function Schedule2026Page({ searchParams }: Props) {
               title="No matches fit these filters"
               description={
                 result.rows.length === 0
-                  ? "The 2026 archive pack is unavailable. Regenerate it with pnpm data:2026:display-schedule."
+                  ? "The 2026 archive is unavailable. Import it with pnpm data:2026:mominul:import:write or regenerate the pack with pnpm data:2026:mominul:approved-pack."
                   : "No archived 2026 match fits the current filters. Try clearing a filter or searching a different team."
               }
             />

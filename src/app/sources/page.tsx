@@ -119,10 +119,11 @@ export default function SourcesPage() {
       <PageContainer component="section" sx={SECTION_SX}>
         <SectionHeading
           title="Secondary and Reference Sources"
-          subtitle="Used for verification only — never as automated import sources."
+          subtitle="Additional sources beyond the primary historical database."
         />
         <Bullets
           items={[
+            "Mominul FIFA World Cup 2026 Dataset (github.com/mominullptr/FIFA-World-Cup-2026-Dataset) — the approved, user-verified source of the imported 2026 tournament archive: teams, venues, matches, squads, events, lineups, and statistics. The only source imported for 2026; its ML prediction features are excluded.",
             "OpenFootball World Cup data (public domain) — reserved for cross-referencing results and filling confirmed gaps; not currently used in production data.",
             "Wikipedia match articles and RSSSF records — manual verification reference only.",
           ]}

@@ -1,0 +1,33 @@
+{
+  "schema": "mominul-import-policy/v1",
+  "sourceId": "mominul_2026_dataset",
+  "status": "APPROVED_BY_USER",
+  "approvedFor": [
+    "teams",
+    "venues",
+    "tournament_stages",
+    "referees",
+    "matches",
+    "matches_detailed",
+    "squads_and_players",
+    "match_events",
+    "match_team_stats",
+    "match_lineups",
+    "player_stats"
+  ],
+  "excludedFromImport": [
+    "match_prediction_features",
+    "bustami_efi",
+    "openfootball",
+    "worldcup26_live",
+    "manual_pack_values"
+  ],
+  "rules": [
+    "Only Mominul source files are imported into 2026 archive tables.",
+    "Manual pack may be used for comparison reports only, not as import data.",
+    "Bustami EFI data is excluded.",
+    "OpenFootball/worldcup26 live fixture sync remains disabled.",
+    "Prediction/ML features are excluded from website integration.",
+    "Import is idempotent and must support dry-run."
+  ]
+}

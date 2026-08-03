@@ -18,6 +18,8 @@ import VaultFilterBar from "@/components/filters/VaultFilterBar";
 import { formatNumber, formatStage } from "@/lib/format";
 import { getStringParam, type RawSearchParams } from "@/lib/search-params";
 import { getTournamentByYear } from "@/server/queries/tournaments";
+import { getWc2026Overview } from "@/server/worldcup2026/queries";
+import Wc2026Hub from "@/components/worldcup2026/Wc2026Hub";
 
 export const dynamic = "force-dynamic";
 
@@ -37,6 +39,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (year === null) {
     return { title: "Tournament not found", robots: { index: false } };
   }
+  if (year === 2026) {
+    return {
+      title: "2026 World Cup — Tournament Archive",
+      description:
+        "The completed 2026 World Cup: matches, groups, bracket, teams, venues, players, and stats from the imported archive dataset.",
+    };
+  }
   return {
     title: `${year} World Cup`,
     description: `Explore the ${year} World Cup tournament, including teams, matches, goals, awards, and records.`,
@@ -52,6 +61,19 @@ export default async function TournamentDetailPage({
   const { year: rawYear } = await params;
   const year = parseYear(rawYear);
   if (year === null) notFound();
+
+  // 2026 — the imported Mominul archive hub (quarantined WorldCup2026*
+  // tables), not the canonical historical Tournament model. Falls through to
+  // the standard page (and its 404) when the import has not run.
+  if (year === 2026) {
+    const [overview, rawParams2026] = await Promise.all([
+      getWc2026Overview(),
+      searchParams,
+    ]);
+    if (overview !== null) {
+      return <Wc2026Hub overview={overview} rawParams={rawParams2026} />;
+    }
+  }
 
   const [tournament, rawParams] = await Promise.all([
     getTournamentByYear(year),

@@ -1,0 +1,27 @@
+{
+  "schema": "mominul-approved-pack/tournament/v1",
+  "sourceId": "mominul_2026_dataset",
+  "year": 2026,
+  "name": "FIFA World Cup 2026",
+  "hosts": [
+    "CAN",
+    "MEX",
+    "USA"
+  ],
+  "startDate": "2026-06-11",
+  "endDate": "2026-07-19",
+  "teamsCount": 48,
+  "matchesCount": 104,
+  "venuesCount": 16,
+  "playersCount": 1248,
+  "goalsCount": 308,
+  "championTeamCode": "ESP",
+  "championTeamName": "Spain",
+  "runnerUpTeamCode": "ARG",
+  "runnerUpTeamName": "Argentina",
+  "thirdTeamCode": "ENG",
+  "thirdTeamName": "England",
+  "fourthTeamCode": "FRA",
+  "fourthTeamName": "France",
+  "finalScoreLine": "Spain 1–0 Argentina AET"
+}

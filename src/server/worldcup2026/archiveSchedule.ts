@@ -34,6 +34,7 @@ import {
   MANUAL_PACK_DIR,
   type ManualReferencePack,
 } from "../agents/worldcup2026/manualReferencePack";
+import { loadMominulApprovedPack } from "../agents/worldcup2026/mominulApprovedPack";
 import { DATA_2026_DIR } from "../agents/worldcup2026/sourceRegistry";
 
 export const FINALIZED_2026_DIR = `${DATA_2026_DIR}/approved/finalized`;
@@ -394,6 +395,110 @@ export function buildArchivedScheduleResult(
 }
 
 // ---------------------------------------------------------------------------
+// Imported Mominul archive → display rows
+// ---------------------------------------------------------------------------
+
+/**
+ * A completed-tournament match from the approved Mominul source — satisfied
+ * both by the approved pack's match records (file fallback) and by the
+ * imported WorldCup2026Match DTOs (database, mapped in scheduleSource.ts).
+ */
+export type MominulScheduleInput = {
+  sourceMatchId: number;
+  date: string | null;
+  kickoffTimeUtc: string | null;
+  stageName: string | null;
+  groupLetter: string | null;
+  venueName: string | null;
+  cityName: string | null;
+  homeTeamName: string | null;
+  awayTeamName: string | null;
+  homeTeamCode: string | null;
+  awayTeamCode: string | null;
+  homeScore: number | null;
+  awayScore: number | null;
+  homePenaltyScore: number | null;
+  awayPenaltyScore: number | null;
+  resultType: string | null;
+  winnerTeamCode: string | null;
+};
+
+const MOMINUL_STAGE_KEYS: Record<string, string> = {
+  "Group Stage": "group",
+  "Round of 32": "round_of_32",
+  "Round of 16": "round_of_16",
+  "Quarter-finals": "quarterfinal",
+  "Semi-finals": "semifinal",
+  "Third-place match": "third_place",
+  Final: "final",
+};
+
+function mominulStageKey(stageName: string | null): string {
+  if (stageName === null) return "unknown";
+  return MOMINUL_STAGE_KEYS[stageName] ?? slugToStageKey(stageName);
+}
+
+function slugToStageKey(stageName: string): string {
+  return stageName.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+}
+
+function mominulStatus(input: MominulScheduleInput): Archived2026MatchStatus {
+  if (input.homeScore === null || input.awayScore === null) {
+    return "RESULT_UNDER_REVIEW";
+  }
+  if (input.resultType === "Penalties") return "PENALTIES";
+  if (input.resultType === "AET") return "AFTER_EXTRA_TIME";
+  return "FULL_TIME";
+}
+
+/**
+ * Maps completed Mominul matches (DB rows or approved pack records) onto the
+ * shared archived-schedule row shape. The tournament is over: rows are final
+ * results — never "SCHEDULED".
+ */
+export function mominulToArchivedRows(
+  matches: MominulScheduleInput[],
+): Archived2026ScheduleRow[] {
+  return matches
+    .map((match): Archived2026ScheduleRow => {
+      const stageKey = mominulStageKey(match.stageName);
+      return {
+        id: `wc2026-${match.sourceMatchId}`,
+        matchId: String(match.sourceMatchId),
+        date: match.date,
+        dateLabel: archivedDateLabel(match.date),
+        timeLabel:
+          match.kickoffTimeUtc !== null ? `${match.kickoffTimeUtc} UTC` : null,
+        stageKey,
+        stage: match.stageName ?? archivedStageLabel(stageKey),
+        groupName:
+          match.groupLetter !== null ? `Group ${match.groupLetter}` : null,
+        homeTeamCode: match.homeTeamCode,
+        homeTeamName: match.homeTeamName,
+        awayTeamCode: match.awayTeamCode,
+        awayTeamName: match.awayTeamName,
+        homeScore: match.homeScore,
+        awayScore: match.awayScore,
+        homePenaltyScore: match.homePenaltyScore,
+        awayPenaltyScore: match.awayPenaltyScore,
+        winnerTeamCode: match.winnerTeamCode,
+        venueId: null,
+        venueName: match.venueName,
+        cityName: match.cityName,
+        status: mominulStatus(match),
+        verification: "VERIFIED",
+        sources: ["mominul_2026_dataset"],
+        notes: null,
+      };
+    })
+    .sort(
+      (a, b) =>
+        (a.date ?? "9999").localeCompare(b.date ?? "9999") ||
+        Number(a.matchId) - Number(b.matchId),
+    );
+}
+
+// ---------------------------------------------------------------------------
 // display-schedule.json (generated artifact) schema
 // ---------------------------------------------------------------------------
 
@@ -497,6 +602,22 @@ export async function getArchived2026Schedule(
       ? path.join(dataDir, "reference", "manual-verified-v1")
       : MANUAL_PACK_DIR;
   const decisionsPath = path.join(dataDir, "review", "review-decisions.json");
+
+  // 0. Approved Mominul import pack — the user-approved complete dataset.
+  //    (The database import outranks even this; see scheduleSource.ts.)
+  const mominulDir =
+    options.dataDir !== undefined
+      ? path.join(dataDir, "approved", "mominul", "finalized")
+      : undefined;
+  const mominulPack = await loadMominulApprovedPack(mominulDir);
+  if (mominulPack !== null && mominulPack.matches.length > 0) {
+    const rows = mominulToArchivedRows(mominulPack.matches);
+    return buildArchivedScheduleResult(
+      rows,
+      mominulPack.tournament.matchesCount || rows.length,
+      `Mominul FIFA World Cup 2026 Dataset · approved pack · ${archivedDateLabel(mominulPack.manifest.generatedAt.slice(0, 10))}`,
+    );
+  }
 
   // 1. Approved finalized matches (pack match format) — highest priority.
   const finalizedMatchesRaw = await readJsonIfExists(
