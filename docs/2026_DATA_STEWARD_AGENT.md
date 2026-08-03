@@ -329,6 +329,15 @@ the historical `Player` model. Live OpenFootball/worldcup26 fixture sync
 remains disabled (feature flags) and the legacy `Fixture` rows are never
 used for 2026 display.
 
+Beyond the 2026-specific pages, the whole app now treats the archive as
+**1930–2026**: `canonicalBridge.ts` maps the imported archive onto the
+canonical card/finals/stats read models (homepage, timeline, featured,
+/tournaments, sitemap, search), and every bridge point drops its synthetic
+2026 contribution automatically if canonical `Tournament` year 2026 appears
+(post-promotion) — the double-counting guard is
+`mergeWc2026TournamentCard` plus the canonical-2026 check in
+`src/server/archive/stats.ts`.
+
 ## No production writes in Phase 1
 
 - No module under `src/server/agents/worldcup2026/` imports Prisma or any

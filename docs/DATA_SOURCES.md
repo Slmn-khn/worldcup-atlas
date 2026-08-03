@@ -119,6 +119,17 @@ normalize or import anything into the database — that happens in Checkpoint 4.
 > `sourceId = "mominul_2026_dataset"` and keeps the raw source row for audit.
 > `/tournaments/2026`, `/matches/2026/<id>`, and 2026 player pages render
 > from these tables with visible source attribution.
+>
+> **The archive now spans 1930–2026 app-wide.** Static copy uses
+> `src/lib/archiveCoverage.ts` (`ARCHIVE_COVERAGE`); numeric stats are
+> COMPUTED by `src/server/archive/stats.ts` (canonical tables + imported 2026
+> additions — goals summed from imported match scores). The tournament
+> timeline, featured tournaments, /tournaments list, homepage finals board,
+> sitemap, and search all include 2026 via
+> `src/server/worldcup2026/canonicalBridge.ts`. Every bridge point carries a
+> double-counting guard: if 2026 is later promoted into the canonical
+> `Tournament`/`Match` tables, the synthetic 2026 card/final/stat additions
+> are dropped automatically and canonical rows stand alone.
 
 The 2026 schedule/scores feature uses a **separate** pipeline from the historical
 Fjelstul archive (it lands in the `Fixture` table, never in `Match`). It is

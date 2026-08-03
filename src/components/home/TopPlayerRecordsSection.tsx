@@ -42,7 +42,7 @@ export default function TopPlayerRecordsSection({
         eyebrow="The pantheon"
         title="Top Player Records"
         accent="gold"
-        subtitle="The archive's all-time leading scorers, computed from imported goal data."
+        subtitle="Leading scorers of the historical archive (1930–2022), computed from imported goal data. 2026 scoring leaders live in the 2026 archive hub."
         action={{ label: "All players", href: "/players" }}
       />
       {visiblePlayers.length > 0 ? (

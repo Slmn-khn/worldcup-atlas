@@ -102,8 +102,9 @@ export default function HomeHero({ span }: HomeHeroProps) {
             mb: 5,
           }}
         >
-          Every tournament, nation, player, match, goal, record, and 2026
-          fixture in one independent football archive.
+          Every tournament, nation, player, match, goal, and record — from the
+          first World Cup to the completed 2026 edition — in one independent
+          football archive.
         </Typography>
 
         <Box sx={{ maxWidth: 680, mb: 4 }}>

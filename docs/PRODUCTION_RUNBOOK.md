@@ -75,6 +75,17 @@ also the recovery path after a failed partial run) and writes ONLY the
 quarantined `WorldCup2026*` tables — never the canonical historical archive,
 never `Fixture` rows. Each run records a `WorldCup2026ImportBatch` audit row.
 
+**App-wide 2026 coverage.** With the import in place the app presents the
+archive as **1930–2026**: homepage stats/timeline/featured/finals, the
+/tournaments list, sitemap, and search all bridge in the imported 2026
+archive (`src/server/worldcup2026/canonicalBridge.ts` +
+`src/server/archive/stats.ts`). To refresh 2026 data: re-run the approved
+pack + write import (above), then `pnpm search:index`. If 2026 is ever
+promoted into the canonical `Tournament`/`Match` tables, no cleanup is
+needed — every bridge point detects canonical year 2026 and drops the
+synthetic additions, so nothing is double-counted; then retire the bridge at
+leisure.
+
 In the **admin environment**, export the same variables per command run,
 except `MEILISEARCH_API_KEY` = the **admin/indexing key** when indexing.
 Never write production values into a committed file.

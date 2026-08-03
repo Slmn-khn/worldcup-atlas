@@ -151,7 +151,7 @@ export default function Footer() {
           }}
         >
           <Typography variant="caption" sx={{ color: atlas.textMuted }}>
-            Historical data:{" "}
+            Data 1930–2022:{" "}
             <Typography
               component={Link}
               href="/sources"
@@ -162,6 +162,18 @@ export default function Footer() {
               }}
             >
               Fjelstul World Cup Database (CC-BY-SA 4.0)
+            </Typography>
+            {" · 2026: "}
+            <Typography
+              component={Link}
+              href="/sources"
+              variant="caption"
+              sx={{
+                color: atlas.textSecondary,
+                "&:hover": { color: atlas.textPrimary },
+              }}
+            >
+              Mominul FIFA World Cup 2026 Dataset
             </Typography>
           </Typography>
           <Typography

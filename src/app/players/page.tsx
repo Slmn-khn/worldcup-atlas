@@ -98,7 +98,7 @@ export default async function PlayersPage({ searchParams }: Props) {
       <VaultPageHeader
         title="World Cup Players"
         lede="Explore players recorded across World Cup squads, goals, cards, penalties, and awards."
-        meta={`${formatNumber(index.total)} players in the archive`}
+        meta={`${formatNumber(index.total)} players in the historical archive (1930–2022) · 2026 squads live in the 2026 archive hub`}
       />
 
       <PageContainer sx={{ py: { xs: 5, md: 7 } }}>
