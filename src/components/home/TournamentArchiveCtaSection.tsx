@@ -27,7 +27,7 @@ export default function TournamentArchiveCtaSection() {
           View 2026 Archive
         </VaultButton>
         <VaultButton component={Link} href="/schedule/2026" variant="outline">
-          Full 2026 Schedule
+          Full 2026 Schedule.
         </VaultButton>
       </Box>
     </HomeSection>
