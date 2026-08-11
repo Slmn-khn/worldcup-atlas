@@ -1,6 +1,6 @@
 # Mominul 2026 approved import — dry-run preview
 
-- Generated: 2026-08-03T09:18:40.113Z
+- Generated: 2026-08-11T07:08:44.590Z
 - Source: `mominul_2026_dataset`
 - Outcome: OK
 - Import batch: none (no writes)

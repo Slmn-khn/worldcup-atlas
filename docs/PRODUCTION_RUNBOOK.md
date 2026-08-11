@@ -74,6 +74,11 @@ The import is idempotent (source-id upserts; re-running converges and is
 also the recovery path after a failed partial run) and writes ONLY the
 quarantined `WorldCup2026*` tables — never the canonical historical archive,
 never `Fixture` rows. Each run records a `WorldCup2026ImportBatch` audit row.
+Use Supabase's direct/session connection on port 5432 where possible; avoid the
+transaction pooler on port 6543 for this import. The importer still uses small,
+independent transaction chunks with explicit timeouts. Optional overrides are
+`--chunk-size`, `--transaction-timeout-ms`, `MOMINUL_IMPORT_CHUNK_SIZE`, and
+`MOMINUL_IMPORT_TRANSACTION_TIMEOUT_MS`; do not print the database URL.
 
 **App-wide 2026 coverage.** With the import in place the app presents the
 archive as **1930–2026**: homepage stats/timeline/featured/finals, the

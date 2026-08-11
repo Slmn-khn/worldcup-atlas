@@ -17,13 +17,19 @@ import {
   validateMominulApprovedPack,
   type MominulApprovedPack,
 } from "../../../src/server/agents/worldcup2026/mominulApprovedPack";
-import { runMominulImport } from "../../../src/server/agents/worldcup2026/mominulImporter";
+import {
+  chunkArray,
+  runMominulImport,
+} from "../../../src/server/agents/worldcup2026/mominulImporter";
 import {
   formatArchivedScore,
   mominulToArchivedRows,
 } from "../../../src/server/worldcup2026/archiveSchedule";
 import { computeGroupStandings } from "../../../src/server/worldcup2026/groupStandings";
-import type { PrismaClient } from "../../../src/generated/prisma/client";
+import type {
+  Prisma,
+  PrismaClient,
+} from "../../../src/generated/prisma/client";
 
 const VALID_POLICY = {
   schema: "mominul-import-policy/v1",
@@ -64,12 +70,171 @@ function poisonedPrisma(): PrismaClient {
   ) as PrismaClient;
 }
 
+type ImportPhase =
+  | "stages"
+  | "teams"
+  | "venues"
+  | "referees"
+  | "matches"
+  | "players"
+  | "events"
+  | "lineups"
+  | "playerStats"
+  | "teamMatchStats";
+
+type UpsertArgs = {
+  where: Record<string, unknown>;
+  create: Record<string, unknown>;
+  update: Record<string, unknown>;
+};
+
+type ImportPrismaDouble = {
+  prisma: PrismaClient;
+  operations: ImportPhase[];
+  transactionOptions: Array<{ maxWait?: number; timeout?: number }>;
+  transactionSizes: number[];
+  batchUpdates: Array<Record<string, unknown>>;
+  maxConcurrentWrites: () => number;
+};
+
+function importPrismaDouble(
+  options: {
+    existingTeamId?: number;
+    failTeamId?: number;
+  } = {},
+): ImportPrismaDouble {
+  const operations: ImportPhase[] = [];
+  const transactionOptions: Array<{ maxWait?: number; timeout?: number }> = [];
+  const transactionSizes: number[] = [];
+  const batchUpdates: Array<Record<string, unknown>> = [];
+  let activeWrites = 0;
+  let maxConcurrentWrites = 0;
+
+  const sourceModel = (
+    phase: ImportPhase,
+    sourceField: string,
+    initialKeys: number[] = [],
+  ) => {
+    const rows = new Map(
+      initialKeys.map((key) => [key, `${phase}-${key}`] as const),
+    );
+    return {
+      findMany: async () =>
+        [...rows].map(([key, id]) => ({ id, [sourceField]: key })),
+      upsert: async (args: UpsertArgs) => {
+        const key = Number(args.where[sourceField]);
+        operations.push(phase);
+        activeWrites += 1;
+        maxConcurrentWrites = Math.max(maxConcurrentWrites, activeWrites);
+        try {
+          await Promise.resolve();
+          if (phase === "teams" && key === options.failTeamId) {
+            throw new Error("simulated team write failure");
+          }
+          const id = rows.get(key) ?? `${phase}-${key}`;
+          rows.set(key, id);
+          return { id, [sourceField]: key };
+        } finally {
+          activeWrites -= 1;
+        }
+      },
+    };
+  };
+
+  const playerStatIds = new Set<string>();
+  const teamStatKeys = new Set<string>();
+  const prismaHolder: { value: PrismaClient | null } = { value: null };
+  const rawClient = {
+    worldCup2026ImportBatch: {
+      create: async () => ({ id: "batch-test" }),
+      update: async (args: { data: Record<string, unknown> }) => {
+        batchUpdates.push(args.data);
+        return { id: "batch-test", ...args.data };
+      },
+    },
+    worldCup2026Stage: sourceModel("stages", "sourceStageId"),
+    worldCup2026Team: sourceModel(
+      "teams",
+      "sourceTeamId",
+      options.existingTeamId === undefined ? [] : [options.existingTeamId],
+    ),
+    worldCup2026Venue: sourceModel("venues", "sourceVenueId"),
+    worldCup2026Referee: sourceModel("referees", "sourceRefereeId"),
+    worldCup2026Match: sourceModel("matches", "sourceMatchId"),
+    worldCup2026Player: sourceModel("players", "sourcePlayerId"),
+    worldCup2026MatchEvent: sourceModel("events", "sourceEventId"),
+    worldCup2026Lineup: sourceModel("lineups", "sourceLineupId"),
+    worldCup2026PlayerStat: {
+      findMany: async () =>
+        [...playerStatIds].map((playerId) => ({ playerId })),
+      upsert: async (args: UpsertArgs) => {
+        const playerId = String(args.where.playerId);
+        operations.push("playerStats");
+        playerStatIds.add(playerId);
+        return { id: `playerStats-${playerId}`, playerId };
+      },
+    },
+    worldCup2026TeamMatchStat: {
+      findMany: async () =>
+        [...teamStatKeys].map((key) => {
+          const [matchId, teamCode] = key.split("::");
+          return { matchId, teamCode };
+        }),
+      upsert: async (args: UpsertArgs) => {
+        const compound = args.where.matchId_teamCode as {
+          matchId: string;
+          teamCode: string;
+        };
+        operations.push("teamMatchStats");
+        teamStatKeys.add(`${compound.matchId}::${compound.teamCode}`);
+        return { id: `teamMatchStats-${teamStatKeys.size}` };
+      },
+    },
+    $transaction: async (
+      handler: (tx: Prisma.TransactionClient) => Promise<unknown>,
+      transaction: { maxWait?: number; timeout?: number },
+    ) => {
+      transactionOptions.push(transaction);
+      const operationsBefore = operations.length;
+      try {
+        return await handler(
+          prismaHolder.value as unknown as Prisma.TransactionClient,
+        );
+      } finally {
+        transactionSizes.push(operations.length - operationsBefore);
+      }
+    },
+  };
+  const prisma = rawClient as unknown as PrismaClient;
+  prismaHolder.value = prisma;
+
+  return {
+    prisma,
+    operations,
+    transactionOptions,
+    transactionSizes,
+    batchUpdates,
+    maxConcurrentWrites: () => maxConcurrentWrites,
+  };
+}
+
 let pack: MominulApprovedPack;
 
 beforeAll(async () => {
   const built = await buildMominulApprovedPack();
   expect(built.errors).toEqual([]);
   pack = built.pack;
+});
+
+describe("chunkArray", () => {
+  it("splits rows without dropping or duplicating them", () => {
+    expect(chunkArray([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
+    expect(chunkArray([], 100)).toEqual([]);
+  });
+
+  it("rejects an invalid chunk size", () => {
+    expect(() => chunkArray([1], 0)).toThrow("positive integer");
+  });
 });
 
 describe("mominul import policy", () => {
@@ -138,7 +303,10 @@ describe("approved pack invariants (real dataset)", () => {
   });
 
   it("rejects wrong counts", () => {
-    const tampered: MominulApprovedPack = { ...pack, venues: pack.venues.slice(0, 10) };
+    const tampered: MominulApprovedPack = {
+      ...pack,
+      venues: pack.venues.slice(0, 10),
+    };
     const validation = validateMominulApprovedPack(tampered);
     expect(validation.errors.some((error) => error.includes("16 venues"))).toBe(
       true,
@@ -146,14 +314,18 @@ describe("approved pack invariants (real dataset)", () => {
   });
 
   it("computes winners including penalty shootouts", () => {
-    const shootout = pack.matches.find((match) => match.resultType === "Penalties");
+    const shootout = pack.matches.find(
+      (match) => match.resultType === "Penalties",
+    );
     expect(shootout).toBeDefined();
     expect(matchWinnerCode(shootout!)).toBe(shootout!.winnerTeamCode);
     expect(shootout!.winnerTeamCode).not.toBeNull();
   });
 
   it("keeps every match Completed — the tournament is over", () => {
-    expect(pack.matches.every((match) => match.status === "Completed")).toBe(true);
+    expect(pack.matches.every((match) => match.status === "Completed")).toBe(
+      true,
+    );
   });
 });
 
@@ -189,13 +361,90 @@ describe("importer gating", () => {
   });
 });
 
+describe("write importer transactions", () => {
+  it("runs ordered phases in bounded transactions and counts existing teams as updated", async () => {
+    const existingTeamId = pack.teams[0]!.sourceTeamId;
+    const mock = importPrismaDouble({ existingTeamId });
+
+    const result = await runMominulImport(mock.prisma, {
+      dryRun: false,
+      chunkSize: 100,
+      transactionTimeoutMs: 65_432,
+      env: { CONFIRM_2026_MOMINUL_IMPORT: "true" },
+    });
+
+    expect(result.ok).toBe(true);
+    expect(result.counts.teams).toMatchObject({
+      planned: 48,
+      created: 47,
+      updated: 1,
+      skipped: 0,
+    });
+    expect([...new Set(mock.operations)]).toEqual([
+      "stages",
+      "teams",
+      "venues",
+      "referees",
+      "matches",
+      "players",
+      "events",
+      "lineups",
+      "playerStats",
+      "teamMatchStats",
+    ]);
+    expect(mock.transactionSizes.length).toBeGreaterThan(10);
+    expect(Math.max(...mock.transactionSizes)).toBeLessThanOrEqual(100);
+    expect(mock.maxConcurrentWrites()).toBe(1);
+    expect(
+      mock.transactionOptions.every(({ maxWait }) => maxWait === 20_000),
+    ).toBe(true);
+    expect(
+      mock.transactionOptions.every(({ timeout }) => timeout === 65_432),
+    ).toBe(true);
+    expect(
+      mock.batchUpdates.some((update) => update.status === "completed"),
+    ).toBe(true);
+  }, 30_000);
+
+  it("keeps only committed chunk counts and marks the batch failed", async () => {
+    const firstTeamId = pack.teams[0]!.sourceTeamId;
+    const failingTeamId = pack.teams[1]!.sourceTeamId;
+    const mock = importPrismaDouble({
+      existingTeamId: firstTeamId,
+      failTeamId: failingTeamId,
+    });
+
+    const result = await runMominulImport(mock.prisma, {
+      dryRun: false,
+      env: {
+        CONFIRM_2026_MOMINUL_IMPORT: "true",
+        MOMINUL_IMPORT_CHUNK_SIZE: "1",
+        MOMINUL_IMPORT_TRANSACTION_TIMEOUT_MS: "54321",
+      },
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.counts.stages.created).toBe(7);
+    expect(result.counts.teams).toMatchObject({
+      created: 0,
+      updated: 1,
+      skipped: 0,
+    });
+    expect(result.errors.join(" ")).toContain("teams chunk 2/48 failed");
+    expect(mock.transactionOptions.at(-1)?.timeout).toBe(54_321);
+    expect(mock.batchUpdates.at(-1)?.status).toBe("failed");
+  });
+});
+
 describe("schedule display rows from the imported source", () => {
   it("maps 104 completed matches with no SCHEDULED status anywhere", () => {
     const rows = mominulToArchivedRows(pack.matches);
     expect(rows).toHaveLength(104);
     for (const row of rows) {
       expect(row.status).not.toBe("SCHEDULED");
-      expect(["FULL_TIME", "AFTER_EXTRA_TIME", "PENALTIES"]).toContain(row.status);
+      expect(["FULL_TIME", "AFTER_EXTRA_TIME", "PENALTIES"]).toContain(
+        row.status,
+      );
       expect(row.verification).toBe("VERIFIED");
       expect(row.sources).toEqual(["mominul_2026_dataset"]);
     }

@@ -5,7 +5,8 @@
 //
 // Write mode refuses unless CONFIRM_2026_MOMINUL_IMPORT="true", and under
 // NODE_ENV=production additionally requires --confirm-production. Reports are
-// written to data/2026/reports/ either way.
+// written to data/2026/reports/ either way. Chunk size and transaction timeout
+// can be overridden by CLI flags or their MOMINUL_IMPORT_* env equivalents.
 
 import "dotenv/config";
 
@@ -21,14 +22,39 @@ import { DATA_2026_DIR } from "../../src/server/agents/worldcup2026/sourceRegist
 
 const REPORTS_DIR = path.join(DATA_2026_DIR, "reports");
 
-function renderMarkdown(result: MominulImportResult, generatedAt: string): string {
+function positiveIntegerArg(args: string[], name: string): number | undefined {
+  const inline = args.find((arg) => arg.startsWith(`${name}=`));
+  const index = args.indexOf(name);
+  const raw =
+    inline?.slice(name.length + 1) ??
+    (index === -1 ? undefined : args[index + 1]);
+  if (raw === undefined) {
+    if (index !== -1) throw new Error(`${name} requires a value.`);
+    return undefined;
+  }
+
+  const parsed = Number(raw);
+  if (!Number.isSafeInteger(parsed) || parsed <= 0) {
+    throw new Error(
+      `${name} must be a positive integer (received ${JSON.stringify(raw)}).`,
+    );
+  }
+  return parsed;
+}
+
+function renderMarkdown(
+  result: MominulImportResult,
+  generatedAt: string,
+): string {
   const lines: string[] = [
     `# Mominul 2026 approved import — ${result.mode === "DRY_RUN" ? "dry-run preview" : "write result"}`,
     "",
     `- Generated: ${generatedAt}`,
     `- Source: \`${result.sourceId}\``,
     `- Outcome: ${result.ok ? "OK" : `REFUSED/FAILED${result.refusedBy !== null ? ` (${result.refusedBy})` : ""}`}`,
-    result.batchId !== null ? `- Import batch: \`${result.batchId}\`` : "- Import batch: none (no writes)",
+    result.batchId !== null
+      ? `- Import batch: \`${result.batchId}\``
+      : "- Import batch: none (no writes)",
     "",
     "| Entity | Planned | Created | Updated | Skipped |",
     "| --- | ---: | ---: | ---: | ---: |",
@@ -58,6 +84,11 @@ async function main(): Promise<void> {
   const write = args.includes("--write");
   const dryRun = !write;
   const confirmProduction = args.includes("--confirm-production");
+  const chunkSize = positiveIntegerArg(args, "--chunk-size");
+  const transactionTimeoutMs = positiveIntegerArg(
+    args,
+    "--transaction-timeout-ms",
+  );
 
   console.log(
     `WORLDCUP Nexus — Mominul 2026 import (${dryRun ? "DRY-RUN" : "WRITE"})\n`,
@@ -67,7 +98,12 @@ async function main(): Promise<void> {
   const prisma = dryRun ? null : createScriptPrismaClient();
   let result: MominulImportResult;
   try {
-    result = await runMominulImport(prisma, { dryRun, confirmProduction });
+    result = await runMominulImport(prisma, {
+      dryRun,
+      confirmProduction,
+      chunkSize,
+      transactionTimeoutMs,
+    });
   } finally {
     await prisma?.$disconnect();
   }

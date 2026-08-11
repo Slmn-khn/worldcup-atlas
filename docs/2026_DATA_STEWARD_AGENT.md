@@ -303,6 +303,7 @@ pnpm data:2026:mominul:approved-pack    # raw CSVs → approved pack (validated)
 pnpm data:2026:mominul:import           # DRY-RUN (default; zero DB access)
 CONFIRM_2026_MOMINUL_IMPORT=true pnpm data:2026:mominul:import:write
 # NODE_ENV=production additionally requires: -- --confirm-production
+# Optional tuning: -- --chunk-size 100 --transaction-timeout-ms 120000
 ```
 
 - The approved pack (`data/2026/approved/mominul/finalized/`) is validated
@@ -312,9 +313,18 @@ CONFIRM_2026_MOMINUL_IMPORT=true pnpm data:2026:mominul:import:write
 - The importer (`mominulImporter.ts`) is **idempotent** — every entity
   upserts on its integer source id (or `matchId+teamCode` for team stats),
   so re-running converges; a re-run after a bad partial import is the
-  rollback story (no destructive reset exists or is needed). Each write run
-  is recorded as a `WorldCup2026ImportBatch` row with per-entity
+  rollback story (no destructive reset exists or is needed). Writes run in
+  ordered phase chunks with explicit 20-second max-wait and 120-second
+  transaction timeouts; no transaction spans phases. Defaults are 100 rows
+  (250 for events/lineups) and can be overridden with `--chunk-size`,
+  `--transaction-timeout-ms`, `MOMINUL_IMPORT_CHUNK_SIZE`, and
+  `MOMINUL_IMPORT_TRANSACTION_TIMEOUT_MS`. Each write run is recorded as a
+  `WorldCup2026ImportBatch` row with committed per-entity
   created/updated/skipped counts.
+- For a production Supabase import, prefer the direct/session PostgreSQL
+  connection on port 5432. Avoid the transaction pooler on port 6543 for this
+  long-running job, and keep chunks small even with the higher timeout. Never
+  log or paste the connection string.
 - Reports: `data/2026/reports/mominul-approved-import-{preview,result}.{json,md}`.
 - Excluded on principle: `match_prediction_features.csv` (ML-only), all
   Bustami EFI data, OpenFootball/worldcup26 rows, and manual-pack values
