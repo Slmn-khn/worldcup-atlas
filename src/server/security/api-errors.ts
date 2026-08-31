@@ -1,10 +1,9 @@
 // Production-safe API error responses (Checkpoint 8B, P0.1).
 //
 // API routes must never echo internal error messages to clients in
-// production: Meilisearch connection failures include the configured host
-// URL and Prisma connectivity errors can include DB host/port. The full
-// error is always logged server-side; the `detail` field is attached only
-// in development.
+// production: Prisma/database connectivity errors can include the DB
+// host/port. The full error is always logged server-side; the `detail`
+// field is attached only in development.
 
 import { NextResponse } from "next/server";
 

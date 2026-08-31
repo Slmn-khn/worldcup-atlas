@@ -17,23 +17,5 @@ services:
       timeout: 5s
       retries: 10
 
-  meilisearch:
-    image: getmeili/meilisearch:v1.15
-    container_name: worldcup-atlas-meilisearch
-    restart: unless-stopped
-    environment:
-      MEILI_MASTER_KEY: worldcup_atlas_master_key
-      MEILI_ENV: development
-    ports:
-      - "7700:7700"
-    volumes:
-      - meilisearch_data:/meili_data
-    healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://localhost:7700/health || exit 1"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
 volumes:
   postgres_data:
-  meilisearch_data:

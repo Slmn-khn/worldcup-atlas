@@ -1,12 +1,12 @@
 // Production readiness preflight (Checkpoint 8C). Static, local-only checks
 // that the repository is ready for deployment — no live services are
-// contacted, no database or Meilisearch required, safe to run anywhere.
+// contacted, no database required, safe to run anywhere.
 //
 // Usage: pnpm prod:preflight
 //
 // Output: PASS/WARN/FAIL report; exits non-zero only on FAIL. Internal
-// identifiers (package name `worldcup-atlas`, DB name `worldcup_atlas`,
-// the Meilisearch index uid) are intentionally allowed and at most WARN.
+// identifiers (package name `worldcup-atlas`, DB name `worldcup_atlas`)
+// are intentionally allowed and at most WARN.
 
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
@@ -56,7 +56,7 @@ function main() {
     "docs/PRODUCTION_RUNBOOK.md",
     "docs/VERCEL_DEPLOYMENT.md",
     "docs/DATABASE_PRODUCTION.md",
-    "docs/MEILISEARCH_PRODUCTION.md",
+    "docs/SEARCH_PRODUCTION.md",
     "docs/SECURITY_AUDIT.md",
     "docs/SECURITY_HARDENING_PLAN.md",
     "SECURITY.md",
@@ -139,13 +139,9 @@ function main() {
 
   // 4. Production env example variables ---------------------------------------
   const prodEnv = read(".env.production.example");
-  const REQUIRED_ENV_VARS = [
-    "DATABASE_URL",
-    "DIRECT_URL",
-    "MEILISEARCH_HOST",
-    "MEILISEARCH_API_KEY",
-    "NEXT_PUBLIC_SITE_URL",
-  ];
+  // Search is Postgres-backed — no Meilisearch (or other search service)
+  // variables are required anymore.
+  const REQUIRED_ENV_VARS = ["DATABASE_URL", "DIRECT_URL", "NEXT_PUBLIC_SITE_URL"];
   const missingVars = REQUIRED_ENV_VARS.filter(
     (name) => !new RegExp(`^${name}=`, "m").test(prodEnv),
   );
@@ -200,7 +196,7 @@ function main() {
   // 8. Old brand references in user-facing docs ----------------------------------
   // "WorldCup Atlas" / "World Cup Atlas" as a styled brand name must not
   // appear in user-facing docs. Internal identifiers (`worldcup-atlas`
-  // package/container names, `worldcup_atlas` DB/index names) are allowed
+  // package/container names, `worldcup_atlas` DB names) are allowed
   // and only warned about — they are documented as internal in DEPLOYMENT.md.
   const USER_FACING_DOCS = [
     "README.md",
@@ -209,7 +205,7 @@ function main() {
     "docs/PRODUCTION_RUNBOOK.md",
     "docs/VERCEL_DEPLOYMENT.md",
     "docs/DATABASE_PRODUCTION.md",
-    "docs/MEILISEARCH_PRODUCTION.md",
+    "docs/SEARCH_PRODUCTION.md",
   ];
   const brandHits: string[] = [];
   const internalNameHits: string[] = [];
@@ -261,13 +257,18 @@ function main() {
         : suspicious.join(", "),
     );
   }
-  report(
-    ".env.production.example does not reuse the local Meilisearch key",
-    !prodEnv.includes("worldcup_atlas_master_key"),
-    prodEnv.includes("worldcup_atlas_master_key")
-      ? "local docker master key found — replace with empty placeholder"
-      : "local weak key absent",
-  );
+  // Legacy search-service variables must not resurface in env templates —
+  // search is Postgres-backed and needs no MEILISEARCH_* configuration.
+  for (const envFile of [".env.example", ".env.production.example"]) {
+    const text = read(envFile);
+    report(
+      `${envFile} has no legacy Meilisearch variables`,
+      !/MEILISEARCH_/.test(text),
+      /MEILISEARCH_/.test(text)
+        ? "MEILISEARCH_* found — search is Postgres-backed, remove them"
+        : "no MEILISEARCH_* variables",
+    );
+  }
 
   // 11. No `prisma migrate dev` as a production step --------------------------------
   const PRODUCTION_DOCS = [

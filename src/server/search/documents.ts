@@ -117,6 +117,7 @@ export async function buildCountrySearchDocuments(): Promise<SearchDocument[]> {
       "national team",
     ]),
     countryName: country.name,
+    countryCode: country.code ?? undefined,
   }));
 }
 
@@ -371,6 +372,57 @@ export async function buildEventSearchDocuments(): Promise<SearchDocument[]> {
   return [...goalDocs, ...penaltyDocs, ...awardDocs];
 }
 
+/** "FUN_FACT" → "Fun fact", "SCHEDULE_2026" → "Schedule 2026". */
+function factCategoryLabel(category: string): string {
+  const words = category.toLowerCase().split("_").join(" ");
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
+// Discovery Vault facts. Only PUBLISHED facts are ever indexed (same rule as
+// the public query layer). Environments where the Fact tables have not been
+// migrated yet simply contribute zero documents — indexing never fails
+// because of the vault.
+export async function buildFactSearchDocuments(): Promise<SearchDocument[]> {
+  const facts = await prisma.fact
+    .findMany({
+      where: { status: "PUBLISHED" },
+      select: {
+        id: true,
+        slug: true,
+        title: true,
+        summary: true,
+        category: true,
+        eraStartYear: true,
+        eraEndYear: true,
+        tags: true,
+      },
+    })
+    .catch(() => []);
+  return facts.map((fact) => {
+    const categoryLabel = factCategoryLabel(fact.category);
+    const year = fact.eraEndYear ?? fact.eraStartYear ?? undefined;
+    return {
+      id: `fact-${fact.id}`,
+      type: "fact" as const,
+      title: fact.title,
+      subtitle: `Discovery Vault · ${categoryLabel}`,
+      description: fact.summary,
+      href: `/facts/${fact.slug}`,
+      keywords: compactKeywords([
+        ...fact.tags,
+        categoryLabel,
+        "fact",
+        "discovery vault",
+        "trivia",
+        fact.eraStartYear !== null ? String(fact.eraStartYear) : null,
+        fact.eraEndYear !== null ? String(fact.eraEndYear) : null,
+      ]),
+      tournamentYear: year,
+      sortYear: year,
+    };
+  });
+}
+
 // 2026 imported archive (Mominul-only import; WorldCup2026* tables). Indexed
 // only when the import has populated the tables — an empty archive simply
 // contributes zero documents, so indexing never fails because of 2026.
@@ -441,6 +493,7 @@ export async function buildWorldCup2026SearchDocuments(): Promise<
     ].filter((keyword) => keyword !== ""),
     tournamentYear: 2026,
     countryName: team.name,
+    countryCode: team.fifaCode ?? undefined,
     sortYear: 2026,
   }));
 
@@ -505,16 +558,25 @@ export async function buildWorldCup2026SearchDocuments(): Promise<
 }
 
 export async function buildAllSearchDocuments(): Promise<SearchDocument[]> {
-  const [tournaments, countries, players, matches, records, events, wc2026] =
-    await Promise.all([
-      buildTournamentSearchDocuments(),
-      buildCountrySearchDocuments(),
-      buildPlayerSearchDocuments(),
-      buildMatchSearchDocuments(),
-      buildRecordSearchDocuments(),
-      buildEventSearchDocuments(),
-      buildWorldCup2026SearchDocuments(),
-    ]);
+  const [
+    tournaments,
+    countries,
+    players,
+    matches,
+    records,
+    events,
+    facts,
+    wc2026,
+  ] = await Promise.all([
+    buildTournamentSearchDocuments(),
+    buildCountrySearchDocuments(),
+    buildPlayerSearchDocuments(),
+    buildMatchSearchDocuments(),
+    buildRecordSearchDocuments(),
+    buildEventSearchDocuments(),
+    buildFactSearchDocuments(),
+    buildWorldCup2026SearchDocuments(),
+  ]);
   return [
     ...tournaments,
     ...countries,
@@ -522,6 +584,7 @@ export async function buildAllSearchDocuments(): Promise<SearchDocument[]> {
     ...matches,
     ...records,
     ...events,
+    ...facts,
     ...wc2026,
   ];
 }

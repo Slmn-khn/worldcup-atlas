@@ -3,6 +3,11 @@
 Companion to `docs/SECURITY_AUDIT.md` (Checkpoint 8A). Items are sequenced
 by deployment priority.
 
+> **Update (2026-08-31):** Meilisearch was removed; search is now
+> Postgres-backed (see `docs/SEARCH_PRODUCTION.md`). Meilisearch-specific
+> wording below is historical — the error-masking, rate-limiting, and
+> query-cap protections all still apply to the Postgres search path.
+
 ## Implementation status (Checkpoint 8B, 2026-06-12)
 
 | Item | Status |

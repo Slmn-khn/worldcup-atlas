@@ -19,7 +19,7 @@ Read `AGENTS.md` before making changes.
 - MUI
 - Prisma
 - PostgreSQL
-- Meilisearch
+- PostgreSQL full-text search + pg_trgm
 - pnpm
 
 ## Critical rules

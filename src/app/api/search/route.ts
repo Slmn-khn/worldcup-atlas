@@ -1,19 +1,21 @@
-// Global search API (Checkpoint 6A). Thin wrapper over the search service.
-// Returns empty groups for empty queries and a clear 503 when Meilisearch
-// is unavailable — pages never depend on search availability.
-// Hardened in Checkpoint 8B: rate limited, production-safe errors, and the
-// service caps query length server-side.
+// Global search API — Postgres-backed (full-text + pg_trgm), no external
+// search service. Returns a flat ranked result list; short/empty queries
+// return an empty result set so pages never depend on search availability.
+// Rate limited, production-safe errors, query length capped server-side.
+//
+// GET /api/search?q=spain&type=player,match&year=2026&limit=20
 
 import { NextResponse } from "next/server";
 import { createApiErrorResponse } from "@/server/security/api-errors";
 import { enforceRateLimit } from "@/server/security/rate-limit";
-import { searchWorldCupAtlas } from "@/server/search/search";
 import {
-  SEARCH_DOCUMENT_TYPES,
-  emptySearchResponse,
-  type SearchDocumentType,
-} from "@/server/search/types";
+  MIN_QUERY_LENGTH,
+  sanitizeSearchQuery,
+  searchDocuments,
+} from "@/server/search/postgresSearch";
+import type { SearchApiResponse } from "@/server/search/types";
 
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
@@ -21,26 +23,34 @@ export async function GET(request: Request) {
   if (limited !== null) return limited;
 
   const url = new URL(request.url);
-  const query = url.searchParams.get("q") ?? "";
-  if (query.trim() === "") {
-    return NextResponse.json(emptySearchResponse(""));
+  const query = sanitizeSearchQuery(url.searchParams.get("q") ?? "");
+  if (query.length < MIN_QUERY_LENGTH) {
+    const empty: SearchApiResponse = { query, count: 0, results: [] };
+    return NextResponse.json(empty);
   }
 
   const rawLimit = Number(url.searchParams.get("limit"));
   const limit =
     Number.isInteger(rawLimit) && rawLimit > 0 ? rawLimit : undefined;
-  const types = (url.searchParams.get("type") ?? "")
+  const rawYear = Number(url.searchParams.get("year"));
+  const year = Number.isInteger(rawYear) && rawYear > 0 ? rawYear : undefined;
+  const entityTypes = (url.searchParams.get("type") ?? "")
     .split(",")
     .map((type) => type.trim())
-    .filter((type): type is SearchDocumentType =>
-      SEARCH_DOCUMENT_TYPES.includes(type as SearchDocumentType),
-    );
+    .filter((type) => type !== "");
 
   try {
-    const response = await searchWorldCupAtlas(query, {
+    const results = await searchDocuments({
+      query,
       limit,
-      types: types.length > 0 ? types : undefined,
+      year,
+      entityTypes: entityTypes.length > 0 ? entityTypes : undefined,
     });
+    const response: SearchApiResponse = {
+      query,
+      count: results.length,
+      results,
+    };
     return NextResponse.json(response);
   } catch (error) {
     return createApiErrorResponse({

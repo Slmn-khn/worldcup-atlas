@@ -16,7 +16,7 @@ WORLDCUP Nexus is an independent historical archive of the FIFA World Cup.
 - `/countries/[slug]` — Country detail: history, appearances, wins, players, matches
 - `/players` — Players list with filter/search
 - `/players/[slug]` — Player detail: biography, stats, tournaments, goals, cards
-- `/search` — Global search (Meilisearch-powered)
+- `/search` — Global search (Postgres full-text + pg_trgm)
 
 ### Data explorer
 

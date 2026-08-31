@@ -1,5 +1,5 @@
 // Smoke tests for the public surface (Checkpoint 7B). Requires the local
-// database (and ideally Meilisearch) to be running — no external internet.
+// database to be running — no external internet.
 
 import { test, expect } from "@playwright/test";
 

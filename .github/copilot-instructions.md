@@ -8,7 +8,7 @@ Rules:
 
 - Use MUI, not Tailwind.
 - Use Prisma and PostgreSQL for persisted data.
-- Use Meilisearch for global search.
+- Use Postgres-backed search (SearchDocument table, full-text + pg_trgm) for global search.
 - Do not hardcode historical statistics.
 - Do not invent data.
 - Prefer server components unless client-side interactivity is required.

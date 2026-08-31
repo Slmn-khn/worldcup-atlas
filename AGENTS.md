@@ -24,7 +24,7 @@ The product should feel like a premium digital football museum, not a betting si
 - MUI X Data Grid
 - Prisma
 - PostgreSQL
-- Meilisearch
+- PostgreSQL full-text search + pg_trgm (no external search service)
 - pnpm
 
 ## UI rules

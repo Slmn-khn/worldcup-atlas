@@ -1,5 +1,5 @@
 // Security hardening verification (Checkpoint 8B). Exercises the security
-// helpers directly — no database or Meilisearch required.
+// helpers directly — no database required.
 //
 // Usage: pnpm security:verify
 
@@ -13,7 +13,7 @@ import {
 } from "@/server/security/rate-limit";
 import { createApiErrorResponse } from "@/server/security/api-errors";
 import { toCsvValue } from "@/server/exports/csv";
-import { MAX_QUERY_LENGTH } from "@/server/search/search";
+import { MAX_QUERY_LENGTH } from "@/server/search/postgresSearch";
 
 type Check = { name: string; passed: boolean; detail: string };
 const checks: Check[] = [];
@@ -102,7 +102,7 @@ async function main() {
   const env = process.env as { NODE_ENV?: string };
   const originalNodeEnv = env.NODE_ENV;
   const sensitiveError = new Error(
-    "connect ECONNREFUSED internal-meilisearch.local:7700",
+    "connect ECONNREFUSED internal-db.local:5432",
   );
   console.log(
     "(the two [api] error logs below are synthetic — the helper always logs server-side)\n",
@@ -120,7 +120,7 @@ async function main() {
     prodResponse.status === 503 &&
       prodBody.error === "Search is temporarily unavailable." &&
       !("detail" in prodBody) &&
-      !JSON.stringify(prodBody).includes("internal-meilisearch"),
+      !JSON.stringify(prodBody).includes("internal-db"),
     JSON.stringify(prodBody),
   );
 

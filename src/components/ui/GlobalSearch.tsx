@@ -1,8 +1,9 @@
 "use client";
 
-// Global search — debounced queries against /api/search, grouped results in
-// a black rectangular dropdown panel. Pages never depend on search
-// availability: if Meilisearch is down only the dropdown shows an error.
+// Global search — debounced queries against /api/search (Postgres-backed
+// full-text + fuzzy search), grouped results in a black rectangular dropdown
+// panel. Pages never depend on search availability: if search is down only
+// the dropdown shows an error.
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
@@ -19,29 +20,38 @@ import SearchIcon from "@mui/icons-material/Search";
 import Link from "@/components/Link";
 import { atlas, eyebrowSx } from "@/theme/tokens";
 import { atlasBorders, atlasColors, atlasShadows } from "@/theme/visualTokens";
-import type { SearchResponseDto, SearchResultDto } from "@/server/search/types";
+import type { SearchApiResponse, SearchResult } from "@/server/search/types";
 
 const MIN_QUERY_LENGTH = 2;
 const DEBOUNCE_MS = 300;
 const SERVICE_ERROR_MESSAGE =
-  "Search index is unavailable. Run pnpm search:index and make sure Meilisearch is running.";
+  "Search is unavailable. If the index is empty, run pnpm search:index.";
 
-const GROUPS: { key: keyof SearchResponseDto["groups"]; label: string }[] = [
-  { key: "tournaments", label: "Tournaments" },
-  { key: "countries", label: "Countries" },
-  { key: "players", label: "Players" },
-  { key: "matches", label: "Matches" },
-  { key: "records", label: "Records" },
-  { key: "events", label: "Events" },
-  { key: "venues", label: "Venues" },
+/** Display order and labels per result entityType. */
+const GROUPS: { type: string; label: string }[] = [
+  { type: "tournament", label: "Tournaments" },
+  { type: "country", label: "Countries" },
+  { type: "player", label: "Players" },
+  { type: "match", label: "Matches" },
+  { type: "record", label: "Records" },
+  { type: "fact", label: "Discovery Vault" },
+  { type: "event", label: "Events" },
+  { type: "venue", label: "Venues" },
 ];
 
-function firstResult(response: SearchResponseDto): SearchResultDto | null {
-  for (const group of GROUPS) {
-    const item = response.groups[group.key][0];
-    if (item !== undefined) return item;
-  }
-  return null;
+/** Ranked results regrouped by entity type, in GROUPS display order. */
+function groupResults(
+  results: SearchResult[],
+): { type: string; label: string; items: SearchResult[] }[] {
+  return GROUPS.map((group) => ({
+    ...group,
+    items: results.filter((result) => result.entityType === group.type),
+  })).filter((group) => group.items.length > 0);
+}
+
+function firstResult(response: SearchApiResponse): SearchResult | null {
+  const groups = groupResults(response.results);
+  return groups[0]?.items[0] ?? null;
 }
 
 export default function GlobalSearch() {
@@ -50,7 +60,7 @@ export default function GlobalSearch() {
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-  const [response, setResponse] = React.useState<SearchResponseDto | null>(
+  const [response, setResponse] = React.useState<SearchApiResponse | null>(
     null,
   );
 
@@ -84,7 +94,7 @@ export default function GlobalSearch() {
           setError(SERVICE_ERROR_MESSAGE);
           return;
         }
-        setResponse((await result.json()) as SearchResponseDto);
+        setResponse((await result.json()) as SearchApiResponse);
         setError(null);
       } catch (fetchError) {
         if ((fetchError as Error).name !== "AbortError") {
@@ -109,7 +119,7 @@ export default function GlobalSearch() {
       const first = firstResult(response);
       if (first !== null) {
         setOpen(false);
-        router.push(first.href);
+        router.push(first.url);
       }
     }
   }
@@ -189,7 +199,7 @@ export default function GlobalSearch() {
               >
                 {error}
               </Typography>
-            ) : response !== null && response.total === 0 ? (
+            ) : response !== null && response.count === 0 ? (
               <Typography
                 variant="body2"
                 sx={{ color: atlas.textSecondary, px: 2.5, py: 2 }}
@@ -198,57 +208,53 @@ export default function GlobalSearch() {
               </Typography>
             ) : response !== null ? (
               <List dense disablePadding>
-                {GROUPS.flatMap((group) => {
-                  const items = response.groups[group.key];
-                  if (items.length === 0) return [];
-                  return [
-                    <ListSubheader
-                      key={`${group.key}-header`}
+                {groupResults(response.results).flatMap((group) => [
+                  <ListSubheader
+                    key={`${group.type}-header`}
+                    sx={{
+                      ...eyebrowSx,
+                      bgcolor: atlas.surfaceSoft,
+                      color: atlas.textMuted,
+                      borderBottom: `1px solid ${atlas.border}`,
+                      lineHeight: 2.8,
+                    }}
+                  >
+                    {group.label}
+                  </ListSubheader>,
+                  ...group.items.map((item) => (
+                    <ListItemButton
+                      key={item.id}
+                      component={Link}
+                      href={item.url}
+                      onClick={() => setOpen(false)}
                       sx={{
-                        ...eyebrowSx,
-                        bgcolor: atlas.surfaceSoft,
-                        color: atlas.textMuted,
+                        alignItems: "baseline",
+                        flexWrap: "wrap",
+                        columnGap: 1,
                         borderBottom: `1px solid ${atlas.border}`,
-                        lineHeight: 2.8,
+                        transition: "background-color 150ms ease",
+                        "&:hover, &:focus-visible": {
+                          bgcolor: atlas.surface1,
+                        },
                       }}
                     >
-                      {group.label}
-                    </ListSubheader>,
-                    ...items.map((item) => (
-                      <ListItemButton
-                        key={item.id}
-                        component={Link}
-                        href={item.href}
-                        onClick={() => setOpen(false)}
-                        sx={{
-                          alignItems: "baseline",
-                          flexWrap: "wrap",
-                          columnGap: 1,
-                          borderBottom: `1px solid ${atlas.border}`,
-                          transition: "background-color 150ms ease",
-                          "&:hover, &:focus-visible": {
-                            bgcolor: atlas.surface1,
-                          },
-                        }}
+                      <Typography
+                        variant="body2"
+                        sx={{ color: atlas.textPrimary, fontWeight: 600 }}
                       >
+                        {item.title}
+                      </Typography>
+                      {item.subtitle ? (
                         <Typography
-                          variant="body2"
-                          sx={{ color: atlas.textPrimary, fontWeight: 600 }}
+                          variant="caption"
+                          sx={{ color: atlas.textMuted }}
                         >
-                          {item.title}
+                          {item.subtitle}
                         </Typography>
-                        {item.subtitle ? (
-                          <Typography
-                            variant="caption"
-                            sx={{ color: atlas.textMuted }}
-                          >
-                            {item.subtitle}
-                          </Typography>
-                        ) : null}
-                      </ListItemButton>
-                    )),
-                  ];
-                })}
+                      ) : null}
+                    </ListItemButton>
+                  )),
+                ])}
               </List>
             ) : (
               <Typography
