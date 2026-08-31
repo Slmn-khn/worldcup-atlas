@@ -9,11 +9,16 @@ export const SEARCH_DOCUMENT_TYPES = [
   "record",
   "event",
   "venue",
+  "fact",
 ] as const;
 
 export type SearchDocumentType = (typeof SEARCH_DOCUMENT_TYPES)[number];
 
-/** Shape stored in the Meilisearch index. */
+/**
+ * Shape produced by the document builders (documents.ts). Rows in the
+ * Postgres SearchDocument table are derived from this via
+ * `toSearchDocumentRow` (indexing.ts).
+ */
 export type SearchDocument = {
   id: string;
   type: SearchDocumentType;
@@ -24,47 +29,31 @@ export type SearchDocument = {
   keywords: string[];
   tournamentYear?: number;
   countryName?: string;
+  countryCode?: string;
   playerName?: string;
   stage?: string;
   sortYear?: number;
 };
 
-/** Frontend-friendly single result. */
-export type SearchResultDto = {
+/** One ranked hit from Postgres full-text/trigram search. */
+export type SearchResult = {
   id: string;
-  type: SearchDocumentType;
+  entityType: string;
+  entityId: string;
   title: string;
   subtitle: string | null;
-  description: string | null;
-  href: string;
+  url: string;
+  year: number | null;
+  countryCode: string | null;
+  imageUrl: string | null;
+  source: string | null;
+  score: number;
 };
 
-export type SearchResponseDto = {
+/** Response shape of GET /api/search. */
+export type SearchApiResponse = {
   query: string;
-  total: number;
-  groups: {
-    tournaments: SearchResultDto[];
-    countries: SearchResultDto[];
-    players: SearchResultDto[];
-    matches: SearchResultDto[];
-    records: SearchResultDto[];
-    events: SearchResultDto[];
-    venues: SearchResultDto[];
-  };
+  count: number;
+  results: SearchResult[];
 };
 
-export function emptySearchResponse(query: string): SearchResponseDto {
-  return {
-    query,
-    total: 0,
-    groups: {
-      tournaments: [],
-      countries: [],
-      players: [],
-      matches: [],
-      records: [],
-      events: [],
-      venues: [],
-    },
-  };
-}

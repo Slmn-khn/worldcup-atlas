@@ -15,13 +15,8 @@ green locally, and `pnpm audit` clean.
       see [DATABASE_PRODUCTION.md](DATABASE_PRODUCTION.md)).
 - [ ] Note both connection strings if the provider offers a pooler:
       pooled (runtime) and direct (migrations/import).
-- [ ] Create the Meilisearch service (Meilisearch Cloud or self-hosted
-      private instance; see
-      [MEILISEARCH_PRODUCTION.md](MEILISEARCH_PRODUCTION.md)).
-- [ ] Create a Meilisearch **admin/indexing key** (kept only in the
-      admin environment).
-- [ ] Create a Meilisearch **runtime search key** (scoped, search-only —
-      this is what the app gets).
+- [ ] No search service is needed: search is Postgres-backed and runs on
+      the same database (see [SEARCH_PRODUCTION.md](SEARCH_PRODUCTION.md)).
 - [ ] Configure automated database backups; verify one restore works.
 - [ ] Configure the production domain and confirm HTTPS.
 
@@ -35,8 +30,6 @@ Set in the hosting platform (see the table in
 | --- | --- |
 | `DATABASE_URL` | pooled production connection string |
 | `DIRECT_URL` | direct connection string (or same as `DATABASE_URL`) |
-| `MEILISEARCH_HOST` | `https://…` production search endpoint |
-| `MEILISEARCH_API_KEY` | the **runtime search key** (not the admin key) |
 | `NEXT_PUBLIC_SITE_URL` | `https://your-production-domain.com` |
 | `NODE_ENV` | `production` (platform usually sets this) |
 | `FEATURE_LATEST_MATCHES_SECTION` | leave **unset** (post-tournament: homepage shows the archive CTA, not live Latest Matches) |
@@ -65,8 +58,8 @@ admin environment:
    (dry-run performs zero database access; it validates policy + pack).
 3. If clean:
    `CONFIRM_2026_MOMINUL_IMPORT=true pnpm data:2026:mominul:import:write -- --confirm-production`
-4. Re-run `pnpm search:index` if Meilisearch is active (adds 2026 teams,
-   matches, players, venues to the index).
+4. Re-run `pnpm search:index` (adds 2026 teams, matches, players, venues
+   to the Postgres search index).
 5. Smoke test `/schedule/2026`, `/tournaments/2026`, one
    `/matches/2026/<id>`, and `/sources`.
 
@@ -91,8 +84,7 @@ needed — every bridge point detects canonical year 2026 and drops the
 synthetic additions, so nothing is double-counted; then retire the bridge at
 leisure.
 
-In the **admin environment**, export the same variables per command run,
-except `MEILISEARCH_API_KEY` = the **admin/indexing key** when indexing.
+In the **admin environment**, export the same variables per command run.
 Never write production values into a committed file.
 
 ## Dependency audit overrides (2026-08-03)
@@ -116,6 +108,8 @@ Never write production values into a committed file.
   | `js-yaml@4` → 4.3.0 | GHSA-52cp-r559-cp3m | via eslint (dev) |
   | `brace-expansion@1` → 1.1.17, `@5` → 5.0.8 | GHSA-3jxr / GHSA-mh99 | ReDoS, via eslint toolchain (dev) |
   | `esbuild` → ^0.28.1 | (pre-existing) | retained |
+  | `nanoid@<3.3.18` → >=3.3.18 (added 2026-08-31) | GHSA-2v37-7h3g-55p8 | infinite-loop edge case, via next's bundled postcss |
+  | `deepmerge-ts@<8.0.0` → >=8.0.0 (added 2026-08-31) | GHSA-ggr8-5vv4-36mx | stack exhaustion, via `@prisma/config` (prisma CLI, dev-time; CLI verified working on v8) |
 
   Remove an override once its parent ships a patched resolution. Validated
   with: `pnpm typecheck`, `pnpm lint`, `pnpm test:unit`, `pnpm build`,
@@ -148,16 +142,16 @@ If this is a **re-import** on a live database, snapshot/backup first
 
 ## 5. Build the search index
 
-From the admin environment, with `MEILISEARCH_API_KEY` set to the
-**admin/indexing key**:
+From the admin environment, using the production `DATABASE_URL` (search
+is Postgres-backed — no other credentials involved):
 
 ```bash
 pnpm search:index
 pnpm search:verify
 ```
 
-The app itself keeps the scoped runtime search key — the admin key never
-enters platform env vars or client code.
+This atomically rebuilds the `SearchDocument` table in the production
+database. Re-run it after every data import.
 
 ## 6. Build and deploy the app
 
@@ -186,7 +180,7 @@ All of these must respond correctly on the production URL:
 - `/privacy`
 - `/sitemap.xml` and `/robots.txt`
 - `/api/health` → `{ ok: true, database: "connected" }`
-- `/api/search?q=maradona` → grouped results
+- `/api/search?q=maradona` → ranked results (`{ query, count, results }`)
 - `/api/export/explorer?format=csv&eventType=Goal` → CSV attachment
   named `worldcup-nexus-explorer.csv`
 - `/api/dev/data-summary` → **404** (proves `NODE_ENV=production`)
@@ -207,9 +201,9 @@ All of these must respond correctly on the production URL:
   — only expected once production HTTPS is confirmed (it is emitted when
   `NODE_ENV=production`)
 
-Also confirm an API error path leaks nothing: temporarily querying
-search while Meilisearch is unreachable must return a 503 with a generic
-message — no hostnames, no stack traces.
+Also confirm an API error path leaks nothing: querying search while the
+database is unreachable must return a 503 with a generic message — no
+hostnames, no stack traces.
 
 ## 9. Rollback
 
@@ -236,8 +230,10 @@ Watch for the first days after launch:
   route; sustained heavy use justifies platform-level rate limits.
 - **DB connection count**: serverless platforms can multiply
   connections — see pooling notes in DATABASE_PRODUCTION.md.
-- **Meilisearch errors**: 503s from `/api/search` mean the instance is
-  unreachable; pages keep working but search UX degrades.
+- **Search errors**: 503s from `/api/search` mean the database is
+  unreachable from the search path; pages keep working but search UX
+  degrades. An empty results set for common queries usually means
+  `pnpm search:index` was not re-run after an import.
 - **CSP Report-Only violations** (browser consoles / reporting endpoint
   if configured later): after 1–2 clean weeks, plan the switch to an
   enforced CSP (hardening plan P2.1).

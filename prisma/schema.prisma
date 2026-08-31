@@ -541,6 +541,47 @@ model FixtureSyncLog {
   @@index([startedAt])
 }
 
+// Postgres-backed global search (replaces Meilisearch). One row per
+// searchable entity, rebuilt by `pnpm search:index` from normalized tables.
+// `searchVector` is a GENERATED ALWAYS tsvector column created by raw SQL in
+// the migration (Prisma models it as Unsupported so migrate never drops it);
+// GIN full-text + pg_trgm indexes also live in the migration SQL.
+model SearchDocument {
+  id String @id @default(cuid())
+
+  entityType String
+  entityId   String
+  slug       String?
+  url        String
+
+  title    String
+  subtitle String?
+  body     String?
+  keywords String[] @default([])
+
+  year        Int?
+  countryCode String?
+  imageUrl    String?
+
+  source   String?
+  priority Int     @default(100)
+
+  searchVector Unsupported("tsvector")? @default(dbgenerated())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([entityType, entityId])
+  @@index([entityType])
+  @@index([year])
+  @@index([countryCode])
+  @@index([priority])
+  @@index([searchVector], type: Gin)
+  @@index([title(ops: raw("gin_trgm_ops"))], map: "SearchDocument_title_trgm_idx", type: Gin)
+  @@index([subtitle(ops: raw("gin_trgm_ops"))], map: "SearchDocument_subtitle_trgm_idx", type: Gin)
+  @@index([body(ops: raw("gin_trgm_ops"))], map: "SearchDocument_body_trgm_idx", type: Gin)
+}
+
 // Verbatim copy of every imported source row, kept for auditing and
 // re-normalization without re-downloading source data.
 model RawSourceRecord {
@@ -656,6 +697,186 @@ model MediaImportJob {
   @@index([provider])
   @@index([entityType, entityId])
   @@index([status])
+}
+
+// ---------------------------------------------------------------------------
+// Discovery Vault (Phase 1). A curated fact archive shown as an hourly
+// homepage rotation. Facts are hand-seeded/reviewed (docs/DISCOVERY_VAULT.md)
+// — nothing here is generated or published by an LLM at runtime, and only
+// status = PUBLISHED facts are ever returned by the public query layer.
+// ---------------------------------------------------------------------------
+
+enum FactCategory {
+  FUN_FACT
+  RECORD
+  HISTORY
+  PLAYER_COMPARISON
+  COUNTRY_COMPARISON
+  FINAL
+  PENALTY
+  HOST
+  FORMAT
+  ICONIC_MOMENT
+  SCHEDULE_2026
+}
+
+enum FactStatus {
+  DRAFT
+  NEEDS_REVIEW
+  PUBLISHED
+  ARCHIVED
+  REJECTED
+}
+
+enum FactDifficulty {
+  CASUAL
+  FAN
+  EXPERT
+}
+
+enum FactVerificationStatus {
+  UNVERIFIED
+  DB_VERIFIED
+  SOURCE_VERIFIED
+  MANUALLY_VERIFIED
+  NEEDS_REVIEW
+}
+
+enum FactRelationEntityType {
+  PLAYER
+  COUNTRY
+  TOURNAMENT
+  MATCH
+  FIXTURE
+  RECORD
+  GENERIC
+}
+
+enum FactRelationType {
+  PRIMARY
+  MENTIONED
+  COMPARISON
+  SOURCE_DATA
+  RELATED
+}
+
+enum FactSourceType {
+  WORLDCUP_NEXUS_DB
+  FJELSTUL
+  OPENFOOTBALL
+  WIKIDATA
+  OFFICIAL
+  MANUAL_RESEARCH
+  OTHER
+}
+
+enum FactRotationType {
+  SCHEDULED
+  MANUAL
+  FALLBACK
+}
+
+model Fact {
+  id String @id @default(cuid())
+
+  slug               String                 @unique
+  title              String
+  summary            String
+  category           FactCategory
+  difficulty         FactDifficulty         @default(CASUAL)
+  status             FactStatus             @default(DRAFT)
+  verificationStatus FactVerificationStatus @default(NEEDS_REVIEW)
+
+  eraStartYear    Int?
+  eraEndYear      Int?
+  readTimeMinutes Int  @default(2)
+
+  rotationWeight Int     @default(100)
+  qualityScore   Int     @default(50)
+  isFeatured     Boolean @default(false)
+
+  publishedAt    DateTime?
+  lastFeaturedAt DateTime?
+
+  contentBlocks Json
+  tags          String[] @default([])
+
+  relations FactRelation[]
+  sources   FactSource[]
+  rotations FactRotation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([category])
+  @@index([status])
+  @@index([difficulty])
+  @@index([verificationStatus])
+  @@index([publishedAt])
+  @@index([isFeatured])
+  @@index([eraStartYear])
+  @@index([eraEndYear])
+}
+
+model FactRelation {
+  id String @id @default(cuid())
+
+  factId String
+  fact   Fact   @relation(fields: [factId], references: [id], onDelete: Cascade)
+
+  entityType   FactRelationEntityType
+  entityId     String?
+  entitySlug   String?
+  entityLabel  String?
+  relationType FactRelationType       @default(RELATED)
+
+  createdAt DateTime @default(now())
+
+  @@index([factId])
+  @@index([entityType])
+  @@index([entitySlug])
+  @@index([relationType])
+}
+
+model FactSource {
+  id String @id @default(cuid())
+
+  factId String
+  fact   Fact   @relation(fields: [factId], references: [id], onDelete: Cascade)
+
+  label      String
+  sourceType FactSourceType
+  url        String?
+  notes      String?
+
+  createdAt DateTime @default(now())
+
+  @@index([factId])
+  @@index([sourceType])
+}
+
+// One row per hourly rotation slot, generated ahead of time by
+// /api/cron/generate-fact-rotations (see docs/DISCOVERY_VAULT.md). The
+// homepage reads the current slot (slotStartAt <= now < slotEndAt) first and
+// only falls back to the deterministic Phase 1 rotation when no slot has been
+// scheduled yet (or its fact is no longer published).
+model FactRotation {
+  id String @id @default(cuid())
+
+  factId String
+  fact   Fact   @relation(fields: [factId], references: [id], onDelete: Cascade)
+
+  slotStartAt  DateTime
+  slotEndAt    DateTime
+  rotationType FactRotationType @default(SCHEDULED)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([slotStartAt])
+  @@index([factId])
+  @@index([slotStartAt])
+  @@index([slotEndAt])
 }
 
 // ---------------------------------------------------------------------------

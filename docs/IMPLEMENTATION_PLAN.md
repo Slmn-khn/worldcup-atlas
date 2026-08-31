@@ -272,6 +272,13 @@ functions (`getHomePageData`, `getTournamentByYear`, `getMatchByIdOrSlug`,
 
 ### Checkpoint 6A — Meilisearch indexing + global search (complete)
 
+> **Superseded (2026-08-31):** search was migrated off Meilisearch to
+> Postgres full-text + `pg_trgm` (`SearchDocument` table,
+> `src/server/search/postgresSearch.ts`, `pnpm search:index` →
+> `scripts/search/build-postgres-index.ts`) to eliminate search-service
+> cost. The document builders and `/api/search` route survive; the notes
+> below describe the original Meilisearch implementation.
+
 - Single index `worldcup_atlas_search` (typed documents grouped client-side):
   tournaments, countries, players, matches, record leaderboards, and a
   curated event set (goals, shootout penalty kicks, awards — bookings and

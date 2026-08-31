@@ -3,6 +3,14 @@
 Checkpoint 8A. Code/configuration audit performed 2026-06-12 against the
 local repository. No code was modified as part of this audit.
 
+> **Update (2026-08-31):** Meilisearch has since been removed — search is
+> now Postgres-backed (`SearchDocument` table, full-text + `pg_trgm`; see
+> `docs/SEARCH_PRODUCTION.md`). Meilisearch-specific findings and notes
+> below are retained as a historical record but no longer apply: there is
+> no search service, no `MEILISEARCH_HOST`/`MEILISEARCH_API_KEY`, and
+> `/api/search` queries PostgreSQL through parameterized Prisma
+> `$queryRaw` (no string-built SQL).
+
 > **Update (Checkpoint 8B, 2026-06-12):** the hardening items derived from
 > this audit have been implemented — findings 1 (headers + Report-Only
 > CSP), 2 (rate limiting), 3 (production-safe error responses), 4 (CSV
@@ -350,12 +358,10 @@ Production go-live checklist (expanded from `docs/DEPLOYMENT.md`):
 - [ ] Hosted PostgreSQL with strong unique credentials; network-restricted
       to the app platform; least-privilege runtime role; automated backups
       with tested restore.
-- [ ] Hosted/private Meilisearch; port not publicly reachable; scoped
-      search-only API key in the app; master key vaulted;
-      `MEILI_ENV=production`.
+- [ ] Search: no separate service (Postgres-backed) — nothing extra to
+      secure beyond the database itself.
 - [ ] All env vars set in the platform (never committed):
-      `DATABASE_URL`, `MEILISEARCH_HOST`, `MEILISEARCH_API_KEY`,
-      `NEXT_PUBLIC_SITE_URL` (production URL).
+      `DATABASE_URL`, `NEXT_PUBLIC_SITE_URL` (production URL).
 - [ ] HTTPS enforced; HSTS header enabled after confirming HTTPS-only.
 - [ ] Security headers + Report-Only CSP deployed (hardening plan P0/P1).
 - [ ] Rate limiting active on `/api/*` (strictest on export).

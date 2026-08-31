@@ -4,7 +4,7 @@
 # production build against an EMPTY migrated database (the sitemap is
 # generated at build time and tolerates an empty schema).
 #
-# Deliberately NOT run here (need imported data and/or Meilisearch):
+# Deliberately NOT run here (need imported data):
 # data:verify, data:verify:queries, search:verify, export:verify,
 # public:verify, test:e2e. Those run locally/admin-side via
 # `pnpm prod:validate` before any deploy (see docs/DEPLOYMENT.md §13).

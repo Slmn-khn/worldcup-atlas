@@ -230,6 +230,22 @@ The following are acceptable as reference for verification only. They must not b
 
 ---
 
+## Search index
+
+Global search is **Postgres-backed** (the `SearchDocument` table in the
+same database — full-text `tsvector` + `pg_trgm`; no external search
+service, see `docs/SEARCH_PRODUCTION.md`). The index is a derived
+artifact built only from normalized tables (never `RawSourceRecord`).
+After **any** data import — historical re-import, 2026 archive import,
+or fact publishing — rebuild it:
+
+```bash
+pnpm search:index
+pnpm search:verify
+```
+
+---
+
 ## Data conflict handling
 
 When source data conflicts are identified:

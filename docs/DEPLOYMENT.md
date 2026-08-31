@@ -5,7 +5,7 @@ Production deployment guide (Checkpoint 8C). Companion documents:
 - [docs/PRODUCTION_RUNBOOK.md](PRODUCTION_RUNBOOK.md) — step-by-step launch runbook
 - [docs/VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) — Vercel-specific notes
 - [docs/DATABASE_PRODUCTION.md](DATABASE_PRODUCTION.md) — PostgreSQL production notes
-- [docs/MEILISEARCH_PRODUCTION.md](MEILISEARCH_PRODUCTION.md) — Meilisearch production notes
+- [docs/SEARCH_PRODUCTION.md](SEARCH_PRODUCTION.md) — Postgres-backed search notes
 - [docs/SECURITY_AUDIT.md](SECURITY_AUDIT.md) / [docs/SECURITY_HARDENING_PLAN.md](SECURITY_HARDENING_PLAN.md)
 
 ## 1. Overview
@@ -24,22 +24,22 @@ lock — any equivalent works):
 | --- | --- | --- |
 | App hosting | Vercel | Any Node 20+ host that runs `next start` |
 | Database | Supabase PostgreSQL | Neon, RDS, any hosted PostgreSQL 16+ |
-| Search | Meilisearch Cloud | Self-hosted private Meilisearch ≥ v1.15 |
+| Search | Postgres full-text + `pg_trgm` (same database — free) | A dedicated engine (Meilisearch/Typesense) only if future scale demands |
 | Import/indexing | Trusted local/admin machine | Private CI job with scoped secrets |
 
 Internal identifiers kept from early development (allowed, cosmetic):
 the package name `worldcup-atlas`, the local database name
-`worldcup_atlas`, local Docker container names, and the Meilisearch
-index uid `worldcup_atlas_search`. None of these are user-facing.
+`worldcup_atlas`, and local Docker container names. None of these are
+user-facing.
 
 ## 2. Required services
 
-1. **Hosted PostgreSQL** (16+ recommended, matching local Docker).
-2. **Meilisearch** (v1.15+, HTTPS, private or key-protected — never an
-   open public instance).
-3. **App hosting** with Node 20+, environment variable support, and
+1. **Hosted PostgreSQL** (16+ recommended, matching local Docker). This
+   also serves search — the `SearchDocument` table lives in the same
+   database (no separate search service).
+2. **App hosting** with Node 20+, environment variable support, and
    HTTPS (Vercel recommended).
-4. Optional: platform WAF / rate limiting in front of `/api/*`
+3. Optional: platform WAF / rate limiting in front of `/api/*`
    (reinforces the built-in per-instance limiter).
 
 ## 3. Required environment variables
@@ -51,19 +51,16 @@ Templates: `.env.example` (local), `.env.production.example`
 | --- | --- | --- | --- | --- | --- |
 | `DATABASE_URL` | Yes | App runtime, `db:deploy`, import/verify scripts | `postgresql://worldcup:worldcup@localhost:5432/worldcup_atlas` | Hosted PostgreSQL connection string; use the **pooled** endpoint if the provider offers one | **Secret, server-only** |
 | `DIRECT_URL` | Optional | Reserved for pooled setups (migrations/import direct connection) | same as `DATABASE_URL` | Direct (non-pooled) endpoint; same as `DATABASE_URL` if no pooler. Note: current code reads only `DATABASE_URL` — see DATABASE_PRODUCTION.md | **Secret, server-only** |
-| `MEILISEARCH_HOST` | Yes | `/api/search` service, `search:index` | `http://localhost:7700` | HTTPS endpoint of the production instance | Server-only (host URL itself is sensitive-ish; treat as private) |
-| `MEILISEARCH_API_KEY` | Yes | `/api/search` service, `search:index` | local docker master key | **Scoped search-only key** for the app runtime; admin/indexing key is used only when running `search:index` from an admin environment | **Secret, server-only** |
 | `NEXT_PUBLIC_SITE_URL` | Yes | Metadata, Open Graph, sitemap, robots | `http://localhost:3000` | The canonical production URL (`https://…`); set **before building** | Public (inlined into the client bundle by design) |
 | `NODE_ENV` | Yes (platform-set) | Error detail gating, HSTS, dev endpoint gate, Prisma logging | `development` | Must be `production` (Vercel sets it automatically) | Public |
 
 Rules:
 
-- `DATABASE_URL` and `MEILISEARCH_API_KEY` are **server-only** — they are
-  read exclusively in server modules and must never appear in
-  `NEXT_PUBLIC_*` variables or client code.
-- The app runtime should hold a **scoped/search-only Meilisearch key**
-  whenever the deployment supports it; the admin key exists only in the
-  admin environment that runs indexing.
+- `DATABASE_URL` is **server-only** — it is read exclusively in server
+  modules and must never appear in `NEXT_PUBLIC_*` variables or client
+  code.
+- Search is Postgres-backed: no `MEILISEARCH_HOST` / `MEILISEARCH_API_KEY`
+  (or any search-service variables) are required anymore.
 - Never commit real values; set them in the platform's env settings.
 
 ## 4. Production database setup
@@ -74,11 +71,13 @@ network access to the app platform and the admin environment, enable
 automated backups, and (recommended) split roles: a write-capable
 migration/import role and a read-only runtime role.
 
-## 5. Production Meilisearch setup
+## 5. Production search setup
 
-See [MEILISEARCH_PRODUCTION.md](MEILISEARCH_PRODUCTION.md). Summary:
-HTTPS endpoint, `MEILI_ENV=production`, master key vaulted, scoped
-search-only key for the app, port never publicly reachable without keys.
+See [SEARCH_PRODUCTION.md](SEARCH_PRODUCTION.md). Summary: search runs
+on the production PostgreSQL database (full-text `tsvector` + `pg_trgm`
+fuzzy matching over the `SearchDocument` table). Deploy migrations with
+`pnpm db:deploy`, then build the index with `pnpm search:index` from the
+admin environment. No extra service, keys, or env vars.
 
 ## 6. Production migration workflow
 
@@ -115,11 +114,11 @@ Take a DB backup/snapshot before a production re-import.
 
 ## 8. Search indexing workflow
 
-From the admin environment, using the **admin/indexing key** (not the
-app's runtime key):
+From the admin environment, using the production `DATABASE_URL` (search
+is Postgres-backed — no other credentials involved):
 
 ```bash
-pnpm search:index             # rebuild settings + documents, waits for tasks
+pnpm search:index             # atomically rebuild the SearchDocument table
 pnpm search:verify            # common-query checks through the app's service
 ```
 
@@ -164,8 +163,6 @@ Deployment-time items:
 - [ ] HTTPS enforced; HSTS header verified after deploy
       (`max-age=63072000; includeSubDomains; preload` — only enable when
       HTTPS-only is certain).
-- [ ] Scoped search-only Meilisearch key in the app; master key vaulted;
-      `MEILI_ENV=production`; port 7700 not publicly reachable.
 - [ ] Least-privilege Postgres runtime role (SELECT-only) — if deferred,
       track as launch follow-up (see DATABASE_PRODUCTION.md).
 - [ ] All env vars set in the platform; nothing committed.
@@ -218,19 +215,19 @@ Run through the list in [PRODUCTION_RUNBOOK.md](PRODUCTION_RUNBOOK.md)
   (`data:verify`, `search:verify`, `test:e2e`, `public:verify`,
   `export:verify`) need imported data and run locally/admin-side via
   `pnpm prod:validate` — see `.github/workflows/ci.yml`.
-- In-app search degrades gracefully: if Meilisearch is down the API
-  returns 503 and pages keep working.
+- In-app search degrades gracefully: if the database is unreachable the
+  search API returns 503 and pages keep working.
 
 ## Local development
 
 ```bash
-docker compose up -d          # PostgreSQL + Meilisearch
+docker compose up -d          # PostgreSQL
 pnpm install
 pnpm db:generate              # generate the Prisma client (src/generated/)
 pnpm db:migrate               # prisma migrate dev — LOCAL ONLY
 pnpm data:download            # cache source CSVs (Fjelstul World Cup Database)
 pnpm data:import -- --reset   # normalize into PostgreSQL
-pnpm search:index             # build the Meilisearch index
+pnpm search:index             # build the Postgres search index (SearchDocument)
 pnpm dev                      # http://localhost:3000
 ```
 

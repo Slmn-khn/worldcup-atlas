@@ -15,7 +15,7 @@
 - Backend layer: Next.js Route Handlers and server-side services
 - ORM: Prisma
 - Database: PostgreSQL
-- Search: Meilisearch
+- Search: PostgreSQL full-text search + pg_trgm (SearchDocument table — no external search service)
 - Validation: Zod
 - Exports: custom CSV/JSON API routes
 
@@ -23,7 +23,7 @@
 
 - Docker Compose
 - PostgreSQL container
-- Meilisearch container
+- (search runs inside PostgreSQL — no separate search container)
 
 ## Testing
 

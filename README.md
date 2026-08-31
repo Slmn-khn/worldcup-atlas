@@ -14,7 +14,7 @@ and penalty — browsable, searchable, and exportable.
 - Next.js (App Router) + TypeScript
 - MUI (+ MUI X Data Grid Community)
 - Prisma 7 + PostgreSQL
-- Meilisearch (global search)
+- PostgreSQL full-text search + pg_trgm (global search — no external search service)
 - Docker Compose (local infrastructure)
 - pnpm, Vitest, Playwright, ESLint, Prettier
 
@@ -42,7 +42,7 @@ Open http://localhost:3000.
 | `pnpm assets:icons`        | Generate favicon/PWA icon variants    |
 | `pnpm data:download`       | Cache source CSVs                     |
 | `pnpm data:import`         | Normalize source data into PostgreSQL |
-| `pnpm search:index`        | Build the Meilisearch index           |
+| `pnpm search:index`        | Build the Postgres search index       |
 | `pnpm data:verify`         | Data integrity checks                 |
 | `pnpm data:verify:queries` | Page query layer checks               |
 | `pnpm search:verify`       | Search checks                         |
@@ -71,7 +71,7 @@ never through public APIs. Run `pnpm prod:preflight` and
 - [docs/PRODUCTION_RUNBOOK.md](docs/PRODUCTION_RUNBOOK.md) — step-by-step launch
 - [docs/VERCEL_DEPLOYMENT.md](docs/VERCEL_DEPLOYMENT.md) — Vercel notes
 - [docs/DATABASE_PRODUCTION.md](docs/DATABASE_PRODUCTION.md) — PostgreSQL notes
-- [docs/MEILISEARCH_PRODUCTION.md](docs/MEILISEARCH_PRODUCTION.md) — Meilisearch notes
+- [docs/SEARCH_PRODUCTION.md](docs/SEARCH_PRODUCTION.md) — Postgres-backed search notes
 
 Never commit secrets (`.env*` is git-ignored; templates are
 `.env.example` and `.env.production.example`). The `/sources`
@@ -82,7 +82,7 @@ independence disclaimer must remain in any deployment.
 
 Checkpoints 1–8C complete: app shell, data pipeline (download → import →
 verify), query layer, DB-backed pages (home, tournaments, matches,
-countries, players, records, explorer), Meilisearch global search, explorer
+countries, players, records, explorer), Postgres-backed global search, explorer
 filters + CSV/JSON export, SEO/attribution polish, Vault editorial visual
 system, security audit + hardening, and deployment preparation. Remaining
 roadmap: the production deployment itself, standings/bracket views, source

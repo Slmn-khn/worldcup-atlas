@@ -26,9 +26,6 @@ Set in Project → Settings → Environment Variables (Production scope):
   serverless functions multiply connections — see
   [DATABASE_PRODUCTION.md](DATABASE_PRODUCTION.md))
 - `DIRECT_URL` — direct endpoint (or same value)
-- `MEILISEARCH_HOST` — HTTPS production search endpoint
-- `MEILISEARCH_API_KEY` — the **scoped runtime search key**, never the
-  admin/master key
 - `NEXT_PUBLIC_SITE_URL` — the production URL; it is inlined at build
   time, so set it **before** the first production build
 
